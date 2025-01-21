@@ -1,0 +1,232 @@
+*{
+    font-family:  Luckiest Guy;
+    margin: 0;
+    padding: 0;
+}
+/* #region header-part of main page start */
+body {
+    display: flex;
+    flex-direction: column; /* 让子元素按列排列 */
+    margin: 0;
+}
+
+header{
+    background-color: #ffc0cb81;
+}
+header img{ 
+    height: 100px;
+    display: block;
+}
+header .top-right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+header ul{
+    display: flex;
+}
+header li a{    
+    margin-right: 10px;
+}
+.nav-pills .nav-link.active {
+    background-color: #ffcb05; 
+    color: black; 
+}
+/* #endregion header part end */
+
+
+/* #region slideshow */
+.slideShow{
+    height: calc(100vw * 9 / 16);
+    width: 100%;
+    z-index: 0;
+    position: relative;
+}
+.slideShow ul{
+    list-style: none;
+}
+.slideShow .imgList img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* background-color: #baf; */
+    z-index: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+#nav-img{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+#nav-img a{
+    height: 10px;
+    width: 100px;
+    background-color: #FFC0CB;
+    margin-right: 5px;
+}
+/* #endregion slideshow */
+
+/* #region search bar */
+.search-div{
+    margin-top: 10px;
+    background-image: url(../img/);
+}
+.search-div .submit{
+    width: 30px;
+    margin-left: 5px;
+    background-image: url(../img/search.png);
+    background-size: cover;
+    border: 0;
+
+}
+/* #endregion search bar */
+
+
+/* #region body part start */
+main{
+    margin-top: 10px;
+}
+.block{
+    width: 100%;
+    height: 500px;
+    background-color: #FFFACD;
+    margin-bottom: 10px ;
+
+}
+.block .label{
+    background-color: #FFC0CB;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.block .mian-pic{
+    height: 87%;
+    background-color: grey;
+    margin: 0 10px;
+}
+/* #endregion body end */
+
+
+/* #region footer part start */
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: #ffc0cb81;
+    overflow: hidden;
+}
+footer .nav{
+    justify-content: center;
+}
+footer p:first-child{
+    margin-top: 20px;
+}
+footer .nav a{
+    margin-right: 10px;
+    text-decoration: none;
+}
+footer .icon-list{
+    display: flex;
+    justify-content: center;
+}
+footer .icons{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #ffc0cb81;
+    margin-right: 10px;
+    cursor: pointer;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s linear;
+}
+footer .icons:hover{
+    box-shadow: 0 0 10px;
+}
+footer .icons:nth-child(1){
+    background-image: url(../img/facebook.svg);
+}
+footer .icons:nth-child(2){
+    background-image: url(../img/instagram.svg);
+}
+footer .icons:nth-child(3){
+    background-image: url(../img/微信.svg);
+}
+/* #endregion footer end */
+
+
+/* #region silde-bar */
+#slidebar{
+    position: fixed;
+    top: 50%;
+    left: 0;
+    background-color: transparent;
+    height: auto;
+    transform: translateY(-50%);
+    display: flex; 
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1)
+}
+#slidebar svg{
+    width: 50px;
+    height: 100px;
+    background-color: black;
+}
+#slidebar:hover svg{
+    transform: rotate(180deg);
+}
+#slidebar:hover .nav{
+    display: inline-block;
+}
+#slidebar .nav{
+    width: 100vw;
+    height: 100%;
+    background-color: #FFFACD;
+    display: inline-block;
+    display: none;
+}
+#slidebar dt{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#slidebar dd{
+    display: flex;
+    justify-content: space-between;
+}
+#slidebar dd a{
+    text-decoration: none;
+    padding-left: 10px;
+    color: black;
+    border-left: 1px solid #FFC0CB;
+}
+/* #endregion slide-bar */
+
+
+/* for mobile device */
+@media (max-width:768px){
+    header{
+        justify-content: center;
+    }
+    header .row{
+        width: 100%;
+        margin: 0;
+    }
+    header .top-left{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+   header .top-right{
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+   }
+}

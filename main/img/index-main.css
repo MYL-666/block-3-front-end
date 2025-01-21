@@ -34,6 +34,23 @@ header li a{
 }
 /* #endregion header part end */
 
+/* #region search bar */
+.search-div{
+    margin-top: 10px;
+    background-image: url(../img/);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.search-div .submit{
+    width: 30px;
+    margin-left: 5px;
+    background-image: url(../img/search.png);
+    background-size: cover;
+    border: 0;
+
+}
+/* #endregion search bar */
 
 /* #region slideshow */
 .slideShow{
@@ -71,21 +88,6 @@ header li a{
     margin-right: 5px;
 }
 /* #endregion slideshow */
-
-/* #region search bar */
-.search-div{
-    margin-top: 10px;
-    background-image: url(../img/);
-}
-.search-div .submit{
-    width: 30px;
-    margin-left: 5px;
-    background-image: url(../img/search.png);
-    background-size: cover;
-    border: 0;
-
-}
-/* #endregion search bar */
 
 
 /* #region body part start */

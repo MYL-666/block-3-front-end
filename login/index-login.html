@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-PokeShop</title>
+    <!-- import the Font style from google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <!-- import the bootsrap -->
+    <link rel="stylesheet" href="./index/bootstrap.min.css">
+    <!-- import the CSS -->
+    <link rel="stylesheet" href="./index/index-login.css">
+
+</head>
+<body>
+    <!-- heading part -->
+   <header class="row">
+        <div class="top-left col-md-6">
+            <div>
+                <h2>Welcome!</h2>                
+            </div>
+        </div>
+        <!-- top right part of header, need to be clicked -->
+        <nav class="top-right col-md-6 ">
+            <ul class="list-inline">
+                <li class="login-nav list-inline-item"><a class="h3" href="#">contact us</a></li>
+                <li class="login-nav list-inline-item"><a class="h3" href="#">help</a></li>
+            </ul>
+        </nav>
+   </header>
+   
+   <!-- main body of login page -->
+   <main>
+    <!-- logo display -->
+    <div class="logo text-center container">
+        <img src="../img/logo.svg" alt="logo">
+    </div>
+    <!-- the main-body -->
+    <div class="main-content container">
+        <div class="login text-center">
+            <form action="../main/index/index-main.html" class="form-horizontal" role="form">
+                <div class="form-group">
+                    <!-- must login with email format -->
+                    <label for="email" class="control-label col-10 h2 login-text">Acount login:</label>
+                    <input id="email" type="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <!--password required  -->
+                <div class="form-group">
+                    <label for="pdw" class="control-label col-2"></label>
+                    <input id="pdw" type="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <!-- if u forget ur password u can press -->
+                <div class="forgortten col-12 ">
+                    <a href="#">Forgort your password?</a>
+                </div>
+                <!-- login to the main page -->
+                <div class="logging form-group">
+                    <button class="btn btn-lg" id="btn" disabled>submit</button>
+                </div>
+            </form>
+        </div>
+        <!-- make sure the text is in the center for all-size screen -->
+        <div class="checking col-lg-8 offset-lg-4 col-md-9 offset-md-3 col-sm-10 offset-sm-2">
+            <input type="checkbox" class="agree" id="btn02" name="agree" disabled="disabled" required>
+            <label for="agree"><span>I have read and agree to the</span> <a id="show" href="#">instructions</a></label>
+        </div>
+        <!-- choose login with other ways -->
+        <div class="other-way">
+            <div class="exist-account"><span>begin with existing account</span></div>
+            <div class="ways ">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+   </main>
+
+   <!-- instructions -->
+   <div id="instructions" class="instructions">
+    <h2>Reading Instructions</h2>
+    <p>Welcome to our virtual pet platform! The purpose of this website is to provide users with a platform to explore and purchase virtual pets, and to enhance users' understanding of digital interactive experience. This platform is mainly used to learn and demonstrate front-end development skills and does not involve any actual commodity transactions.</p>
+    
+    <h3>Announcement</h3>
+    <ol>
+        <li>All content on this website is for academic purposes only and does not involve any commercial use.</li>
+        <li>The images and materials used on this website come from the following sources:
+            <ul>
+                <li>Open resource libraries (such as Pixiv, Pinterest).</li>
+                <li>Official images, suitable for non-commercial use.</li>
+            </ul>
+        </li>
+        <li>This website does not collect users' actual personal information. All submitted data is only used as a functional display and will not be stored or shared.</li>
+        <li>If you find that the content involves infringement, please contact us immediately and we will deal with it as soon as possible.</li>
+        <li>This platform does not bear legal responsibility for user behavior and its consequences. Visiting and using this website means that you accept this statement.</li>
+    </ol>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero doloremque molestiae ab? Molestiae quos asperiores beatae sunt cumque quaerat blanditiis, distinctio, veniam in accusantium possimus ad commodi! Animi nesciunt vel minima ullam? Itaque quia quasi rem. Eum libero dolores soluta ipsa incidunt a alias aperiam rem adipisci, magnam ex vel aut non nemo itaque nobis quia, exercitationem perspiciatis. Aliquam dolore eaque eveniet mollitia cum dicta modi quasi! Perferendis corrupti aliquid sunt omnis, est labore cupiditate commodi hic sit perspiciatis minima necessitatibus beatae iure, aperiam reiciendis porro deserunt id molestias modi? Sit accusamus, debitis voluptatum ullam nisi est molestiae? Deserunt odit impedit quod possimus perspiciatis harum ad aspernatur. Vel natus adipisci optio hic animi officiis debitis magni deserunt facilis, ea perspiciatis inventore laudantium omnis provident voluptatum ipsam laboriosam, quam ab facere porro, aspernatur suscipit quos consequuntur nulla. Aspernatur id et ab non cumque officiis! Error quibusdam ipsam quos voluptates nulla? Magnam, doloremque! Veritatis nam repellat fugit tempore modi enim quae. Doloribus quas inventore iure assumenda tenetur nesciunt laboriosam earum praesentium officiis a, modi illo minus nisi. Quibusdam deserunt quasi et, hic vero placeat ipsa, voluptate in at, quisquam ad veritatis saepe voluptas provident nobis neque voluptatem fugit odio tenetur impedit. Ut.</p>
+    <button id="btn03" class="form-control" disabled="disabled">Close</button>
+</div>
+    
+</body>
+      <!-- import JS -->
+      <script src="./index/index-login.js"></script>
+      <script src="./index/bootstrap.min.js"></script>
+</html>

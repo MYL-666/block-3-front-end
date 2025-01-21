@@ -1,0 +1,227 @@
+
+*{
+    font-family: Luckiest Guy;
+}
+/* #region heading part start */
+header{
+
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+.top-left{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+}
+.top-left h2{
+    margin: 0;
+    font-size: 2rem;
+    color: #FFDE00;
+    font-weight: bold;
+}
+.top-right ul{
+    text-align: right;
+    height: 100%;
+    line-height: 100px;
+}
+.top-right ul a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.login-nav a{
+    text-decoration: none;
+    color: #FFDE00;
+    padding: 0 20px;
+    border-right: 3px solid #FFDE00;
+}
+.login-nav:last-child>a{
+    border-right: 0;
+}
+
+
+/* #endregion heading part */
+
+/* #region main-body start */
+
+/* for PC background */
+body{
+    background-image: url(../img/pikachu-in-the-rain-pokemon-thumb.jpg) ;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    filter: saturate(70%);
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+main .logo img{
+    height: 210px;   
+}
+.main-content{
+    background-color: transparent;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+}
+.main-content .login{
+
+    padding: 10px 50px;
+    padding-bottom: 10px;
+}
+.main-content .login .login-text{
+    color: black; 
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
+}
+
+.main-content .login .forgortten {
+    text-align: right;
+    color: #000;
+    margin: 10px 0;
+
+}
+.main-content .login .forgortten a{
+    text-decoration: none;
+    color: #000;    
+    
+}
+/* hover effect for forgot  */
+.main-content .login .forgortten a:hover{
+    text-decoration: underline;
+    color: red;
+}
+.main-content .logging{
+    background-color: blanchedalmond;
+    border-radius: 10px;
+
+}
+.main-content .logging button{
+    width: 100%;
+}
+/* hover effect for login submit */
+.main-content .logging:hover{
+    box-shadow: 0 0 5px;
+    transform: translate(1.1);
+}
+
+.main-content .login .checking {
+    margin: 0 auto;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.main-content .login .checking  a{
+    font-weight: bold;
+    color: black;
+}
+.main-content .login .checking a:hover{
+    text-shadow: 0 0 10px;
+}
+.main-content .other-way .exist-account{
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    color: #FFDE00;
+}
+
+.main-content .other-way .ways>div{
+    height: 55px;
+    border-radius: 50%;
+    width: 55px;
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: url(../img/google.svg);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: 0.1 linear;
+    margin-bottom: 20px;
+}
+.main-content .other-way .ways>div:nth-child(2){
+    background-image: url(../img/facebook.svg);
+}
+.main-content .other-way .ways>div:nth-child(3){
+    background-image: url(../img/apple.svg);
+}
+.main-content .other-way .ways>div:nth-child(4){
+    background-image: url(../img/微信.svg);
+}
+.main-content .other-way .ways{
+    display: flex;
+    justify-content: center;
+}
+.main-content .other-way .ways>div:hover{
+    box-shadow: 0 0 10px;
+}
+
+
+/* #endregion main-body */
+
+
+/* #region instructions */
+.instructions{
+    display: none;
+    z-index: 1000;
+    width: 80%;
+    height: 60%;
+    border-radius: 5px;
+    overflow: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid black;
+    background-color: white;
+}
+.instructions h2, .instructions p, .instructions li, .instructions h3{
+    font-family: Arial, Helvetica, sans-serif
+}
+/* #endregion instructions */
+
+
+/* #region for mobile device */
+@media (max-width:768px) {
+    header {
+        flex-wrap: wrap; 
+        height: auto; 
+    }
+
+    .top-left {
+        width: 100%; 
+        justify-content: center; 
+        margin-top: 10px;
+    }
+
+    .top-right {
+        width: 100%; 
+        justify-content: center; 
+        margin-top: 10px; 
+    }
+
+    .login-nav a {
+        font-size: 0.9rem; 
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8)
+    }
+    header .top-left h2, header .top-right h3{
+        color: #FFDE00;
+        font-weight: bold;
+    }
+    .exist-account span{
+        color: #000000;
+    }
+    .forgortten,.regardness label{
+        font-size: 10px;
+    }
+    .regardness a:hover{
+        color: red;
+    }
+    .checking{
+        text-align: center;
+    }
+    .checking>label>span{
+        display: none;
+    }
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cart</title>
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./index-cart.css">
      <!--import the font style  -->
@@ -36,5 +36,49 @@
             </div>
         </div>
     </header>
+
+    <!-- mian body -->
+     <main class="container">
+        <h1>Shopping Cart</h1>
+
+        <!-- product -->
+         <div class="products-input">
+            <p id="hint">Your shopping cart is empty. If you see something you would like to add to your shopping cart when shopping, click Add to Cart.</p>
+            <form class="payment" action="" role="form">
+                Total:<span id="total-amount">0.00</span>💰
+                <input type="submit" value="Payment" class="form-control" class="btn" id="btn02">
+                <input type="submit" value="back to product" class="form-control" class="btn" id="btn03">
+            </form>
+         </div>
+     </main>
+
+
+     <!-- footer -->
+     <footer class="text-center">
+        <p>Your go-to platform for exploring and adopting virtual Pokémon pets. Learn, play, and connect with your favorite Pokémon today!</p>
+
+        <!-- nav part -->
+        <div class="nav">
+            <a href="../../main/index/index-main.html">home</a>
+            <a href="#">Cart</a>
+            <a href="">Profile</a>
+        </div>
+
+        <!-- contact us -->
+         <div>
+            <p>You can contact us :</p>
+            <div class="icon-list">
+                <div class="icons"></div>
+                <div class="icons"></div>
+                <div class="icons"></div>
+            </div>
+         </div>
+
+         <!-- copyright -->
+         <p>&copy; 2025 PokéShop. All rights reserved. UA92.YuLun_Miao</p>
+         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+     </footer>
+
 </body>
+<script src="./index-cart.js"></script>
 </html>

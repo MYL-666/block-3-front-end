@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Luckiest Guy ;
+}
+/* #region header-part of main page start */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    /* background: linear-gradient(to bottom, #ffe4e1, #fffaf0); */
+}
+.content a {
+    color: #007acc;
+}
+header .row{
+    justify-content: space-evenly;
+}
+header{
+    background-color: #ffc0cb81;
+}
+header img{ 
+    height: 100px;
+    display: block;
+}
+header .top-right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+header ul{
+    display: flex;
+}
+header li a{    
+    margin-right: 10px;
+}
+.nav-pills .nav-link.active {
+    background-color: #ffcb05; 
+    color: black; 
+}
+.nav-pills .nav-link.active:hover{
+    box-shadow: 0 0 10px;
+}
+/* #endregion header part end */
+
+/* #region search bar */
+.search-div{
+    margin-top: 10px;
+    background-image: url(../img/);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-div form{
+    width: 100%;
+}
+.search-div .search{
+    width: 85%;
+}
+.search-div .submit{
+    width: 10%;
+    background-image: url(../img/search.png);
+    background-color: #ffdfe5;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    transition: 0.2s ease-in-out;
+}
+.search-div .submit:hover{
+    box-shadow: 0 0 10px;
+    background-size: 80%;
+}
+/* #endregion search bar */

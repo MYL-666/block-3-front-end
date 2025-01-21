@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column; /* 让子元素按列排列 */
     margin: 0;
-    background: linear-gradient(to bottom, #ffe4e1, #fffaf0);
 }
 .content a {
     color: #007acc;
@@ -38,6 +37,9 @@ header li a{
     background-color: #ffcb05; 
     color: black; 
 }
+.nav-pills .nav-link.active:hover{
+    box-shadow: 0 0 10px;
+}
 /* #endregion header part end */
 
 /* #region search bar */
@@ -58,7 +60,7 @@ header li a{
     width: 10%;
     background-image: url(../img/search3.png);
     background-color: #ffdfe5;
-    background-size: 80%;
+    background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
     border: 0;
@@ -66,7 +68,7 @@ header li a{
 }
 .search-div .submit:hover{
     box-shadow: 0 0 10px;
-    background-size: 90%;
+    background-size: 80%;
 }
 /* #endregion search bar */
 

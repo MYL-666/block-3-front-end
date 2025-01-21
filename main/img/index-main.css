@@ -48,16 +48,21 @@ header li a{
     width: 100%;
 }
 .search-div .search{
-    width: 90%;
+    width: 85%;
 }
 .search-div .submit{
     width: 10%;
-    background-image: url(../img/search.png);
-    background-size: 90%;
+    background-image: url(../img/search3.png);
+    background-color: #ffdfe5;
+    background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
     border: 0;
-
+    transition: 0.2s ease-in-out;
+}
+.search-div .submit:hover{
+    box-shadow: 0 0 10px;
+    background-size: 90%;
 }
 /* #endregion search bar */
 
@@ -176,7 +181,7 @@ footer .icons:nth-child(3){
     position: fixed;
     top: 50%;
     left: 0;
-    background-color: transparent;
+    background-color:#FFFACD ;
     height: auto;
     transform: translateY(-50%);
     display: flex; 
@@ -186,12 +191,13 @@ footer .icons:nth-child(3){
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1)
 }
 #slidebar svg{
-    width: 50px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     background-color: black;
 }
 #slidebar:hover svg{
     transform: rotate(180deg);
+    transition: transform 0.3s ease, fill 0.3s ease
 }
 #slidebar:hover .nav{
     display: inline-block;
@@ -203,9 +209,15 @@ footer .icons:nth-child(3){
     display: inline-block;
     display: none;
 }
+#slidebar dl{
+    border-bottom: 2px solid #ffc0cb80;
+    display: flex;
+    flex-wrap: wrap;
+}
 #slidebar dt{
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
 #slidebar dd{
     display: flex;
@@ -215,15 +227,30 @@ footer .icons:nth-child(3){
     text-decoration: none;
     padding-left: 10px;
     color: black;
-    border-left: 1px solid #FFC0CB;
+    border-left: 2px solid #ffc0cb80;
+}
+#slidebar dd a:hover{
+    text-decoration: underline;
+    color: #FFC0CB;
+}
+.mobile-tabs{
+    /* display: none; */
 }
 /* #endregion slide-bar */
 
 
 /* for mobile device */
 @media (max-width:768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
     header{
         justify-content: center;
+        height: 210px;
+    }
+    header img{
+        margin: 0 auto;
     }
     header .row{
         width: 100%;
@@ -240,4 +267,69 @@ footer .icons:nth-child(3){
     justify-content: center;
     margin-top: 10px;
    }
+
+   /*PC silde bar */
+   #slidebar {
+        display: none; /* 隐藏侧边栏 */
+}
+
+    /* mobile slide bar */
+
+    #mobile-menu {
+    width: 100%;
+        background-color: transparent;
+        position: fixed;
+        top: 0;
+        left: 0;
+}
+
+/* 菜单按钮样式 */
+    #menu-btn {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 15px;
+        background: transparent;
+        color: black;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+    }
+    #menu-content {
+        display: none; 
+        background-color: #ffe4e1;
+        padding: 10px 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    #menu-btn:hover #menu-content{
+        display: block;
+    }
+    .menu-category {
+        margin: 10px 0;
+    }
+
+    .menu-category span {
+        font-weight: bold;
+        color: #333;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .menu-category a {
+        color: #007bff;
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .menu-category a:hover {
+        text-decoration: underline;
+    }
+
+    /* 过渡动画 */
+    #menu-content {
+        transition: max-height 0.3s ease-in-out; /* 添加展开动画 */
+        overflow: hidden;
+    }
+
 }

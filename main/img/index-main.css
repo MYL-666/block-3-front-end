@@ -9,7 +9,9 @@ body {
     flex-direction: column; /* 让子元素按列排列 */
     margin: 0;
 }
-
+header .row{
+    justify-content: space-evenly;
+}
 header{
     background-color: #ffc0cb81;
 }
@@ -40,13 +42,20 @@ header li a{
     background-image: url(../img/);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+}
+.search-div form{
+    width: 100%;
+}
+.search-div .search{
+    width: 90%;
 }
 .search-div .submit{
     width: 30px;
-    margin-left: 5px;
     background-image: url(../img/search.png);
-    background-size: cover;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
     border: 0;
 
 }

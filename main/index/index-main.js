@@ -67,4 +67,28 @@ window.onload=function(){
         }
     };
     // #endregion sildebar for mobile device
+
+
+
+    // #region adding the products to cart
+    var cartBtn=document.querySelectorAll("#add-cart");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    for(var i=0;i<cartBtn.length;i++){
+        cartBtn[i].onclick=function(){
+            var name=this.dataset.name;
+            var price=this.dataset.price;
+            var img=this.dataset.img;
+            // if item already exist,number +1 or number=1
+            var existItem=cart.find((item) => item.name === name);
+            if (existItem) {
+                existItem.quantity++; 
+            } else {
+                // add new product
+                cart.push({ name, price, img, quantity: 1 });
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(`${name} has been added to the cart!`);
+        }
+    }
 }

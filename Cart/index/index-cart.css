@@ -76,7 +76,7 @@ header li a{
 
 /* #region main-body */
 main{
-    background-color: #FFFACD;
+    /* background-color: #FFFACD; */
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -92,7 +92,9 @@ main .products-input{
     display: flex;
     align-items: center;
     justify-content: center;
+    column-count: 1;
     position: relative;
+    overflow: auto;
 }
 main .products-input .payment{
     position: absolute;
@@ -104,16 +106,39 @@ main .products-input .payment{
     align-items: center;
     justify-content: space-evenly;
 }
-main .products-input .payment .btn{
-    width: 100px;
+main .products-input .payment #btn02,#btn03{
+    width: 70%;
     background-color: #ffdfe5;
     margin: 0 5px;
 }
-main .products-input .payment .btn:hover{
+main .products-input .payment #btn02:hover,#btn03:hover{
     box-shadow: 0 0 10px;
 }
 main #btn03{
     display: none;
+}
+main .cart-item {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    overflow: auto;
+}
+main .added{
+    border-radius: 8px;
+    padding: 5px;
+}
+main .cart-item .added:hover{
+    box-shadow: 0 0 5px;
+}
+main .remove-btn{
+    margin-left: 5px;
+    background-color: #ffdfe5;
+}
+main .remove-btn:hover{
+    box-shadow: 0 0 5px;
 }
 /* #endregion main-body */
 

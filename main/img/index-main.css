@@ -116,20 +116,73 @@ main{
 }
 .block{
     width: 100%;
-    height: 500px;
-    background-color: #FFFACD;
+    height: calc();
     margin-bottom: 10px ;
-
 }
 .block .label{
     background-color: #FFC0CB;
     height: 50px;
     margin-bottom: 10px;
+    width: 100%;
+}
+.block .items{
+    height: 100%;
 }
 .block .mian-pic{
     height: 87%;
-    background-color: grey;
-    margin: 0 10px;
+    background-color: #FFFACD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+.block .product-img{
+    position: relative;
+    margin-top: 10px;
+}
+.block .product-img .detail{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    padding: 0 10px;
+    background-color: rgba(128, 128, 128, 0.26);
+    text-align: center;
+    display: none;
+    transition: 0.2 ease-in-out;
+    align-items: center;
+}
+.block .product-img:hover .detail{
+    display: block;
+    cursor: pointer;
+    box-shadow: 0 0 4px;
+}
+.block .mian-pic:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 5px;
+}
+.block .mian-pic img{
+    object-fit: cover;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+.block .product-price{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.block .add{
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.block #add-cart{
+    background-color: #FFC0CB;
+}
+.block #add-cart:hover{
+    box-shadow: 0 0 5px;
 }
 /* #endregion body end */
 
@@ -278,6 +331,10 @@ footer .icons:nth-child(3){
     font-size: 12px;
    }
 
+   /* mian-body */
+   main .items span{
+    font-size: 12px;
+   }
    /*hide PC silde bar */
    #slidebar {
         display: none; 

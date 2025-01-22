@@ -3,7 +3,9 @@
     margin: 0;
     font-family: Luckiest Guy ;
 }
-
+h4{
+    font-weight: bold;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -96,7 +98,7 @@ main{
     margin-bottom: 10px;
 }
 .left-part #extra{
-    height: 200px;
+    height: 300px;
 }
 .right-part .top{
     height: 50%;
@@ -124,6 +126,50 @@ main{
     margin: 0 10px;
     border-top: 1px solid #ccc;
     padding: 10px 0;
+}
+.right-bottom{
+    margin-top: 20px;
+}
+.right-bottom .ways>div{
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}.right-bottom .ways input{
+    accent-color: #ffcb05;
+}
+.right-bottom .ways label{
+    margin-left: 10px;
+}
+.right-bottom .cards .imglist{
+    display: none;
+}
+.right-bottom img{
+    height: 40px;
+    justify-content: center;
+}
+.right-bottom .recive-pay p{
+    display: none;
+}
+.right-bottom #cards:checked+label+.imglist{
+    display: flex;
+    justify-content: space-evenly;
+}
+.right-bottom #COD:checked+label+p{
+    display: block;
+    font-size: 10px;
+}
+.right-bottom .ways .pay{
+    border: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.right-bottom .submit-payment{
+    background-color: #ffcb05;
+    width: 70;
+}
+.right-bottom .submit-payment:hover{
+    box-shadow: 0 0 8px;
 }
 /* #endregion body part end */
 

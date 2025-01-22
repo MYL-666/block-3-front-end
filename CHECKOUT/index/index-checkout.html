@@ -42,7 +42,7 @@
     <!-- main body -->
      <main class="container">
 
-        <!-- left part -->
+        <!-- left form -->
          <div class="row left-part col-8">
             <div class="col-12 text-left">
                 <h2>Bill Details</h2>
@@ -125,7 +125,7 @@
 
             <div class="col-12 form-horizontal bottom">
                 <div class="form-group">
-                    <label for="email" class="control-label h4">Additional Notes*:</label>
+                    <label for="email" class="control-label h4">Additional Notes:</label>
                     <div class="col-12">
                         <textarea name="extra" id="extra" class="form-control"></textarea>
                     </div>
@@ -156,8 +156,31 @@
             </div>
 
             <!-- Payment -->
-             <div class="bottom">
+             <div class="right-bottom">
                 <h2 class="text-center">Payment</h2>
+                <form class="ways">
+                    <div class="bank-transfer">
+                        <input type="radio" name="choice" id="bank-transfer">
+                        <label for="bank-transfer">bank transfer</label>
+                    </div>
+                    <div class="cards">
+                        <input type="radio" name="choice" id="cards">
+                        <label for="cards">debit cards</label>
+                        <div class="imglist">
+                            <img src="../img/Visa VISA.png" alt="">
+                            <img src="../img/mastercard.png" alt="">
+                            <img src="../img/yinlian.png" alt="">
+                        </div>
+                    </div>
+                    <div class="recive-pay">
+                        <input type="radio" name="choice" id="COD">
+                        <label for="COD">cash on delivery</label>
+                        <p class="text-center">VIP users can enjoy cash on delivery service</p>
+                    </div>
+                        <div class="pay">
+                            <input type="button" value="Submit Order" class="form-control submit-payment">
+                        </div>
+                </form>
              </div>
         </div>
      </main>

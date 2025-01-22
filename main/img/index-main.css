@@ -142,26 +142,10 @@ main{
     position: relative;
     margin-top: 10px;
 }
-.block .product-img .detail{
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    padding: 0 10px;
-    background-color: rgba(128, 128, 128, 0.26);
-    text-align: center;
-    display: none;
-    transition: 0.2 ease-in-out;
-    align-items: center;
-}
-.block .product-img:hover .detail{
-    display: block;
-    cursor: pointer;
-    box-shadow: 0 0 4px;
-}
 .block .mian-pic:hover{
     transform: scale(1.05);
     box-shadow: 0 0 5px;
+    cursor: pointer;
 }
 .block .mian-pic img{
     object-fit: cover;

@@ -80,6 +80,7 @@ main{
     height: 500px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 main h1{
     margin: 20px 0;
@@ -93,13 +94,13 @@ main .products-input{
     align-items: center;
     justify-content: center;
     column-count: 1;
-    position: relative;
+
     overflow: auto;
 }
 main .products-input .payment{
     position: absolute;
     right: 5vw;
-    bottom: 0;
+    bottom: 10px;
     margin-bottom: 10px;
     width: 300px;
     display: flex;
@@ -222,6 +223,10 @@ footer .icons:nth-child(3){
     width: 100%;
     justify-content: center;
     margin-top: 10px;
+   }
+   main .products-input .payment{
+    position: absolute;
+    bottom: 20px;
    }
    footer p{
     font-size: 12px;

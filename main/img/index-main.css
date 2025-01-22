@@ -16,7 +16,11 @@ header .row{
     justify-content: space-evenly;
 }
 header{
-    background-color: #ffc0cb81;
+    background-color: #ffc0cb;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1000;
 }
 header img{ 
     height: 100px;

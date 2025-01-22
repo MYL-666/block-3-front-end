@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkout</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <link rel="stylesheet" href="./index-checkout.css">
+     <!--import the font style  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header part -->
+    <header>
+        <div class="row">
+            <!-- logo part -->
+            <div class="top-left col-lg-1 col-md-1">
+                <img src="../img/logo.svg" alt="logo">
+            </div>
+            <!-- search bar -->
+            <div class="search-div col-lg-5 col-md-4 offset-md-1">
+                <form action="" class="form-horizontal row" role="form">
+                    <input type="text" class="search form-control" placeholder="Search the product" id="searching">
+                    <input type="button" class="submit form-control" id="btn01">
+                </form>
+              </div>
+            <!-- navigator on header -->
+            <div class="top-right col-lg-5 col-md-6">
+
+                <ul class="nav nav-pills">
+                    <li class="nav-item "><a class="nav-link active" href="../../login/index-login.html">login</a></li>
+                    <li class="nav-item "><a class="nav-link active" href="#">setting</a></li>
+                    <li class="nav-item "><a class="nav-link active" href="../../main/index/index-main.html">Home</a></li>
+                </ul> 
+            </div>
+        </div>
+    </header>
+
+
+    <!-- main body -->
+     <main class="container">
+
+        <!-- left part -->
+         <div class="row left-part col-8">
+            <div class="col-12 text-left">
+                <h2>Bill Details</h2>
+            </div>
+            <form class="col-6 left-form form-horizontal" role="form">
+               <div class="form-group">
+                <label for="user-name" class="control-label h4">User name*:</label>
+                <div class="col-12">
+                    <input type="text" placeholder="User name" id="user-name" required class="form-control">
+                </div>
+               </div>
+
+               <div class="form-group">
+                <label for="region" class="control-label h4">region*:</label>
+                <div class="col-12">
+                    <select placeholder="User name" id="region" required class="form-control" name="region">
+                        <option>UK</option>
+                        <option>Europe</option>
+                        <option>China</option>
+                        <option>Japan</option>
+                    </select>
+                </div>
+            </div>
+
+                <div class="form-group">
+                    <label for="city" class="control-label h4">City*:</label>
+                    <div class="col-12">
+                        <input type="text" placeholder="Enter the city to delivery" id="city" required class="form-control">
+                    </div>
+                   </div>               
+
+               <div class="form-group">
+                <label for="street" class="control-label h4">Street*:</label>
+                <div class="col-12">
+                    <input type="text" placeholder="Enter the street" id="street" required class="form-control">
+                </div>
+               </div>
+
+            </form>
+            <form class="col-6 right-form form-horizontal">
+                <div class="form-group">
+                    <label for="lastName" class="control-label h4">Last name*:</label>
+                    <div class="col-12">
+                        <input type="text" placeholder="Enter last name" id="lastName" required class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstName" class="control-label h4">first name*:</label>
+                    <div class="col-12">
+                        <input type="text" placeholder="Enter first name" id="firstName" required class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="postCode" class="control-label h4">Post code*:</label>
+                    <div class="col-12">
+                        <input type="text" placeholder="Enter Postcode" id="postCode" required class="form-control">
+                    </div>
+                </div>
+            </form>
+
+            <div class="col-6 form-horizontal bottom">
+                <div class="form-group">
+                    <label for="number" class="control-label h4">Phone number*:</label>
+                    <div class="col-12">
+                        <input type="text" placeholder="+44 XXXXX" id="phonenumber" required class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 form-horizontal bottom">
+                <div class="form-group">
+                    <label for="email" class="control-label h4">Email*:</label>
+                    <div class="col-12">
+                        <input type="email" placeholder="youreamil@gmail.com" id="email" required class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 form-horizontal bottom">
+                <div class="form-group">
+                    <label for="email" class="control-label h4">Additional Notes*:</label>
+                    <div class="col-12">
+                        <textarea name="extra" id="extra" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+         </div>
+
+         <!-- right part -->
+          <div class="right-part col-4">
+            <!-- bill summary -->
+            <div class="top">
+                <h2 class="text-center">Bill Summary</h2>
+                <div class="items"></div>
+                <div class="col-12 text-left summary">                 
+                    <div class="delivery">
+                        <span>delivery fee:</span>
+                        <span>0.00 💰</span>
+                    </div>
+                   <div class="discount">
+                    <span>discount:</span>
+                    <span>-0% 💰</span>
+                   </div>
+                </div>
+                <div id="total">
+                    <span>Total:</span>
+                    <span id="total-amount">0.00 💰</span>
+                </div>
+            </div>
+
+            <!-- Payment -->
+             <div class="bottom">
+                <h2 class="text-center">Payment</h2>
+             </div>
+        </div>
+     </main>
+
+
+
+
+        <!-- footer -->
+        <footer class="text-center">
+            <p>Your go-to platform for exploring and adopting virtual Pokémon pets. Learn, play, and connect with your favorite Pokémon today!</p>
+    
+            <!-- nav part -->
+            <div class="nav">
+                <a href="../../main/index/index-main.html">home</a>
+                <a href="#">Cart</a>
+                <a href="">Profile</a>
+            </div>
+    
+            <!-- contact us -->
+             <div>
+                <p>You can contact us :</p>
+                <div class="icon-list">
+                    <div class="icons"></div>
+                    <div class="icons"></div>
+                    <div class="icons"></div>
+                </div>
+             </div>
+    
+             <!-- copyright -->
+             <p>&copy; 2025 PokéShop. All rights reserved. UA92.YuLun_Miao</p>
+             <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+         </footer>
+    
+</body>
+</html>

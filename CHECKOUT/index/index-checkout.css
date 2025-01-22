@@ -1,9 +1,9 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     font-family: Luckiest Guy ;
 }
-/* #region header-part of main page start */
+
 body {
     display: flex;
     flex-direction: column;
@@ -17,9 +17,8 @@ header .row{
 header{
     background-color: #ffc0cb;
     position: sticky;
-    z-index: 100;
-    left: 0;
-    top: 0;
+    top:0;
+    z-index: 1000;
 }
 header img{ 
     height: 100px;
@@ -75,86 +74,67 @@ header li a{
 }
 /* #endregion search bar */
 
-
-/* #region main-body */
+/* #region bodypart start */
 main{
-    /* background-color: #FFFACD; */
-    height: 500px;
     display: flex;
-    flex-direction: column;
+    width: 100vw;
+    margin-top: 10px;
+    gap: 10px;
+}
+.left-part,.right-part{
+    border: 1px #ccc solid;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.left-part .form-horizontal{
+    margin-top: 10px;
+}
+.left-part .form-group{
+    margin-top: 15px;
+}
+.left-part .bottom{
+    margin-bottom: 10px;
+}
+.left-part #extra{
+    height: 200px;
+}
+.right-part .top{
+    height: 50%;
+    width: 100%;
     position: relative;
 }
-main h1{
-    margin: 20px 0;
+.right-part .items{
+    /* height: 60%; */
 }
-main .products-input{
-    border: 2px solid #ccc;
-    height: 400px;
-    width: 100%;
-    border-top:2px solid black;
+.right-part .summary{
     display: flex;
-    align-items: center;
+    height: 75%;
+    flex-direction: column;
     justify-content: center;
-    column-count: 1;
-
-    overflow: auto;
 }
-main .products-input .payment{
+.right-part .discount, .delivery, .right-part #total{
+    display: flex;
+    justify-content: space-between;
+}
+.right-part #total{
     position: absolute;
-    right: 5vw;
-    bottom: 10px;
-    margin-bottom: 10px;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    margin: 0 10px;
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
 }
-main .products-input .payment #btn02,#btn03{
-    width: 70%;
-    background-color: #ffdfe5;
-    margin: 0 5px;
-}
-main .products-input .payment #btn02:hover,#btn03:hover{
-    box-shadow: 0 0 10px;
-}
-main #btn03{
-    display: none;
-}
-main .cart-item {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
-    overflow: auto;
-}
-main .added{
-    border-radius: 8px;
-    padding: 5px;
-}
-main .cart-item .added:hover{
-    box-shadow: 0 0 5px;
-}
-main .remove-btn{
-    margin-left: 5px;
-    background-color: #ffdfe5;
-}
-main .remove-btn:hover{
-    box-shadow: 0 0 5px;
-}
-/* #endregion main-body */
+/* #endregion body part end */
 
 
 
-
-
-/* #region footer part start */
 footer{
     width: 100%;
     height: 300px;
     background-color: #ffc0cb81;
     overflow: hidden;
+    margin-top: 10px;
 }
 footer .nav{
     justify-content: center;
@@ -196,41 +176,3 @@ footer .icons:nth-child(3){
     background-image: url(../img/微信.svg);
 }
 /* #endregion footer end */
-
-
-/* for mobile device */
-@media (max-width:768px){
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    header{
-        justify-content: center;
-        height: 210px;
-    }
-    header img{
-        margin: 0 auto;
-    }
-    header .row{
-        width: 100%;
-        margin: 0;
-    }
-    header .top-left{
-        width: 100%;
-        padding: 0;
-        text-align: center;
-    }
-   header .top-right{
-    text-align: center;
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
-   }
-   main .products-input .payment{
-    position: absolute;
-    bottom: 20px;
-   }
-   footer p{
-    font-size: 12px;
-   }
-}

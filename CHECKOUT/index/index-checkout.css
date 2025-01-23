@@ -49,7 +49,6 @@ header li a{
 /* #region search bar */
 .search-div{
     margin-top: 10px;
-    background-image: url(../img/);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,6 +74,7 @@ header li a{
     background-size: 80%;
 }
 /* #endregion search bar */
+
 
 /* #region bodypart start */
 main{
@@ -222,3 +222,72 @@ footer .icons:nth-child(3){
     background-image: url(../img/微信.svg);
 }
 /* #endregion footer end */
+
+
+
+/* for mobile device */
+@media (max-width:768px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    header{
+        justify-content: center;
+        height: 210px;
+    }
+    header img{
+        margin: 0 auto;
+    }
+    header .row{
+        width: 100%;
+        margin: 0;
+    }
+    header .top-left{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+   header .top-right{
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+   }
+   main{
+    display: flex;
+    flex-direction: column;
+   }
+   main .left-part{
+    width: 100%;
+   }
+   main .right-part{
+    width: 100%;
+    height: 1000px;
+   }
+   main .products-input .payment{
+    position: absolute;
+    bottom: 20px;
+   }
+   h2{
+    font-size: 26px;
+   }
+   h4{
+    font-size: 16px;
+   }
+   .right-bottom .ways>div{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+   }
+   .right-bottom label{
+    font-size: 18px;
+   }
+   .right-bottom img{
+    height: 40px;
+    justify-content: center;
+}
+    footer p{
+    font-size: 12px;
+   }
+}

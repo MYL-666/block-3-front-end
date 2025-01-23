@@ -332,6 +332,9 @@ footer .icons:nth-child(3){
     justify-content: center;
     margin-top: 10px;
    }
+   .main-nav{
+    display: none;
+   }
    footer p{
     font-size: 12px;
    }

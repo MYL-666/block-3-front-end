@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-direction: column; /* 让子元素按列排列 */
     margin: 0;
+    overflow-x: hidden;
 }
 .content a {
     color: #007acc;
@@ -72,6 +73,85 @@ header li a{
 }
 /* #endregion search bar */
 
+
+/* #region navigator */
+nav{
+    width: 100vw;
+    background-color: #ffc0cb;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+    position: relative;
+}
+nav .nav {
+    height: 10vh;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+nav .nav a{
+    width: 100%;
+    text-align: center;
+    border-right: 2px solid black;
+    line-height: 4vh;
+}
+nav .nav:hover{
+    border-bottom: 3px solid #007acc;
+}
+nav .nav:hover a{
+    color: #007acc;
+}
+nav #click03{
+    border: 0;
+}
+nav .nav a{
+    text-decoration: none;
+    color: black;
+}
+/* for pets nav */
+.nav-pet:hover+.nav-product+.nav-card+.hidden-nav-pet, .hidden-nav-pet:hover{
+    display: flex;
+}
+/* for product nav */
+.nav-product:hover+.nav-card+.hidden-nav-pet+.hidden-nav-product, .hidden-nav-product:hover{
+    display: flex;
+}
+/* for cards nav */
+.nav-card:hover+.hidden-nav-pet+.hidden-nav-product+.hidden-nav-card, .hidden-nav-card:hover{
+    display: flex;
+}
+nav .hidden-nav{
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    height: 500px;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    z-index: 10000;
+    display: none;   
+}
+nav .nav-item{
+    border-right: 1px solid #FFC0CB;
+    background-color: #fff5e6;
+    display: flex;
+    flex-direction: column;
+}
+nav .nav-item>a, .nav-item>h2{
+    margin: 5px 0;
+    text-decoration: none;
+    color: #333;
+}
+nav .nav-item>a:hover{
+    text-decoration: underline;
+}
+nav .third img{
+    margin-top: 10px;
+}
+/* #endregion navigator */
+
+
+
 /* #region slideshow */
 .slideShow{
     height: calc(100vw * 9 / 16);
@@ -110,29 +190,6 @@ header li a{
 /* #endregion slideshow */
 
 
-/* #region navigator */
-nav{
-    width: 100%;
-    height: 5vh;
-    background-color: #ffc0cb;
-    align-items: center;
-}
-nav .nav{
-    height: 70%;
-    padding: 0 10px;
-    border-right: 1px solid black;
-    justify-content: center;
-    align-items: center;
-}
-nav .nav:last-child{
-    border: 0;
-}
-nav .nav a{
-    text-decoration: none;
-    color: black;
-}
-/* #endregion navigator */
-
 
 
 /* #region body part start */
@@ -141,7 +198,6 @@ main{
 }
 .block{
     width: 100%;
-    height: calc();
     margin-bottom: 10px ;
 }
 .block .label{
@@ -155,7 +211,7 @@ main{
 }
 .block .mian-pic{
     height: 87%;
-    background-color: #FFFACD;
+    background-color: #fff5e6;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -188,7 +244,7 @@ main{
     margin-bottom: 10px;
 }
 .block #add-cart{
-    background-color: #FFC0CB;
+    background-color: #ffcb05;
 }
 .block #add-cart:hover{
     box-shadow: 0 0 5px;
@@ -244,69 +300,9 @@ footer .icons:nth-child(3){
 }
 /* #endregion footer end */
 
-
-/* #region silde-bar */
-#slidebar{
-    position: fixed;
-    top: 50%;
-    left: 0;
-    background-color:linear-gradient(to bottom, #ffe4e1, #fffaf0);
-    height: auto;
-    transform: translateY(-50%);
-    display: flex; 
-    align-items: center;
-    overflow-y: auto;
-    overflow-x: hidden;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1)
-}
-#slidebar svg{
-    width: 40px;
-    height: 40px;
-    background-color: #ccc;
-}
-#slidebar:hover svg{
-    transform: rotate(180deg);
-    transition: transform 0.3s ease, fill 0.3s ease
-}
-#slidebar:hover .nav{
-    display: inline-block;
-}
-#slidebar .nav{
-    width: 100vw;
-    height: 100%;
-    background-color: #ffe4e1;
-    display: inline-block;
-    display: none;
-}
-#slidebar dl{
-    border-bottom: 2px solid #ffc0cb80;
-    display: flex;
-    flex-wrap: wrap;
-}
-#slidebar dt{
-    font-size: 20px;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 5px;
-    text-align: center;
-}
-#slidebar dd{
-    display: flex;
-    justify-content: space-between;
-}
-#slidebar dd a{
-    text-decoration: none;
-    padding-left: 10px;
-    border-left: 2px solid #ffc0cb80;
-}
-#slidebar dd a:hover{
-    text-decoration: underline;
-}
 #mobile-menu{
     display: none;
 }
-/* #endregion slide-bar */
-
 
 /* for mobile device */
 @media (max-width:768px){

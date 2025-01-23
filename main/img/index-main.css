@@ -6,7 +6,7 @@
 /* #region header-part of main page start */
 body {
     display: flex;
-    flex-direction: column; /* 让子元素按列排列 */
+    flex-direction: column; 
     margin: 0;
     overflow-x: hidden;
 }
@@ -352,8 +352,6 @@ footer .icons:nth-child(3){
 
     #mobile-menu {
         display: block;
-        width: 100%;
-        background-color: transparent;
         position: fixed;
         top: 0;
         left: 0;
@@ -372,22 +370,76 @@ footer .icons:nth-child(3){
     }
     #menu-content {
         display: none; 
+        width: 80%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
         background-color: #ffe4e1;
         padding: 10px 15px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
+    #close{
+        height: 30px;
+    }
+    #menu-content .profile{
+        height: 40px;
+        width: 100%;
+        margin:10px auto;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    #menu-content .profile img{
+        height: 30px;
+    }
     #menu-btn:hover #menu-content{
         display: block;
     }
+    #menu-content .nav-pet{
+        border-top: 1px solid #999;
+    }
     .menu-category {
-        margin: 10px 0;
+        margin: 0 auto;
+        align-items: center;
+        padding: 20px 0;
+        text-align: left;
+        border-bottom: 1px solid #999 ;
+    }
+    /* mobile nav-pet */
+    .menu-category .detail1,.detail2,.detail3{
+        display: none;
+    }
+    #menu-content .nav-pet:hover .detail1{
+        display: block;
+    }
+    #menu-content .nav-pet:hover #symbol1{
+        transform: rotate(90deg);
+    }
+    /* mobile nav-product */
+    #menu-content .nav-product:hover .detail2{
+        display: block;
+    }
+    #menu-content .nav-product:hover #symbol2{
+        transform: rotate(90deg);
+    }
+    /* mobile nav-card */
+    #menu-content .nav-card:hover .detail3{
+        display: block;
+    }
+    #menu-content .nav-card:hover #symbol3{
+        transform: rotate(90deg);
     }
 
-    .menu-category span {
-        font-weight: bold;
+
+    .menu-category ul, .menu-category li{
+        margin-top: 10px;
+    }
+    .menu-category li{
+        padding: 5px 0;
+        border-bottom: 1px solid #999;
+    }
+    .menu-category span,.menu-category li a {
         color: #333;
-        display: block;
-        margin-bottom: 5px;
     }
 
     .menu-category a {

@@ -56,9 +56,18 @@ window.onload=function(){
     // get element by id
     var menuBtn = document.getElementById("menu-btn");
     var menuContent = document.getElementById("menu-content");
+    var close=document.getElementById("close")
 
     // Bind click event to button
     menuBtn.onclick = function () {
+        // when its open,click will close; when its close, click will open
+        if (menuContent.style.display === "block") {
+            menuContent.style.display = "none"; 
+        } else {
+            menuContent.style.display = "block"; 
+        }
+    };
+    close.onclick = function () {
         // when its open,click will close; when its close, click will open
         if (menuContent.style.display === "block") {
             menuContent.style.display = "none"; 

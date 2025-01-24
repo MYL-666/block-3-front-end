@@ -46,7 +46,6 @@ header li a{
 /* #region search bar */
 .search-div{
     margin-top: 10px;
-    background-image: url(../img/);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -61,7 +60,7 @@ header li a{
     width: 10%;
     background-image: url(../img/search.png);
     background-color: #ffdfe5;
-    background-size: 70%;
+    background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
     border: 0;
@@ -248,6 +247,22 @@ main{
 }
 .block #add-cart:hover{
     box-shadow: 0 0 5px;
+}
+.block .sold-out{
+    width: 100%;
+    text-align: center;
+    background-color: #999;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 10;
+    transition: 0.1s ease-in-out;
+    color: #333;
+}
+.block .mian-pic:hover .sold-out{
+    transform: scale(1.2);
+    color: black;
 }
 /* #endregion body end */
 

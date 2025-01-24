@@ -1,3 +1,4 @@
+/* clear all margin and padding and reset the font style */
 *{
     font-family:  Luckiest Guy;
     margin: 0;
@@ -5,25 +6,31 @@
 }
 /* #region header-part of main page start */
 body {
+    /* make sure evry part connect to each other */
     display: flex;
     flex-direction: column; 
     margin: 0;
     overflow-x: hidden;
 }
 .content a {
+    /* more clear blue of <a> */
     color: #007acc;
 }
 header .row{
+    /* make usre the logo and header nav on the left and right */
     justify-content: space-evenly;
 }
 header{
+    /* header backgorund color */
     background-color: #ffc0cb;
 }
 header img{ 
+    /* change the size of logo */
     height: 100px;
     display: block;
 }
 header .top-right{
+    /* header nav layout */
     display: flex;
     justify-content: right;
     align-items: center;
@@ -32,19 +39,23 @@ header ul{
     display: flex;
 }
 header li a{    
+    /* gap between each element */
     margin-right: 10px;
 }
 .nav-pills .nav-link.active {
+    /* change the button color */
     background-color: #ffcb05; 
     color: black; 
 }
 .nav-pills .nav-link.active:hover{
+    /* add the change when hover */
     box-shadow: 0 0 10px;
 }
 /* #endregion header part end */
 
 /* #region search bar */
 .search-div{
+    /* search bar layout */
     margin-top: 10px;
     display: flex;
     align-items: center;
@@ -57,6 +68,7 @@ header li a{
     width: 85%;
 }
 .search-div .submit{
+    /* add a search picture instead of button */
     width: 10%;
     background-image: url(../img/search.png);
     background-color: #ffdfe5;
@@ -67,6 +79,7 @@ header li a{
     transition: 0.2s ease-in-out;
 }
 .search-div .submit:hover{
+    /* add interaction when hover */
     box-shadow: 0 0 10px;
     background-size: 80%;
 }
@@ -75,6 +88,7 @@ header li a{
 
 /* #region navigator */
 nav{
+    /* layout of main-nav */
     width: 100vw;
     background-color: #ffc0cb;
     align-items: center;
@@ -83,6 +97,7 @@ nav{
     position: relative;
 }
 nav .nav {
+    /* for the top part layout in nav */
     height: 10vh;
     padding: 0;
     justify-content: center;
@@ -95,6 +110,7 @@ nav .nav a{
     line-height: 4vh;
 }
 nav .nav:hover{
+    /* when hover show the blue bottom line */
     border-bottom: 3px solid #007acc;
 }
 nav .nav:hover a{
@@ -468,9 +484,9 @@ footer .icons:nth-child(3){
         text-decoration: underline;
     }
 
-    /* 过渡动画 */
+    /* Transition Animation */
     #menu-content {
-        transition: max-height 0.3s ease-in-out; /* 添加展开动画 */
+        transition: max-height 0.3s ease-in-out;
         overflow: hidden;
     }
 

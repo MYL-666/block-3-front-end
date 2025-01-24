@@ -2,6 +2,9 @@
 *{
     font-family: Luckiest Guy;
 }
+.content a {
+    color: #007acc;
+}
 /* #region heading part start */
 header{
 

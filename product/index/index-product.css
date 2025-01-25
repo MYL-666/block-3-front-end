@@ -303,9 +303,57 @@ main #add:hover{
     box-shadow: 0 0 8px;
     background-color: orange;
 }
-main .description{
+main .Introduction{
     margin-bottom: 20px;
 }
+
+/*#region  description part */
+main .more{
+    width: 100%;
+    padding: 20px;
+}
+.more .description, .more .details,.more .delivery,.rating{
+    align-items: center;
+    border-bottom: 1px solid #999;
+    padding-bottom: 20px;
+    margin: 10px;
+}
+#btn-description,#btn-detail,#btn-delivery,#btn-comment{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    background: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+#delivery li{
+    list-style: none;
+    margin: 10px;
+}
+.rating{
+    padding-top: 40px;
+}
+.rating .first{
+    border-bottom: 1px solid #999;
+}
+.big{
+    align-items: baseline;
+}
+.rating .big>h1{
+    font-size: 60px;
+}
+#comments{
+    border-top: 1px solid #999;
+    padding-top: 20px;
+}
+#comments .date{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* #endregion description part end */
 
 /* #region footer part start */
 footer{

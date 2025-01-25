@@ -1,4 +1,5 @@
 window.onload = function () {
+    // #region slideshow
     var index = 0; 
     var imgArr = document.querySelectorAll(".imgList li");
     var prevBtn = document.querySelector('.prev'); 
@@ -44,4 +45,62 @@ window.onload = function () {
         imgArr[index].style.zIndex = "1"; 
         allA[index].style.backgroundColor = "black"; 
     }
+    // #endregion slideshow end
+
+
+    //#region description and details and reviews;
+    var detailDescription=document.getElementById("detail-description");
+    var btnDescription=document.getElementById("btn-description");
+    var details=document.getElementById("details")
+    var btnDetail=document.getElementById("btn-detail")
+    var delivery=document.getElementById("delivery")
+    var btnDelivery=document.getElementById("btn-delivery")
+    var btnComment=document.getElementById("btn-comment")
+    var commentList=document.getElementById("comment-list")
+
+    show(detailDescription,btnDescription)
+    show(details,btnDetail);
+    show(delivery,btnDelivery)
+    show(commentList,btnComment)
+    // make a function to handle multiple usage
+    function show(name,btn){
+        name.style.display="none"
+        btn.onclick=function(){
+            if(name.style.display=="none"){
+                name.style.display="block";
+                btn.innerText="-";
+            }else{
+                name.style.display="none";
+                btn.innerText="+";
+            }
+        }
+    }
+    // #endregion description end
+
+     // #region slide bar for mobile device
+    // get element by id
+    var menuBtn = document.getElementById("menu-btn");
+    var menuContent = document.getElementById("menu-content");
+    var close=document.getElementById("close")
+
+    // Bind click event to button
+    menuBtn.onclick = function () {
+        // when its open,click will close; when its close, click will open
+        if (menuContent.style.display === "block") {
+            menuContent.style.display = "none"; 
+        } else {
+            menuContent.style.display = "block"; 
+        }
+    };
+    close.onclick = function () {
+        // when its open,click will close; when its close, click will open
+        if (menuContent.style.display === "block") {
+            menuContent.style.display = "none"; 
+        } else {
+            menuContent.style.display = "block"; 
+        }
+    };
+    // #endregion sildebar for mobile device
+
+    
 };

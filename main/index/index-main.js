@@ -100,13 +100,18 @@ window.onload=function(){
             alert(`${name} has been added to the cart!`);
         }
     }
+    // #endregion adding the product end
 
+
+    //#region going to detail product page
     var pikachu=document.getElementById("pikachu")
     pikachu.onclick=function(){
         window.location.href="../../product/index/index-product.html"
     }
+    // #endregion
 
-    // mobile slide bar
+
+    //#region mobile slide bar
     var open=document.querySelectorAll(".btn-open")
     var details=document.querySelectorAll(".menu-detail")
     for(let i=0;i<open.length;i++){
@@ -121,4 +126,5 @@ window.onload=function(){
             }
         }
     }
+    // #endregion
 }

@@ -260,6 +260,7 @@ main{
 }
 .block #add-cart{
     background-color: #ffcb05;
+    font-size: clamp(14px, 3vw, 16px);
 }
 .block #add-cart:hover{
     box-shadow: 0 0 5px;
@@ -372,6 +373,9 @@ footer .icons:nth-child(3){
 
    /* mian-body */
    main .items span{
+    font-size: 12px;
+   }
+   main h3{
     font-size: 12px;
    }
    /*hide PC silde bar */

@@ -188,8 +188,9 @@ main .product-detail{
     margin-bottom: 10px;
 }
 .left{
-    width: 50vw;
+    width: 45vw;
     height: 80vh;
+    margin-right: 5vw;
 }
 /* #region slideshow */
 .slideShow{
@@ -353,6 +354,18 @@ main .more{
     flex-direction: column;
     justify-content: center;
 }
+.write-comment{
+    display: flex;
+    align-items: end;
+}
+#new-comment{
+    height: 20vh;
+}
+#submit-comment{
+    background-color: #ffcb05;
+    height: 8vh;
+    width: 5rem;
+}
 /* #endregion description part end */
 
 /* #region footer part start */
@@ -484,6 +497,18 @@ footer .icons:nth-child(3){
    }
    .overall{
     display: none;
+   }
+   .write-comment{
+    flex-direction: column;
+    justify-content: center;
+   }
+   #new-comment{
+    width: 100%;
+   }
+   #submit-comment{
+    font-size: 12px;
+    width: 100%;
+    margin-top: 10px;
    }
    /*hide PC silde bar */
    #slidebar {

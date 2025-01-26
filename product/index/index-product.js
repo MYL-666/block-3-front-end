@@ -100,7 +100,7 @@ window.onload = function () {
     };
     // #endregion sildebar for mobile device
 
-    // add to cart
+    // #region add to cart
     var add=document.getElementById("add");
     var decrease=document.getElementById("decrease");
     var increase=document.getElementById("increase");
@@ -131,6 +131,7 @@ window.onload = function () {
         localStorage.setItem("cart", JSON.stringify(cart));
         alert(`${name} has been added to the cart!`);
     }
+    // #endregion add to cart
 
     // mobile sildebar
     var open=document.querySelectorAll(".btn-open")

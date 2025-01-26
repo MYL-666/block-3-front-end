@@ -105,4 +105,20 @@ window.onload=function(){
     pikachu.onclick=function(){
         window.location.href="../../product/index/index-product.html"
     }
+
+    // mobile slide bar
+    var open=document.querySelectorAll(".btn-open")
+    var details=document.querySelectorAll(".menu-detail")
+    for(let i=0;i<open.length;i++){
+        details[i].style.display = "none";
+        open[i].onclick=function(){
+            if (details[i].style.display === "block") {
+                details[i].style.display = "none"; 
+                open[i].style.transform="rotate(0deg)"
+            } else {
+                details[i].style.display = "block"; 
+                open[i].style.transform="rotate(90deg)"
+            }
+        }
+    }
 }

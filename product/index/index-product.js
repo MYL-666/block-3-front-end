@@ -131,4 +131,20 @@ window.onload = function () {
         localStorage.setItem("cart", JSON.stringify(cart));
         alert(`${name} has been added to the cart!`);
     }
+
+    // mobile sildebar
+    var open=document.querySelectorAll(".btn-open")
+    var details=document.querySelectorAll(".menu-detail")
+    for(let i=0;i<open.length;i++){
+        details[i].style.display = "none";
+        open[i].onclick=function(){
+            if (details[i].style.display === "block") {
+                details[i].style.display = "none"; 
+                open[i].style.transform="rotate(0deg)"
+            } else {
+                details[i].style.display = "block"; 
+                open[i].style.transform="rotate(90deg)"
+            }
+        }
+    }
 };

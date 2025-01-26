@@ -476,17 +476,13 @@ footer .icons:nth-child(3){
     align-items: center;
    }
    .big{
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
    }
-   .big>span{
-    display: none;
+   .rating .big>h1{
+    font-size: 40px;
    }
    .overall{
-    font-size: 12px;
-    align-items: center;
-   }
-   .overall>span{
     display: none;
    }
    /*hide PC silde bar */
@@ -550,30 +546,6 @@ footer .icons:nth-child(3){
         padding: 20px 0;
         text-align: left;
         border-bottom: 1px solid #999 ;
-    }
-    /* mobile nav-pet */
-    .menu-category .detail1,.detail2,.detail3{
-        display: none;
-    }
-    #menu-content .nav-pet:hover .detail1{
-        display: block;
-    }
-    #menu-content .nav-pet:hover #symbol1{
-        transform: rotate(90deg);
-    }
-    /* mobile nav-product */
-    #menu-content .nav-product:hover .detail2{
-        display: block;
-    }
-    #menu-content .nav-product:hover #symbol2{
-        transform: rotate(90deg);
-    }
-    /* mobile nav-card */
-    #menu-content .nav-card:hover .detail3{
-        display: block;
-    }
-    #menu-content .nav-card:hover #symbol3{
-        transform: rotate(90deg);
     }
 
 

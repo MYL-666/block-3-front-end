@@ -141,7 +141,7 @@ main .logo img{
     margin-right: 10px;
     cursor: pointer;
     transition: 0.1 linear;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .main-content .other-way .ways>div:nth-child(2){
     background-image: url(../img/facebook.svg);

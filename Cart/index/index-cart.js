@@ -7,9 +7,9 @@ window.onload = function () {
     var cartItemsContainer = document.getElementById("cart-items");
     var PI=document.getElementById("PI")
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || []; // 获取购物车数据
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    // 根据购物车状态切换按钮和提示
+ 
     if (cart.length === 0) {
         btn02.style.display = "none";
         btn03.style.display = "inline-block";
@@ -22,10 +22,10 @@ window.onload = function () {
         PI.style.justifyContent="left"
     }
 
-    // 渲染购物车
+
     function renderCart() {
-        cartItemsContainer.innerHTML = ""; // 清空容器内容
-        let total = 0.00; // 初始化总价
+        cartItemsContainer.innerHTML = ""; 
+        let total = 0.00; 
         cart.forEach((item, index) => {
             const itemElement = document.createElement("div");
             itemElement.classList.add("cart-item");
@@ -39,20 +39,21 @@ window.onload = function () {
             </div>
             `;
             cartItemsContainer.appendChild(itemElement);
-            total += item.price * item.quantity; // 计算总价
+            total += item.price * item.quantity; 
+            
         });
-        totalPriceElement.textContent = `${total}`; // 更新总价显示
+        totalPriceElement.textContent = `${total.toFixed(2)}`; //update
     }
 
-    // 删除商品
+    // delete
     cartItemsContainer.addEventListener("click", (e) => {
         if (e.target.classList.contains("remove-btn")) {
             const index = e.target.dataset.index;
-            cart.splice(index, 1); // 从购物车中移除商品
-            localStorage.setItem("cart", JSON.stringify(cart)); // 更新 localStorage
-            renderCart(); // 重新渲染购物车
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart)); // update localStorage
+            renderCart(); 
         }
     });
 
-    renderCart(); // 初次渲染
+    renderCart(); 
 };

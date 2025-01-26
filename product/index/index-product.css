@@ -10,7 +10,7 @@ body {
     display: flex;
     flex-direction: column; 
     margin: 0;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
 }
 .content a {
     /* more clear blue of <a> */
@@ -182,7 +182,7 @@ main .sequence a:hover{
 }
 main .product-detail{
     width: 100%;
-    height: 90vh;
+    height: auto;
     display: flex;
     border-bottom: 1px solid #999;
     margin-bottom: 10px;
@@ -283,19 +283,19 @@ main .quantity-select{
     margin-top:30px ;
 }
 main #decrease,#increase{
-    width: 5vw;
+    width:5rem;
     height: 3rem;
 }
 main #quantity{
     height: 3rem;
-    width: 8vw;
+    width: 8rem;
     box-sizing: border-box;
     border: 1px solid #999;
     margin: 0 5px;
 }
 main #add{
     background-color: #ffcb05;
-    width: 60%;
+    width: 80%;
     height: 4rem;
     transition: 0.2s ease-in-out;
 }
@@ -312,7 +312,7 @@ main .more{
     width: 100%;
     padding: 20px;
 }
-.more .description, .more .details,.more .delivery,.rating{
+.more .d1{
     align-items: center;
     border-bottom: 1px solid #999;
     padding-bottom: 20px;
@@ -408,6 +408,11 @@ footer .icons:nth-child(3){
 }
 
 /* for mobile device */
+@media (max-width:500px){
+    .left{
+        height: 50vh;
+    }
+}
 @media (max-width:768px){
     *{
         margin: 0;
@@ -443,8 +448,46 @@ footer .icons:nth-child(3){
    }
 
    /* mian-body */
+   main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   }
+   main .product-detail{
+    display: flex;
+    flex-direction: column;
+   }
    main .items span{
     font-size: 12px;
+   }
+   main .right{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+   }
+   .add{
+    width: 80vw;
+   }
+   main .left,main .right{
+    width: 100%;
+   }
+   .d1{
+    display: flex;
+    align-items: center;
+   }
+   .big{
+    flex-direction: column;
+    justify-content: center;
+   }
+   .big>span{
+    display: none;
+   }
+   .overall{
+    font-size: 12px;
+    align-items: center;
+   }
+   .overall>span{
+    display: none;
    }
    /*hide PC silde bar */
    #slidebar {

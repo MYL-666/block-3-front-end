@@ -6,13 +6,11 @@ window.onload = function () {
     var nextBtn = document.querySelector('.next'); 
     var allA = document.querySelectorAll(".nav-dots a"); 
 
-
     function init() {
         index = 0; 
         setA(); 
     }
     init();
-
  
     prevBtn.onclick = function () {
         index--; 
@@ -102,5 +100,35 @@ window.onload = function () {
     };
     // #endregion sildebar for mobile device
 
-    
+    // add to cart
+    var add=document.getElementById("add");
+    var decrease=document.getElementById("decrease");
+    var increase=document.getElementById("increase");
+    var quantity=document.getElementById("quantity");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    var j=quantity.value
+    decrease.onclick=function(){
+        if(j!=1){
+            j--;
+            quantity.value=j;
+        }else{
+            j=1;
+        }
+    }
+
+    increase.onclick=function(){
+        j++;
+        quantity.value=j;
+    }
+
+    add.onclick=function(){
+        var name=this.dataset.name;
+        var price=this.dataset.price;
+        var img=this.dataset.img;
+        cart.push({ name, price, img, quantity: quantity.value });
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert(`${name} has been added to the cart!`);
+    }
 };

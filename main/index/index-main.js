@@ -100,4 +100,9 @@ window.onload=function(){
             alert(`${name} has been added to the cart!`);
         }
     }
+
+    var pikachu=document.getElementById("pikachu")
+    pikachu.onclick=function(){
+        window.location.href="../../product/index/index-product.html"
+    }
 }

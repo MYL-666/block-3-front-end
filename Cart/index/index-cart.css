@@ -129,6 +129,11 @@ main .cart-item {
     margin-bottom: 10px;
     overflow: auto;
 }
+.cart-item img {
+    max-width: 60px;
+    height: auto;
+    border-radius: 5px;
+}
 main .added{
     border-radius: 8px;
     padding: 5px;

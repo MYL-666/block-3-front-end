@@ -9,7 +9,7 @@ window.onload = function () {
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
- 
+    // when cart is empty, another page be like
     if (cart.length === 0) {
         btn02.style.display = "none";
         btn03.style.display = "inline-block";
@@ -22,13 +22,14 @@ window.onload = function () {
         PI.style.justifyContent="left"
     }
 
-
+    // add the product to cart
     function renderCart() {
         cartItemsContainer.innerHTML = ""; 
         let total = 0.00; 
         cart.forEach((item, index) => {
             const itemElement = document.createElement("div");
             itemElement.classList.add("cart-item");
+            // add the html of the product
             itemElement.innerHTML = `
             <div class="added">
                 <img src="${item.img}" alt="${item.name}" style="width:50px;">
@@ -38,6 +39,7 @@ window.onload = function () {
                 <button class="remove-btn" data-index="${index}">Remove</button>
             </div>
             `;
+            // calculate the total cost
             cartItemsContainer.appendChild(itemElement);
             total += item.price * item.quantity; 
             
@@ -45,7 +47,7 @@ window.onload = function () {
         totalPriceElement.textContent = `${total.toFixed(2)}`; //update
     }
 
-    // delete
+    // remove the product
     cartItemsContainer.addEventListener("click", (e) => {
         if (e.target.classList.contains("remove-btn")) {
             const index = e.target.dataset.index;

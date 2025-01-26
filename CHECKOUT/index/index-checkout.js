@@ -3,7 +3,7 @@ window.onload=function(){
     var totalPrice = document.getElementById("total-amount");
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-
+    // double check of cart
     function renderCart() {
         cartItemsContainer.innerHTML = ""; 
         let total = 0.00; 
@@ -25,4 +25,10 @@ window.onload=function(){
         totalPrice.textContent = `${total.toFixed(2)}💰`;
     }
     renderCart()
+
+    // submit the order
+    document.querySelector(".submit-payment").addEventListener("click", function (i) {
+        i.preventDefault();
+        alert("oreder submitted!");
+    });
 }

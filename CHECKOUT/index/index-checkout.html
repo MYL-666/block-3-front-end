@@ -39,50 +39,58 @@
     </header>
 
 
-    <!-- main body -->
+<form action="" role="form">
+        <!-- main body -->
      <main class="container">
 
         <!-- left form -->
-         <div class="row left-part col-8">
+        <section class="row left-part col-8">
             <div class="col-12 text-left">
                 <h2>Bill Details</h2>
             </div>
-            <form class="col-6 left-form form-horizontal" role="form">
+            <!-- left section -->
+            <section class="col-6 left-form form-horizontal" role="form">
+                <!-- name -->
                <div class="form-group">
-                <label for="user-name" class="control-label h4">User name*:</label>
-                <div class="col-12">
-                    <input type="text" placeholder="User name" id="user-name" required class="form-control">
-                </div>
+                    <label for="user-name" class="control-label h4">User name*:</label>
+                    <div class="col-12">
+                        <input type="text" placeholder="User name" id="user-name" required class="form-control">
+                    </div>
                </div>
 
+               <!-- region -->
                <div class="form-group">
-                <label for="region" class="control-label h4">region*:</label>
-                <div class="col-12">
-                    <select placeholder="User name" id="region" required class="form-control" name="region">
-                        <option>UK</option>
-                        <option>Europe</option>
-                        <option>China</option>
-                        <option>Japan</option>
-                    </select>
+                    <label for="region" class="control-label h4">region*:</label>
+                    <div class="col-12">
+                        <select placeholder="User name" id="region" required class="form-control" name="region">
+                            <option>UK</option>
+                            <option>Europe</option>
+                            <option>China</option>
+                            <option>Japan</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
+                <!-- city -->
                 <div class="form-group">
                     <label for="city" class="control-label h4">City*:</label>
                     <div class="col-12">
                         <input type="text" placeholder="Enter the city to delivery" id="city" required class="form-control">
                     </div>
                    </div>               
-
+                
+                <!-- address -->
                <div class="form-group">
-                <label for="street" class="control-label h4">Street*:</label>
-                <div class="col-12">
-                    <input type="text" placeholder="Enter the street" id="street" required class="form-control">
-                </div>
+                    <label for="street" class="control-label h4">Street*:</label>
+                    <div class="col-12">
+                        <input type="text" placeholder="Enter the street" id="street" required class="form-control">
+                    </div>
                </div>
+            </section>
 
-            </form>
-            <form class="col-6 right-form form-horizontal">
+            <!-- right section -->
+            <section class="col-6 right-form form-horizontal">
+                <!-- last name -->
                 <div class="form-group">
                     <label for="lastName" class="control-label h4">Last name*:</label>
                     <div class="col-12">
@@ -90,6 +98,7 @@
                     </div>
                 </div>
 
+                <!-- first name -->
                 <div class="form-group">
                     <label for="firstName" class="control-label h4">first name*:</label>
                     <div class="col-12">
@@ -97,44 +106,48 @@
                     </div>
                 </div>
 
+                <!-- post-code -->
                 <div class="form-group">
                     <label for="postCode" class="control-label h4">Post code*:</label>
                     <div class="col-12">
                         <input type="text" placeholder="Enter Postcode" id="postCode" required class="form-control">
                     </div>
                 </div>
-            </form>
+            </section>
 
-            <div class="col-6 form-horizontal bottom">
-                <div class="form-group">
-                    <label for="phonenumber" class="control-label h4">Phone number*:</label>
-                    <div class="col-12">
-                        <input type="text" placeholder="+44 XXXXX" id="phonenumber" required class="form-control">
+            <!-- bottom section -->
+            <section>
+                <div class="col-6 form-horizontal bottom">
+                    <div class="form-group">
+                        <label for="phonenumber" class="control-label h4">Phone number*:</label>
+                        <div class="col-12">
+                            <input type="text" placeholder="+44 XXXXX" id="phonenumber" required class="form-control">
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-6 form-horizontal bottom">
-                <div class="form-group">
-                    <label for="email" class="control-label h4">Email*:</label>
-                    <div class="col-12">
-                        <input type="email" placeholder="youreamil@gmail.com" id="email" required class="form-control">
+    
+                <div class="col-6 form-horizontal bottom">
+                    <div class="form-group">
+                        <label for="email" class="control-label h4">Email*:</label>
+                        <div class="col-12">
+                            <input type="email" placeholder="youreamil@gmail.com" id="email" required class="form-control">
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-12 form-horizontal bottom">
-                <div class="form-group">
-                    <label for="email" class="control-label h4">Additional Notes:</label>
-                    <div class="col-12">
-                        <textarea name="extra" id="extra" class="form-control"></textarea>
+    
+                <div class="col-12 form-horizontal bottom">
+                    <div class="form-group">
+                        <label for="email" class="control-label h4">Additional Notes:</label>
+                        <div class="col-12">
+                            <textarea name="extra" id="extra" class="form-control"></textarea>
+                        </div>
                     </div>
                 </div>
-            </div>
-         </div>
+            </section>
+        </section>
 
          <!-- right part -->
-          <div class="right-part col-4">
+        <section class="right-part col-4">
             <!-- bill summary -->
             <div class="top">
                 <h2 class="text-center">Bill Summary</h2>
@@ -156,9 +169,9 @@
             </div>
 
             <!-- Payment -->
-             <div class="right-bottom">
+             <section class="right-bottom">
                 <h2 class="text-center">Payment</h2>
-                <form class="ways">
+                <section class="ways">
                     <div class="bank-transfer">
                         <input type="radio" name="choice" id="bank-transfer">
                         <label for="bank-transfer">bank transfer</label>
@@ -178,12 +191,13 @@
                         <p class="text-center">VIP users can enjoy cash on delivery service</p>
                     </div>
                         <div class="pay">
-                            <input type="button" value="Submit Order" class="form-control submit-payment">
+                            <input type="button" id="submit-order" value="Submit Order" class="form-control submit-payment">
                         </div>
-                </form>
-             </div>
-        </div>
-     </main>
+                </section>
+             </section>
+        </section>
+    </main>
+</form>
 
 
 

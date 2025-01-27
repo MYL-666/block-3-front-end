@@ -5,6 +5,9 @@ window.onload=function(){
     var btn03 = document.getElementById("btn03");
     var instruction = document.getElementById("instructions");
     var show =document.getElementById("show");
+    var btn04=document.getElementById("btn04")
+    var pdw=document.getElementById("pdw");
+    
     // banding the onclick event to the "instruction"
     show.onclick=function(){
         instruction.style.display="block"
@@ -24,5 +27,16 @@ window.onload=function(){
     btn02.addEventListener('change', function(){
         btn.disabled = !btn02.checked;
       });
+
+    // password show and hide
+    btn04.onclick=function(){
+        if(pdw.type==="password"){
+            pdw.type="text";
+            btn04.src="./img/yanjing_xianshi.svg"
+        }else{
+            pdw.type="password";
+            btn04.src="./img/yanjing_yincang.svg"
+        };
+    }
       
 }

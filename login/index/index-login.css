@@ -105,7 +105,7 @@ main .logo img{
 /* hover effect for login submit */
 .main-content .logging:hover{
     box-shadow: 0 0 5px;
-    transform: translate(1.1);
+    transform: translate(1.1px);
 }
 
 .main-content .login .checking {
@@ -122,6 +122,19 @@ main .logo img{
 .main-content .login .checking a:hover{
     text-shadow: 0 0 10px;
 }
+.login .pdw{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif
+}
+.pdw #btn04{
+    position: absolute;
+    bottom: 25%;
+    right: 3vw;
+    transform: translateY(35%);
+    height: 2rem;
+    cursor: pointer;
+}
+
 .main-content .other-way .exist-account{
     text-align: center;
     padding-top: 10px;
@@ -140,7 +153,7 @@ main .logo img{
     background-repeat: no-repeat;
     margin-right: 10px;
     cursor: pointer;
-    transition: 0.1 linear;
+    transition: 0.1s linear;
     margin-bottom: 40px;
 }
 .main-content .other-way .ways>div:nth-child(2){
@@ -158,6 +171,7 @@ main .logo img{
 }
 .main-content .other-way .ways>div:hover{
     box-shadow: 0 0 10px;
+    transform: scale(1.1);
 }
 
 
@@ -177,7 +191,68 @@ main .logo img{
     left: 50%;
     transform: translate(-50%,-50%);
     border: 1px solid black;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    scrollbar-width: thin;
+}
+.instructions h2, .reading-instructions h3 {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.instructions h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f7c6c7; /* 添加下划线 */
+    padding-bottom: 10px;
+}
+
+.instructions h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.instructions ol, .reading-instructions ul {
+    padding-left: 40px;
+    line-height: 1.6;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
+
+.instructions p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #444;
+    font-size: 16px;
+}
+
+#btn03 {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background-color: #ffc107; 
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+}
+
+#btn03:hover {
+    background-color: #e0a800; 
+    transform: scale(1.02); 
 }
 .instructions h2, .instructions p, .instructions li, .instructions h3{
     font-family: Arial, Helvetica, sans-serif

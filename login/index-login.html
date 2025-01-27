@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="./index/bootstrap.min.css">
     <!-- import the CSS -->
     <link rel="stylesheet" href="./index/index-login.css">
+    <!-- import JS -->
+    <script src="./index/index-login.js"></script>
+    <script src="./index/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -25,8 +28,8 @@
         <!-- top right part of header, need to be clicked -->
         <nav class="top-right col-md-6 ">
             <ul class="list-inline">
-                <li class="login-nav list-inline-item"><a class="h3" href="#">contact us</a></li>
-                <li class="login-nav list-inline-item"><a class="h3" href="#">help</a></li>
+                <li class="login-nav list-inline-item"><a class="h3" href="javascript:;">contact us</a></li>
+                <li class="login-nav list-inline-item"><a class="h3" href="javascript:;">help</a></li>
             </ul>
         </nav>
    </header>
@@ -40,20 +43,21 @@
     <!-- the main-body -->
     <div class="main-content container">
         <div class="login text-center">
-            <form action="../main/index/index-main.html" class="form-horizontal" role="form">
+            <form action="../main/index/index-main.html" class="form-horizontal">
                 <div class="form-group">
                     <!-- must login with email format -->
                     <label for="email" class="control-label col-10 h2 login-text">Acount login:</label>
-                    <input id="email" type="email" class="form-control" placeholder="Enter your email: eample@example.com" required>
+                    <input id="email" type="email" class="form-control" placeholder="Enter your email:" style="font-family: Arial, Helvetica, sans-serif" required>
                 </div>
                 <!--password required  -->
-                <div class="form-group">
+                <div class="form-group pdw">
                     <label for="pdw" class="control-label"></label>
-                    <input id="pdw" type="password" class="form-control" placeholder="password with at least 8 letters" pattern="^(?=.*[A-Z]).{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter" required>
+                    <input id="pdw" type="password" class="form-control" placeholder="Password:" pattern="^(?=.*[A-Z]).{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter" required>
+                    <img id="btn04" src="./img/yanjing_yincang.svg" alt="">
                 </div>
                 <!-- if u forget ur password u can press -->
                 <div class="forgortten col-12 ">
-                    <a href="#">Forgort your password?</a>
+                    <a href="javascript:;">Forgort your password?</a>
                 </div>
                 <!-- login to the main page -->
                 <div class="logging form-group">
@@ -64,7 +68,7 @@
         <!-- make sure the text is in the center for all-size screen -->
         <div class="checking col-lg-8 offset-lg-4 col-md-9 offset-md-3 col-sm-10 offset-sm-2">
             <input type="checkbox" class="agree" id="btn02" name="agree" disabled="disabled" required>
-            <label for="agree"><span>I have read and agree to the</span> <a id="show" href="#">instructions</a></label>
+            <label for="btn02"><span>I have read and agree to the</span> <a id="show" href="javascript:;">instructions</a></label>
         </div>
         <!-- choose login with other ways -->
         <div class="other-way">
@@ -103,7 +107,4 @@
 </div>
     
 </body>
-      <!-- import JS -->
-      <script src="./index/index-login.js"></script>
-      <script src="./index/bootstrap.min.js"></script>
 </html>

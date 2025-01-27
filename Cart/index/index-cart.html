@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
+    <!-- import font style -->
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./index-cart.css">
      <!--import the font style  -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <!-- import js -->
      <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+     <script src="./index-cart.js"></script>
 </head>
 <body>
     <header>
@@ -20,9 +23,9 @@
             </div>
             <!-- search bar -->
             <div class="search-div col-lg-5 col-md-4 offset-md-1">
-                <form action="" class="form-horizontal row" role="form">
+                <form class="form-horizontal row">
                     <input type="text" class="search form-control" placeholder="Search the product" id="searching">
-                    <input type="button" class="submit form-control" id="btn01">
+                    <button type="button" class="submit form-control" id="btn01"></button>
                 </form>
               </div>
             <!-- navigator on header -->
@@ -45,10 +48,10 @@
          <div class="products-input" id="PI">
             <div id="cart-items"></div>
             <p id="hint">Your shopping cart is empty. If you see something you would like to add to your shopping cart when shopping, click Add to Cart.</p>
-            <form class="payment" action="../../CHECKOUT/index/index-checkout.html" role="form">
+            <form class="payment" action="../../CHECKOUT/index/index-checkout.html">
                 Total:<span id="total-amount">0.00</span>💰
-                <input type="submit" value="check out" class="form-control" class="btn" id="btn02">
-                <input type="submit" value="back to product" class="form-control" class="btn" id="btn03">
+                <input type="submit" value="check out" class="form-control btn" id="btn02">
+                <input type="submit" value="back to product" class="form-control btn" id="btn03">
             </form>
          </div>
      </main>
@@ -81,5 +84,4 @@
      </footer>
 
 </body>
-<script src="./index-cart.js"></script>
 </html>

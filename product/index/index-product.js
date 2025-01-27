@@ -106,6 +106,8 @@ window.onload = function () {
     var increase=document.getElementById("increase");
     var quantity=document.getElementById("quantity");
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    var successModal = new bootstrap.Modal(document.getElementById("successModal"));
+    var modalMessage = document.getElementById("modalMessage");
 
     var j=quantity.value
     decrease.onclick=function(){
@@ -129,7 +131,8 @@ window.onload = function () {
         cart.push({ name, price, img, quantity: quantity.value });
 
         localStorage.setItem("cart", JSON.stringify(cart));
-        alert(`${name} has been added to the cart!`);
+        modalMessage.textContent = `${name} has been successfully added to the cart!`;
+        successModal.show();
     }
     // #endregion add to cart
 

@@ -341,18 +341,30 @@ main .more{
 .big{
     align-items: baseline;
 }
-.rating .big>h1{
+.rating .big>.h1{
     font-size: 60px;
 }
-#comments{
+.comments{
     border-top: 1px solid #999;
     padding-top: 20px;
 }
-#comments .date{
+.comments .date{
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+/* progress reviews */
+.overall li{
+    align-items: center;
+    justify-content: space-evenly;
+}
+.overall .progress{
+    padding: 0;
+}
+.progress-bar{
+    background-color: #ffcb05;
+    color: black;
 }
 .write-comment{
     display: flex;

@@ -40,7 +40,7 @@
     <!-- the main-body -->
     <div class="main-content container">
         <div class="login text-center">
-            <form action="../main/index/index-main.html" class="form-horizontal" role="form">
+            <form action="../main/index/index-main.html" class="form-horizontal">
                 <div class="form-group">
                     <!-- must login with email format -->
                     <label for="email" class="control-label col-10 h2 login-text">Acount login:</label>
@@ -49,7 +49,7 @@
                 <!--password required  -->
                 <div class="form-group">
                     <label for="pdw" class="control-label"></label>
-                    <input id="pdw" type="password" class="form-control" placeholder="password with at least 8 letters" min="8" required pattern="">
+                    <input id="pdw" type="password" class="form-control" placeholder="password with at least 8 letters" pattern="^(?=.*[A-Z]).{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter" required pattern="">
                 </div>
                 <!-- if u forget ur password u can press -->
                 <div class="forgortten col-12 ">
@@ -64,7 +64,7 @@
         <!-- make sure the text is in the center for all-size screen -->
         <div class="checking col-lg-8 offset-lg-4 col-md-9 offset-md-3 col-sm-10 offset-sm-2">
             <input type="checkbox" class="agree" id="btn02" name="agree" disabled="disabled" required>
-            <label for="agree"><span>I have read and agree to the</span> <a id="show" href="#">instructions</a></label>
+            <label for="btn02"><span>I have read and agree to the</span> <a id="show" href="#">instructions</a></label>
         </div>
         <!-- choose login with other ways -->
         <div class="other-way">

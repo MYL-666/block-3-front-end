@@ -71,7 +71,7 @@ header li a{
     /* add a search picture instead of button */
     width: 10%;
     background-image: url(../img/search.png);
-    background-color: #ffdfe5;
+    background-color: #ffc0cb;
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;

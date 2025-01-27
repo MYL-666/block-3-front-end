@@ -62,7 +62,7 @@ header li a{
 .search-div .submit{
     width: 10%;
     background-image: url(../img/search.png);
-    background-color: #ffdfe5;
+    background-color: #ffc0cb;
     background-size: 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -161,7 +161,7 @@ main{
 }
 .right-bottom .submit-payment{
     background-color: #ffcb05;
-    width: 70;
+
 }
 .right-bottom .submit-payment:hover{
     box-shadow: 0 0 8px;

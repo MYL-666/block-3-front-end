@@ -10,6 +10,9 @@
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+     <!-- import js -->
+     <script src="./index-checkout.js"></script>
+     <script src="./bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <!-- header part -->
@@ -21,9 +24,9 @@
             </div>
             <!-- search bar -->
             <div class="search-div col-lg-5 col-md-4 offset-md-1">
-                <form action="" class="form-horizontal row" role="form">
+                <form class="form-horizontal row">
                     <input type="text" class="search form-control" placeholder="Search the product" id="searching">
-                    <input type="button" class="submit form-control" id="btn01">
+                    <button type="button" class="submit form-control" id="btn01"></button>
                 </form>
               </div>
             <!-- navigator on header -->
@@ -39,17 +42,17 @@
     </header>
 
 
-<form action="" role="form">
+    <form>
         <!-- main body -->
      <main class="container">
 
         <!-- left form -->
-        <section class="row left-part col-8">
+        <div class="row left-part col-8">
             <div class="col-12 text-left">
                 <h2>Bill Details</h2>
             </div>
             <!-- left section -->
-            <section class="col-6 left-form form-horizontal" role="form">
+            <div class="col-6 left-form form-horizontal" role="form">
                 <!-- name -->
                <div class="form-group">
                     <label for="user-name" class="control-label h4">User name*:</label>
@@ -86,10 +89,10 @@
                         <input type="text" placeholder="Enter the street" id="street" required class="form-control">
                     </div>
                </div>
-            </section>
+            </div>
 
             <!-- right section -->
-            <section class="col-6 right-form form-horizontal">
+            <div class="col-6 right-form form-horizontal">
                 <!-- last name -->
                 <div class="form-group">
                     <label for="lastName" class="control-label h4">Last name*:</label>
@@ -113,10 +116,10 @@
                         <input type="text" placeholder="Enter Postcode" id="postCode" required class="form-control">
                     </div>
                 </div>
-            </section>
+            </div>
 
             <!-- bottom section -->
-            <section>
+            <div>
                 <div class="col-6 form-horizontal bottom">
                     <div class="form-group">
                         <label for="phonenumber" class="control-label h4">Phone number*:</label>
@@ -143,11 +146,11 @@
                         </div>
                     </div>
                 </div>
-            </section>
-        </section>
+            </div>
+        </div>
 
          <!-- right part -->
-        <section class="right-part col-4">
+        <div class="right-part col-4">
             <!-- bill summary -->
             <div class="top">
                 <h2 class="text-center">Bill Summary</h2>
@@ -169,9 +172,9 @@
             </div>
 
             <!-- Payment -->
-             <section class="right-bottom">
+             <div class="right-bottom">
                 <h2 class="text-center">Payment</h2>
-                <section class="ways">
+                <div class="ways">
                     <div class="bank-transfer">
                         <input type="radio" name="choice" id="bank-transfer">
                         <label for="bank-transfer">bank transfer</label>
@@ -180,7 +183,7 @@
                         <input type="radio" name="choice" id="cards">
                         <label for="cards">debit cards</label>
                         <div class="imglist">
-                            <img src="../img/Visa VISA.png" alt="">
+                            <img src="../img/visaPay.png" alt="">
                             <img src="../img/mastercard.png" alt="">
                             <img src="../img/yinlian.png" alt="">
                         </div>
@@ -193,11 +196,11 @@
                         <div class="pay">
                             <input type="button" id="submit-order" value="Submit Order" class="form-control submit-payment">
                         </div>
-                </section>
-             </section>
-        </section>
-    </main>
-</form>
+                </div>
+             </div>
+        </div>
+     </main>
+    </form>
 
 
 
@@ -229,5 +232,4 @@
          </footer>
     
 </body>
-<script src="../index/index-checkout.js"></script>
 </html>

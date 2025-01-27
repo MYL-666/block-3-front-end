@@ -80,8 +80,11 @@ window.onload=function(){
 
 
     // #region adding the products to cart
-    var cartBtn=document.querySelectorAll("#add-cart");
+    var cartBtn=document.querySelectorAll(".add-cart");
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    // success adding to cart
+    var successModal = new bootstrap.Modal(document.getElementById("successModal"));
+    var modalMessage = document.getElementById("modalMessage");
 
     for(var i=0;i<cartBtn.length;i++){
         cartBtn[i].onclick=function(){
@@ -97,7 +100,8 @@ window.onload=function(){
                 cart.push({ name, price, img, quantity: 1 });
             }
             localStorage.setItem("cart", JSON.stringify(cart));
-            alert(`${name} has been added to the cart!`);
+            modalMessage.textContent = `${name} has been successfully added to the cart!`;
+            successModal.show();
         }
     }
     // #endregion adding the product end

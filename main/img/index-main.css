@@ -258,11 +258,11 @@ main{
     border-radius: 10px;
     margin-bottom: 10px;
 }
-.block #add-cart{
+.block .add-cart{
     background-color: #ffcb05;
     font-size: clamp(14px, 3vw, 16px);
 }
-.block #add-cart:hover{
+.block .add-cart:hover{
     box-shadow: 0 0 5px;
 }
 .block .sold-out{

@@ -29,6 +29,7 @@ window.onload=function(){
       });
       
         // password show and hide
+    btn04.src="./img/yanjing_yincang.svg"
     btn04.onclick=function(){
         if(pdw.type==="password"){
             pdw.type="text";

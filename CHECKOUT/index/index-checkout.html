@@ -33,9 +33,12 @@
             <div class="top-right col-lg-5 col-md-6">
 
                 <ul class="nav nav-pills">
-                    <li class="nav-item "><a class="nav-link active" href="../../login/index-login.html">login</a></li>
-                    <li class="nav-item "><a class="nav-link active" href="../../Cart/index/index-cart.html">Cart</a></li>
-                    <li class="nav-item "><a class="nav-link active" href="../../main/index/index-main.html">Home</a></li>
+                    <li class="nav-item "><a class="nav-link active" href="../../login/index-login.html"></a></li>
+                    <li class="nav-item "><a class="nav-link active" href="../../main/index/index-main.html"></a></li>
+                    <li class="nav-item cart1">
+                        <div id="cart-num"></div>
+                        <a class="nav-link active" href="../../Cart/index/index-cart.html"></a>
+                    </li>
                 </ul> 
             </div>
         </div>
@@ -195,7 +198,7 @@
                         <p class="text-center">VIP users can enjoy cash on delivery service</p>
                     </div>
                         <div class="pay">
-                            <input type="button" id="submit-order" value="Submit Order" class="form-control submit-payment">
+                            <input type="button" id="submit-order" value="Submit Order" class="form-control submit-payment" data-bs-toggle="modal" data-bs-target="#payment-success">
                         </div>
                 </div>
              </div>
@@ -231,6 +234,23 @@
              <p>&copy; 2025 PokéShop. All rights reserved. UA92.YuLun_Miao</p>
              <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
          </footer>
+
+         <div id="payment-success" class="modal fade" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="payment-success modal-content">
+                    <svg width="200" height="200">
+                        <circle id="circle" class="circle" fill="none" stroke="#68e534" stroke-width="10" cx="100" cy="100" r="95" transform="rotate(-90 100 100)"></circle>
+                        <polyline id="tick" fill="none" stroke="#68e534" stroke-width="12" points="60,110 90,140 140,60" stroke-linecap="round" stroke-linejoin="round" class="tick"></polyline>
+                     </svg>   
+                     <h1 class="payment-text">payment successed</h1> 
+                     <h3 class="payment-text">Your oreder will be delivered</h3>
+                     <h3 class="payment-text">in 5-7 days</h3>
+                 </div>
+                 <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" style="margin-bottom: 10px;">close</button>
+                 </div>
+            </div>
+         </div>
     
 </body>
 </html>

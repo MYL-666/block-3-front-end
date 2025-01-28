@@ -108,7 +108,20 @@ window.onload = function () {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     var successModal = new bootstrap.Modal(document.getElementById("successModal"));
     var modalMessage = document.getElementById("modalMessage");
+    var cartNum=document.getElementById("cart-num");
+    var num=0
+    //  if there already had products in cart
+    for(var i=0;i<cart.length;i++){
+        num+= parseInt(cart[i].quantity);
+     }
+     if(num==0){
+         cartNum.style.display="none";
+     }else{
+         cartNum.innerText=num;
+         cartNum.style.display="block";
+     }
 
+    // change the quantity of the product to add
     var j=quantity.value
     decrease.onclick=function(){
         if(j!=1){
@@ -120,16 +133,20 @@ window.onload = function () {
     }
 
     increase.onclick=function(){
-        j++;
+        j++;;
         quantity.value=j;
     }
 
+    // add the pikachu to cart with specific quantity
     add.onclick=function(){
         var name=this.dataset.name;
         var price=this.dataset.price;
         var img=this.dataset.img;
         cart.push({ name, price, img, quantity: quantity.value });
 
+        num+=parseInt(j);
+        cartNum.innerText=num;
+        cartNum.style.display="block";
         localStorage.setItem("cart", JSON.stringify(cart));
         modalMessage.textContent = `${name} has been successfully added to the cart!`;
         successModal.show();

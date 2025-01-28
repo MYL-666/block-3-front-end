@@ -37,6 +37,43 @@ header ul{
 header li a{    
     margin-right: 10px;
 }
+.cart1{
+    position: relative;
+}
+header li:last-child a{
+    background-image: url(../img/cart.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 5rem;
+}
+header li:nth-child(2) a{
+    background-image: url(../img/home.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 5rem;
+}
+header li:first-child a{
+    background-image: url(../img/profile.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 5rem;
+}
+#cart-num{
+    height: 25px;
+    width: 25px;
+    background-image: url(../img/icon_dot.png);
+    background-size: cover;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    text-align: center;
+}
 .nav-pills .nav-link.active {
     background-color: #ffcb05; 
     color: black; 
@@ -239,6 +276,73 @@ main .cart-item .added:hover{
     box-shadow: 0 0 5px;
 }
 
+/* payment success */
+#payment-success{
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.payment-success{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+.payment-success>h1{
+    margin-top: 40px;
+}
+.circle{
+    stroke-dasharray: 1194;
+    stroke-dashoffset: 1194;
+    animation: circle 1s ease-in-out forwards;
+}
+.tick{
+    stroke-dasharray: 350;
+    stroke-dashoffset: 350;
+    animation: tick 1.2s ease-in-out forwards;
+}
+.payment-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: payment-text 0.5s ease-out 1s forwards;
+}
+.btn-primary{
+    background-color: #ffcb05;
+    color: black;
+    border: 0;
+}
+/* animations */
+@keyframes payment-text {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes circle{
+    from{
+        stroke-dashoffset: 1194;
+    }
+    to{
+        stroke-dashoffset: 2388;
+    }
+}
+@keyframes tick{
+    from{
+        stroke-dashoffset: 350;
+    }
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+
 /* for mobile device */
 @media (max-width:768px){
     *{
@@ -307,5 +411,8 @@ main .cart-item .added:hover{
 }
     footer p{
     font-size: 12px;
+   }
+   #payment-success{
+    top: 25%;
    }
 }

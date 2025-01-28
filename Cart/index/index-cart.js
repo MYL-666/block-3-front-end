@@ -55,6 +55,14 @@ window.onload = function () {
             localStorage.setItem("cart", JSON.stringify(cart)); // update localStorage
             renderCart(); 
         }
+        // if everything is removed, show nothin page
+        if (cart.length === 0) {
+            btn02.style.display = "none";
+            btn03.style.display = "inline-block";
+            formlist[1].action = "../../main/index/index-main.html";
+            hint.style.display = "block";
+            hint.style.margin="0 auto"
+        }
     });
 
     renderCart(); 

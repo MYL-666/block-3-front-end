@@ -23,6 +23,10 @@ header .row{
 header{
     /* header backgorund color */
     background-color: #ffc0cb;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 header img{ 
     /* change the size of logo */
@@ -41,6 +45,43 @@ header ul{
 header li a{    
     /* gap between each element */
     margin-right: 10px;
+}
+.cart1{
+    position: relative;
+}
+header li:last-child a{
+    background-image: url(../img/cart.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 5rem;
+}
+header li:nth-child(2) a{
+    background-image: url(../img/home.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 5rem;
+}
+header li:first-child a{
+    background-image: url(../img/profile.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 5rem;
+}
+#cart-num{
+    height: 25px;
+    width: 25px;
+    background-image: url(../img/icon_dot.png);
+    background-size: cover;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    text-align: center;
 }
 .nav-pills .nav-link.active {
     /* change the button color */
@@ -380,6 +421,30 @@ main .more{
 }
 /* #endregion description part end */
 
+/* #region recommendation */
+.recommendation>h2{
+    border-bottom: 1px solid #999;
+    margin: 20px 0;
+}
+.product{
+    height: 25vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.product>img{
+    height: 60%;
+    margin: 10px 0;
+    object-fit: contain;
+}
+.product:hover{
+    box-shadow: 0 0 8px;
+    border: 1px solid #ccc;
+}
+/* #endregion recommendation */
+
+
 /* #region footer part start */
 footer{
     width: 100%;
@@ -521,6 +586,11 @@ footer .icons:nth-child(3){
     font-size: 12px;
     width: 100%;
     margin-top: 10px;
+   }
+
+   .product{
+    width: 50%;
+    height: 300px;
    }
    /*hide PC silde bar */
    #slidebar {

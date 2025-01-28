@@ -27,8 +27,26 @@ window.onload=function(){
     renderCart()
 
     // submit the order
-    document.querySelector(".submit-payment").addEventListener("click", function (i) {
-        i.preventDefault();
-        alert("oreder submitted!");
-    });
+   var submit=document.getElementById("submit-order");
+   submit.onclick=function(){
+    localStorage.removeItem("cart");
+    cartNum.style.display="none";   
+    cartItemsContainer.style.display="none";
+   }
+
+
+
+    // show the quantity in cart
+    var cartNum=document.getElementById("cart-num");
+    var num=0;
+    //  if there already had products in cart
+    for(var i=0;i<cart.length;i++){
+        num+= parseInt(cart[i].quantity);
+     }
+     if(num==0){
+         cartNum.style.display="none";
+     }else{
+         cartNum.innerText=num;
+         cartNum.style.display="block";
+     }
 }

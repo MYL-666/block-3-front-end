@@ -85,7 +85,19 @@ window.onload=function(){
     // success adding to cart
     var successModal = new bootstrap.Modal(document.getElementById("successModal"));
     var modalMessage = document.getElementById("modalMessage");
+    var cartNum=document.getElementById("cart-num");
+    var num=0;
 
+    //  if there already had products in cart
+    for(var i=0;i<cart.length;i++){
+       num+= parseInt(cart[i].quantity);
+    }
+    if(num==0){
+        cartNum.style.display="none";
+    }else{
+        cartNum.innerText=num;
+        cartNum.style.display="block";
+    }
     for(var i=0;i<cartBtn.length;i++){
         cartBtn[i].onclick=function(){
             var name=this.dataset.name;
@@ -99,6 +111,10 @@ window.onload=function(){
                 // add new product
                 cart.push({ name, price, img, quantity: 1 });
             }
+            // show how many product in cart
+            num++;
+            cartNum.innerText=num;
+            cartNum.style.display="block";
             localStorage.setItem("cart", JSON.stringify(cart));
             modalMessage.textContent = `${name} has been successfully added to the cart!`;
             successModal.show();

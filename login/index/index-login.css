@@ -1,4 +1,6 @@
-
+html{
+    overflow-x: hidden;
+}
 *{
     font-family: Luckiest Guy;
 }
@@ -102,7 +104,8 @@ main .logo img{
 .main-content .login .forgortten{
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+    align-items: center;
     padding: 0 20px;
     margin: 10px 0;
     font-size: 1rem;
@@ -127,7 +130,7 @@ main .logo img{
     opacity: 0;
     animation-delay: 0.4s;
 }
-#pdw{
+.pdw{
     animation:  reloadA 1.6s ease-out forwards;
     opacity: 0;
     animation-delay: 0.6s;
@@ -236,7 +239,7 @@ main .logo img{
     background-image: url(../img/apple.svg);
 }
 .main-content .other-way .ways>div:nth-child(4){
-    background-image: url(../img/微信.svg);
+    background-image: url(../img/wechat.svg);
 }
 .main-content .other-way .ways{
     display: flex;
@@ -335,7 +338,7 @@ footer{
 }
 /* #endregion instructions */
 
-/* animation */
+/*#region animation */
 @keyframes reloadA{
     from{
         transform: translateY(70vh);
@@ -345,9 +348,25 @@ footer{
         opacity: 1;
     }
 }
+/* for safari */
+@-webkit-keyframes reloadA{
+    from{
+        transform: translateY(70vh);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* #endregion animation */
+
 
 /* #region for mobile device */
 @media (max-width:768px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
     header {
         flex-wrap: wrap; 
         height: auto; 
@@ -376,8 +395,11 @@ footer{
     .main-content{
         width: 100%;
     }
+    .forgortten>a,.forgortten label{
+        font-size: 13px;
+    }
     .exist-account span{
-        color: #000000;
+        color: white;
     }
     .forgortten,.regardness label{
         font-size: 10px;

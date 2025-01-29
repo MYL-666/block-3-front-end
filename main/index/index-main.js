@@ -1,55 +1,30 @@
 window.onload=function(){
 
     // #region slideShow
-    var index=0;
-    var imgArr=document.querySelectorAll(".imgList img");
-    var allA=document.querySelectorAll("#nav-img a");
-    var timer
+        let index = 0;
+    const slides = document.querySelectorAll(".pic");
+    const shell = document.querySelector(".shell");
+    const prev=document.getElementById("prev")
+    const next=document.getElementById("next")
 
-    // Initialize index
-    function init() {
-        index = 0; 
-        setA(); 
-    };
-    init();
-    
+    function updateCarousel() {
+        shell.style.animation = "none";
+        shell.style.transform = `translateZ(-35vw) rotateY(${-index * 120}deg)`;
 
-    // Bind a single machine response function to all a
-    for(var i=0;i<allA.length;i++){
-        allA[i].num = i;
-        allA[i].onclick=function(){
-            index=this.num;
-            setA();
-            clearInterval(timer);
-            autoChange();
-        };
-    };
+        setTimeout(() => {
+            shell.style.animation = `carousel 9s infinite cubic-bezier(0.77,0,0.175,1) ${-index*3}s forwards`;
+        }, 500);
+    }
 
+    prev.onclick=function(){
+        index = (index -1 + slides.length) % slides.length;
+        updateCarousel();
+    }
 
-    // Create a function to store the image state
-    function setA() {
-        for (var i = 0; i < imgArr.length; i++) {
-            // Reset all image states
-            imgArr[i].style.opacity = "0"; 
-            imgArr[i].style.zIndex = "0"; 
-            allA[i].style.backgroundColor="";
-        };
-        // Selected state
-        imgArr[index].style.opacity = "1"; 
-        imgArr[index].style.zIndex = "1"; 
-        allA[index].style.backgroundColor="black";
-    };
-
-    // Create a function to play pictures automatically
-    function autoChange(){
-        timer=setInterval(function(){
-            index++;
-            index%=imgArr.length;
-            setA();
-        },3000);
-    };
-    
-   autoChange()
+    next.onclick=function(){
+        index = (index - 2 + slides.length) % slides.length;
+        updateCarousel();
+    }
 //    #endregion slideShow
 
     // #region slide bar for mobile device

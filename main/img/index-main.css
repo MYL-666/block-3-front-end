@@ -209,40 +209,101 @@ nav .third img{
 
 
 /* #region slideshow */
-.slideShow{
-    height: calc(100vw * 9 / 16);
-    width: 100%;
-    z-index: 0;
+.slideshow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-height:90vh;
+    min-height: 40vh;
+    overflow: hidden;
+    /* background-image: linear-gradient(to bottom, #FFF3E0, #FFE0B2); */
+    background-color: #FFFBF2;
     position: relative;
 }
-.slideShow ul{
-    list-style: none;
+.carousel{
+    position: relative;
+    width: 60vw;
+    height: 40vw;
+    max-width: 800px;
+    max-height: 450px;
+    margin: 0;
+    color: rgb(255, 255, 255);
+    perspective: 1000px;
+    transform-origin: center;
 }
-.slideShow .imgList img{
+.shell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    /* background-color: #baf; */
-    z-index: 0;
-    transition: opacity 0.5s ease-in-out;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: translateZ(-30vw) rotateY(0);
+    animation: carousel 9s infinite cubic-bezier(0.77,0,0.175,1) forwards;
 }
-#nav-img{
+
+
+.pic{
+    position:absolute;
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+    border-radius: 6px;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+}
+.pic:nth-child(1){
+    background-image: url(../img/carousel-img1.png);
+    transform: rotateY(0) translateZ(35vw);
+    background-size: cover;
+    background-position: center;
+}
+.pic:nth-child(2){
+    background-image: url(../img/carousel-img2.png);
+    transform: rotateY(120deg) translateZ(35vw);
+    background-size: cover;
+}
+.pic:nth-child(3){
+    background-image: url(../img/carousel-img3.png);
+    transform: rotateY(240deg) translateZ(35vw);
+    background-size:cover;
+}
+.carousel-control-prev-icon{
     position: absolute;
-    bottom: 10px;
-    display: flex;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
+    top: 50%;
+    left: 0;
+    background-color: #00000041;
+    height: 50px;
 }
-#nav-img a{
-    height: 10px;
-    width: 100px;
-    background-color: #FFC0CB;
-    margin-right: 5px;
+.carousel-control-next-icon{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background-color: #00000041;
+    height: 50px;
 }
+
+@keyframes carousel{
+    0%,
+    17.5%{
+        transform: translateZ(-35vw) rotateY(0);
+    }
+    27.5%,
+    45%{
+        transform: translateZ(-35vw) rotateY(-120deg);
+    }
+    55%,
+    72.5%{
+        transform: translateZ(-35vw) rotateY(-240deg);
+    }
+    82.5%,
+    100%{
+        transform: translateZ(-35vw) rotateY(-360deg);
+    }
+}
+
 /* #endregion slideshow */
 
 

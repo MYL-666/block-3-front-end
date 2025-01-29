@@ -184,7 +184,7 @@ nav .hidden-nav{
     position: absolute;
     top: 10vh;
     left: 0;
-    z-index: 10000;
+    z-index: 10;
     display: none;   
 }
 nav .nav-item{
@@ -376,6 +376,12 @@ footer .icons:nth-child(3){
 #mobile-menu{
     display: none;
 }
+
+
+/* #region animation */
+
+/* #endregion animation */
+
 
 /* for mobile device */
 @media (max-width:768px){

@@ -147,4 +147,20 @@ window.onload=function(){
         }
     }
     // #endregion
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const pics = document.querySelectorAll(".mian-pic");
+    
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animated"); // 触发动画
+                    observer.unobserve(entry.target); // 只触发一次，节省性能
+                }
+            });
+        }, { threshold: 0.3 });
+    
+        pics.forEach(pic => observer.observe(pic));
+    });
+    
 }

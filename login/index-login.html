@@ -53,22 +53,32 @@
                 <div class="form-group pdw">
                     <label for="pdw" class="control-label"></label>
                     <input id="pdw" type="password" class="form-control" placeholder="Password:" pattern="^(?=.*[A-Z]).{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter" required>
-                    <img id="btn04" src="./img/yanjing_yincang.svg" alt="">
+                    <img id="btn04" src="./img/yanjing_yincang.png" alt="eye">
                 </div>
                 <!-- if u forget ur password u can press -->
-                <div class="forgortten col-12 ">
-                    <a href="javascript:;">Forgort your password?</a>
+                <div class="forgortten col-12">
+                    <div style="display: flex; align-items: center;">
+                        <input style="margin-right: 5px;" id="remember" type="checkbox">
+                        <label for="remember">remember me</label>
+                    </div>
+                    <a href="javascript:;">Forgort password?</a>
                 </div>
                 <!-- login to the main page -->
-                <div class="logging form-group">
-                    <button class="btn btn-lg" id="btn" disabled>submit</button>
+                <div class="logging" style="background-color: transparent;">
+                    <button class="btn btn-lg" id="btn" disabled>login</button>
                 </div>
             </form>
         </div>
         <!-- make sure the text is in the center for all-size screen -->
         <div class="checking col-lg-8 offset-lg-4 col-md-9 offset-md-3 col-sm-10 offset-sm-2">
             <input type="checkbox" class="agree" id="btn02" name="agree" disabled="disabled" required>
-            <label for="btn02"><span>I have read and agree to the</span> <a id="show" href="javascript:;">instructions</a></label>
+            <label for="btn02"><span>I have read & agree to the</span> <a id="show" href="javascript:;">instructions</a></label>
+        </div>
+
+        <!-- regist -->
+         <div class="regist">
+            <span>Don't have an account? </span>
+            <a href="">register</a>
         </div>
         <!-- choose login with other ways -->
         <div class="other-way">
@@ -105,6 +115,8 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero doloremque molestiae ab? Molestiae quos asperiores beatae sunt cumque quaerat blanditiis, distinctio, veniam in accusantium possimus ad commodi! Animi nesciunt vel minima ullam? Itaque quia quasi rem. Eum libero dolores soluta ipsa incidunt a alias aperiam rem adipisci, magnam ex vel aut non nemo itaque nobis quia, exercitationem perspiciatis. Aliquam dolore eaque eveniet mollitia cum dicta modi quasi! Perferendis corrupti aliquid sunt omnis, est labore cupiditate commodi hic sit perspiciatis minima necessitatibus beatae iure, aperiam reiciendis porro deserunt id molestias modi? Sit accusamus, debitis voluptatum ullam nisi est molestiae? Deserunt odit impedit quod possimus perspiciatis harum ad aspernatur. Vel natus adipisci optio hic animi officiis debitis magni deserunt facilis, ea perspiciatis inventore laudantium omnis provident voluptatum ipsam laboriosam, quam ab facere porro, aspernatur suscipit quos consequuntur nulla. Aspernatur id et ab non cumque officiis! Error quibusdam ipsam quos voluptates nulla? Magnam, doloremque! Veritatis nam repellat fugit tempore modi enim quae. Doloribus quas inventore iure assumenda tenetur nesciunt laboriosam earum praesentium officiis a, modi illo minus nisi. Quibusdam deserunt quasi et, hic vero placeat ipsa, voluptate in at, quisquam ad veritatis saepe voluptas provident nobis neque voluptatem fugit odio tenetur impedit. Ut.</p>
     <button id="btn03" class="form-control" disabled="disabled">Close</button>
 </div>
+
+<footer></footer>
     
 </body>
 </html>

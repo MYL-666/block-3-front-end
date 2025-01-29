@@ -2,8 +2,8 @@
 *{
     font-family: Luckiest Guy;
 }
-.content a {
-    color: #007acc;
+a {
+    color: #8bd5ffee;
 }
 /* #region heading part start */
 header{
@@ -59,35 +59,82 @@ body{
     aspect-ratio: 16 / 9;
     width: 100%;
 }
+body::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.298);
+    z-index: -1;
+}
+main .login .h2{
+    font-size: 2rem;
+    letter-spacing: 3px;
+}
 main .logo img{
-    height: 210px;   
+    height: 8rem;  
+    animation: reloadA 1.2s ease-out forwards;
+    opacity: 0; 
 }
 .main-content{
-    background-color: transparent;
-    height: 100%;
+    width: 60%;
+    background-color: rgba(248, 248, 248, 0.093);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.275);
+    backdrop-filter: blur(100%);
+    box-shadow: 0 10px 25px rgba(10, 10, 10, 0.2);
     overflow: hidden;
-    width: 100%;
 }
 .main-content .login{
-
     padding: 10px 50px;
     padding-bottom: 10px;
 }
 .main-content .login .login-text{
-    color: black; 
-    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.5);
+    color: white; 
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+
+    animation: reloadA 1.2s ease-out forwards;
+    opacity: 0;
 }
 
-.main-content .login .forgortten {
-    text-align: right;
-    color: #000;
+.main-content .login .forgortten{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 20px;
     margin: 10px 0;
+    font-size: 1rem;
+    color: #fff;
 
+    animation:  reloadA 1.8s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.8s;
 }
 .main-content .login .forgortten a{
     text-decoration: none;
-    color: #000;    
-    
+    color: #ffffff;       
+}
+#email,#pdw{
+    border-radius: 50px;
+    border-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+#email{
+    animation:  reloadA 1.4s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.4s;
+}
+#pdw{
+    animation:  reloadA 1.6s ease-out forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+}
+
+#email::placeholder,#pdw::placeholder{
+    color: rgb(255, 255, 255);
 }
 /* hover effect for forgot  */
 .main-content .login .forgortten a:hover{
@@ -95,12 +142,16 @@ main .logo img{
     color: red;
 }
 .main-content .logging{
-    background-color: blanchedalmond;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
-
 }
 .main-content .logging button{
     width: 100%;
+    background-color: white;
+    animation:  reloadA 2s ease-in-out forwards;
+    transform: translateX(-70vw);
+    opacity: 0;
+    animation-delay: 1s;
 }
 /* hover effect for login submit */
 .main-content .logging:hover{
@@ -109,18 +160,35 @@ main .logo img{
 }
 
 .main-content .login .checking {
-    margin: 0 auto;
     font-size: 12px;
     display: flex;
-    align-items: center;
     text-align: center;
+    width: 100%;
+    letter-spacing: 1px;
+}
+.checking>label,.checking>input{
+    animation:  reloadA 2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1.2s;
+}
+.checking span{
+    color: white;
+    letter-spacing: 1px;
 }
 .main-content .login .checking  a{
     font-weight: bold;
-    color: black;
+    color: white;
 }
 .main-content .login .checking a:hover{
     text-shadow: 0 0 10px;
+}
+.regist{
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+    animation:  reloadA 2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1.4s;
 }
 .login .pdw{
     position: relative;
@@ -139,14 +207,19 @@ main .logo img{
     text-align: center;
     padding-top: 10px;
     margin-bottom: 10px;
-    color: #FFDE00;
+    color: #ffffff;
+    letter-spacing: 1px;
 }
-
+.other-way{
+    animation:  reloadA 2.2s ease-out forwards;
+    opacity: 0;
+    animation-delay: 1.5s;
+}
 .main-content .other-way .ways>div{
     height: 55px;
     border-radius: 50%;
     width: 55px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.169);
     background-image: url(../img/google.svg);
     background-size: 80%;
     background-position: center;
@@ -170,10 +243,13 @@ main .logo img{
     justify-content: center;
 }
 .main-content .other-way .ways>div:hover{
-    box-shadow: 0 0 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.692);
     transform: scale(1.1);
 }
-
+footer{
+    height: 100px;
+    width: 100%;
+}
 
 /* #endregion main-body */
 
@@ -259,6 +335,16 @@ main .logo img{
 }
 /* #endregion instructions */
 
+/* animation */
+@keyframes reloadA{
+    from{
+        transform: translateY(70vh);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
 /* #region for mobile device */
 @media (max-width:768px) {
@@ -286,6 +372,9 @@ main .logo img{
     header .top-left h2, header .top-right h3{
         color: #FFDE00;
         font-weight: bold;
+    }
+    .main-content{
+        width: 100%;
     }
     .exist-account span{
         color: #000000;

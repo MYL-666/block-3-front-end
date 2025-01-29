@@ -1,6 +1,7 @@
 window.onload=function(){
     var cartItemsContainer = document.getElementById("cartItemsContainer");
     var totalPrice = document.getElementById("total-amount");
+    var discount=document.getElementById("discount");
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     // double check of cart
@@ -19,9 +20,19 @@ window.onload=function(){
             </div>
             `;
             cartItemsContainer.appendChild(itemElement);
-            total += item.price * item.quantity; 
-            
+            total += item.price * item.quantity;            
         });
+        // if total amount > 300. the discount will apply
+        if(total>=300){
+            let total2=total*0.9
+            discount.innerText="-10% 💰";
+            // creat an element to show the actual price
+            let span=document.createElement("span");
+            span.innerHTML=total2.toFixed(2)+" 💰";
+            totalPrice.parentElement.appendChild(span);
+            totalPrice.style.textDecoration="line-through"
+            totalPrice.textContent = `${total.toFixed(2)}💰`;
+        };
         totalPrice.textContent = `${total.toFixed(2)}💰`;
     }
     renderCart()
@@ -32,6 +43,7 @@ window.onload=function(){
     localStorage.removeItem("cart");
     cartNum.style.display="none";   
     cartItemsContainer.style.display="none";
+    totalPrice.innerText="0.00 💰"
    }
 
 

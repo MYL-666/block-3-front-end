@@ -15,7 +15,7 @@
     <script src="./bootstrap.bundle.min.js"></script>
 </head>
 <body>
-        <!-- header part -->
+        <!-- header part start -->
         <header>
             <div class="row">
                 <!-- logo part -->
@@ -43,8 +43,10 @@
                 </div>
             </div>
         </header>
+<!-- header part end -->
 
-        <!-- navigation -->
+
+<!-- navigation  start-->
         <nav class="row main-nav">
             <div class="col-4 nav nav-pet">
                 <a id="click01" href="javascript:;">PokePets</a>
@@ -100,9 +102,9 @@
              <!-- hidden nav for Products -->
             <section class="hidden-nav hidden-nav-product row">
                 <div class="nav-item first col-3 text-center">
-                    <a href="#Products">Products Tree</a>
-                    <a href="#Products">about our Porducts</a>
-                    <a href="#Products">shop all products</a>
+                    <a href="#products">Products Tree</a>
+                    <a href="#products">about our Porducts</a>
+                    <a href="#products">shop all products</a>
                 </div>
                 <div class="nav-item second col-3">
                     <h2>PLush category</h2>
@@ -122,11 +124,11 @@
                 </div>
                 <div class="nav-item third col-3">
                     <h2>other products</h2>
-                    <a href="#Products">Clothing</a>
-                    <a href="#Products">Accessories</a>
-                    <a href="#Products">Home Goods</a>
-                    <a href="#Products">Stationery</a>
-                    <a href="#Products">Office Supplies</a>
+                    <a href="#products">Clothing</a>
+                    <a href="#products">Accessories</a>
+                    <a href="#products">Home Goods</a>
+                    <a href="#products">Stationery</a>
+                    <a href="#products">Office Supplies</a>
 
                 </div>
                 <div class="nav-item third col-3 text-center">
@@ -174,8 +176,22 @@
                 </div>
             </section>
         </nav>
+<!-- nav part end -->
 
-        <!-- Slideshow -->
+
+<!-- head pic start -->
+        <section class="wallpaper">
+            <div class="text">
+                <h1>Ready for your adevnture?</h1>
+                <span>Book a lesson with our master!</span>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, deserunt? Id dignissimos reiciendis deserunt accusantium rem neque distinctio, ullam iure?</p>
+                <a href="#trainer-container"><button>More information</button></a>
+            </div>
+        </section>
+<!-- head pci end -->
+
+
+<!-- carousel start -->
         <div class="slideshow">
             <div class="carousel">
                 <div class="shell" id="shell">
@@ -191,11 +207,11 @@
                 <span class="carousel-control-next-icon"></span>
             </button>
         </div>
+<!-- carousel end -->
 
-
-        <!-- poke pet section -->
+        <!-- poke pet section start -->
          <div class="container">
-            <h1>Pokepet</h1>
+            <h1 id="pets">Pokepet</h1>
          </div>
         <div class="pet-shell">
             <div class="pet-box">
@@ -249,6 +265,35 @@
                 </div>
             </div>
         </div>
+<!-- pet section end -->
+
+<!-- product head pic start -->
+        <div class="container">
+            <h1 id="products">Products</h1>
+        </div>
+        <div class="product-box">
+            <div class="loading">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span>
+                    <button value="Add to cart" class="add-cart" data-name="Snorlax" data-price="99.99" data-img="../../main/img/snorlax.png">Buy now</button>
+                </span>
+            </div>
+        </div>
+<!-- product head pic end -->
+
+<!-- about us -->
+        <div class="about-title container">
+            <h1>About Us</h1>
+        </div>
+        <section class="about">       
+            <div class="left">
+                
+            </div>
+        </section>
 
         <!-- mian-body -->
         <main class="container">
@@ -401,8 +446,8 @@
 
 
         <!-- personal trainer cards -->
-        <div class="container"><h1>personal trainer</h1></div>
-        <div class="trainer-container">
+        <div class="container"><h1>Your Personal Trainer</h1></div>
+        <div class="trainer-container" id="trainer-container">
             <div class="shell">
                 <!-- first tutor ash -->
                 <div class="card ash">

@@ -9,7 +9,7 @@ body {
     /* make sure evry part connect to each other */
     display: flex;
     flex-direction: column; 
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     justify-content: center;
     align-items: center;
 }
@@ -259,8 +259,69 @@ nav .third img{
 
 /* #region about us start */
 .about-title{
-    height: 5rem;
-    background-color: #74F596;
+    height: 3rem;
+    background-color: #F5F5F5;
+    margin: 2rem;
+    text-align: center;
+    box-sizing: 2px 5px 15px rgba(0, 0, 0, 0.246);
+}
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding: 3rem;
+    align-items: center;
+}
+.about .left{
+    width: 50%;
+    object-fit: cover;
+    position: relative;
+    box-sizing: border-box;
+}
+.about .left span{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    mix-blend-mode: screen;
+}
+.about img{
+    max-width: 100%; 
+    height: auto; 
+    border: .5rem solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 8px;
+}
+.about .right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 2rem;
+}
+.about .right h2{
+    font-size: 2rem;
+    color: #333;
+}
+.about .right p{
+    color: #666;
+    font-size: 1.2rem;
+}
+.about .right button{
+    height: 2rem;
+    width: 10rem;
+    border-radius: 15px;
+    background-color: #4B0082;
+    color: white;
+}
+.about .right button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #000;
 }
 /* #endregion about us end */
 
@@ -568,6 +629,7 @@ nav .third img{
         transform: rotate(360deg);
     }
 }
+
 /* #endregion product section */
 
 
@@ -589,8 +651,7 @@ main{
     height: 100%;
 }
 .block .mian-pic{
-    height: 87%;
-    background-color: #fff5e6;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -904,6 +965,9 @@ footer .icons:nth-child(3){
         width: 30vh;
         height: 30vh;
     }
+    .about .right p{
+        font-size: 1rem;
+    }
 }
 @media (max-width:768px){
     *{
@@ -933,6 +997,17 @@ footer .icons:nth-child(3){
     margin-top: 10px;
    }
 
+   .about{
+    flex-direction: column;
+    justify-content: center;
+        align-items: center;
+    }
+    .about .left,.about .right{
+        width: 100%;
+    }
+    .about .left span{
+        font-size: 1.2rem;
+    }
        /* #region pokepet */
        .pet-shell{
         height: 120vh;

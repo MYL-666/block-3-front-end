@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index-main</title>
+    <!-- import js and css  -->
     <link rel="stylesheet" href="../img/bootstrap.min.css">
     <link rel="stylesheet" href="../img/index-main.css">
     <!--import the font style  -->
@@ -15,7 +16,7 @@
     <script src="./bootstrap.bundle.min.js"></script>
 </head>
 <body>
-        <!-- header part start -->
+<!-- header part start -->
         <header>
             <div class="row">
                 <!-- logo part -->
@@ -179,6 +180,8 @@
 <!-- nav part end -->
 
 
+<!-- main page start -->
+ <main>
 <!-- head pic start -->
         <section class="wallpaper">
             <div class="text">
@@ -192,7 +195,7 @@
 
 <!-- about us -->
         <section>
-            <div class="about-title container ">
+            <div class="subtitle">
                 <h1>About Us</h1>
             </div>
             <section class="about">       
@@ -228,10 +231,30 @@
         </div>
 <!-- carousel end -->
 
-        <!-- poke pet section start -->
-         <div class="container">
+<!-- poke pet section start -->
+         <div class="container head-title">
             <h1 id="pets">Pokepet</h1>
+            <a href="" class="h3">More></a>
          </div>
+         <section class="pet-intro">
+            <div class="left">
+                <h2>Choose your own pets!</h2>
+                <p>Find the Pokémon that matches your style, strength, and spirit. Whether fierce, friendly, or fearless—there's a PokéPet waiting just for you!"</p>
+                <p>From the depths of the ocean to the heights of the skies, explore a world of powerful companions. Start your adventure today!</p>
+                <button>Choose now!</button>
+            </div>
+            <div class="right">
+                <img src="../img/pet-intro.png" alt="">
+            </div>
+         </section>
+
+
+
+
+
+        <div class="subtitle">
+            <h1>Most popular pets</h1>
+        </div>
         <div class="pet-shell">
             <div class="pet-box">
                 <div class="pet-card card1">
@@ -286,9 +309,12 @@
         </div>
 <!-- pet section end -->
 
-<!-- product head pic start -->
-        <div class="container">
+
+<!-- product section start -->
+    <!-- product head pic start -->
+        <div class="container head-title">
             <h1 id="products">Products</h1>
+            <a href="" class="h3">More></a>
         </div>
         <div class="product-box">
             <div class="loading">
@@ -302,178 +328,277 @@
                 </span>
             </div>
         </div>
-<!-- product head pic end -->
+    <!-- product head pic end -->
 
-
+    <!--more product section start -->
 <section class="product-page">
-    <div class="container title">
-        <h1>Guess you might also like:</h1>
+    <div class="subtitle">
+        <h1 class="title">Guess you might also like:</h1>
     </div>
     <div class="product-container">
+        <div class="box">
+            <span class="discount">-10%</span>
+            <div class="img">
+                <img src="../img/Meowth.jpg" alt="Meowth" class="product-imgs">
+                <input type="button" value="Add to cart" class="add-cart" data-name="Meowth" data-price="99.99" data-img="../img/Meowth.jpg">
+            </div>
+            <div class="content">
+                <div class="name">
+                    <h2>New!</h2>
+                    <span class="h3">Meowth</span>
+                </div>
+                <div class="price">
+                    <h5>💰: 109.99</h5>
+                    <h3>💰: 99.99</h3>
+                </div>
+            </div>
+          </div>
+    
+          <div class="box">
+            <span class="discount">-10%</span>
+            <div class="img">
+                <img src="../img/Palkia.jpg" alt="Palkia" class="product-imgs">
+                <input type="button" value="Add to cart" class="add-cart" data-name="Palkia" data-price="249.99" data-img="../img/Palkia.jpg">
+            </div>
+            <div class="content">
+                <div class="name">
+                    <h2>New!</h2>
+                    <span class="h3"> Palkia</span>
+                </div>
+                <div class="price">
+                    <h5>💰: 274.99</h5>
+                    <h3>💰: 249.99</h3>
+                </div>
+            </div>
+          </div>
+    
+          <div class="box">
+            <span class="discount">-10%</span>
+            <div class="img">
+                <img src="../img/Hydrapple.jpg" alt="Hydrapple" class="product-imgs">
+                <input type="button" value="Add to cart" class="add-cart" data-name="Hydrapple" data-price="129.99" data-img="../img/Hydrapple.jpg">
+            </div>
+            <div class="content">
+                <div class="name">
+                    <h2>New!</h2>
+                    <span class="h3"> Hydrapple</span>
+                </div>
+                <div class="price">
+                    <h5>💰: 142.99</h5>
+                    <h3>💰: 129.99</h3>
+                </div>
+            </div>
+          </div>
+
+      <div class="box">
+        <span class="discount">-15%</span>
+        <div class="img">
+            <img src="../img/sweetheart.jpg" alt="sweet-heart" class="product-imgs">
+            <input type="button" value="Add to cart" class="add-cart" data-name="sweet-heart" data-price="149.99" data-img="../img/sweetheart.jpg">
+        </div>
+        <div class="content">
+            <span class="h3"> sweetheart</span>
+            <div class="price">
+                <h5>💰: 169.99</h5>
+                <h3>💰: 149.99</h3>
+            </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <span class="discount">-15%</span>
+        <div class="img">
+            <img src="../img/Gengar.jpg" alt="Floatzel" class="product-imgs">
+            <input type="button" value="Add to cart" class="add-cart" data-name="Gengar" data-price="129.99" data-img="../img/Gengar.jpg">
+        </div>
+        <div class="content">
+            <span class="h3"> Gengar</span>
+            <div class="price">
+                <h5>💰: 147.99</h5>
+                <h3>💰: 129.99</h3>
+            </div>
+        </div>
+      </div>
+
+      <div class="box">
+        <span class="discount">-15%</span>
+        <div class="img">
+            <img src="../img/Eevee.jpg" alt="Eevee" class="product-imgs">
+            <input type="button" value="Add to cart" class="add-cart" data-name="Eevee" data-price="149.99" data-img="../img/Eevee.jpg">
+        </div>
+        <div class="content">
+            <span class="h3"> Eevee</span>
+            <div class="price">
+                <h5>💰: 169.99</h5>
+                <h3>💰: 149.99</h3>
+            </div>
+        </div>
+      </div>
+    </div>
       
-    </div>
 </section>
+    <!--more product section end -->
+<!--product section end  -->
 
+        <!-- card page start -->
+         <section class="card-section">
+            <div class="container head-title">
+                <h1 id="products">Poke Crads</h1>
+                <a href="" class="h3">More></a>
+            </div>
+            <section>
+                <section class="about">       
+                    <div class="left">
+                        <img src="../img/card-intro.jpg" alt="">
+                    </div>
+                    <div class="right">
+                        <h2>What is Poke card</h2>
+                        <p>Dive into the vibrant world of Pokémon with our exclusive collection of Poké Cards. From classic favorites to rare, legendary treasures, each card holds the power to ignite your inner trainer’s spirit.</p>
+                        <p>What Makes Them Special?</p>
+                        <ul>
+                            <li>Collect iconic Pokémon cards from different generations.</li>
+                            <li>Battle with strategic decks and dominate your opponents.</li>
+                            <li>Trade with fellow trainers to complete your ultimate collection.</li>
+                        </ul>
+                        <p class="h3">Ready to Become a Card Master?</p>
+                        <button id="btn-card">Start Now</button>
+                    </div>
+                </section>
 
-
-
-
-<section class="block second-block">
-    <div class="label text-center col-5">
-        <h1 id="Products" style="line-height: 50px; font-size: 30px;">Guess you might like:</h1>
-    </div>
-    <!-- second row products -->
-    <div class="items row g-4">
-        <!-- first product -->
-        <div class="col-3 mian-pic">
-            <div class="product-img">
-                <img src="../img/product5.png" alt="sweet-heart">
-            </div>
-            <div class="product-name">
-                <span class="h3"> sweetheart</span>
-            </div>
-            <div class="product-price">
-                💰:<span>149.99</span>
-            </div>
-            <div class="add">
-                <input type="button" value="Add to cart" class="add-cart" data-name="sweet-heart" data-price="149.99" data-img="../img/product5.png">
-            </div>
-        </div>
-        <!-- second-product -->
-        <div class="col-3 mian-pic">
-            <div class="product-img">
-                <img src="../img/product6.jpg" alt="Froslass">
-            </div>
-            <div class="product-name">
-                <span class="h3">Froslass</span>
-            </div>
-            <div class="product-price">
-                💰:<span>129.99</span>
-            </div>
-            <div class="add">
-                <input type="button" value="Add to cart" class="add-cart" data-name="Froslass" data-price="129.99" data-img="../img/product6.jpg">
-            </div>
-        </div>
-        <!-- third-product -->
-        <div class="col-3 mian-pic">
-            <div class="product-img">
-                <img src="../img/product7.jpg" alt="Floatzel">
-            </div>
-            <div class="product-name">
-                <span class="h3">Floatzel</span>
-            </div>
-            <div class="product-price">
-                💰:<span>99.99</span>
-            </div>
-            <div class="add">
-                <input type="button" value="Add to cart" class="add-cart" data-name="Floatzel" data-price="99.99" data-img="../img/product7.jpg">
-            </div>
-        </div>
-        <!-- forth-product -->
-        <div class="col-3 mian-pic">
-            <div class="product-img">
-                <img src="../img/product8.jpg" alt="Drifblim">
-            </div>
-            <div class="product-name">
-                <span class="h3">Drifblim</span>
-            </div>
-            <div class="product-price">
-                💰:<span>69.99</span>
-            </div>
-            <div class="add">
-                <input type="button" value="Add to cart" class="add-cart" data-name="Drifblim" data-price="69.99" data-img="../img/product8.jpg">
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-        <!-- mian-body -->
-        <main class="container">
-
-
-            <!-- products section -->
-          
-            <!-- card section -->
-            <section class="block third-block">
-                <div class="label text-center col-5">
-                    <h1 id="Cards" style="line-height: 50px; font-size: 30px;">Cards:</h1>
+                <div class="subtitle">
+                    <h1 class="title">Pick your lucky cards:</h1>
                 </div>
-                <!-- third-row product -->
-                <div class="items row g-4">
-                    <!-- first product -->
-                    <div class="col-3 mian-pic">
-                        <div class="product-img">
-                            <img src="../img/product9.jpg" alt="Pikachu EX">
+                <!-- first line -->
+                <section class="card-shell">
+                    
+                    <div class="card-container">
+                        <div class="box card-box">
+                                <div class="cover">
+                                    <img  src="../img/product9.jpg" alt="">
+                                    <div class="card-content">
+                                        <span class="h3">PikachuEX</span>
+                                        <span>💰: 19.99</span>
+                                        <input type="button" value="Add to cart" class="add-cart" data-name="PikachuEX" data-price="19.99" data-img="../img/product9.jpg">
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <img src="../img/card-back.jpg" alt="">
+                                </div>
+                                
                         </div>
-                        <div class="product-name">
-                            <span class="h3">PikachuEX</span>
+
+                        <div class="box card-box">
+                            <div class="cover">
+                                <img  src="../img/product10.jpg" alt="">
+                                <div class="card-content">
+                                    <span class="h3">Treasure</span>
+                                    <span>💰: 29.99</span>
+                                    <input type="button" value="Add to cart" class="add-cart" data-name="Treasure" data-price="29.99" data-img="../img/product10.jpg">
+                                </div>
+                            </div>
+                            <div class="back">
+                                <img src="../img/card-back.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="product-price">
-                            💰:<span>19.99</span>
+
+                        <div class="box card-box">
+                            <div class="cover">
+                                <img  src="../img/product11.jpg" alt="">
+                                <div class="card-content">
+                                    <span class="h3">Scarlet</span>
+                                    <span>💰: 19.99</span>
+                                    <input type="button" value="Add to cart" class="add-cart" data-name="Scarlet" data-price="19.99" data-img="../img/product11.jpg">
+                                </div>
+                            </div>
+                            <div class="back">
+                                <img src="../img/card-back.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="add">
-                            <input type="button" value="Add to cart" class="add-cart" data-name="PikachuEX" data-price="19.99" data-img="../img/product9.jpg">
+
+                        <div class="box card-box">
+                            <div class="cover">
+                                <img  src="../img/product12.jpg" alt="">
+                                <div class="card-content">
+                                    <span class="h3">Crimson</span>
+                                    <span>💰: 19.99</span>
+                                    <input type="button" value="Add to cart" class="add-cart" data-name="Crimson" data-price="19.99" data-img="../img/product12.jpg">
+                                </div>
+                            </div>
+                            <div class="back">
+                                <img src="../img/card-back.jpg" alt="">
+                            </div>
                         </div>
                     </div>
-                    <!-- second-product -->
-                    <div class="col-3 mian-pic">
-                        <div class="product-img">
-                            <img src="../img/product10.jpg" alt="Treasure EX">
+
+
+                    <!-- second lines -->
+                    <div class="card-container">
+                        <div class="box card-box">
+                                <div class="cover">
+                                    <img  src="../img/product9.jpg" alt="">
+                                    <div class="card-content">
+                                        <span class="h3">PikachuEX</span>
+                                        <span>💰: 19.99</span>
+                                        <input type="button" value="Add to cart" class="add-cart" data-name="PikachuEX" data-price="19.99" data-img="../img/product9.jpg">
+                                    </div>
+                                </div>
+                                <div class="back">
+                                    <img src="../img/card-back.jpg" alt="">
+                                </div>                            
                         </div>
-                        <div class="product-name">
-                            <span class="h3">Treasure</span>
+
+                        <div class="box card-box">
+                            <div class="cover">
+                                <img  src="../img/product10.jpg" alt="">
+                                <div class="card-content">
+                                    <span class="h3">Treasure</span>
+                                    <span>💰: 29.99</span>
+                                    <input type="button" value="Add to cart" class="add-cart" data-name="Treasure" data-price="29.99" data-img="../img/product10.jpg">
+                                </div>
+                            </div>
+                            <div class="back">
+                                <img src="../img/card-back.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="product-price">
-                            💰:<span>29.99</span>
+
+                        <div class="box card-box">
+                            <div class="cover">
+                                <img  src="../img/product11.jpg" alt="">
+                                <div class="card-content">
+                                    <span class="h3">Scarlet</span>
+                                    <span>💰: 19.99</span>
+                                    <input type="button" value="Add to cart" class="add-cart" data-name="Scarlet" data-price="19.99" data-img="../img/product11.jpg">
+                                </div>
+                            </div>
+                            <div class="back">
+                                <img src="../img/card-back.jpg" alt="">
+                            </div>
                         </div>
-                        <div class="add">
-                            <input type="button" value="Add to cart" class="add-cart" data-name="TreasureEX" data-price="29.99" data-img="../img/product10.jpg">
+
+                        <div class="box card-box">
+                            <div class="cover">
+                                <img  src="../img/product12.jpg" alt="">
+                                <div class="card-content">
+                                    <span class="h3">Crimson</span>
+                                    <span>💰: 19.99</span>
+                                    <input type="button" value="Add to cart" class="add-cart" data-name="Crimson" data-price="19.99" data-img="../img/product12.jpg">
+                                </div>
+                            </div>
+                            <div class="back">
+                                <img src="../img/card-back.jpg" alt="">
+                            </div>
                         </div>
                     </div>
-                    <!-- third-product -->
-                    <div class="col-3 mian-pic">
-                        <div class="product-img">
-                            <img src="../img/product11.jpg" alt="Scarlet EX">
-                        </div>
-                        <div class="product-name">
-                            <span class="h3">Scarlet</span>
-                        </div>
-                        <div class="product-price">
-                            💰:<span>19.99</span>
-                        </div>
-                        <div class="add">
-                            <input type="button" value="Add to cart" class="add-cart" data-name="ScarletEX" data-price="19.99" data-img="../img/product11.jpg">
-                        </div>
-                    </div>
-                    <!-- forth-product -->
-                    <div class="col-3 mian-pic">
-                        <div class="product-img">
-                            <img src="../img/product12.jpg" alt="Crimson EX">
-                        </div>
-                        <div class="product-name">
-                            <span class="h3">Crimson</span>
-                        </div>
-                        <div class="product-price">
-                            💰:<span>19.99</span>
-                        </div>
-                        <div class="add">
-                            <input type="button" value="Add to cart" class="add-cart" data-name="CrimsonHaze" data-price="19.99" data-img="../img/product12.jpg">
-                        </div>
-                    </div>
-                </div>
+                </section>
             </section>
-
-        </main>
-
+         </section>
+         <!-- card part end -->
 
 
 
 
         <!-- personal trainer cards -->
-        <div class="container"><h1>Your Personal Trainer</h1></div>
+        <div class="head-title container"><h1>Your Personal Trainer</h1> <a class="h3" href="javascript:;">more></a></div>
         <div class="trainer-container" id="trainer-container">
             <div class="shell">
                 <!-- first tutor ash -->
@@ -534,7 +659,8 @@
                 </div>
             </div>
         </div>
-
+</main>
+<!-- main page end -->
 
          <!-- Add to Cart Success Modal -->
          <section class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">

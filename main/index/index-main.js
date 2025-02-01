@@ -97,6 +97,19 @@ window.onload=function(){
     }
     // #endregion adding the product end
 
+    //#region when hover on the product change the img
+    const productImg=document.querySelectorAll(".product-imgs");
+    let nameArr=["Meowth","Palkia","Hydrapple","sweetheart","Gengar","Eevee"]
+    productImg.forEach((img, index) => {
+        img.addEventListener("mousemove", function() {
+            img.src = `../img/${nameArr[index]}2.jpg`;
+        });
+    
+        img.addEventListener("mouseleave", function() {
+            img.src = `../img/${nameArr[index]}.jpg`;
+        });
+    });
+    // #endregion changing img end
 
     //#region going to detail product page
     var pikachu=document.getElementById("pikachu")
@@ -123,19 +136,18 @@ window.onload=function(){
     }
     // #endregion
 
-    document.addEventListener("DOMContentLoaded", function () {
-        const pics = document.querySelectorAll(".mian-pic");
+
+    // #region turning the card start
+    const cardList=document.querySelectorAll(".card-box");
+    const cover=document.querySelectorAll(".cover");
+    const back=document.querySelectorAll(".back");
     
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("animated"); // 触发动画
-                    observer.unobserve(entry.target); // 只触发一次，节省性能
-                }
-            });
-        }, { threshold: 0.3 });
-    
-        pics.forEach(pic => observer.observe(pic));
-    });
+    cardList.forEach((cards,index)=>{
+        cards.addEventListener("click",function(){
+            cover[index].style.animation="turn-cover .5s ease-in-out forwards";
+            back[index].style.animation="turn-back .5s ease-in-out forwards";
+        });
+    })
+    // #endregion turning card end
     
 }

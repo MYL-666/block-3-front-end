@@ -9,9 +9,24 @@ body {
     /* make sure evry part connect to each other */
     display: flex;
     flex-direction: column; 
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     justify-content: center;
     align-items: center;
+}
+.head-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 2rem;
+}
+.head-title>h1{
+    font-size: 5rem;
+}
+.head-title .h3{
+    text-decoration: none;
+}
+.head-title .h3:hover{
+    text-decoration: underline;
 }
 .content a {
     /* more clear blue of <a> */
@@ -258,12 +273,14 @@ nav .third img{
 
 
 /* #region about us start */
-.about-title{
+.subtitle{
     height: 3rem;
-    background-color: #F5F5F5;
+    background-color: #ffcd054f;
     margin: 2rem;
     text-align: center;
     box-sizing: 2px 5px 15px rgba(0, 0, 0, 0.246);
+    margin: 2rem 5vw;
+    width: 90vw;
 }
 .about{
     display: flex;
@@ -427,18 +444,64 @@ nav .third img{
 
 
 /* #region pet section */
+.pet-intro{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding: 3rem;
+    align-items: center;
+}
+.pet-intro .left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+.pet-intro .right{
+    width: 50%;
+    object-fit: cover;
+    position: relative;
+    box-sizing: border-box;
+}
+.pet-intro .right>img{
+    max-width: 100%; 
+    height: auto; 
+    border: .5rem solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 8px;
+}
+.pet-intro .left p{
+    font-size: 1.2rem;
+}
+.pet-intro .left button{
+    border-radius: 10px;
+    width: 8rem;
+    height: 2rem;
+    background-color: #ffcb05;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.pet-intro .left button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
 .pet-shell  {
     width: 100vw;
     height: 105vh;
     overflow: hidden;
     background-color: #efefefdb;
+    margin: 1rem;
 }
 .pet-box{
     display: flex;
     width: 100%;
     height: 100vh;
-
+    gap: 5px;
     border: 10px solid #fff;
+    box-sizing: border-box;
     background-color: #fff;
 }
 .pet-card{
@@ -447,41 +510,44 @@ nav .third img{
     margin: 10px;
     border-radius: 10px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.078);
+    backdrop-filter: blur(15px);
     flex: 1;
     width: 6%;
     border: 10px solid #FFFBF2;
     display: flex;
     align-items: center;
-    transition: 1s;
+    transition: 1s ease;
     transition-delay: .2;
+    overflow: hidden;
 }
 .pet-card img{
     height:  100%;
     object-fit: cover;
-    transition:all .5s;
+    transition:all 1s;
     border-radius: 10px;
     cursor: pointer;
+    z-index: -1;
 }
 .pet-card:hover{
     flex-basis: 60%;
 }
 .pet-shell .card1{
-    background-color: #F5FF86;
+    background-color: #f5ff8781;
 }
 .pet-shell .card6{
-    background-color: #74F596;
+    background-color: #74f7979c;
 }
 .pet-shell .card2{
-    background-color: #8181FF;
+    background-color: #8181ff85;
 }
 .pet-shell .card3{
-    background-color: #F56A9D;
+    background-color: #f76a9e7e;
 }
 .pet-shell .card4{
-    background-color: #89F7EC;
+    background-color: #89f9ee85;
 }
 .pet-shell .card5{
-    background-color: #FF812D;
+    background-color: #ff802c80;
 }
 .pet-shell .description{
     width: 50%;
@@ -608,6 +674,95 @@ nav .third img{
     box-shadow: 0 0 8px black;
     transform: scale(1.05);
 }
+.product-page{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.product-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.product-container .box{
+    flex: 1 1 10rem;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    box-sizing: border-box;
+    border: 2px solid rgba(255, 255, 255, 0.169);
+    position: relative;
+    margin: 10px;
+}
+.product-container .box .discount{
+    position: absolute;
+    top:1rem ;
+    left: 1rem;
+    margin: 4rem 1rem;
+    font-size: 2rem;
+    background-color: #ffcd05;
+    z-index: 1;
+    border-radius: .5rem;
+    height: auto;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.078);
+}
+.product-container .img{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+.product-container .img>img{
+    height: 25rem;
+}
+.product-container .img input{
+   position: absolute;
+   bottom: 2rem;
+   left: 25%;
+   width: 50%;
+   height: 3rem;
+   background-color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
+   opacity: 0;
+   border-radius: 15px;
+   transition: all .5s ease-in-out;
+}
+.product-container .img:hover input{
+    opacity: 1;
+}
+.product-container .img input:hover{
+    transform: scale(1.05);
+    color: white;
+    background-color: black;
+}
+.product-container .box .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.product-container .price{
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+}
+.product-container .price>h5{
+    text-decoration: line-through;
+}
+.product-container .name{
+    display: flex;
+    gap: .5rem;
+}
+.product-container .name>h2{
+    color: red;
+}
 /* amimation of span border */
 @keyframes colorChange{
     0%{
@@ -632,6 +787,119 @@ nav .third img{
 
 /* #endregion product section */
 
+
+/* #region cards section start */
+#btn-card{
+    background-color: #FFD700;
+    color: #000;
+}
+.card-shell{
+    height: auto;
+    background-color: rgba(173, 216, 230, 0.2);
+}
+.card-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    height: 50%;
+    margin-bottom: 4rem;
+}
+.card-container .box{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    perspective: 1000px;
+    transition-delay: .1s;
+    transform: rotateY(0deg);
+    transition: .3s;
+    margin: 2rem 0;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.card-container .card-content{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    transition: transform .5s;
+    transition: opacity .1s .4s;
+}
+.card-container .card-content input{
+    width: 8rem;
+    height: 3rem;
+    background-color: #ffac00;
+    border-radius: 10px;
+}
+.card-container .card-content input:hover{
+    box-shadow: 0 0 10px;
+}
+.card-container .card-content span{
+    font-size: 1.2rem;
+}
+/* movement of card  */
+.card-container:hover .box{
+    transform: rotateY(20deg);
+}
+.card-container .box:hover{
+    transform: rotateY(0deg) scale(1.2);
+    z-index: 1;
+}
+.card-container .box:hover~.box{
+    transform: rotateY(-20deg);
+}
+/* movement of card end */
+.card-container .cover{
+    transform: rotateY(-180deg);
+}
+.card-container .back{
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+}
+.card-container .cover,.card-container .back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.078);
+}
+.card-container .cover:hover,.card-container .back:hover{
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
+}
+.card-container img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.card-container .cover img{
+    height: 70%;
+}
+@keyframes turn-cover{
+    form{
+        transform: rotateY(-180deg);
+    }to{
+        transform: rotateY(0deg);
+    }
+}
+@keyframes turn-back{
+    form{
+        transform: rotateY(0deg);
+    }to{
+        transform: rotateY(180deg);
+    }
+}
+/* #endregion card section end */
 
 /* #region body part start */
 main{
@@ -713,16 +981,15 @@ main{
 .trainer-container{
     margin: 0;
     padding: 0;
-    width: 100vw;
-    max-width: 1280px;
+    min-width: 100vw;
     max-height: 800px;
     height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #efefefdb;
+    background-color: #efefef3a;
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 0;
 }
 .trainer-container .shell{
     display: flex;
@@ -742,6 +1009,7 @@ main{
     margin: 0 100px;
     border: 0;
     background-color: transparent;
+    z-index: 1;
 }
 .trainer-container .card .cover-img{
     width: 100%;
@@ -808,11 +1076,8 @@ main{
     height: 480px;
     width: auto;
 }
-.trainer-container .ash:hover+.dawn{
-    z-index: -1;
-}
-.trainer-container .dawn:hover+.ash{
-    z-index: -5;
+.trainer-container .card:hover {
+    z-index: 3; 
 }
 .trainer-container .intro{
     width:200% ;
@@ -830,6 +1095,7 @@ main{
     align-items: center;
     justify-content: space-evenly;
     padding: 20px;
+    z-index: 2;
 }
 .intro-dawn{
     position: absolute;
@@ -968,11 +1234,77 @@ footer .icons:nth-child(3){
     .about .right p{
         font-size: 1rem;
     }
+    .pet-intro .left p{
+        font-size: 1rem;
+    }
+    .pet-intro {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .pet-intro .left, .pet-intro .right {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .pet-intro .right img {
+        max-width: 60%;
+        height: auto;
+    }
+
+
+    .pet-shell{
+        height: 120vh;
+       }
+       .pet-box {
+        display: flex; 
+        flex-wrap: wrap;
+    }
+    
+    .pet-card {
+        width: calc(33.33% - 10px);
+        height: 60%;
+        margin: 0; 
+        border-radius: 10px;
+        transition: 0.5s ease;
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 1rem;
+        flex: 0 0 calc(33.33% - 10px);
+    }
+    .pet-card img{
+        width: 100%;
+    }
+    .pet-card:hover img {
+        width: 60%;
+    }
+    .pet-card .description{
+        width: 80%;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+    .pet-card:hover .description{
+        opacity: 1;
+    }
+    .pet-card .price{
+        margin: 0;
+    }
+    .pet-card:hover {
+        flex-basis: unset;
+        width: calc(33.33% - 10px);
+    }
 }
 @media (max-width:768px){
     *{
         margin: 0;
         padding: 0;
+    }
+    .head-title,.product-page {
+        width: 100vw;
+    }
+    .head-title h1{
+        font-size: 3rem;
     }
     header{
         justify-content: center;
@@ -1003,54 +1335,25 @@ footer .icons:nth-child(3){
         align-items: center;
     }
     .about .left,.about .right{
+        margin-top: 10px;
         width: 100%;
     }
     .about .left span{
         font-size: 1.2rem;
     }
-       /* #region pokepet */
-       .pet-shell{
-        height: 120vh;
-       }
-       .pet-box {
-        display: flex; 
-        flex-wrap: wrap;
-    }
-    
-    .pet-card {
-        width: 30%; 
-        height: 60%;
-        margin: 0; 
-        border-radius: 10px;
-        transition: 0.5s ease;
+    .pet-intro{
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
     }
-    .pet-card img{
+    .pet-intro .left,.pet-intro .right{
         width: 100%;
     }
-    .pet-card:hover{
-        flex-basis: 0;
+    .pet-intro .left p{
+        font-size: 1.2rem;
     }
-    .pet-card:hover img {
-        height: 40%; 
-        width: 100%;
-    }
-    .pet-card .description{
-        height: 40%;
-        width: 80%;
-        opacity: 0;
-        transition: opacity .5s ease-in-out;
-    }
-    .pet-card:hover .description{
-        opacity: 1;
-    }
-    .pet-card .price{
-        margin: 0;
-    }
-    .pet-card:hover {
-        transform: scale(1.05); 
-    }
+       /* #region pokepet */
+
        /* #endregion */
     .product-box {
         background-size: contain; 
@@ -1084,6 +1387,54 @@ footer .icons:nth-child(3){
    #slidebar {
         display: none; 
     }
+
+           /* #region pokepet */
+           .pet-intro {
+            padding: 1rem;
+        }
+    
+        .pet-intro .left button {
+            width: 100%;
+            height: 2.5rem;
+            font-size: 1rem;
+        }
+    
+        .pet-shell .description h3 {
+            font-size: 1.2rem;
+        }
+    
+        .pet-shell .price {
+            font-size: 0.9rem;
+        }
+    
+        .pet-shell .add-cart {
+            width: 100%;
+            padding: 12px;
+        }
+        .pet-box{
+            height: 120vh;
+        }
+        .pet-card{
+            flex: 0 0 calc(50% - 10px);
+            width: calc(50% - 10px);
+            height: 40vh;
+        }
+        .pet-card:hover{
+            width: calc(50% - 10px);
+        }
+        .pet-card img{
+            height: 100%;
+        }
+        .pet-card:hover img{
+            height: 50%;
+        }
+        .pet-card:hover .description{
+            height: 80%;
+        }
+        .pet-card .description input{
+            width: 80%;
+        }
+   /* #endregion */
 
     /* for trainer */
     .trainer-container{
@@ -1194,47 +1545,7 @@ footer .icons:nth-child(3){
 }
 
 @media (max-width:500px){
-       /* #region pokepet */
-   .pet-box {
-    display: flex; 
-    flex-direction: column;
-    flex-wrap: nowrap;
-    overflow: visible;
-}
-.pet-shell{
-    height: 150vh;
-}
-.pet-card {
-    width: 100%;
-    height: 25%;
-    margin: 0; 
-    border-radius: 10px;
-    transition: 0.5s ease;
-    flex-direction: row;
-}
-.pet-card img{
-    height:  100%;
-    width: 50%;
-    object-fit: cover;
-    transition:all .5s;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.pet-card .description{
-    height: 80%;
-    opacity: 1;
-}
-.pet-card:hover img{
-    height:  100%;
-    width: 50%;
-}
-.pet-card .price{
-    margin: 0;
-}
-.pet-card:hover {
-    transform: scale(1.05); 
-}
-   /* #endregion */
+
 }
 
 

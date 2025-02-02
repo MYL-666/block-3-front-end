@@ -7,6 +7,14 @@
     box-sizing: border-box;
     /* outline: 1px solid red !important; */
 }
+.icon-wuxinghaoping-quan{
+    color: #FFD700;
+}
+.icon-qian{
+    font-size:2rem;
+    color: #FFB300 ;
+    text-decoration: none !important;
+}
 /* #region header-part of main page start */
 body {
     /* make sure evry part connect to each other */
@@ -134,11 +142,11 @@ header li:first-child a{
     width: 100%;
 }
 .search-div .search{
-    width: 85%;
+    width: 70%;
     box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.1);
 }
 .search-div .submit{
-    width: 10%;
+    width: 25%;
     background-color: #ffcb05;
     background-size: 60%;
     background-position: center;
@@ -755,6 +763,9 @@ nav .third img{
         bottom: 0;
         transition: transform .5s;
         transition: opacity .1s .4s;
+    }
+    .card-container .icon-qian{
+        font-size: 1rem ;
     }
     .card-container .card-content input{
         width: 8rem;

@@ -109,8 +109,8 @@ window.onload = function () {
         <div class="person col-2">
             <div class="face face5"></div>
             <p>${userName.value}</p>
-        </div>
-    `;
+        </div>`;
+        
         commentList.insertBefore(newMessage,commentList.firstChild);
         // clear textarese
         userName.value='';

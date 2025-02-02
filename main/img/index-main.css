@@ -50,6 +50,7 @@ header{
     z-index: 100;
     box-shadow: 5px 5px 8px  rgba(0, 0, 0, 0.331);
     backdrop-filter: blur(15px);
+    -webkit-backdrop-filter:blur(15px);
     padding: 0 1rem;
 }
 header img{ 
@@ -218,6 +219,7 @@ nav .nav-item{
     background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.747);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter:blur(5px);
     display: flex;
     flex-direction: column;
 }
@@ -1115,6 +1117,12 @@ footer .icons:nth-child(3){
 footer .second p{
     font-size: 1rem;
 }
+footer .copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /* #endregion footer section end */
 
 /* mobile nav  start*/
@@ -1231,7 +1239,8 @@ footer .second p{
         justify-content: center;
         height: auto;
         background: rgba(255, 255, 255, 0.8); 
-        backdrop-filter: blur(10px);           
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter:blur(10px);          
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     header .row{
@@ -1329,6 +1338,9 @@ footer .second p{
         height: 15vw;
         left: 25%;
     }
+    .loading span>button{
+        font-size: .8rem;
+    }
         /* product-intro end */
     /* #endregion product section end */
 
@@ -1364,6 +1376,7 @@ footer .second p{
     .trainer-container .intro{
         background-color: #ffe4e12d;
         backdrop-filter: blur(15px);
+        -webkit-backdrop-filter:blur(15px);
         left: 50%;
         transform: translatex(-50%);
         transition-delay: .5s;
@@ -1421,6 +1434,8 @@ footer .second p{
         background-color: rgba(255, 255, 255, 0.6);
         padding: 10px 15px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter:blur(15px);
     }
     #close{
         position: absolute;

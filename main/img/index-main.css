@@ -1020,6 +1020,9 @@ nav .third img{
     .trainer-container h4{
         font-size: 16px;
     }
+    .intro2{
+        display: none;
+    }
     /* trainer information end */
 /* #endregion trainer section end */
 
@@ -1275,15 +1278,37 @@ nav .third img{
     /* #region trainer section start */
     .trainer-container{
         height: auto;
-        max-height: 1200px;
+        max-height: 1300px;
         width: auto;
+        padding: 0;
         box-sizing: border-box;
+        margin-bottom: 1rem;
+    }
+    .trainer-container .shell .card{
+        position: relative;
     }
     .trainer-container .shell{
         flex-direction: column;
     }
+    .trainer-container .shell .intro-ash{
+
+    }
     .trainer-container .intro{
-        display: none;
+        animation:none !important;
+        max-width: 90vw;
+    }
+    .trainer-container .dawn:hover .intro-dawn{
+        opacity: 1;
+    }
+    .trainer-container .ash:hover .intro-ash{
+        opacity: 1;
+    }
+    .trainer-container .intro{
+        background-color: #ffe4e12d;
+        backdrop-filter: blur(15px);
+        left: 50%;
+        transform: translatex(-50%);
+        transition-delay: .5s;
     }
     .trainer-container .shell .card{
         flex-direction: column;

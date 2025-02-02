@@ -2,10 +2,15 @@ html{
     overflow-x: hidden;
 }
 *{
-    font-family: Luckiest Guy;
+    font-family: "Sour Gummy", serif;
 }
 a {
-    color: #8bd5ffee;
+    color: #FFD700;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    color: red;
 }
 /* #region heading part start */
 header{
@@ -51,15 +56,19 @@ header{
 /* #region main-body start */
 
 /* for PC background */
-body{
-    background-image: url(../img/pikachu-in-the-rain-pokemon-thumb.jpg) ;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed;
+body>img{
+    /* background-image: url(../img/wallpaper.jpg) ; */
+    /* background-size: cover;  */
+    /* background-position: center;  */
+    /* background-repeat: no-repeat;  */
+    /* background-attachment: fixed; */
+    height: 100%;
+    width: 100%;
     filter: saturate(70%);
     aspect-ratio: 16 / 9;
-    width: 100%;
+    position: fixed;
+    object-fit: cover;
+    z-index: -1;
 }
 body::after{
     content: "";
@@ -68,7 +77,7 @@ body::after{
     bottom: 0;
     right: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.298);
+    background-color: rgba(0, 0, 0, 0.226);
     z-index: -1;
 }
 main .login .h2{
@@ -82,10 +91,10 @@ main .logo img{
 }
 .main-content{
     width: 60%;
-    background-color: rgba(248, 248, 248, 0.093);
+    background-color: rgba(248, 248, 248, 0.105);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.275);
-    backdrop-filter: blur(100%);
+    backdrop-filter: blur(10px);
     box-shadow: 0 10px 25px rgba(10, 10, 10, 0.2);
     overflow: hidden;
 }
@@ -96,7 +105,6 @@ main .logo img{
 .main-content .login .login-text{
     color: white; 
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-
     animation: reloadA 1.2s ease-out forwards;
     opacity: 0;
 }
@@ -120,10 +128,13 @@ main .logo img{
     color: #ffffff;       
 }
 #email,#pdw{
-    border-radius: 50px;
+    border-radius: 12px;
     border-color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.484);
     box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    font-size: 16px;
+    border: 2px solid white;
 }
 #email{
     animation:  reloadA 1.4s ease-out forwards;
@@ -139,6 +150,7 @@ main .logo img{
 #email::placeholder,#pdw::placeholder{
     color: rgb(255, 255, 255);
 }
+
 /* hover effect for forgot  */
 .main-content .login .forgortten a:hover{
     text-decoration: underline;
@@ -150,16 +162,19 @@ main .logo img{
 }
 .main-content .logging button{
     width: 100%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.989);
     animation:  reloadA 2s ease-in-out forwards;
     transform: translateX(-70vw);
     opacity: 0;
     animation-delay: 1s;
 }
 /* hover effect for login submit */
-.main-content .logging:hover{
-    box-shadow: 0 0 5px;
+.main-content .logging:hover button{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     transform: translate(1.1px);
+    background-color: black;
+    color: white;
+    border: #08080824;
 }
 
 .main-content .login .checking {
@@ -195,7 +210,6 @@ main .logo img{
 }
 .login .pdw{
     position: relative;
-    font-family: Arial, Helvetica, sans-serif
 }
 .pdw #btn04{
     position: absolute;
@@ -332,9 +346,6 @@ footer{
 #btn03:hover {
     background-color: #e0a800; 
     transform: scale(1.02); 
-}
-.instructions h2, .instructions p, .instructions li, .instructions h3{
-    font-family: Arial, Helvetica, sans-serif
 }
 /* #endregion instructions */
 

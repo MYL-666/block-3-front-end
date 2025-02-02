@@ -13,6 +13,7 @@ window.onload=function(){
             menuContent.style.display = "none"; 
         } else {
             menuContent.style.display = "block"; 
+            menuContent.style.animation="animate .5s ease-out forwards"
         }
     };
     close.onclick = function () {

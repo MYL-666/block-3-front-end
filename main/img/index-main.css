@@ -15,8 +15,8 @@ body {
     overflow-x: hidden;
     justify-content: center;
     align-items: center;
-
 }
+/*#region header [art start */
 .head-title{
     display: flex;
     justify-content: space-between;
@@ -49,6 +49,8 @@ header{
     left: 0;
     z-index: 100;
     box-shadow: 5px 5px 8px  rgba(0, 0, 0, 0.331);
+    backdrop-filter: blur(15px);
+    padding: 0 1rem;
 }
 header img{ 
     /* change the size of logo */
@@ -107,7 +109,7 @@ header li:first-child a{
 }
 .nav-pills .nav-link.active {
     /* change the button color */
-    background-color: #ffcd05; 
+    background-color: #FFD700; 
     box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
     color: black; 
 }
@@ -116,6 +118,8 @@ header li:first-child a{
     box-shadow: 0 0 10px;
 }
 /* #endregion header part end */
+
+
 
 /* #region search bar */
 .search-div{
@@ -133,10 +137,8 @@ header li:first-child a{
     box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.1);
 }
 .search-div .submit{
-    /* add a search picture instead of button */
     width: 10%;
-    background-image: url(../img/search.png);
-    background-color: transparent;
+    background-color: #ffcb05;
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
@@ -144,9 +146,7 @@ header li:first-child a{
     transition: 0.2s ease-in-out;
 }
 .search-div .submit:hover{
-    /* add interaction when hover */
     box-shadow: 0 0 10px;
-    background-size: 80%;
 }
 /* #endregion search bar */
 
@@ -155,11 +155,13 @@ header li:first-child a{
 nav{
     /* layout of main-nav */
     width: 100vw;
-    background-color: #fcfcfc;
+    background: rgba(255, 255, 255, 0.909); 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     align-items: center;
     border-bottom: 2px solid #000;
     border-top: 2px solid #000;
     position: relative;
+    transition: all .3s;
 }
 nav .nav {
     /* for the top part layout in nav */
@@ -209,13 +211,13 @@ nav .hidden-nav{
     top: 10vh;
     left: 0;
     z-index: 10;
-    display: none;   
+    display: none;  
 }
 nav .nav-item{
     border-right: 1px solid #999;
-    background-color: rgba(255, 245, 230, 0.9);
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.747);
     backdrop-filter: blur(5px);
-    box-shadow: 2px 5px 8px rgba(255, 245, 230, 0.9);
     display: flex;
     flex-direction: column;
 }
@@ -223,6 +225,7 @@ nav .nav-item>a, .nav-item>h2{
     margin: 5px 0;
     text-decoration: none;
     color: #333;
+    font-weight: bold;
 }
 nav .nav-item>a:hover{
     text-decoration: underline;
@@ -794,6 +797,8 @@ nav .third img{
         border-radius: 10px;
         border: 5px solid #fff;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.078);
+        display: flex;
+        justify-content: center;
     }
     .card-container .cover:hover,.card-container .back:hover{
         box-shadow: 0 25px 40px rgba(0, 0, 0, 0.7);
@@ -802,9 +807,11 @@ nav .third img{
         height: 100%;
         width: 100%;
         object-fit: cover;
+
     }
     .card-container .cover img{
         height: 70%;
+        width: auto;
     }
     /* animation of turning cards */
     @keyframes turn-cover{
@@ -951,6 +958,7 @@ nav .third img{
         justify-content: space-evenly;
         padding: 20px;
         z-index: 2;
+        border-radius: 10px;
     }
     .intro-dawn{
         position: absolute;
@@ -1028,51 +1036,85 @@ nav .third img{
 
 
 /* #region footer section start */
-    footer{
-        width: 100%;
-        height: 300px;
-        background-color: #ffc0cb81;
-        overflow: hidden;
-    }
-    footer .nav{
-        justify-content: center;
-    }
-    footer p:first-child{
-        margin-top: 20px;
-    }
-    footer .nav a{
-        margin-right: 10px;
-        text-decoration: none;
-    }
-    footer .icon-list{
-        display: flex;
-        justify-content: center;
-    }
-    footer .icons{
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        background-color: #ffc0cb81;
-        margin-right: 10px;
-        cursor: pointer;
-        background-size: 90%;
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: 0.2s linear;
-        margin-bottom: 10px;
-    }
-    footer .icons:hover{
-        box-shadow: 0 0 10px;
-    }
-    footer .icons:nth-child(1){
-        background-image: url(../img/facebook.svg);
-    }
-    footer .icons:nth-child(2){
-        background-image: url(../img/instagram.svg);
-    }
-    footer .icons:nth-child(3){
-        background-image: url(../img/微信.svg);
-    }
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(to top, #FFFFFF, #FAFAFA);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+footer .first{
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #999;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+footer ul{
+    list-style: none;
+}
+footer li{
+    padding: .5rem;
+}
+footer a{
+    text-decoration: none;
+    color: #666;
+}
+footer a:hover{
+    color: #000;
+    text-decoration: underline;
+}
+footer img{
+    height: 3rem;
+    cursor: pointer;
+}
+footer .second{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .follow{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer .icon-list{
+    display: flex;
+    justify-content: center;
+}
+footer .icons{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: #ffc0cb21;
+    margin-right: 10px;
+    cursor: pointer;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 0.2s linear;
+    margin-bottom: 10px;
+}
+footer .icons:hover{
+    box-shadow: 0 0 8px;
+    transform: scale(1.1);
+}
+footer .icons:nth-child(1){
+    background-image: url(../img/facebook.svg);
+}
+footer .icons:nth-child(2){
+    background-image: url(../img/instagram.svg);
+}
+footer .icons:nth-child(3){
+    background-image: url(../img/微信.svg);
+}
+footer .second p{
+    font-size: 1rem;
+}
 /* #endregion footer section end */
 
 /* mobile nav  start*/
@@ -1187,25 +1229,41 @@ nav .third img{
     }
     header{
         justify-content: center;
-        height: 210px;
-    }
-    header img{
-        margin: 0 auto;
+        height: auto;
+        background: rgba(255, 255, 255, 0.8); 
+        backdrop-filter: blur(10px);           
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     header .row{
         width: 100%;
         margin: 0;
+        justify-content: space-between;
+        padding-left: 2rem;
+        height: 5.5rem;
+        align-items: center;
     }
     header .top-left{
-        width: 100%;
+        width: 30%;
         padding: 0;
         text-align: center;
     }
+    header .top-left img{
+        width: 5rem;
+    }
    header .top-right{
     text-align: center;
-    width: 100%;
-    justify-content: center;
+    width: 50%;
     margin-top: 10px;
+   }
+   header .nav-pills{
+    flex-wrap: nowrap;
+   }
+   header .nav-item{
+    width: 5rem;
+    margin: 5px;
+   }
+   header .search-div{
+    display: none ;
    }
 
     /* header end */
@@ -1327,6 +1385,13 @@ nav .third img{
 
 
     /* #region mobile nav start */
+    @keyframes animate{
+        from{
+            transform: translateX(-1000px);
+        }to{
+            transform: translateX(0px);
+        }
+    }
     #mobile-menu {
         display: block;
         position: fixed;
@@ -1348,18 +1413,47 @@ nav .third img{
     }
     #menu-content {
         display: none; 
-        width: 80%;
+        width: 75%;
         height: 100%;
         position: fixed;
         top: 0;
         left: 0;
-        background-color: #ffe4e1;
+        background-color: rgba(255, 255, 255, 0.6);
         padding: 10px 15px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
     #close{
-        height: 30px;
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        height: 20px;
     }
+    #menu-content .search-bar{
+        margin-bottom: 1rem;
+    }
+    #menu-content .search-bar input{
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.107);
+        border: 1px solid black;
+    }
+    #menu-content .search-bar input::placeholder{
+        padding: 1rem;
+        letter-spacing: 1px;
+    }
+    #menu-content .search-bar button{
+        width: 4rem;
+        background-color: #FFD700;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    #menu-content .search-bar button:hover{
+        background-color: #ffaa00;
+        transform: scale(1.05);
+    }
+    .menu-category h3 {
+        margin-bottom: 15px;
+      }
     #menu-content .profile{
         height: 40px;
         width: 100%;
@@ -1417,4 +1511,24 @@ nav .third img{
     .main-nav{
         display: none;
     }
+
+
+    /* #region footer start */
+    footer{
+        padding: 1rem;
+    }
+    footer .first{
+        display: grid;
+        grid-template-columns: 2fr;
+        text-align: center;
+    }
+    footer ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .second span{
+        display: none;
+    }
+    /* #endregion footer end */
 }

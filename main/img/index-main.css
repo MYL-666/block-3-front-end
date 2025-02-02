@@ -459,7 +459,7 @@ nav .third img{
     }
     .pet-shell .description{
         width: 50%;
-        height: 50%;
+        height: 50vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1108,6 +1108,9 @@ nav .third img{
     }
     .pet-card,.pet-card:hover{
         flex-basis: 33.3%;
+    }
+    .pet-shell .description{
+        height: 50%;
     }
 
     /* product-intro start */

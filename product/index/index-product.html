@@ -4,29 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product</title>
+    <!-- import CSS  -->
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./index-product.css">
-     <!--import the font style  -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <!--import the font style  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
      <!-- import js -->
     <script src="./index-product.js"></script>
     <script src="./bootstrap.bundle.min.js"></script>
+    <!-- import font icons -->
+    <link rel="stylesheet" href="./iconfont.css">
 </head>
 <body>
-       <!-- header part -->
+       <!-- header part start -->
        <header>
         <div class="row">
             <!-- logo part -->
-            <div class="top-left col-lg-1 col-md-1">
+            <div class="top-left col-1">
                 <img src="../img/logo.svg" alt="logo">
             </div>
             <!-- search bar -->
             <div class="search-div col-lg-5 col-md-4 offset-md-1">
                 <form class="form-horizontal row">
                     <input type="text" class="search form-control" placeholder="Search the product" id="searching">
-                    <button type="button" class="submit form-control" id="btn01"></button>
+                    <button type="button" class="submit form-control" id="btn01">Search</button>
                 </form>
               </div>
             <!-- navigator on header -->
@@ -43,8 +46,10 @@
             </div>
         </div>
     </header>
+<!-- header part end -->
 
-    <!-- navigation -->
+
+<!-- navigation  start-->
     <nav class="row main-nav">
         <div class="col-4 nav nav-pet">
             <a id="click01" href="javascript:;">PokePets</a>
@@ -57,10 +62,10 @@
         </div>
 
         <!-- hidden nav for Pets -->
-        <section class="hidden-nav hidden-nav-pet row">
+         <section class="hidden-nav hidden-nav-pet row">
             <div class="nav-item first col-3 text-center">
-                <a href="">shop all PokePets</a>
-                <a href="">about the PokePets</a>
+                <a href="#pets">shop all PokePets</a>
+                <a href="#pets">about the PokePets</a>
             </div>
             <div class="nav-item second col-3">
                 <h2>Pokepet category</h2>
@@ -100,9 +105,9 @@
          <!-- hidden nav for Products -->
         <section class="hidden-nav hidden-nav-product row">
             <div class="nav-item first col-3 text-center">
-                <a href="#Products">Products Tree</a>
-                <a href="#Products">about our Porducts</a>
-                <a href="#Products">shop all products</a>
+                <a href="#products">Products Tree</a>
+                <a href="#products">about our Porducts</a>
+                <a href="#products">shop all products</a>
             </div>
             <div class="nav-item second col-3">
                 <h2>PLush category</h2>
@@ -122,11 +127,11 @@
             </div>
             <div class="nav-item third col-3">
                 <h2>other products</h2>
-                <a href="#Products">Clothing</a>
-                <a href="#Products">Accessories</a>
-                <a href="#Products">Home Goods</a>
-                <a href="#Products">Stationery</a>
-                <a href="#Products">Office Supplies</a>
+                <a href="#products">Clothing</a>
+                <a href="#products">Accessories</a>
+                <a href="#products">Home Goods</a>
+                <a href="#products">Stationery</a>
+                <a href="#products">Office Supplies</a>
 
             </div>
             <div class="nav-item third col-3 text-center">
@@ -173,32 +178,38 @@
                 <a href="">shop now</a>
             </div>
         </section>
-
-
     </nav>
+<!-- nav part end -->
 
+
+<!-- main part start -->
     <main class="container">
         <div class="sequence col-12">
             <a href="">home</a>/
             <a href="">PokePets</a>/
             <a href="">Electric</a>
         </div>
+
+        <!-- product section start -->
         <div class="product-detail">
             <section class="left">
-                <!-- Slideshow -->
+                <!-- Slideshow  start-->
                 <div class="slideShow">
                    <ul class="imgList" id="imgList">
                        <li>
                         <h2>pikachu</h2>
-                        <img src="../img/pikachu.png" alt="">
+                        <img src="../img/pikachu2.gif" alt="pikachu2">
                         </li>
                        <li>
                         <h2>super evolution: Raichu</h2>
-                        <img src="../img/雷丘-removebg-preview.png" alt="">
+                        <img src="../img/raichu.jpg" alt="raichu">
+                       </li>
+                       <li>
+                        <img src="../img/pikachu1.gif" alt="pikachu1">
                        </li>
                        <li>
                         <h1>Ultra:Thunderbolt</h1>
-                        <video src="../img/pikachu-skill.mp4" controls></video>
+                        <video src="../img/pikachu-skill.mp4" autoplay loop controls ></video>
                        </li>
                        
                    </ul>
@@ -208,15 +219,24 @@
                         <a href="javascript:;"></a>
                         <a href="javascript:;"></a>
                         <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
                     </div>
                 </div>
             </section>
+            <!-- slideshow end -->
                 
-            <!-- product intro -->
+            <!-- product intro  start-->
             <section class="right">
-                <div class="review"><span>🌟🌟🌟🌟🌟</span><a href="#rating">Read 666 reviews</a></div>
+                <div class="review">
+                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                    <a href="#rating">Read 666 reviews</a>
+                </div>
                 <div class="name"><h2>Pokepet: Pikachu (can be Evolute)</h2></div>
-                <div class="price"><span>💰:499.99</span></div>
+                <div class="price"><i class="iconfont icon-qian"></i><span style="font-size: 3rem;">:499.99</span></div>
                 <div class="quantity-select">
                     <label for="quantity">quantity</label>
                     <div class="quantity-controls">
@@ -225,7 +245,7 @@
                         <button id="increase" class="quantity-btn form-control">+</button>
                     </div>
                     <div class="add">
-                        <input type="button" name="add" id="add" class="form-control" value="add to cart" data-name="Pikachu" data-price="499.99" data-img="../../main/img/product1.png">
+                        <input type="button" name="add" id="add" class="form-control" value="add to cart" data-name="Pikachu" data-price="499.99" data-img="../../main/img/wallpaper-pikachu.png">
                     </div>
                 </div>
                 <article class="Introduction">
@@ -234,16 +254,19 @@
                 </article>
             </section>
         </div>
+            <!-- product intro end -->
 
-        <!-- description of the product -->
+        <!--more detail of the product start -->
         <div class="more">
+            <!-- description start -->
             <section class="d1 description row">
                 <h2 class="col-10">description</h2>
                 <div id="btn-description" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>
                 <p class="col-12" id="detail-description">Not only does it look cute, it also has powerful electrical properties, and can release skills such as 100,000 volts and electric ball. Whether it is a forest adventure or a battle, it will use its lightning speed and unparalleled loyalty to become your reliable partner on the adventure.</p>
             </section>
+            <!-- description end -->
 
-            <!-- product details -->
+            <!-- product details start-->
             <section class="d1 details row">
                 <h2 class="col-10">more details</h2>
                 <div id="btn-detail" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>
@@ -255,8 +278,9 @@
                     <li><span>Habitat: Forest areas, likes to climb trees and absorb the surrounding electricity.</span></li>
                 </ul>
             </section>
+            <!-- product detail end -->
 
-            <!-- delivery policy -->
+            <!-- delivery policy  start-->
             <section class="d1 delivery row">
                 <h2 class="col-10">delivery policy</h2>
                 <div id="btn-delivery" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>
@@ -265,8 +289,9 @@
                     <li>Return Policy: We are not allowed to return the product once delivery accepted</li>
                 </ul>
             </section>
+            <!-- delivery policy end -->
 
-            <!-- rating &comments -->
+            <!-- rating &comments  start-->
             <section class="d1 rating row" id="rating">
                 <div class="col-12 first h3">
                     <span>666 ratings</span>
@@ -276,7 +301,7 @@
                         <div class="col-5 big row">
                             <span class="col-3 h1">5.0</span>
                             <span class="col-8">out of 5.0</span>
-                            <h2>🌟🌟🌟🌟🌟</h2>
+                            <h2><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i></h2>
                         </div>
 
                         <!-- using progress to represent ratings -->
@@ -284,117 +309,152 @@
                             <span>520 ratings</span>
                             <ul style="list-style: none;">
                                 <li class="row">
-                                    <span class="col-3">5🌟:</span>
+                                    <span class="col-3">5 <i class="iconfont icon-wuxinghaoping-quan"></i> :</span>
                                     <div class="col-7 progress">
                                         <div role="progressbar" style="width: 100%;" aria-valuenow="50" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage1">100%</div>
                                     </div>
                                 </li>
                                 <li class="row">
-                                    <span class="col-3">4🌟:</span>
+                                    <span class="col-3">4 <i class="iconfont icon-wuxinghaoping-quan"></i> :</span>
                                     <div class="col-7 progress">
-                                        <div role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage2">100%</div>
+                                        <div role="progressbar" style="width: 100%; background-color: #ccc;" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage2">0%</div>
                                     </div>
                                 </li>
                                 <li class="row">
-                                    <span class="col-3">3🌟:</span>
+                                    <span class="col-3">3 <i class="iconfont icon-wuxinghaoping-quan"></i> :</span>
                                     <div class="col-7 progress">
-                                        <div role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage3">100%</div>
+                                        <div role="progressbar" style="width: 100%; background-color: #ccc" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage3">0%</div>
                                     </div>
                                 </li>
                                 <li class="row">
-                                    <span class="col-3">2🌟:</span>
+                                    <span class="col-3">2 <i class="iconfont icon-wuxinghaoping-quan"></i> :</span>
                                     <div class="col-7 progress">
-                                        <div role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage4">100%</div>
+                                        <div role="progressbar" style="width: 100%; background-color: #ccc" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage4">0%</div>
                                     </div>
                                 </li>
                                 <li class="row">
-                                    <span class="col-3">1🌟:</span>
+                                    <span class="col-3">1 <i class="iconfont icon-wuxinghaoping-quan"></i> :</span>
                                     <div class="col-7 progress">
-                                        <div role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage5">100%</div>
+                                        <div role="progressbar" style="width: 100%; background-color: #ccc" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage5">0%</div>
                                     </div>
                                 </li>
                             </ul>
                         </div>
+                        <!-- progress of rating end -->
                     </div>
                 </div>
+
+                <!-- previous comments start -->
                 <div id="btn-comment" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>
                 <div id="comment-list">
-                    <article class="row comments">
+                    <article class="row comments" id="message">
                         <ul class="col-4 date">
-                            <li><span>250 BC</span></li>
-                            <li><span>🌟🌟🌟🌟🌟</span></li>
+                            <li><span>25/05/2015</span></li>
+                            <li><span><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i></span></li>
                             <li><h5>Best Partner Ever!</h5></li>
                         </ul>
                         <p class="col-6">This Pikachu is so cute! Its electric-type skills are very powerful, and its "100,000 Volts" is amazing in battle. And it is very loyal and always stays by my side. I definitely recommend it to every trainer!</p>
-                        <p class="col-2">from Zheng Ying</p>
+                        <div class="person col-2">
+                            <div class="face face1"></div>
+                            <p> Ash</p>
+                        </div>
                     </article>
                     <article class="row comments">
                         <ul class="col-4 date">
-                            <li><span>200 BC</span></li>
-                            <li><span>🌟🌟🌟🌟🌟</span></li>
+                            <li><span>03/11/2012</span></li>
+                            <li><span><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i></span></li>
                             <li><h5>Perfect for any trainer</h5></li>
                         </ul>
                         <p class="col-6">As my first Pokémon, Pikachu adapts perfectly to various scenarios. Not only can it fight with me, but it can also accompany me on trips, and it can even use its static electricity to help start devices. It's so considerate!</p>
-                        <p class="col-2">from Bang Liu</p>
+                        <div class="person col-2">
+                            <div class="face face2"></div>
+                            <p>Dawn</p>
+                        </div>
                     </article>
                     <article class="row comments">
                         <ul class="col-4 date">
-                            <li><span>1700</span></li>
-                            <li><span>🌟🌟🌟🌟🌟</span></li>
+                            <li><span>11/07/2010</span></li>
+                            <li><span><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i></span></li>
                             <li><h5>Super popular Pokémon</h5></li>
                         </ul>
                         <p class="col-6">I have loved Pikachu since I was a kid, and now I finally have one of my own! It really interacts with me, and it is super cute every time it releases electricity. I have become the best partner with it!</p>
-                        <p class="col-2">from Kangxi</p>
+                        <div class="person col-2">
+                            <div class="face face3"></div>
+                            <p>Serena</p>
+                        </div>
                     </article>
                     <article class="row comments">
                         <ul class="col-4 date">
-                            <li><span>1800</span></li>
-                            <li><span>🌟🌟🌟🌟🌟</span></li>
+                            <li><span>25/05/2008</span></li>
+                            <li><span><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i></span></li>
                             <li><h5>The cutest power bank Ever!</h5></li>
                         </ul>
                         <p class="col-6">I can actually use Pikachu to charge my phone! Every time my phone runs out of power, it uses its cheeks to generate a small current. It is simply the most environmentally friendly power bank, hahaha!</p>
-                        <p class="col-2">from Qianlong</p>
+                        <div class="person col-2">
+                            <div class="face face4"></div>
+                            <p>Brock</p>
+                        </div>
                     </article>
+                <!-- previous comments end -->
+
+                <!-- write comments start -->
                     <form class="row text-center comments">
                         <label for="new-comment" class="h5">write your own comment</label>
                         <div class="col-12 row write-comment"> 
-                            <textarea class="col-10" id="new-comment" placeholder="Leave your comment..."></textarea>
-                            <button class="col-1 offset-1" id="submit-comment">Submit</button>
+                            <div class="Rating col-12">           
+                                <input type="radio" id="star5" class="stars" name="rating" value="5" /><label for="star5" title="5 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
+                                <input type="radio" id="star4" class="stars" name="rating" value="4" /><label for="star4" title="4 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
+                                <input type="radio" id="star3" class="stars" name="rating" value="3" /><label for="star3" title="3 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
+                                <input type="radio" id="star2" class="stars" name="rating" value="2" /><label for="star2" title="2 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
+                                <input type="radio" id="star1" class="stars" name="rating" value="1" /><label for="star1" title="1 star"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
+                                <span>Rate the product:&nbsp;</span>
+                              </div>
+                            <input type="text" placeholder="User name" id="user-name" class="col-10">
+                            <input type="text" placeholder="title" id="comment-title" class="col-10">
+                            <textarea class="col-10" id="new-comment" placeholder="Leave your comment..." required></textarea>
+                            <button class="col-1 offset-1" id="submit-comment" type="button">Submit</button>
                         </div>
                     </form>
+                    <!-- write comment end -->
                 </div>
             </section>
+            <!-- comment section end -->
 
-            <!-- recommendation -->
+
+            <!-- recommendation start -->
              <section class="d1 row recommendation">
                 <h2>Recommendation</h2>
                 <!-- product1 -->
                 <div class="product col-lg-3 col-md-3">
                     <img src="../img/product13.png" alt="Electabuzz">
                     <p>Electabuzz</p>
-                    <p>💰: 399.99</p>
+                    <p><i class="iconfont icon-qian"></i>: 399.99</p>
                 </div>
                 <!-- product2 -->
                 <div class="product col-lg-3 col-md-3">
                     <img src="../img/product14.png" alt="Plusle">
                     <p>Plusle</p>
-                    <p>💰: 299.99</p>
+                    <p><i class="iconfont icon-qian"></i>: 299.99</p>
                 </div>
                 <!-- product3 -->
                 <div class="product col-lg-3 col-md-3">
                     <img src="../img/product15.png" alt="Pachirisu">
                     <p>Pachirisu</p>
-                    <p>💰: 299.99</p>
+                    <p><i class="iconfont icon-qian"></i>: 299.99</p>
                 </div>
                 <!-- product4 -->
                 <div class="product col-lg-3 col-md-3">
                     <img src="../img/product16.png" alt="Togedemaru">
                     <p>Togedemaru</p>
-                    <p>💰: 199.99</p>
+                    <p><i class="iconfont icon-qian"></i>: 199.99</p>
                 </div>
              </section>
+             <!-- recommendation end -->
         </div>
     </main>
+<!--main section end  -->
+
+
 
     <!-- Add to Cart Success Modal -->
     <section class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
@@ -415,35 +475,74 @@
           </div>
         </div>
     </section>
+    <!-- add to cart success modal -->
 
 
-    <!-- footer -->
-    <footer class="text-center">
-        <p>Your go-to platform for exploring and adopting virtual Pokémon pets. Learn, play, and connect with your favorite Pokémon today!</p>
-
-        <!-- nav part -->
-        <div class="nav">
-            <a href="#">home</a>
-            <a href="">Cart</a>
-            <a href="">Profile</a>
+<!-- footer section start -->
+<footer>
+    <div class="first">
+        <div class="quick-link">
+            <h1>Quick-link</h1>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="../../Cart/index/index-cart.html">My Cart</a></li>
+                <li><a href="#pets">Pets</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#Cards">Cards</a></li>           
+            </ul>
         </div>
+        <div class="location">
+            <h1>Location</h1>
+            <ul>
+                <li><a href="javascript:;">UK</a></li>
+                <li><a href="javascript:;">China</a></li>
+                <li><a href="javascript:;">Japan</a></li>
+                <li><a href="javascript:;">Finland</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h1>Contact Infro</h1>
+            <ul>
+                <li><a href="javascript:;">Esmee</a></li>
+                <li><a href="javascript:;">+44 520-1314</a></li>
+                <li><a href="javascript:;">myl666@gmail.com</a></li>
+            </ul>
+        </div>
+        <div class="payment">
+            <h1>payment</h1>
+            <ul>
+                <li><img src="../img/mastercard.png" alt="mastercard"></li>
+                <li><img src="../img/yinlian.png" alt="yinlian"></li>
+                <li><img src="../img/visaPay.png" alt="visaPay"></li>
+            </ul>
+        </div>
+    </div>
 
-        <!-- contact us -->
-         <div>
-            <p>You can contact us :</p>
+    <div class="second">
+        <span>Your go-to platform for exploring and adopting virtual Pokémon pets.</span>
+        <span>Learn, play, and connect with your favorite Pokémon today!</span>
+
+        <div class="follow">
+            <h1>Follow us :</h1>
             <div class="icon-list">
                 <div class="icons"></div>
                 <div class="icons"></div>
                 <div class="icons"></div>
             </div>
-         </div>
+        </div>
 
-         <!-- copyright -->
-         <p>&copy; 2025 PokéShop. All rights reserved. UA92.YuLun_Miao</p>
+        <!-- copyright -->
+         <div class="copyright">
+            <h5>&copy; 2025 PokéShop.All rights reserved</h5>
+            <h5>.UA92.YuLun_Miao_666</h5>
+        </div>
          <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-     </footer>
+    </div>
+</footer>
+<!-- footer section end -->
+
     
-       <!-- moblie slidebar -->
+<!-- moblie slidebar start-->
     <div id="mobile-menu">
         <button id="menu-btn">☰</button>
         <div id="menu-content">
@@ -494,5 +593,6 @@
             </div>
         </div>
     </div>
+<!-- mobile slide bar end -->
 </body>
 </html>

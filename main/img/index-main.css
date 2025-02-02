@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-/*#region header [art start */
+/*#region header part start */
 .head-title{
     display: flex;
     justify-content: space-between;
@@ -1268,7 +1268,7 @@ footer .copyright{
     flex-wrap: nowrap;
    }
    header .nav-item{
-    width: 5rem;
+    width: 4.5rem;
     margin: 5px;
    }
    header .search-div{

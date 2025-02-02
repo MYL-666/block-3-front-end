@@ -75,6 +75,60 @@ window.onload = function () {
     }
     // #endregion description end
 
+    // #region write comment start
+    const userName=document.getElementById("user-name");
+    const commentTitle=document.getElementById("comment-title");
+    const newComment=document.getElementById("new-comment");
+    const stars=document.querySelectorAll(".stars");
+    const submitBtn=document.getElementById("submit-comment");
+
+
+    submitBtn.onclick=function(){
+        var newMessage=document.createElement("article");
+        let i=0;
+        let commentStar='';
+        if(userName.value===''){
+            userName.value="unknown";
+        };
+        stars.forEach(star => {
+            if(star.checked){
+                i=parseInt(star.value);
+            }
+        });
+        for(var j=0;j<i;j++){
+            commentStar+='<i class="iconfont icon-wuxinghaoping-quan"></i>';
+        };
+        newMessage.classList.add("row","comments");
+        newMessage.innerHTML=`
+        <ul class="col-4 date">
+            <li><span>${getCurrentTime()}</span></li>
+            <li><span>${commentStar}</span></li>
+            <li><h5>${commentTitle.value}</h5></li>
+        </ul>
+        <p class="col-6">${newComment.value}</p>
+        <div class="person col-2">
+            <div class="face face5"></div>
+            <p>${userName.value}</p>
+        </div>
+    `;
+        commentList.insertBefore(newMessage,commentList.firstChild);
+        // clear textarese
+        userName.value='';
+        commentTitle.value='';
+        newComment.value = '';
+        stars.forEach(star => star.checked = false);
+
+    }
+    // get the time function
+    function getCurrentTime(){
+        var now=new Date();
+        var year=now.getFullYear();
+        var month=('0'+now.getDate()).slice(-2);
+        var day=('0'+now.getDate()).slice(-2);
+        return day+'/'+month+'/'+year;
+    }
+    // #endregion write comment end
+
      // #region slide bar for mobile device
     // get element by id
     var menuBtn = document.getElementById("menu-btn");
@@ -153,7 +207,7 @@ window.onload = function () {
     }
     // #endregion add to cart
 
-    // mobile sildebar
+    //#region mobile sildebar
     var open=document.querySelectorAll(".btn-open")
     var details=document.querySelectorAll(".menu-detail")
     for(let i=0;i<open.length;i++){
@@ -168,4 +222,5 @@ window.onload = function () {
             }
         }
     }
+    // #endregion mobile slidebar
 };

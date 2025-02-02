@@ -1265,6 +1265,8 @@ nav .third img{
         width: 15vw;
         height: 15vw;
         left: 25%;
+    }.pet-shell img{
+        height: 50%;
     }
         /* product-intro end */
     /* #endregion product section end */

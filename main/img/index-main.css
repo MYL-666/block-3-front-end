@@ -5,6 +5,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    outline: 1px solid red !important;
 }
 /* #region header-part of main page start */
 body {

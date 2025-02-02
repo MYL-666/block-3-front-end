@@ -1101,6 +1101,7 @@ nav .third img{
     }
     .pet-card{
         height: 50vh;
+        z-index: 10;
     }
     .pet-card:hover {
         width: 33.33%;

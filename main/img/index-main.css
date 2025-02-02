@@ -5,14 +5,14 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    outline: 1px solid red !important;
+    /* outline: 1px solid red !important; */
 }
 /* #region header-part of main page start */
 body {
     /* make sure evry part connect to each other */
     display: flex;
     flex-direction: column; 
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     justify-content: center;
     align-items: center;
 
@@ -403,7 +403,6 @@ nav .third img{
         height: auto;
         background-color: #efefefdb;
         padding: 1rem 0;
-        overflow: visible;
     }
     .pet-box{
         width: 100vw;
@@ -428,7 +427,7 @@ nav .third img{
         align-items: center;
         transition: 1s ease;
         transition-delay: .2;
-        /* overflow: hidden; */
+        overflow: hidden;
     }
     .pet-card img{
         height:  100%;

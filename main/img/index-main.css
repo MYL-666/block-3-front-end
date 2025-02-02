@@ -1266,15 +1266,6 @@ nav .third img{
         height: 15vw;
         left: 25%;
     }
-    .pet-shell img{
-        width: 100%;
-    }
-    .pet-shell .description{
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
         /* product-intro end */
     /* #endregion product section end */
 

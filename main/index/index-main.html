@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="../img/index-main.css">
     <!--import the font style  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- import js -->
     <script src="./index-main.js"></script>
     <script src="./bootstrap.bundle.min.js"></script>
@@ -193,7 +193,7 @@
         </section>
 <!-- head pci end -->
 
-<!-- about us -->
+<!-- about us start-->
         <section>
             <div class="subtitle">
                 <h1>About Us</h1>
@@ -213,26 +213,10 @@
             </section>
         </section>
 
-<!-- carousel start -->
-        <div class="slideshow">
-            <div class="carousel">
-                <div class="shell" id="shell">
-                    <div class="pic"></div>
-                    <div class="pic"></div>
-                    <div class="pic"></div>
-                </div>
-            </div>
-            <button id="prev" class="carousel-control-prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button id="next" class="carousel-control-next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
-        </div>
-<!-- carousel end -->
-
 <!-- poke pet section start -->
-         <div class="container head-title">
+
+        <!-- pet-intro start -->
+        <div class="container head-title">
             <h1 id="pets">Pokepet</h1>
             <a href="" class="h3">More></a>
          </div>
@@ -247,14 +231,13 @@
                 <img src="../img/pet-intro.png" alt="">
             </div>
          </section>
+         <!-- pet-intro end -->
 
-
-
-
-
-        <div class="subtitle">
+         <!-- pets card start -->
+         <div class="subtitle">
             <h1>Most popular pets</h1>
         </div>
+
         <div class="pet-shell">
             <div class="pet-box">
                 <div class="pet-card card1">
@@ -307,11 +290,12 @@
                 </div>
             </div>
         </div>
+        <!-- pet card end -->
 <!-- pet section end -->
 
 
 <!-- product section start -->
-    <!-- product head pic start -->
+        <!-- product head pic start -->
         <div class="container head-title">
             <h1 id="products">Products</h1>
             <a href="" class="h3">More></a>
@@ -328,124 +312,126 @@
                 </span>
             </div>
         </div>
-    <!-- product head pic end -->
+<!-- product head pic end -->
+        <!-- product card start -->
+        <section class="product-page">
+            <div class="subtitle">
+                <h1 class="title">Guess you might also like:</h1>
+            </div>
+            <div class="product-container">
+                <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="img">
+                        <img src="../img/Meowth.jpg" alt="Meowth" class="product-imgs">
+                        <input type="button" value="Add to cart" class="add-cart" data-name="Meowth" data-price="99.99" data-img="../img/Meowth.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="name">
+                            <h2>New!</h2>
+                            <span class="h3">Meowth</span>
+                        </div>
+                        <div class="price">
+                            <h5>💰: 109.99</h5>
+                            <h3>💰: 99.99</h3>
+                        </div>
+                    </div>
+                  </div>
+            
+                  <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="img">
+                        <img src="../img/Palkia.jpg" alt="Palkia" class="product-imgs">
+                        <input type="button" value="Add to cart" class="add-cart" data-name="Palkia" data-price="249.99" data-img="../img/Palkia.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="name">
+                            <h2>New!</h2>
+                            <span class="h3"> Palkia</span>
+                        </div>
+                        <div class="price">
+                            <h5>💰: 274.99</h5>
+                            <h3>💰: 249.99</h3>
+                        </div>
+                    </div>
+                  </div>
+            
+                  <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="img">
+                        <img src="../img/Hydrapple.jpg" alt="Hydrapple" class="product-imgs">
+                        <input type="button" value="Add to cart" class="add-cart" data-name="Hydrapple" data-price="129.99" data-img="../img/Hydrapple.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="name">
+                            <h2>New!</h2>
+                            <span class="h3"> Hydrapple</span>
+                        </div>
+                        <div class="price">
+                            <h5>💰: 142.99</h5>
+                            <h3>💰: 129.99</h3>
+                        </div>
+                    </div>
+                  </div>
+        
+              <div class="box">
+                <span class="discount">-15%</span>
+                <div class="img">
+                    <img src="../img/sweetheart.jpg" alt="sweet-heart" class="product-imgs">
+                    <input type="button" value="Add to cart" class="add-cart" data-name="sweet-heart" data-price="149.99" data-img="../img/sweetheart.jpg">
+                </div>
+                <div class="content">
+                    <span class="h3"> sweetheart</span>
+                    <div class="price">
+                        <h5>💰: 169.99</h5>
+                        <h3>💰: 149.99</h3>
+                    </div>
+                </div>
+              </div>
+        
+              <div class="box">
+                <span class="discount">-15%</span>
+                <div class="img">
+                    <img src="../img/Gengar.jpg" alt="Floatzel" class="product-imgs">
+                    <input type="button" value="Add to cart" class="add-cart" data-name="Gengar" data-price="129.99" data-img="../img/Gengar.jpg">
+                </div>
+                <div class="content">
+                    <span class="h3"> Gengar</span>
+                    <div class="price">
+                        <h5>💰: 147.99</h5>
+                        <h3>💰: 129.99</h3>
+                    </div>
+                </div>
+              </div>
+        
+              <div class="box">
+                <span class="discount">-15%</span>
+                <div class="img">
+                    <img src="../img/Eevee.jpg" alt="Eevee" class="product-imgs">
+                    <input type="button" value="Add to cart" class="add-cart" data-name="Eevee" data-price="149.99" data-img="../img/Eevee.jpg">
+                </div>
+                <div class="content">
+                    <span class="h3"> Eevee</span>
+                    <div class="price">
+                        <h5>💰: 169.99</h5>
+                        <h3>💰: 149.99</h3>
+                    </div>
+                </div>
+              </div>
+            </div>              
+        </section>
+        <!-- product card end -->
+<!-- product section end -->
 
-    <!--more product section start -->
-<section class="product-page">
-    <div class="subtitle">
-        <h1 class="title">Guess you might also like:</h1>
-    </div>
-    <div class="product-container">
-        <div class="box">
-            <span class="discount">-10%</span>
-            <div class="img">
-                <img src="../img/Meowth.jpg" alt="Meowth" class="product-imgs">
-                <input type="button" value="Add to cart" class="add-cart" data-name="Meowth" data-price="99.99" data-img="../img/Meowth.jpg">
-            </div>
-            <div class="content">
-                <div class="name">
-                    <h2>New!</h2>
-                    <span class="h3">Meowth</span>
-                </div>
-                <div class="price">
-                    <h5>💰: 109.99</h5>
-                    <h3>💰: 99.99</h3>
-                </div>
-            </div>
-          </div>
-    
-          <div class="box">
-            <span class="discount">-10%</span>
-            <div class="img">
-                <img src="../img/Palkia.jpg" alt="Palkia" class="product-imgs">
-                <input type="button" value="Add to cart" class="add-cart" data-name="Palkia" data-price="249.99" data-img="../img/Palkia.jpg">
-            </div>
-            <div class="content">
-                <div class="name">
-                    <h2>New!</h2>
-                    <span class="h3"> Palkia</span>
-                </div>
-                <div class="price">
-                    <h5>💰: 274.99</h5>
-                    <h3>💰: 249.99</h3>
-                </div>
-            </div>
-          </div>
-    
-          <div class="box">
-            <span class="discount">-10%</span>
-            <div class="img">
-                <img src="../img/Hydrapple.jpg" alt="Hydrapple" class="product-imgs">
-                <input type="button" value="Add to cart" class="add-cart" data-name="Hydrapple" data-price="129.99" data-img="../img/Hydrapple.jpg">
-            </div>
-            <div class="content">
-                <div class="name">
-                    <h2>New!</h2>
-                    <span class="h3"> Hydrapple</span>
-                </div>
-                <div class="price">
-                    <h5>💰: 142.99</h5>
-                    <h3>💰: 129.99</h3>
-                </div>
-            </div>
-          </div>
 
-      <div class="box">
-        <span class="discount">-15%</span>
-        <div class="img">
-            <img src="../img/sweetheart.jpg" alt="sweet-heart" class="product-imgs">
-            <input type="button" value="Add to cart" class="add-cart" data-name="sweet-heart" data-price="149.99" data-img="../img/sweetheart.jpg">
-        </div>
-        <div class="content">
-            <span class="h3"> sweetheart</span>
-            <div class="price">
-                <h5>💰: 169.99</h5>
-                <h3>💰: 149.99</h3>
-            </div>
-        </div>
-      </div>
+<!-- card section start -->
+        <section class="card-section">
 
-      <div class="box">
-        <span class="discount">-15%</span>
-        <div class="img">
-            <img src="../img/Gengar.jpg" alt="Floatzel" class="product-imgs">
-            <input type="button" value="Add to cart" class="add-cart" data-name="Gengar" data-price="129.99" data-img="../img/Gengar.jpg">
-        </div>
-        <div class="content">
-            <span class="h3"> Gengar</span>
-            <div class="price">
-                <h5>💰: 147.99</h5>
-                <h3>💰: 129.99</h3>
-            </div>
-        </div>
-      </div>
-
-      <div class="box">
-        <span class="discount">-15%</span>
-        <div class="img">
-            <img src="../img/Eevee.jpg" alt="Eevee" class="product-imgs">
-            <input type="button" value="Add to cart" class="add-cart" data-name="Eevee" data-price="149.99" data-img="../img/Eevee.jpg">
-        </div>
-        <div class="content">
-            <span class="h3"> Eevee</span>
-            <div class="price">
-                <h5>💰: 169.99</h5>
-                <h3>💰: 149.99</h3>
-            </div>
-        </div>
-      </div>
-    </div>
-      
-</section>
-    <!--more product section end -->
-<!--product section end  -->
-
-        <!-- card page start -->
-         <section class="card-section">
+        <!-- card intro start -->
             <div class="container head-title">
                 <h1 id="products">Poke Crads</h1>
                 <a href="" class="h3">More></a>
             </div>
+            
             <section>
                 <section class="about">       
                     <div class="left">
@@ -468,6 +454,7 @@
                 <div class="subtitle">
                     <h1 class="title">Pick your lucky cards:</h1>
                 </div>
+
                 <!-- first line -->
                 <section class="card-shell">
                     
@@ -530,9 +517,8 @@
                         </div>
                     </div>
 
-
-                    <!-- second lines -->
-                    <div class="card-container">
+                     <!-- second lines -->
+                     <div class="card-container">
                         <div class="box card-box">
                                 <div class="cover">
                                     <img  src="../img/product9.jpg" alt="">
@@ -591,14 +577,17 @@
                     </div>
                 </section>
             </section>
-         </section>
-         <!-- card part end -->
+        </section>
+        <!-- pick cards end -->
+<!-- cards section end -->
 
 
+<!-- personal trainer section start -->
+        <div class="head-title container">
+            <h1>Personal Trainer</h1> 
+            <a class="h3" href="javascript:;">more></a>
+        </div>
 
-
-        <!-- personal trainer cards -->
-        <div class="head-title container"><h1>Your Personal Trainer</h1> <a class="h3" href="javascript:;">more></a></div>
         <div class="trainer-container" id="trainer-container">
             <div class="shell">
                 <!-- first tutor ash -->
@@ -662,53 +651,57 @@
 </main>
 <!-- main page end -->
 
-         <!-- Add to Cart Success Modal -->
-         <section class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <!-- Modal Header -->
-                <div class="modal-header">
-                  <h5 class="modal-title" id="successModalLabel">Success!</h5>
-                </div>
-                <!-- Modal Body -->
-                <div class="modal-body">
-                  <p id="modalMessage"></p>
-                </div>
-                <!-- Modal Footer -->
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
-                </div>
-              </div>
+
+     <!-- Add to Cart Success Modal start -->
+     <section class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="successModalLabel">Success!</h5>
             </div>
-        </section>
-
-
-        <!-- footer -->
-         <footer class="text-center">
-            <p>Your go-to platform for exploring and adopting virtual Pokémon pets. Learn, play, and connect with your favorite Pokémon today!</p>
-
-            <!-- nav part -->
-            <div class="nav">
-                <a href="#">home</a>
-                <a href="">Cart</a>
-                <a href="">Profile</a>
+            <!-- Modal Body -->
+            <div class="modal-body">
+              <p id="modalMessage"></p>
             </div>
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- add to cart modal end -->
 
-            <!-- contact us -->
-             <div>
-                <p>You can contact us :</p>
-                <div class="icon-list">
-                    <div class="icons"></div>
-                    <div class="icons"></div>
-                    <div class="icons"></div>
-                </div>
-             </div>
+<!-- footer section start -->
+    <footer class="text-center">
+      <p>Your go-to platform for exploring and adopting virtual Pokémon pets. Learn, play, and connect with your favorite Pokémon today!</p>
+    
+      <!-- nav part -->
+      <div class="nav">
+          <a href="#">home</a>
+          <a href="">Cart</a>
+          <a href="">Profile</a>
+      </div>
+    
+      <!-- contact us -->
+       <div>
+          <p>You can contact us :</p>
+          <div class="icon-list">
+              <div class="icons"></div>
+              <div class="icons"></div>
+              <div class="icons"></div>
+          </div>
+       </div>
+    
+       <!-- copyright -->
+       <p>&copy; 2025 PokéShop. All rights reserved. UA92.YuLun_Miao</p>
+       <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </foter>
+<!-- footer section end -->
 
-             <!-- copyright -->
-             <p>&copy; 2025 PokéShop. All rights reserved. UA92.YuLun_Miao</p>
-             <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-         </footer>
 
+<!-- mobile nav start -->
     <!-- moblie slidebar -->
     <div id="mobile-menu">
         <button id="menu-btn">☰</button>
@@ -766,6 +759,7 @@
             </section>
         </div>
     </div>
-    
+<!-- mobile nav end -->
+
 </body>
 </html>

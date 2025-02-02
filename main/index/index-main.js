@@ -1,32 +1,5 @@
 window.onload=function(){
 
-    // #region slideShow
-        let index = 0;
-    const slides = document.querySelectorAll(".pic");
-    const shell = document.querySelector(".shell");
-    const prev=document.getElementById("prev")
-    const next=document.getElementById("next")
-
-    function updateCarousel() {
-        shell.style.animation = "none";
-        shell.style.transform = `translateZ(-35vw) rotateY(${-index * 120}deg)`;
-
-        setTimeout(() => {
-            shell.style.animation = `carousel 9s infinite cubic-bezier(0.77,0,0.175,1) ${-index*3}s forwards`;
-        }, 500);
-    }
-
-    prev.onclick=function(){
-        index = (index -1 + slides.length) % slides.length;
-        updateCarousel();
-    }
-
-    next.onclick=function(){
-        index = (index - 2 + slides.length) % slides.length;
-        updateCarousel();
-    }
-//    #endregion slideShow
-
     // #region slide bar for mobile device
     // get element by id
     var menuBtn = document.getElementById("menu-btn");

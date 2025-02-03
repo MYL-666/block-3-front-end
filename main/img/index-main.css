@@ -448,7 +448,7 @@ nav .third img{
         display: flex;
         align-items: center;
         transition: 1s ease;
-        transition-delay: .2;
+        transition-delay: .2s;
         overflow: hidden;
     }
     .pet-card img{
@@ -574,16 +574,16 @@ nav .third img{
     .loading span:nth-child(3){
         border-radius: 50% 50% 44% 56% / 41% 86% 14% 59% ;
         border-color: blanchedalmond;
-        animation-duration: 3%;
+        animation-duration: 3s;
     }
     .loading span:nth-child(4){
         border-radius: 80% 20% 84% 16% / 28% 86% 14% 72% ;
-        animation-duration: 12%;
+        animation-duration: 4s;
     }
     .loading span:nth-child(5){
         border-radius: 16% 84% 37% 63% / 75% 66% 34% 25% ;
         animation-direction: reverse;
-        animation-duration: 5%;
+        animation-duration: 3.5s;
     }
     .loading span:last-child{
         border: 0;
@@ -837,14 +837,14 @@ nav .third img{
     }
     /* animation of turning cards */
     @keyframes turn-cover{
-        form{
+        from{
             transform: rotateY(-180deg);
         }to{
             transform: rotateY(0deg);
         }
     }
     @keyframes turn-back{
-        form{
+        from{
             transform: rotateY(0deg);
         }to{
             transform: rotateY(180deg);
@@ -1008,7 +1008,7 @@ nav .third img{
             transform: scale(0.1);
             opacity: 0;
         }to{
-            transform: translateX(-100%) scale(1);;
+            transform: translate(-115%,-15%) scale(1);;
             opacity: 1;
         }
     }

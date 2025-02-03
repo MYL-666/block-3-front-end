@@ -5,7 +5,8 @@ window.onload = function () {
     var formlist = document.getElementsByTagName("form");
     var hint = document.getElementById("hint");
     var cartItemsContainer = document.getElementById("cart-items");
-    var PI=document.getElementById("PI")
+    var PI=document.getElementById("PI");
+    var cartNum=document.getElementById("cart-num");
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -15,11 +16,16 @@ window.onload = function () {
         btn03.style.display = "inline-block";
         formlist[1].action = "../../main/index/index-main.html";
         hint.style.display = "block";
+        cartItemsContainer.style.display="none";
+        cartNum.style.display="none";
     } else {
         btn02.style.display = "block";
         btn03.style.display = "none";
         hint.style.display = "none";
-        PI.style.justifyContent="left"
+        PI.style.justifyContent="left";
+        cartItemsContainer.style.display="flex";
+        cartNum.innerText=cart.length;
+        cartNum.style.display="block";
     }
 
     // add the product to cart
@@ -32,7 +38,7 @@ window.onload = function () {
             // add the html of the product
             itemElement.innerHTML = `
             <div class="added">
-                <img src="${item.img}" alt="${item.name}" style="width:50px;">
+                <img src="${item.img}" alt="${item.name}">
                 <span>${item.name}</span>&nbsp;&nbsp;
                 <span><i class="iconfont icon-qian"></i>: ${item.price}</span>&nbsp;&nbsp;
                 <span>Quantity: ${item.quantity}</span>&nbsp;&nbsp;
@@ -53,6 +59,7 @@ window.onload = function () {
             const index = e.target.dataset.index;
             cart.splice(index, 1);
             localStorage.setItem("cart", JSON.stringify(cart)); // update localStorage
+            cartNum.innerText=cart.length;
             renderCart(); 
         }
         // if everything is removed, show nothin page
@@ -61,13 +68,36 @@ window.onload = function () {
             btn03.style.display = "inline-block";
             formlist[1].action = "../../main/index/index-main.html";
             hint.style.display = "block";
-            hint.style.margin="0 auto"
+            hint.style.margin="0 auto";
+            cartItemsContainer.style.display="none";
+            cartNum.style.display="none";
         }
     });
 
     renderCart(); 
 
    
+    //#region  remove all btn
+   document.getElementById("remove-all").onclick=function(){
+    // confirm remove all or not
+    if (confirm("Are you sure you want to remove all items from the cart?")) {
+        cart = [];
+        localStorage.setItem("cart", JSON.stringify(cart));
+        cartItemsContainer.innerHTML = "";
+        totalPriceElement.textContent = "0.00";
+        btn02.style.display = "none";
+        btn03.style.display = "inline-block";
+        formlist[1].action = "../../main/index/index-main.html";
+        hint.style.display = "block";
+        hint.style.margin = "0 auto";
+        cartItemsContainer.style.display = "none";
+        cartNum.style.display = "none";
+    }
+   }
+//    #endregion remove all btn end
+
+
+
     // #region slide bar for mobile device
     // get element by id
     var menuBtn = document.getElementById("menu-btn");

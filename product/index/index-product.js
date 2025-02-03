@@ -123,11 +123,13 @@ window.onload = function () {
     function getCurrentTime(){
         var now=new Date();
         var year=now.getFullYear();
-        var month=('0'+now.getDate()).slice(-2);
+        var month=('0'+(now.getDate()-1)).slice(-2);
         var day=('0'+now.getDate()).slice(-2);
         return day+'/'+month+'/'+year;
     }
     // #endregion write comment end
+
+
 
      // #region slide bar for mobile device
     // get element by id

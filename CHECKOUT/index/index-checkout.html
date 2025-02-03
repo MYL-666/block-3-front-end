@@ -7,44 +7,47 @@
     <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="stylesheet" href="./index-checkout.css">
      <!--import the font style  -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-     <!-- import js -->
-     <script src="./index-checkout.js"></script>
-     <script src="./bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- import js -->
+    <script src="./index-checkout.js"></script>
+    <script src="./bootstrap.bundle.min.js"></script>
+    <!-- import font icons -->
+    <link rel="stylesheet" href="./iconfont.css">
 </head>
 <body>
-    <!-- header part -->
-    <header>
-        <div class="row">
-            <!-- logo part -->
-            <div class="top-left col-lg-1 col-md-1">
-                <img src="../img/logo.svg" alt="logo">
-            </div>
-            <!-- search bar -->
-            <div class="search-div col-lg-5 col-md-4 offset-md-1">
-                <form class="form-horizontal row">
-                    <input type="text" class="search form-control" placeholder="Search the product" id="searching">
-                    <button type="button" class="submit form-control" id="btn01"></button>
-                </form>
-              </div>
-            <!-- navigator on header -->
-            <div class="top-right col-lg-5 col-md-6">
-
-                <ul class="nav nav-pills">
-                    <li class="nav-item "><a class="nav-link active" href="../../login/index-login.html"></a></li>
-                    <li class="nav-item "><a class="nav-link active" href="../../main/index/index-main.html"></a></li>
-                    <li class="nav-item cart1">
-                        <div id="cart-num"></div>
-                        <a class="nav-link active" href="../../Cart/index/index-cart.html"></a>
-                    </li>
-                </ul> 
-            </div>
+<!-- header part start -->
+<header>
+    <div class="row">
+        <!-- logo part -->
+        <div class="top-left col-lg-1 col-md-1">
+            <img src="../img/logo.svg" alt="logo">
         </div>
-    </header>
+        <!-- search bar -->
+        <div class="search-div col-lg-5 col-md-4 offset-md-1">
+            <form class="form-horizontal row">
+                <input type="text" class="search form-control" placeholder="Search the product" id="searching">
+                <button type="button" class="submit form-control" id="btn01">search</button>
+            </form>
+          </div>
+        <!-- navigator on header -->
+        <div class="top-right col-lg-5 col-md-6">
 
+            <ul class="nav nav-pills">
+                <li class="nav-item "><a class="nav-link active" href="../../login/index-login.html"></a></li>
+                <li class="nav-item "><a class="nav-link active" href="../../main/index/index-main.html"></a></li>
+                <li class="nav-item cart1">
+                    <div id="cart-num"></div>
+                    <a class="nav-link active" href="../../Cart/index/index-cart.html"></a>
+                </li>
+            </ul> 
+        </div>
+    </div>
+</header>
+<!-- header start end -->
 
+<!-- main body start -->
     <form>
         <!-- main body -->
      <main class="container">
@@ -69,11 +72,12 @@
                     <label for="region" class="control-label h4">region*:</label>
                     <div class="col-12">
                         <select id="region" required class="form-control" name="region">
-                            <option value="" disabled selected>choose your country</option>
+                            <option disabled selected>choose your country</option>
                             <option>UK</option>
                             <option>Europe</option>
                             <option>China</option>
                             <option>Japan</option>
+                            <option>Finland</option>
                         </select>
                     </div>
                 </div>
@@ -120,6 +124,14 @@
                         <input type="text" placeholder="Enter Postcode" id="postCode" required class="form-control">
                     </div>
                 </div>
+
+                <!-- street number2 -->
+                <div class="form-group">
+                    <label for="postCode" class="control-label h4">Street 2:</label>
+                    <div class="col-12">
+                        <input type="text" placeholder="Enter the second line of street" id="postCode" required class="form-control">
+                    </div>
+                </div>               
             </div>
 
             <!-- bottom section -->
@@ -161,17 +173,17 @@
                 <div class="col-12 text-left summary"> 
                     <div id="cartItemsContainer"></div>                
                     <div class="delivery">
-                        <span>delivery fee:</span>
-                        <span>0.00 💰</span>
+                        <span>Delivery Fee:</span>
+                        <span>0.00 <i class="iconfont icon-qian"></i></span>
                     </div>
                    <div class="discount">
                     <span>discount:</span>
-                    <span id="discount">-0% 💰</span>
+                    <span id="discount">-0% <i class="iconfont icon-qian"></i></span>
                    </div>
                 </div>
                 <div id="total">
                     <span>Total:</span>
-                    <span id="total-amount">0.00 💰</span>
+                    <span id="total-amount">0.00 <i class="iconfont icon-qian"></i></span>
                 </div>
             </div>
 
@@ -205,36 +217,75 @@
         </div>
      </main>
     </form>
+<!-- main section end -->
 
 
 
+<!-- footer section start -->
+<footer>
+    <div class="first">
+        <div class="quick-link">
+            <h1>Quick-link</h1>
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="../../Cart/index/index-cart.html">My Cart</a></li>
+                <li><a href="#pets">Pets</a></li>
+                <li><a href="#Products">Products</a></li>
+                <li><a href="#Cards">Cards</a></li>           
+            </ul>
+        </div>
+        <div class="location">
+            <h1>Location</h1>
+            <ul>
+                <li><a href="javascript:;">UK</a></li>
+                <li><a href="javascript:;">China</a></li>
+                <li><a href="javascript:;">Japan</a></li>
+                <li><a href="javascript:;">Finland</a></li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h1>Contact Infro</h1>
+            <ul>
+                <li><a href="javascript:;">Esmee</a></li>
+                <li><a href="javascript:;">+44 520-1314</a></li>
+                <li><a href="javascript:;">myl666@gmail.com</a></li>
+            </ul>
+        </div>
+        <div class="payment">
+            <h1>payment</h1>
+            <ul>
+                <li><img src="../img/mastercard.png" alt="mastercard"></li>
+                <li><img src="../img/yinlian.png" alt="yinlian"></li>
+                <li><img src="../img/visaPay.png" alt="visaPay"></li>
+            </ul>
+        </div>
+    </div>
 
-        <!-- footer -->
-        <footer class="text-center">
-            <p>Your go-to platform for exploring and adopting virtual Pokémon pets. Learn, play, and connect with your favorite Pokémon today!</p>
-    
-            <!-- nav part -->
-            <div class="nav">
-                <a href="../../main/index/index-main.html">home</a>
-                <a href="#">Cart</a>
-                <a href="">Profile</a>
+    <div class="second">
+        <span>Your go-to platform for exploring and adopting virtual Pokémon pets.</span>
+        <span>Learn, play, and connect with your favorite Pokémon today!</span>
+
+        <div class="follow">
+            <h1>Follow us :</h1>
+            <div class="icon-list">
+                <div class="icons"></div>
+                <div class="icons"></div>
+                <div class="icons"></div>
             </div>
-    
-            <!-- contact us -->
-             <div>
-                <p>You can contact us :</p>
-                <div class="icon-list">
-                    <div class="icons"></div>
-                    <div class="icons"></div>
-                    <div class="icons"></div>
-                </div>
-             </div>
-    
-             <!-- copyright -->
-             <p>&copy; 2025 PokéShop. All rights reserved. UA92.YuLun_Miao</p>
-             <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-         </footer>
+        </div>
 
+        <!-- copyright -->
+         <div class="copyright">
+            <h5>&copy; 2025 PokéShop.All rights reserved</h5>
+            <h5>.UA92.YuLun_Miao_666</h5>
+        </div>
+         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+</footer>
+<!-- footer section end -->
+
+
+<!-- payment success animate start -->
          <div id="payment-success" class="modal fade" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="payment-success modal-content">
@@ -251,6 +302,6 @@
                  </div>
             </div>
          </div>
-    
+<!-- payment success animate end -->
 </body>
 </html>

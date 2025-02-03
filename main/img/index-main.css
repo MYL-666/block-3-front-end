@@ -7,6 +7,15 @@
     box-sizing: border-box;
     /* outline: 1px solid red !important; */
 }
+/* scroll style start */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FFD700;
+    border-radius: 10px;
+}
+    /* scroll style end */
 .icon-wuxinghaoping-quan{
     color: #FFD700;
 }
@@ -31,7 +40,7 @@ body {
     align-items: baseline;
     margin-top: 2rem;
 }
-.head-title>h1{
+.head-title>h1,.head-title>span{
     font-size: 5rem;
 }
 .head-title .h3{

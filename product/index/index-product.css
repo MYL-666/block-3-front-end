@@ -9,6 +9,15 @@
 .icon-wuxinghaoping-quan{
     color: #FFD700;
 }
+/* scroll style start */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FFD700;
+    border-radius: 10px;
+}
+    /* scroll style end */
 .icon-qian{
     font-size: 50px !important;
     color: #FFB300 ;
@@ -550,6 +559,10 @@ main .more{
     height: 3rem;
     width: 5rem;
     border-radius: 10px;
+}
+#submit-comment:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 8px;
 }
 /* #endregion description part end */
 

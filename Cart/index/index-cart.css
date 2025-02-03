@@ -3,6 +3,15 @@
     padding: 0;
     font-family: "Sour Gummy", serif;
 }
+/* scroll style start */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FFD700;
+    border-radius: 10px;
+}
+    /* scroll style end */
 /* #region header-part of main page start */
 body {
     display: flex;
@@ -152,6 +161,10 @@ main  #remove-all{
     top: 7.5rem;
     right: 2rem;
 }
+#remove-all:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
 main .products-input{
     border: 5px solid #cccccc22;
     height: 90%;
@@ -218,6 +231,13 @@ main .remove-btn{
 }
 main .remove-btn:hover{
     box-shadow: 0 0 5px;
+}
+#hint{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
 }
 /* #endregion main-body */
 

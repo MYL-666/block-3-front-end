@@ -11,10 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-     <!-- import js -->
-     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-     <script src="./index-cart.js"></script>
-        <!-- import font icons -->
+    <!-- import js -->
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <script src="./index-cart.js"></script>
+    <!-- import font icons -->
     <link rel="stylesheet" href="./iconfont.css">
 </head>
 <body>
@@ -58,7 +58,11 @@
         <!-- product -->
          <div class="products-input" id="PI">         
             <div id="cart-items"></div>
-            <p id="hint">Your shopping cart is empty. If you see something you would like to add to your shopping cart when shopping, click Add to Cart.</p>
+            <p id="hint">
+                <span>Your shopping cart is empty. </span>
+                <span>If you see something you like</span>
+                <span>click Add to Cart</span>
+            </p>
             <form class="payment" action="../../CHECKOUT/index/index-checkout.html">
                 Total:&nbsp;&nbsp;<span id="total-amount">0.00</span>&nbsp;&nbsp;<i class="iconfont icon-qian"></i>
                 <input type="submit" value="check out" class="form-control btn" id="btn02">

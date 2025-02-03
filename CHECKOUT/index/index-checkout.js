@@ -14,9 +14,9 @@ window.onload=function(){
             itemElement.classList.add("cart-item");
             itemElement.innerHTML = `
             <div class="added">
-                <img src="${item.img}" alt="${item.name}" style="width:50px;">
-                <span>${item.name}</span>
-                <span>Price: ${item.price} 💰</span>
+                <img src="${item.img}" alt="${item.name}" style="width:50px;">&nbsp;
+                <span>${item.name}</span>&nbsp;&nbsp;
+                <span>Price: ${item.price} <i class="iconfont icon-qian"></i></span>&nbsp;&nbsp;
                 <span>Quantity: ${item.quantity}</span>
             </div>
             `;
@@ -26,14 +26,14 @@ window.onload=function(){
         // if total amount > 300. the discount will apply
         if(total>=300){
             var total2=total*0.9
-            discount.innerText="-10% 💰";
+            discount.innerHTML='-10% <i class="iconfont icon-qian"></i>';
             // creat an element to show the actual price
-            span.innerHTML=total2.toFixed(2)+" 💰";
+            span.innerHTML=`${total2.toFixed(2)}<i class="iconfont icon-qian"></i>`;
             totalPrice.parentElement.appendChild(span);
             totalPrice.style.textDecoration="line-through"
             totalPrice.textContent = `${total.toFixed(2)}💰`;
         }
-        totalPrice.textContent = `${total.toFixed(2)}💰`;
+        totalPrice.innerHTML = `${total.toFixed(2)} <i class="iconfont icon-qian"></i>`;
     }
     renderCart()
 
@@ -46,8 +46,9 @@ window.onload=function(){
     if(span){
         totalPrice.parentElement.removeChild(span);
     }
+    discount.innerHTML='-0% <i class="iconfont icon-qian"></i>'
     totalPrice.style.textDecoration="none";
-    totalPrice.innerText="0.00 💰"
+    totalPrice.innerHTML='0.00 <i class="iconfont icon-qian"></i>'
    }
 
 

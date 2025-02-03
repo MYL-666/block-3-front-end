@@ -15,7 +15,7 @@ window.onload = function () {
         btn02.style.display = "none";
         btn03.style.display = "inline-block";
         formlist[1].action = "../../main/index/index-main.html";
-        hint.style.display = "block";
+        hint.style.display = "flex";
         cartItemsContainer.style.display="none";
         cartNum.style.display="none";
     } else {
@@ -67,8 +67,7 @@ window.onload = function () {
             btn02.style.display = "none";
             btn03.style.display = "inline-block";
             formlist[1].action = "../../main/index/index-main.html";
-            hint.style.display = "block";
-            hint.style.margin="0 auto";
+            hint.style.display = "flex";
             cartItemsContainer.style.display="none";
             cartNum.style.display="none";
         }

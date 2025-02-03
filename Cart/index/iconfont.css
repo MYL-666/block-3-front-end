@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1738524632574') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\e603";
+}
+
+.icon-qian:before {
+  content: "\e608";
+}
+
+.icon-yinlian:before {
+  content: "\e604";
+}
+
+.icon-WeChat:before {
+  content: "\e65b";
+}
+
+.icon-visa:before {
+  content: "\e63b";
+}
+
+.icon-VisaVISA:before {
+  content: "\e62b";
+}
+
+.icon-instagram:before {
+  content: "\e60f";
+}
+
+.icon-wuxinghaoping-quan:before {
+  content: "\e60b";
+}
+

@@ -33,9 +33,9 @@ window.onload = function () {
             itemElement.innerHTML = `
             <div class="added">
                 <img src="${item.img}" alt="${item.name}" style="width:50px;">
-                <span>${item.name}</span>
-                <span>Price: ${item.price} 💰</span>
-                <span>Quantity: ${item.quantity}</span>
+                <span>${item.name}</span>&nbsp;&nbsp;
+                <span><i class="iconfont icon-qian"></i>: ${item.price}</span>&nbsp;&nbsp;
+                <span>Quantity: ${item.quantity}</span>&nbsp;&nbsp;
                 <button class="remove-btn" data-index="${index}">Remove</button>
             </div>
             `;
@@ -66,4 +66,49 @@ window.onload = function () {
     });
 
     renderCart(); 
+
+   
+    // #region slide bar for mobile device
+    // get element by id
+    var menuBtn = document.getElementById("menu-btn");
+    var menuContent = document.getElementById("menu-content");
+    var close=document.getElementById("close")
+
+    // Bind click event to button
+    menuBtn.onclick = function () {
+        // when its open,click will close; when its close, click will open
+        if (menuContent.style.display === "block") {
+            menuContent.style.display = "none"; 
+        } else {
+            menuContent.style.display = "block"; 
+            menuContent.style.animation="animate .5s ease-out forwards"
+        }
+    };
+    close.onclick = function () {
+        // when its open,click will close; when its close, click will open
+        if (menuContent.style.display === "block") {
+            menuContent.style.display = "none"; 
+        } else {
+            menuContent.style.display = "block"; 
+        }
+    };
+    // #endregion sildebar for mobile device
+
+
+    //#region mobile slide bar
+    var open=document.querySelectorAll(".btn-open")
+    var details=document.querySelectorAll(".menu-detail")
+    for(let i=0;i<open.length;i++){
+        details[i].style.display = "none";
+        open[i].onclick=function(){
+            if (details[i].style.display === "block") {
+                details[i].style.display = "none"; 
+                open[i].style.transform="rotate(0deg)"
+            } else {
+                details[i].style.display = "block"; 
+                open[i].style.transform="rotate(90deg)"
+            }
+        }
+    }
+    // #endregion
 };

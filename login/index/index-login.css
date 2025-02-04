@@ -11,6 +11,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 /* #region main section start */
@@ -20,18 +21,19 @@ main{
 .shell{
     display: flex;
     height: 60vh;
+    overflow: hidden;
 }
     /* img section start */
 .img-box{
     height: 100%;
     width: 20vw;
     background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,248,113,1) 0%, rgba(240,221,254,1) 90% );
-    border: 0;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: animate1 1s ease-out forwards;
 }
 .img-box img{
     height: 100%;
-    border: 0;
 }
     /* img section end */
     /* main form start */
@@ -52,6 +54,8 @@ main{
 .welcome{
     margin-bottom: 2rem;
     text-align: center;
+    opacity: 0;
+    animation: animate2 1s ease-out forwards;
 }
 .welcome h1{
     letter-spacing: 1px;
@@ -72,6 +76,8 @@ main{
     line-height: 1;
     border-radius: 2rem;
     width: 100%;
+    opacity: 0;
+    animation: animate2 1s .3s ease-out forwards;
 }
 .input input{
     margin: 0;
@@ -92,6 +98,10 @@ main{
     font-size: 1.2rem;
     color: #888;
 }
+.forget,.checking{
+    opacity: 0;
+    animation: animate2 1s .5s ease-out forwards;
+}
 .login{
     margin-top: 1.5rem;
     width: 100%;
@@ -99,6 +109,10 @@ main{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+.login,.existing{
+    opacity: 0;
+    animation: animate2 1s .8s ease-out forwards;
 }
 #btn {
     width: 50%;
@@ -110,7 +124,8 @@ main{
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-}:disabled{
+}
+:disabled{
     color: #666;
 }
 #btn:hover {
@@ -163,7 +178,30 @@ a{
 .welcome img{
     display: none;
 }
+
     /* main form end */
+
+    /* animation */
+@keyframes animate1{
+    from{
+        opacity: 0;
+        transform: translate(800px, 1000px);
+        z-index: -2;
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+        z-index: 1;
+    }
+}
+@keyframes animate2{
+    from{
+        opacity: 0;
+        transform: translateX(1000px);
+    }to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 /* #endregion main section end */
 
 /* #region instructions */

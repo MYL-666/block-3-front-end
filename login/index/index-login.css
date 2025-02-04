@@ -1,182 +1,123 @@
-html{
-    overflow-x: hidden;
-}
 *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: "Sour Gummy", serif;
 }
-a {
-    color: #FFD700;
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: underline;
-    color: red;
-}
-/* #region heading part start */
-header{
-
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,248,113,1) 0%, rgba(240,221,254,1) 90% );
     display: flex;
-    justify-content: space-between;
-    height: 100px;
-}
-.top-left{
-    height: 100%;
-    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    
+    min-height: 100vh;
 }
-.top-left h2{
+
+/* #region main section start */
+main{
+    padding: 5rem 0;
+}
+.shell{
+    display: flex;
+    height: 60vh;
+}
+    /* img section start */
+.img-box{
+    height: 100%;
+    width: 20vw;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,248,113,1) 0%, rgba(240,221,254,1) 90% );
+    border: 0;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
+}
+.img-box img{
+    height: 100%;
+    border: 0;
+}
+    /* img section end */
+    /* main form start */
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(255, 255, 255) 0%, rgba(234,241,249,0.8) 90.1% );
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px 5px rgba(240,221,254,0.3);
+    padding: 2rem;
+    margin-left: .5rem;
+    width: 30vw;
+    min-width: 520px;
+    box-sizing:border-box ;
+}
+.welcome{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.welcome h1{
+    letter-spacing: 1px;
+    text-shadow: 1px .8px .3px;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.inform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; 
+    width: 80%;
+}
+.input{
+    padding: 1rem 1.5rem;
+    border: 2px solid #6e6d6e;
+    line-height: 1;
+    border-radius: 2rem;
+    width: 100%;
+}
+.input input{
     margin: 0;
-    font-size: 2rem;
-    color: #FFDE00;
-    font-weight: bold;
-}
-.top-right ul{
-    text-align: right;
-    height: 100%;
-    line-height: 100px;
-}
-.top-right ul a:hover{
-    color: red;
-    text-decoration: underline;
-}
-.login-nav a{
-    text-decoration: none;
-    color: #FFDE00;
-    padding: 0 20px;
-    border-right: 3px solid #FFDE00;
-}
-.login-nav:last-child>a{
-    border-right: 0;
-}
-
-
-/* #endregion heading part */
-
-/* #region main-body start */
-
-/* for PC background */
-body>img{
-    /* background-image: url(../img/wallpaper.jpg) ; */
-    /* background-size: cover;  */
-    /* background-position: center;  */
-    /* background-repeat: no-repeat;  */
-    /* background-attachment: fixed; */
-    height: 100%;
+    border: 0;
+    outline: none;
     width: 100%;
-    filter: saturate(70%);
-    aspect-ratio: 16 / 9;
-    position: fixed;
-    object-fit: cover;
-    z-index: -1;
+    background-color: transparent;
 }
-body::after{
-    content: "";
+.password{
+    position: relative;
+}
+.password i {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.226);
-    z-index: -1;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #888;
 }
-main .login .h2{
-    font-size: 2rem;
-    letter-spacing: 3px;
-}
-main .logo img{
-    height: 8rem;  
-    animation: reloadA 1.2s ease-out forwards;
-    opacity: 0; 
-}
-.main-content{
-    width: 60%;
-    background-color: rgba(248, 248, 248, 0.105);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.275);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 25px rgba(10, 10, 10, 0.2);
-    overflow: hidden;
-}
-.main-content .login{
-    padding: 10px 50px;
-    padding-bottom: 10px;
-}
-.main-content .login .login-text{
-    color: white; 
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-    animation: reloadA 1.2s ease-out forwards;
-    opacity: 0;
-}
-
-.main-content .login .forgortten{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    align-items: center;
-    padding: 0 20px;
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #fff;
-
-    animation:  reloadA 1.8s ease-out forwards;
-    opacity: 0;
-    animation-delay: 0.8s;
-}
-.main-content .login .forgortten a{
-    text-decoration: none;
-    color: #ffffff;       
-}
-#email,#pdw{
-    border-radius: 12px;
-    border-color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.484);
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(10px);
-    font-size: 16px;
-    border: 2px solid white;
-}
-#email{
-    animation:  reloadA 1.4s ease-out forwards;
-    opacity: 0;
-    animation-delay: 0.4s;
-}
-.pdw{
-    animation:  reloadA 1.6s ease-out forwards;
-    opacity: 0;
-    animation-delay: 0.6s;
-}
-
-#email::placeholder,#pdw::placeholder{
-    color: rgb(255, 255, 255);
-}
-
-/* hover effect for forgot  */
-.main-content .login .forgortten a:hover{
-    text-decoration: underline;
-    color: red;
-}
-.main-content .logging{
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-}
-.main-content .logging button{
+.login{
+    margin-top: 1.5rem;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.989);
-    animation:  reloadA 2s ease-in-out forwards;
-    transform: translateX(-70vw);
-    opacity: 0;
-    animation-delay: 1s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
-/* hover effect for login submit */
-.main-content .logging:hover button{
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    transform: translate(1.1px);
-    background-color: black;
-    color: white;
-    border: #08080824;
+#btn {
+    width: 50%;
+    height: 3rem;
+    background-color: rgb(255, 207, 15);
+    border-radius: 2rem;
+    border: 0;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}:disabled{
+    color: #666;
 }
-
+#btn:hover {
+    transform: scale(1.05);
+    background-color: rgb(248, 202, 67);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 .main-content .login .checking {
     font-size: 12px;
     display: flex;
@@ -184,92 +125,46 @@ main .logo img{
     width: 100%;
     letter-spacing: 1px;
 }
-.checking>label,.checking>input{
-    animation:  reloadA 2s ease-out forwards;
-    opacity: 0;
-    animation-delay: 1.2s;
-}
 .checking span{
-    color: white;
+    color: #666;
     letter-spacing: 1px;
 }
-.main-content .login .checking  a{
-    font-weight: bold;
-    color: white;
+a{
+    text-decoration: none;
+    color: #333;
 }
-.main-content .login .checking a:hover{
-    text-shadow: 0 0 10px;
+ a:hover{
+    text-decoration: underline;
+    color: #000;
 }
-.regist{
-    text-align: center;
-    margin-top: 30px;
-    color: white;
-    animation:  reloadA 2s ease-out forwards;
-    opacity: 0;
-    animation-delay: 1.4s;
-}
-.login .pdw{
-    position: relative;
-}
-.pdw #btn04{
-    position: absolute;
-    bottom: 25%;
-    right: 3vw;
-    transform: translateY(35%);
+.existing{
+    margin-top: 1rem;
     height: 2rem;
-    cursor: pointer;
-}
-
-.main-content .other-way .exist-account{
-    text-align: center;
-    padding-top: 10px;
-    margin-bottom: 10px;
-    color: #ffffff;
-    letter-spacing: 1px;
-}
-.other-way{
-    animation:  reloadA 2.2s ease-out forwards;
-    opacity: 0;
-    animation-delay: 1.5s;
-}
-.main-content .other-way .ways>div{
-    height: 55px;
-    border-radius: 50%;
-    width: 55px;
-    background-color: rgba(255, 255, 255, 0.169);
-    background-image: url(../img/google.svg);
-    background-size: 80%;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-right: 10px;
-    cursor: pointer;
-    transition: 0.1s linear;
-    margin-bottom: 40px;
-}
-.main-content .other-way .ways>div:nth-child(2){
-    background-image: url(../img/facebook.svg);
-}
-.main-content .other-way .ways>div:nth-child(3){
-    background-image: url(../img/apple.svg);
-}
-.main-content .other-way .ways>div:nth-child(4){
-    background-image: url(../img/wechat.svg);
-}
-.main-content .other-way .ways{
     display: flex;
-    justify-content: center;
 }
-.main-content .other-way .ways>div:hover{
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.692);
-    transform: scale(1.1);
+.existing div{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    transition: .5s ease;
+    line-height: 2rem;
+    text-align: center;
 }
-footer{
-    height: 100px;
-    width: 100%;
+.existing i{
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
 }
-
-/* #endregion main-body */
-
+.existing div:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 8px;
+}
+.welcome img{
+    display: none;
+}
+    /* main form end */
+/* #endregion main section end */
 
 /* #region instructions */
 .instructions{
@@ -285,6 +180,8 @@ footer{
     transform: translate(-50%,-50%);
     border: 1px solid black;
     background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 20px;
     margin: 30px auto;
     max-width: 800px;
@@ -301,7 +198,7 @@ footer{
 .instructions h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    border-bottom: 2px solid #f7c6c7; /* 添加下划线 */
+    border-bottom: 2px solid #f7c6c7; 
     padding-bottom: 10px;
 }
 
@@ -333,7 +230,7 @@ footer{
     margin: 20px auto 0;
     padding: 10px 20px;
     background-color: #ffc107; 
-    color: #fff;
+    color: #000;
     border: none;
     border-radius: 25px;
     font-size: 18px;
@@ -342,86 +239,40 @@ footer{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: all 0.3s ease;
 }
-
+input[type="checkbox"]:checked {
+    accent-color: #FFD700;
+}
 #btn03:hover {
     background-color: #e0a800; 
     transform: scale(1.02); 
 }
 /* #endregion instructions */
-
-/*#region animation */
-@keyframes reloadA{
-    from{
-        transform: translateY(70vh);
+@media (max-width: 1024px) {
+    .shell {
+        flex-direction: column;
+        align-items: center;
+        height: 80vh;
     }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-/* for safari */
-@-webkit-keyframes reloadA{
-    from{
-        transform: translateY(70vh);
-    }
-    to{
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-/* #endregion animation */
-
-
-/* #region for mobile device */
-@media (max-width:768px) {
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    header {
-        flex-wrap: wrap; 
-        height: auto; 
-    }
-
-    .top-left {
-        width: 100%; 
-        justify-content: center; 
-        margin-top: 10px;
-    }
-
-    .top-right {
-        width: 100%; 
-        justify-content: center; 
-        margin-top: 10px; 
-    }
-
-    .login-nav a {
-        font-size: 0.9rem; 
-        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8)
-    }
-    header .top-left h2, header .top-right h3{
-        color: #FFDE00;
-        font-weight: bold;
-    }
-    .main-content{
-        width: 100%;
-    }
-    .forgortten>a,.forgortten label{
-        font-size: 13px;
-    }
-    .exist-account span{
-        color: white;
-    }
-    .forgortten,.regardness label{
-        font-size: 10px;
-    }
-    .regardness a:hover{
-        color: red;
-    }
-    .checking{
-        text-align: center;
-    }
-    .checking>label>span{
+    .img-box {
         display: none;
     }
+    .welcome img{
+        margin: 0 auto;
+        width: 8rem;
+        display: block;
+    }
+    .box {
+        width: 90vw;
+        margin: 0 auto;
+        height: 100%;
+        min-width: 0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    }       
+  
+}
+@media (max-width:600px){
+    .checking span{
+            display: none;
+        }
 }

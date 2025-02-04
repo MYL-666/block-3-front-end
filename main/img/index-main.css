@@ -835,6 +835,19 @@ nav .third img{
         height: 70%;
         width: auto;
     }
+    .card-content input {
+        width: 8rem;
+        height: 3rem;
+        background-color: #ffac00;
+        border-radius: 10px;
+        opacity: 0;               
+        visibility: hidden;       
+        transition: all 0.3s ease;
+    }
+    .card-box:hover .card-content input {
+        opacity: 1;
+        visibility: visible;
+    }
     /* animation of turning cards */
     @keyframes turn-cover{
         from{
@@ -1458,7 +1471,8 @@ footer .copyright{
         position: absolute;
         top: 1rem;
         left: 1rem;
-        height: 20px;
+        font-size:2rem;
+        cursor: pointer;
     }
     #menu-content .search-bar{
         margin-bottom: 1rem;

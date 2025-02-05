@@ -14,7 +14,7 @@
     <script src="./index/index-login.js"></script>
     <!-- import icon css -->
     <link rel="stylesheet" href="./index/iconfont.css">
-
+    <link rel="icon" href="./index/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -36,10 +36,10 @@
             </div>
             <div class="inform">
                 <div class="input">
-                    <input type="text" placeholder="Account:" required>
+                    <input type="text" placeholder="Account:" required autocomplete="username">
                 </div>
                 <div class="input password">
-                    <input type="password" id="pdw" placeholder="Password:" required pattern="^(?=.*[A-Z]).{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter">
+                    <input type="password" id="pdw" placeholder="Password:" required pattern="^(?=.*[A-Z]).{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter" autocomplete="current-password">
                     <i class="iconfont icon-yanjing_yincang" id="btn-hidden"></i>
                     <i class="iconfont icon-yanjing_xianshi" id="btn-show"></i>
                 </div>

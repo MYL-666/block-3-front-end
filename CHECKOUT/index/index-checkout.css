@@ -342,8 +342,8 @@ main .cart-item .added:hover{
 /*#region payment success start*/
 #payment-success{
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 50vh;
+    left: 50vw;
     transform: translate(-50%,-50%);
 }
 .payment-success{
@@ -568,9 +568,11 @@ footer .copyright{
      margin: 10px;
      height: 1000px;
     }
-    main .products-input .payment{
-     position: absolute;
-     bottom: 20px;
+    #payment-success{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
     h2{
      font-size: 26px;

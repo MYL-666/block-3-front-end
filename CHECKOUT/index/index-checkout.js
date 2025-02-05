@@ -44,6 +44,7 @@ window.onload=function(){
    submit.onclick=function(){
     if(cart.length>0)
     {localStorage.removeItem("cart");
+    cart.length=0;
     cartNum.style.display="none";   
     cartItemsContainer.style.display="none";
     if(span){

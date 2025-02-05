@@ -35,6 +35,7 @@ window.onload=function(){
     var successModal = new bootstrap.Modal(document.getElementById("successModal"));
     var modalMessage = document.getElementById("modalMessage");
     var cartNum=document.getElementById("cart-num");
+    var btnOK=document.getElementById("OK");
     var num=0;
 
     //  if there already had products in cart
@@ -68,6 +69,11 @@ window.onload=function(){
             modalMessage.textContent = `${name} has been successfully added to the cart!`;
             successModal.show();
         }
+        // remove focus
+        btnOK.addEventListener('click', () => {
+            btnOK.blur();
+            document.body.focus();
+        });
     }
     // #endregion adding the product end
 

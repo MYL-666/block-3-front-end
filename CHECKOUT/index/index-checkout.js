@@ -1,4 +1,5 @@
 window.onload=function(){
+    // #region add product to html start
     var cartItemsContainer = document.getElementById("cartItemsContainer");
     var totalPrice = document.getElementById("total-amount");
     var discount=document.getElementById("discount");
@@ -31,16 +32,18 @@ window.onload=function(){
             span.innerHTML=`${total2.toFixed(2)}<i class="iconfont icon-qian"></i>`;
             totalPrice.parentElement.appendChild(span);
             totalPrice.style.textDecoration="line-through"
-            totalPrice.textContent = `${total.toFixed(2)}💰`;
+            totalPrice.textContent = `${total.toFixed(2)}<i class="iconfont icon-qian"></i>`;
         }
         totalPrice.innerHTML = `${total.toFixed(2)} <i class="iconfont icon-qian"></i>`;
     }
     renderCart()
+    // #endregion add the product to html end
 
-    // submit the order
+    //#region submit the order
    var submit=document.getElementById("submit-order");
    submit.onclick=function(){
-    localStorage.removeItem("cart");
+    if(cart.length>0)
+    {localStorage.removeItem("cart");
     cartNum.style.display="none";   
     cartItemsContainer.style.display="none";
     if(span){
@@ -48,12 +51,18 @@ window.onload=function(){
     }
     discount.innerHTML='-0% <i class="iconfont icon-qian"></i>'
     totalPrice.style.textDecoration="none";
-    totalPrice.innerHTML='0.00 <i class="iconfont icon-qian"></i>'
+    totalPrice.innerHTML='0.00 <i class="iconfont icon-qian"></i>'}
    }
+//    remove focus
+   const btnClose=document.getElementById("close-btn");
+   btnClose.addEventListener('click', () => {
+    btnClose.blur();
+    document.body.focus();
+    });
+    //#endregion payment success end
 
 
-
-    // show the quantity in cart
+    //#region show the quantity in cart start
     var cartNum=document.getElementById("cart-num");
     var num=0;
     //  if there already had products in cart
@@ -66,4 +75,5 @@ window.onload=function(){
          cartNum.innerText=num;
          cartNum.style.display="block";
      }
+    //  #endregion show the quantity in cart end
 }

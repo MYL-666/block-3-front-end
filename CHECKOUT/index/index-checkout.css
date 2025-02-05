@@ -612,4 +612,9 @@ footer .copyright{
          display: none;
      }
      /* #endregion footer end */
+     @media (max-width:500px){
+        .nav-item:first-child{
+            display: none;
+        }
+    }
 }

@@ -39,6 +39,7 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(135deg, #F8FBFF 0%, #FDEEF4 100%);
+    overflow-x: hidden;
 }
 .content a {
     color: #007acc;
@@ -569,5 +570,10 @@ footer .copyright{
         display: none;
     }
     /* #endregion footer end */
+    @media (max-width:500px){
+        .nav-item:first-child{
+            display: none;
+        }
+    }
 
 }

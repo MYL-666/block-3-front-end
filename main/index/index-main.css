@@ -315,7 +315,7 @@ nav .third img{
 .wallpaper{
     min-height: 100vh;
     min-width: 100vw;
-    background: url(./background.jpg) no-repeat;
+    background: url(../img/background.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1380,7 +1380,6 @@ footer .copyright{
    header .search-div{
     display: none ;
    }
-
     /* header end */
 
 
@@ -1650,4 +1649,9 @@ footer .copyright{
         display: none;
     }
     /* #endregion footer end */
+    @media (max-width:500px){
+        .nav-item:first-child{
+            display: none;
+        }
+    }
 }

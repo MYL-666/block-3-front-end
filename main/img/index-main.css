@@ -7,6 +7,7 @@
     box-sizing: border-box;
     /* outline: 1px solid red !important; */
 }
+
 /*#region universe animate */
 @keyframes zoomIn{
     from{
@@ -72,7 +73,7 @@
     color: #FFB300 ;
     text-decoration: none !important;
 }
-/* icon style */
+/* icon style end*/
 
 /* #region header-part of main page start */
 body{

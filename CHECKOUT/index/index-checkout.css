@@ -4,7 +4,46 @@
     margin: 0;
     font-family: "Sour Gummy", serif;
     box-sizing: border-box;
-    
+}
+/* universal animation */
+@keyframes fromL{
+    from{
+        opacity: 0;
+        transform: translateX(-1000px);
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fromR{
+    from{
+        opacity: 0;
+        transform: translateX(1000px);
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fromZ{
+    from{
+        opacity: 0;
+        transform: scale(0.8);
+    }to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.section{
+    opacity: 0;
+}
+.sectionZ{
+    animation: fromZ 1s ease forwards;
+}
+.sectionL{
+    animation:fromL 1s ease forwards;
+}
+.sectionR{
+    animation:fromR 1s ease forwards;
 }
     /* scroll style start */
 ::-webkit-scrollbar {
@@ -25,6 +64,7 @@ body {
     display: flex;
     flex-direction: column;
     background: linear-gradient(135deg, #F8FBFF 0%, #FDEEF4 100%);
+    overflow-x: hidden;
 }
 .content a {
     color: #007acc;

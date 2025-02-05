@@ -5,6 +5,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* universal animation */
+@keyframes animation1{
+    from{
+        opacity: 0;
+        transform: translateX(-1000px);
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.section{
+    opacity: 0;
+    animation: animation1 1s ease forwards;
+}
+.section:nth-child(2){
+    animation-delay: .2s;
+}
+.section:nth-child(3){
+    animation-delay: .4s;
+}
+footer.section{
+    animation-delay: .6s;
+}
+/* universal animation end */
+
 /* font icon color change start */
 .icon-wuxinghaoping-quan{
     color: #FFD700;
@@ -185,6 +211,7 @@ nav{
     border-top: 2px solid #000;
     position: relative;
     transition: all .3s;
+    z-index: 1000;
 }
 nav .nav {
     /* for the top part layout in nav */

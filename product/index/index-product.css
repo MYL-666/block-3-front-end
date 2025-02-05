@@ -480,6 +480,9 @@ main .more{
 .big{
     align-items: baseline;
 }
+.big .reviews{
+    display: flex;
+}
 .big i{
     font-size: 3rem;
 }

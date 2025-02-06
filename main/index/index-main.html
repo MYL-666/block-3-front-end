@@ -19,168 +19,158 @@
     <link rel="icon" href="./index/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<!-- header part start -->
-        <header>
-            <div class="row">
-                <!-- logo part -->
-                <div class="top-left col-1">
-                    <img src="../img/logo.svg" alt="logo" class="logo">
-                </div>
-                <!-- search bar -->
-                <div class="search-div col-lg-5 col-md-4 offset-md-1">
-                    <form class="form-horizontal row">
-                        <input type="text" class="search form-control" placeholder="Search the product" id="searching">
-                        <button type="button" class="submit form-control" id="btn01">Search</button>
-                    </form>
-                  </div>
-                <!-- navigator on header -->
-                <div class="top-right col-lg-5 col-md-6">
+<!-- ================== Header Section Start ================== -->
+<header class="section">
+    <div class="row">
+      
+        <!-- ========== Logo Section On Top-Left ========== -->
+        <div class="top-left col-1">
+            <img src="../img/logo.svg" alt="logo">
+        </div>
+
+        <!-- ========== Search Bar Form Section ========== -->
+        <div class="search-div col-lg-5 col-md-4 offset-md-1">
+            <form class="form-horizontal row">
+                <input type="text" class="search form-control" placeholder="Search the product" id="searching">
+                <button type="button" class="submit form-control" id="btn01">Search</button>
+            </form>
+        </div>
+
+        <!-- ========== Navigation Links (Login, Home, Cart) ========== -->
+        <div class="top-right col-lg-5 col-md-6">
+            <ul class="nav nav-pills">
+                <!-- Login Button -->
+                <li class="nav-item">
+                    <!-- turn to login page -->
+                    <a class="nav-link active" href="../../login/index/index-login.html"></a>  
+                </li>
+                <!-- Home Button -->
+                <li class="nav-item">
+                    <!-- turn to home page(back to top) -->
+                    <a class="nav-link active" href="../../main/index/index-main.html"></a>
+                </li>
+                <!-- Cart Button -->
+                <li class="nav-item cart1">
+                    <div id="cart-num"></div> <!-- show the number in cart -->
+                    <!-- turn to cart page -->
+                    <a class="nav-link active" href="../../Cart/index/index-cart.html"></a>
+                </li>
+            </ul> 
+        </div>
+
+    </div>
+</header>
+<!-- ================== Header Section End ================== -->
+
+
+<!--======================== Navigation Section Start ========================-->
+<nav class="row main-nav section">
     
-                    <ul class="nav nav-pills">
-                        <li class="nav-item header-nav "><a class="nav-link active" href="../../login/index-login.html"></a></li>
-                        <li class="nav-item header-nav"><a class="nav-link active" href="#"></a></li>
-                        <li class="nav-item header-nav cart1">
-                            <div id="cart-num"></div>
-                            <a class="nav-link active" href="../../Cart/index/index-cart.html"></a>
-                        </li>
-                    </ul> 
-                </div>
-            </div>
-        </header>
-<!-- header part end -->
+    <!--========= Top-Level Navigation Buttons =========-->
+    <div class="col-4 nav nav-pet">
+        <a id="click01" href="javascript:;">PokePets</a> <!-- when hover show PokePets nav  -->
+    </div>
+    <div class="col-4 nav nav-product">
+        <a id="click02" href="javascript:;">Products</a> <!-- when hover show Products nav -->
+    </div>
+    <div class="col-4 nav nav-card">
+        <a id="click03" href="javascript:;">Cards</a> <!-- when hover show Cards nav -->
+    </div>
 
+    <!--=============== Hidden Navigation Menu for PokePets ===============-->
+    <section class="hidden-nav hidden-nav-pet row">
+        <!-- ===== First column ===== -->
+        <div class="nav-item first col-3 text-center">
+            <a href="#pets">Shop All PokePets</a>
+            <a href="#pets">About PokePets</a>
+        </div>
+        <!-- ===== Second column ===== -->
+        <div class="nav-item second col-3">
+            <h2>PokePet Categories</h2>
+            <a href="#pets">Bulbasaur</a>
+            <a href="#pets">Charmander</a>
+            <a href="#pets">Squirtle</a>
+            <a href="#pets">...</a>
+        </div>
+        <!-- ===== Third column ===== -->
+        <div class="nav-item third col-3">
+            <h2>PokePets Types</h2>
+            <a href="#pets">Grass</a>
+            <a href="#pets">Water</a>
+            <a href="#pets">Flying</a>
+            <a href="#pets">...</a>
+        </div>
+        <!-- ===== forth column ===== -->
+        <div class="nav-item third col-3 text-center">
+            <img src="../img/Salamence.png" alt="Salamence Image">
+            <a href="">Shop Now</a>
+        </div>
+    </section>
 
-<!-- navigation  start-->
-        <nav class="row main-nav">
-            <div class="col-4 nav nav-pet">
-                <a id="click01" href="javascript:;">PokePets</a>
-            </div>
-            <div class="col-4 nav nav-product">
-                <a id="click02" href="javascript:;">products</a>
-            </div>
-            <div class="col-4 nav nav-card">
-                <a id="click03" href="javascript:;">Cards</a>
-            </div>
+    <!--=============== Hidden Navigation Menu for Products ===============-->
+    <section class="hidden-nav hidden-nav-product row">
+        <!-- ===== First column ===== -->
+        <div class="nav-item first col-3 text-center">
+            <a href="#products">Products Tree</a>
+            <a href="#products">About Our Products</a>
+            <a href="#products">Shop All Products</a>
+        </div>
+        <!-- ===== Second column ===== -->
+        <div class="nav-item second col-3">
+            <h2>Plush Category</h2>
+            <a href="#products">Holiday Plush</a>
+            <a href="#products">Large Plush</a>
+            <a href="#products">Keychains</a>
+            <a href="#products">...</a>
+        </div>
+        <!-- ===== Third column ===== -->
+        <div class="nav-item third col-3">
+            <h2>Other Products</h2>
+            <a href="#products">Clothing</a>
+            <a href="#products">Accessories</a>
+            <a href="#products">Home Goods</a>
+            <a href="#products">Stationery</a>
+        </div>
+        <!-- ===== Forth column ===== -->
+        <div class="nav-item third col-3 text-center">
+            <img src="../img/plush.jpg" alt="Plush Product Image">
+            <a href="">Shop Now</a>
+        </div>
+    </section>
 
-            <!-- hidden nav for Pets -->
-             <section class="hidden-nav hidden-nav-pet row">
-                <div class="nav-item first col-3 text-center">
-                    <a href="#pets">shop all PokePets</a>
-                    <a href="#pets">about the PokePets</a>
-                </div>
-                <div class="nav-item second col-3">
-                    <h2>Pokepet category</h2>
-                    <a href="#pets">Bulbasaur</a>
-                    <a href="#pets">Charmander</a>
-                    <a href="#pets">Squirtle</a>
-                    <a href="#pets">Caterpie</a>
-                    <a href="#pets">Beedrill</a>
-                    <a href="#pets">Spearow</a>
-                    <a href="#pets">Pikachu</a>
-                    <a href="#pets">Raichu</a>
-                    <a href="#pets">Clefairy</a>
-                    <a href="#pets">Vulpix</a>
-                    <a href="#pets">Ninetales</a>
-                    <a href="#pets">Wigglytuff</a>
-                    <a href="#pets">...</a>
-                </div>
-                <div class="nav-item third col-3">
-                    <h2>PokePets Types</h2>
-                    <a href="#pets">Grass</a>
-                    <a href="#pets">water</a>
-                    <a href="#pets">flying</a>
-                    <a href="#pets">fire</a>
-                    <a href="#pets">normal</a>
-                    <a href="#pets">posion</a>
-                    <a href="#pets">rock</a>
-                    <a href="#pets">ghost</a>
-                    <a href="#pets">...</a>
-                </div>
-                <div class="nav-item third col-3 text-center">
-                    <img src="../img/Salamence.png" alt="salsamence" loading="lazy"> 
-                    <a href="">shop now</a>
-                </div>
-            </section>
+    <!--=============== Hidden Navigation Menu for Cards ===============-->
+    <section class="hidden-nav hidden-nav-card row">
+        <!-- ===== First column ===== -->
+        <div class="nav-item first col-3 text-center">
+            <a href="#Cards">Pokémon TCG Classic</a>
+            <a href="#Cards">New to TCG?</a>
+            <a href="#Cards">Shop All Cards</a>
+        </div>
+        <!-- ===== Second column ===== -->
+        <div class="nav-item second col-3">
+            <h2>Cards Category</h2>
+            <a href="#Cards">Playmats</a>
+            <a href="#Cards">Deck Boxes</a>
+            <a href="#Cards">Card Sleeves</a>
+            <a href="#Cards">...</a>
+        </div>
+        <!-- ===== Third column ===== -->
+        <div class="nav-item third col-3">
+            <h2>Expansions</h2>
+            <a href="#Cards">Surging Sparks</a>
+            <a href="#Cards">Twilight Masquerade</a>
+            <a href="#Cards">Shrouded Fable</a>
+        </div>
+        <!-- ===== Forth column ===== -->
+        <div class="nav-item third col-3 text-center">
+            <img src="../img/cards.png" alt="Pokemon Cards Image">
+            <a href="">Shop Now</a>
+        </div>
+    </section>
 
+</nav>
+<!--======================== Navigation Section End ========================-->
 
-             <!-- hidden nav for Products -->
-            <section class="hidden-nav hidden-nav-product row">
-                <div class="nav-item first col-3 text-center">
-                    <a href="#products">Products Tree</a>
-                    <a href="#products">about our Porducts</a>
-                    <a href="#products">shop all products</a>
-                </div>
-                <div class="nav-item second col-3">
-                    <h2>PLush category</h2>
-                    <a href="#products">Holiday Plush</a>
-                    <a href="#products">Halloween Plush</a>
-                    <a href="#products">Large Plush</a>
-                    <a href="#products">Keychains</a>
-                    <a href="#products">Poké Plush</a>
-                    <a href="#products">Sitting Cuties</a>
-                    <a href="#products">Pikachu Plush</a>
-                    <a href="#products">Hand Puppets</a>
-                    <a href="#products">Comfy Friends</a>
-                    <a href="#products">Pokémon Dolls</a>
-                    <a href="#products">Eevee Evolutions</a>
-                    <a href="#products">Pokémon Squishmallows</a>
-                    <a href="#products">...</a>
-                </div>
-                <div class="nav-item third col-3">
-                    <h2>other products</h2>
-                    <a href="#products">Clothing</a>
-                    <a href="#products">Accessories</a>
-                    <a href="#products">Home Goods</a>
-                    <a href="#products">Stationery</a>
-                    <a href="#products">Office Supplies</a>
-
-                </div>
-                <div class="nav-item third col-3 text-center">
-                    <img src="../img/plush.jpg" alt="plush" loading="lazy">
-                    <a href="">shop now</a>
-                </div>
-            </section>
-
-
-
-              <!-- hidden nav for Cards -->
-            <section class="hidden-nav hidden-nav-card row">
-                <div class="nav-item first col-3 text-center">
-                    <a href="#cards">Pokémon TCG Classic</a>
-                    <a href="#cards">New to TCG?</a>
-                    <a href="#cards">Shopping all cards</a>
-                </div>
-                <div class="nav-item second col-3">
-                    <h2>Cards category</h2>
-                    <a href="#cards">Playmats</a>
-                    <a href="#cards">Deck Boxes</a>
-                    <a href="#cards">Card Sleeves</a>
-                    <a href="#cards">Premium</a>
-                    <a href="#cards">Accessories</a>
-                    <a href="#cards">Boxed Sets</a>
-                    <a href="#cards">Decks</a>
-                    <a href="#cards">Battle & Theme</a>
-                    <a href="#cards">Collection</a>
-                </div>
-                <div class="nav-item third col-3">
-                    <h2>EXPANSIONS</h2>
-                    <a href="#cards">Surging Sparks</a>
-                    <a href="#cards">Twilight Masquerade</a>
-                    <a href="#cards">Shrouded Fable</a>
-                    <a href="#cards">Temporal Forces</a>
-                    <a href="#cards">Paldean Fates</a>
-                    <a href="#cards">Paradox Rift</a>
-                    <a href="#cards">Crown Zenith</a>
-                    <a href="#cards">Brilliant Stars</a>
-                    <a href="#cards">Lost Origin</a>
-                </div>
-                <div class="nav-item third col-3 text-center">
-                    <img src="../img/cards.png" alt="cards" loading="lazy">
-                    <a href="">shop now</a>
-                </div>
-            </section>
-        </nav>
-<!-- nav part end -->
 
 
 <!-- main page start -->
@@ -682,7 +672,7 @@
     <!-- add to cart modal end -->
 
 
-    
+
 <!-- ================== Footer Section Start ================== -->
 <footer class="section sectionZ">
 

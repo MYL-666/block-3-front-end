@@ -1,6 +1,6 @@
 window.onload=function(){
 
-    // #region slide bar for mobile device
+// #region slide bar for mobile device
     // get element by id
     var menuBtn = document.getElementById("menu-btn");
     var menuContent = document.getElementById("menu-content");
@@ -24,11 +24,11 @@ window.onload=function(){
             menuContent.style.display = "block"; 
         }
     };
-    // #endregion sildebar for mobile device
+// #endregion sildebar for mobile device
 
 
 
-    // #region adding the products to cart
+// #region adding the products to cart
     var cartBtn=document.querySelectorAll(".add-cart");
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     // success adding to cart
@@ -38,7 +38,7 @@ window.onload=function(){
     var btnOK=document.getElementById("OK");
     var num=0;
 
-    //  if there already had products in cart
+    //  if there already had products in cart catnum will show
     for(var i=0;i<cart.length;i++){
        num+= parseInt(cart[i].quantity);
     }
@@ -75,11 +75,12 @@ window.onload=function(){
             document.body.focus();
         });
     }
-    // #endregion adding the product end
+// #endregion adding the product end
 
-    //#region when hover on the product change the img
+//#region when hover on the product change the img
     const productImg=document.querySelectorAll(".product-imgs");
-    let nameArr=["Meowth","Palkia","Hydrapple","sweetheart","Gengar","Eevee"]
+    let nameArr=["Meowth","Palkia","Hydrapple","sweetheart","Gengar","Eevee"];
+    //when mouse hover on it, change the pic
     productImg.forEach((img, index) => {
         img.addEventListener("mousemove", function() {
             img.src = `../img/${nameArr[index]}2.jpg`;
@@ -89,22 +90,24 @@ window.onload=function(){
             img.src = `../img/${nameArr[index]}.jpg`;
         });
     });
-    // #endregion changing img end
+// #endregion changing img end
 
-    //#region going to detail product page
+//#region going to detail product page
     var pikachu=document.getElementById("pikachu")
     pikachu.onclick=function(){
         window.location.href="../../product/index/index-product.html"
     }
-    // #endregion
+// #endregion
 
 
-    //#region mobile slide bar
+//#region mobile slide bar
     var open=document.querySelectorAll(".btn-open")
     var details=document.querySelectorAll(".menu-detail")
     for(let i=0;i<open.length;i++){
+        //make sure it is close at first
         details[i].style.display = "none";
         open[i].onclick=function(){
+            //when click, show it, if already shown,it will close
             if (details[i].style.display === "block") {
                 details[i].style.display = "none"; 
                 open[i].style.transform="rotate(0deg)"
@@ -114,7 +117,7 @@ window.onload=function(){
             }
         }
     }
-    // #endregion
+// #endregion
 
 
     // #region turning the card start
@@ -135,7 +138,7 @@ window.onload=function(){
 }
 
 
-        // scrolling animation
+    // scrolling animation,when scroll down to 85%, the animation will start
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {

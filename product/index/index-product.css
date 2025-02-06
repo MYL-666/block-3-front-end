@@ -7,6 +7,7 @@
 }
 
 /* universal animation */
+    /* fade in from left */
 @keyframes animation1{
     from{
         opacity: 0;
@@ -20,6 +21,7 @@
     opacity: 0;
     animation: animation1 1s ease forwards;
 }
+/* fade in orederly */
 .section:nth-child(2){
     animation-delay: .2s;
 }

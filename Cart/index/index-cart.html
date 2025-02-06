@@ -16,76 +16,112 @@
     <script src="./index-cart.js"></script>
     <!-- import font icons -->
     <link rel="stylesheet" href="./iconfont.css">
-    <link rel="stylesheet" href="./favicon.ico">
+    <link rel="icon" href="./index/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
-<!-- header part start -->
-    <header class="section">
-        <div class="row">
-            <!-- logo part -->
-            <div class="top-left col-lg-1 col-md-1">
-                <img src="../img/logo.svg" alt="logo">
-            </div>
-            <!-- search bar -->
-            <div class="search-div col-lg-5 col-md-4 offset-md-1">
-                <form class="form-horizontal row">
-                    <input type="text" class="search form-control" placeholder="Search the product" id="searching">
-                    <button type="button" class="submit form-control" id="btn01">search</button>
-                </form>
-              </div>
-            <!-- navigator on header -->
-            <div class="top-right col-lg-5 col-md-6">
-
-                <ul class="nav nav-pills">
-                    <li class="nav-item "><a class="nav-link active" href="../../login/index-login.html"></a></li>
-                    <li class="nav-item "><a class="nav-link active" href="../../main/index/index-main.html"></a></li>
-                    <li class="nav-item cart1">
-                        <div id="cart-num"></div>
-                        <a class="nav-link active" href="../../Cart/index/index-cart.html"></a>
-                    </li>
-                </ul> 
-            </div>
+<!-- ================== Header Section Start ================== -->
+<header>
+    <div class="row">
+      
+        <!-- ========== Logo Section On Top-Left ========== -->
+        <div class="top-left col-1">
+            <img src="../img/logo.svg" alt="logo">
         </div>
-    </header>
-<!-- header start end -->
 
-<!-- mian body start-->
-     <main class="container section">
-        <div class="top">
-            <h1>Shopping Cart</h1>
-            <button type="button" id="remove-all">Remove All</button>
+        <!-- ========== Search Bar Form Section ========== -->
+        <div class="search-div col-lg-5 col-md-4 offset-md-1">
+            <form class="form-horizontal row">
+                <input type="text" class="search form-control" placeholder="Search the product" id="searching">
+                <button type="button" class="submit form-control" id="btn01">Search</button>
+            </form>
         </div>
-        <!-- product -->
-         <div class="products-input" id="PI">         
-            <div id="cart-items"></div>
-            <p id="hint">
-                <span>Your shopping cart is empty. </span>
-                <span>If you see something you like</span>
-                <span>click Add to Cart</span>
-            </p>
-         </div>
-         <form class="payment" action="../../CHECKOUT/index/index-checkout.html">
-            Total:&nbsp;&nbsp;<span id="total-amount">0.00</span>&nbsp;&nbsp;<i class="iconfont icon-qian"></i>
-            <input type="submit" value="check out" class="form-control btn" id="btn02">
-            <input type="submit" value="back to product" class="form-control btn" id="btn03">
-        </form>
-     </main>
-<!-- main body end -->
 
-<!-- footer section start -->
-<footer class="section">
+        <!-- ========== Navigation Links (Login, Home, Cart) ========== -->
+        <div class="top-right col-lg-5 col-md-6">
+            <ul class="nav nav-pills">
+                <!-- Login Button -->
+                <li class="nav-item">
+                    <!-- turn to login page -->
+                    <a class="nav-link active" href="../../login/index/index-login.html"></a>  
+                </li>
+                <!-- Home Button -->
+                <li class="nav-item">
+                    <!-- turn to home page(back to top) -->
+                    <a class="nav-link active" href="../../main/index/index-main.html"></a>
+                </li>
+                <!-- Cart Button -->
+                <li class="nav-item cart1">
+                    <div id="cart-num"></div> <!-- show the number in cart -->
+                    <!-- turn to cart page -->
+                    <a class="nav-link active" href="../../Cart/index/index-cart.html"></a>
+                </li>
+            </ul> 
+        </div>
+
+    </div>
+</header>
+<!-- ================== Header Section End ================== -->
+
+
+
+<!-- ======================== Main Body Start ======================== -->
+<main class="container section">
+    
+    <!-- Shopping Cart Header -->
+    <div class="top">
+        <h1>Shopping Cart</h1>
+        <button type="button" id="remove-all">Remove All</button> <!-- Button to clear all items in the cart -->
+    </div>
+
+    <!-- Shopping Cart Items Section -->
+    <div class="products-input" id="PI">         
+        <div id="cart-items"></div> <!-- This div dynamically displays added cart items -->
+
+        <!-- Message shown when the cart is empty -->
+        <p id="hint">
+            <span>Your shopping cart is empty. </span>
+            <span>If you see something you like</span>
+            <span>click Add to Cart</span>
+        </p>
+    </div>
+
+    <!-- Checkout Section -->
+    <form class="payment" action="../../CHECKOUT/index/index-checkout.html">
+        <!-- Displays the total amount of items in the cart -->
+        Total:&nbsp;&nbsp;<span id="total-amount">0.00</span>&nbsp;&nbsp;<i class="iconfont icon-qian"></i>
+
+        <!-- Checkout button -->
+        <input type="submit" value="Check Out" class="form-control btn" id="btn02">
+        
+        <!-- Back to Product Page button -->
+        <input type="submit" value="Back to Product" class="form-control btn" id="btn03">
+    </form>
+</main>
+<!-- ======================== Main Body End ======================== -->
+
+
+
+
+<!-- ================== Footer Section Start ================== -->
+<footer class="section sectionZ">
+
+    <!-- Top Section: Quick Links, Location, Contact, and Payment Methods -->
     <div class="first">
+
+        <!-- Quick Links Section -->
         <div class="quick-link">
-            <h1>Quick-link</h1>
+            <h1>Quick Links</h1>
             <ul>
-                <li><a href="#">home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="../../Cart/index/index-cart.html">My Cart</a></li>
                 <li><a href="#pets">Pets</a></li>
-                <li><a href="#Products">Products</a></li>
-                <li><a href="#Cards">Cards</a></li>           
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cards">Cards</a></li>           
             </ul>
         </div>
+
+        <!-- Location Section -->
         <div class="location">
             <h1>Location</h1>
             <ul>
@@ -95,54 +131,67 @@
                 <li><a href="javascript:;">Finland</a></li>
             </ul>
         </div>
+
+        <!-- Contact Information Section -->
         <div class="contact">
-            <h1>Contact Infro</h1>
+            <h1>Contact Info</h1>
             <ul>
                 <li><a href="javascript:;">Esmee</a></li>
                 <li><a href="javascript:;">+44 520-1314</a></li>
                 <li><a href="javascript:;">myl666@gmail.com</a></li>
             </ul>
         </div>
+
+        <!-- Payment Methods Section -->
         <div class="payment">
-            <h1>payment</h1>
+            <h1>Payment</h1>
             <ul>
-                <li><img src="../img/mastercard.png" alt="mastercard"></li>
-                <li><img src="../img/yinlian.png" alt="yinlian"></li>
-                <li><img src="../img/visaPay.png" alt="visaPay"></li>
+                <li><img src="../img/mastercard.png" alt="MasterCard" loading="lazy"></li>
+                <li><img src="../img/yinlian.png" alt="UnionPay" loading="lazy"></li>
+                <li><img src="../img/visaPay.png" alt="VisaPay" loading="lazy"></li>
             </ul>
         </div>
-    </div>
 
+    </div> <!-- End of First Section -->
+
+    <!-- Bottom Section: Branding, Social Media, and Legal Links -->
     <div class="second">
+        
+        <!-- Brand Tagline -->
         <span>Your go-to platform for exploring and adopting virtual Pokémon pets.</span>
         <span>Learn, play, and connect with your favorite Pokémon today!</span>
 
+        <!-- Social Media Follow Section -->
         <div class="follow">
-            <h1>Follow us :</h1>
+            <h1>Follow Us:</h1>
             <div class="icon-list">
-                <div class="icons"></div>
-                <div class="icons"></div>
-                <div class="icons"></div>
+                <div class="icons"></div>  <!-- Placeholder for Facebook -->
+                <div class="icons"></div>  <!-- Placeholder for Instagram -->
+                <div class="icons"></div>  <!-- Placeholder for WeChat -->
             </div>
         </div>
 
-        <!-- copyright -->
-         <div class="copyright">
-            <h5>&copy; 2025 PokéShop.All rights reserved</h5>
+        <!-- Copyright and Legal Information -->
+        <div class="copyright">
+            <h5>&copy; 2025 PokéShop. All rights reserved</h5>
             <h5>.UA92.YuLun_Miao_666</h5>
         </div>
-         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </div>
+
+        <!-- Privacy Policy and Terms of Service Links -->
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+
+    </div> <!-- End of Second Section -->
+
 </footer>
-<!-- footer section end -->
+<!-- ================== Footer Section End ================== -->
 
 
-<!-- mobile nav start -->
+<!-- ================== Mobile Sidebar Start ================== -->
     <!-- moblie slidebar -->
     <div id="mobile-menu">
         <button id="menu-btn">☰</button>
         <div id="menu-content">
-                <img id="close" src="../img/close.png" alt="close">
+            <span id="close">✖</span>
             <div class="profile">
                 <img src="../img/profile.png" alt="profile">
                 <span>sign in / login</span>
@@ -199,6 +248,7 @@
             </section>
         </div>
     </div>
-<!--mobile nav end -->
+<!-- ================== Mobile Sidebar End ================== -->
+
 </body>
 </html>

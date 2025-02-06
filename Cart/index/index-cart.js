@@ -7,30 +7,31 @@ window.onload = function () {
     var cartItemsContainer = document.getElementById("cart-items");
     var PI=document.getElementById("PI");
     var cartNum=document.getElementById("cart-num");
-
+    // Retrieve cart data from localStorage, or initialize an empty array if it doesn't exist
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
     // when cart is empty, another page be like
     if (cart.length === 0) {
-        btn02.style.display = "none";
-        btn03.style.display = "inline-block";
-        formlist[1].action = "../../main/index/index-main.html";
-        hint.style.display = "flex";
-        cartItemsContainer.style.display="none";
-        cartNum.style.display="none";
+        btn02.style.display = "none"; // Hide checkout button
+        btn03.style.display = "inline-block"; // Show back-to-product button
+        formlist[1].action = "../../main/index/index-main.html"; // Redirect back to main page
+        hint.style.display = "flex"; // Display empty cart message
+        cartItemsContainer.style.display="none";  // Hide cart items
+        cartNum.style.display="none"; // Hide cart count indicator
     } else {
-        btn02.style.display = "block";
-        btn03.style.display = "none";
-        hint.style.display = "none";
-        PI.style.justifyContent="left";
-        cartItemsContainer.style.display="flex";
-        cartNum.innerText=cart.length;
-        cartNum.style.display="block";
+        btn02.style.display = "block"; // Show checkout button
+        btn03.style.display = "none";// Hide back-to-product button
+        hint.style.display = "none";// Hide empty cart message
+        PI.style.justifyContent="left";// Align cart content to the left
+        cartItemsContainer.style.display="flex";// Show cart items
+        cartNum.innerText=cart.length;// Update cart count indicator
+        cartNum.style.display="block";// Show cart count indicator
     }
 
     // add the product to cart
     function renderCart() {
         cartItemsContainer.innerHTML = ""; 
+        // Initialize total cost
         let total = 0.00; 
         cart.forEach((item, index) => {
             const itemElement = document.createElement("div");
@@ -67,8 +68,9 @@ window.onload = function () {
             btn02.style.display = "none";
             btn03.style.display = "inline-block";
             formlist[1].action = "../../main/index/index-main.html";
-            hint.style.display = "flex";
             cartItemsContainer.style.display="none";
+            hint.style.display = "flex";
+            hint.style.margin = "0 auto";
             cartNum.style.display="none";
         }
     });
@@ -80,14 +82,16 @@ window.onload = function () {
    document.getElementById("remove-all").onclick=function(){
     // confirm remove all or not
     if (confirm("Are you sure you want to remove all items from the cart?")) {
+        // clear the cart
         cart = [];
         localStorage.setItem("cart", JSON.stringify(cart));
+        // same as above remov logic
         cartItemsContainer.innerHTML = "";
         totalPriceElement.textContent = "0.00";
         btn02.style.display = "none";
         btn03.style.display = "inline-block";
         formlist[1].action = "../../main/index/index-main.html";
-        hint.style.display = "block";
+        hint.style.display = "flex";
         hint.style.margin = "0 auto";
         cartItemsContainer.style.display = "none";
         cartNum.style.display = "none";
@@ -124,7 +128,7 @@ window.onload = function () {
     // #endregion sildebar for mobile device
 
 
-    //#region mobile slide bar
+    //#region mobile slide bar detail nav
     var open=document.querySelectorAll(".btn-open")
     var details=document.querySelectorAll(".menu-detail")
     for(let i=0;i<open.length;i++){

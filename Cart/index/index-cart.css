@@ -3,38 +3,6 @@
     padding: 0;
     font-family: "Sour Gummy", serif;
 }
-/* universal animation */
-@keyframes animation1{
-    from{
-        opacity: 0;
-        transform: translateX(-1000px);
-    }to{
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-.section{
-    opacity: 0;
-    animation: animation1 1s ease forwards;
-}
-.section:nth-child(2){
-    animation-delay: .2s;
-}
-.section:nth-child(3){
-    animation-delay: .4s;
-}
-/* universal animation end */
-
-/* scroll style start */
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #FFD700;
-    border-radius: 10px;
-}
-    /* scroll style end */
-/* #region header-part of main page start */
 body {
     display: flex;
     flex-direction: column;
@@ -48,6 +16,73 @@ body {
     font-size:2rem;
     color: #FFB300 ;
     text-decoration: none !important;
+}
+/* scroll style start */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #FFD700;
+    border-radius: 10px;
+}
+    /* scroll style end */
+
+/* ======================== Universal Animation Start ======================== */
+
+/* Animation: Fades in elements from the left */
+@keyframes animation1{
+    from{
+        opacity: 0;
+        transform: translateX(-1000px);
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Applies fade-in animation to all elements with class "section" */
+.section{
+    opacity: 0;
+    animation: animation1 1s ease forwards;
+}
+/* Staggered fade-in effect for sequential sections */
+.section:nth-child(2){
+    animation-delay: .2s;
+}
+.section:nth-child(3){
+    animation-delay: .4s;
+}
+/* ======================== Universal Animation End ======================== */
+
+
+
+/* #region=================== header-part of main page start =====================*/
+/* 
+   Description: 
+   - The header contains a logo, navigation menu of home/cart/login, and search bar.
+   - It has a sticky position at the top with a semi-transparent background.
+   - Includes an animation effect for a smooth appearance.
+   - Navigation icons for profile, home, and cart are included.
+   - Responsive design ensures proper alignment on different screen sizes.
+*/
+/*#region===== header part start =====*/
+.head-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 2rem;
+}
+.head-title>h1,.head-title>span{
+    font-size: 5rem;
+}
+.head-title .h3{
+    text-decoration: none;
+}
+.head-title .h3:hover{
+    text-decoration: underline;
+}
+.content a {
+    /* more clear blue of <a> */
+    color: #007acc;
 }
 header .row{
     /* make usre the logo and header nav on the left and right */
@@ -131,9 +166,15 @@ header li:first-child a{
     /* add the change when hover */
     box-shadow: 0 0 10px;
 }
-/* #endregion header part end */
+    /* logo animation */
+.logo ,.header-nav,.search-div{
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 1s ease-out forwards;
+}  
+    /* #endregion===== header part end =====*/
 
-/* #region search bar */
+    /* #region===== search bar start =====*/
 .search-div{
     /* search bar layout */
     margin-top: 10px;
@@ -150,7 +191,7 @@ header li:first-child a{
 }
 .search-div .submit{
     width: 25%;
-    background-color: #FFD700;
+    background-color: #ffcb05;
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
@@ -160,40 +201,48 @@ header li:first-child a{
 .search-div .submit:hover{
     box-shadow: 0 0 10px;
 }
-/* #endregion search bar */
+    /*#endregion===== search bar end =====*/
+/* #endregion ================== HEADER SECTION END =========================== */
 
 
-/* #region main-body */
-main{
-    /* background-color: #FFFACD; */
-    height: 100vh;
+/* ======================== Main Body Section Start ======================== */
+
+main {
+    height: 100vh; /* Full viewport height */
     display: flex;
     flex-direction: column;
     position: relative;
     padding: 1rem;
 }
-main .top{
+
+/* Shopping Cart Title and Remove Button */
+main .top {
     margin: 20px 0;
 }
-main  #remove-all{
+
+main #remove-all {
     width: 6rem;
     height: 2rem;
     border-radius: 10px;
-    background-color: #FFD700;
+    background-color: #FFD700; /* Gold color */
     position: absolute;
     top: 7.5rem;
     right: 2rem;
     margin-bottom: 2rem;
 }
-#remove-all:hover{
+
+/* Add hover effect for Remove All button */
+#remove-all:hover {
     transform: scale(1.1);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
-main .products-input{
+
+/* Shopping Cart Items Container */
+main .products-input {
     border: 5px solid #cccccc22;
     height: 80%;
     width: 100%;
-    border-top:2px solid black;
+    border-top: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,10 +251,9 @@ main .products-input{
     overflow: auto;
     background-color: rgba(255, 255, 255, 0.801);
 }
-main .payment{
-    /* position: absolute;
-    right: 5vw;
-    bottom: 2rem; */
+
+/* Checkout & Back to Product Buttons */
+main .payment {
     margin-top: 1rem;
     margin-bottom: 10px;
     width: 100%;
@@ -214,22 +262,30 @@ main .payment{
     align-items: center;
     justify-content: flex-end;
 }
-main  .payment #btn02,#btn03{
+
+main .payment #btn02, #btn03 {
     width: 10rem;
     background-color: #FFD700;
     margin: 0 5px;
 }
-main  .payment #btn02:hover,#btn03:hover{
+
+/* Add hover effect to buttons */
+main .payment #btn02:hover, #btn03:hover {
     box-shadow: 0 0 10px;
 }
-main #btn03{
-    display: none;
+
+main #btn03 {
+    display: none; /* Hide back-to-product button initially */
 }
+
+/* Individual Cart Item */
 main .cart-item {
     height: 90%;
     border-bottom: 1px solid #ccc;
 }
-#cart-items{
+
+/* Cart Items List */
+#cart-items {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -237,40 +293,60 @@ main .cart-item {
     width: 100%;
     overflow: auto;
 }
+
+/* Cart Item Image Styling */
 .cart-item img {
     max-width: 200px;
     border-radius: 5px;
     object-fit: cover;
 }
-main .added{
+
+/* Added Item Styling */
+main .added {
     border-radius: 8px;
     padding: 5px;
 }
-main .cart-item .added:hover{
+
+/* Hover Effect for Added Items */
+main .cart-item .added:hover {
     box-shadow: 0 0 5px;
 }
-main .remove-btn{
+
+/* Remove Button for Individual Cart Items */
+main .remove-btn {
     margin-left: 5px;
     background-color: #FFD700;
     width: 5rem;
 }
-main .remove-btn:hover{
+
+/* Hover Effect for Remove Button */
+main .remove-btn:hover {
     box-shadow: 0 0 5px;
 }
-#hint{
+
+/* Empty Cart Hint Message */
+#hint {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
 }
-/* #endregion main-body */
+
+/* ======================== Main Body Section End ======================== */
 
 
 
 
-
-/* #region footer section start */
+/* #region ============ FOOTER SECTION START ============ */
+/*
+   - This section styles the **footer**, which includes:
+      1. `.first` → Contains **quick links, location, and contact info**.
+      2. `.second` → Displays **social icons & legal text**.
+      3. `.icons` → Interactive **social media buttons**.
+      4. Hover effects for **links and icons**.
+*/
+    /* #region ====================== FIrst =================================== */
 footer{
     display: flex;
     flex-direction: column;
@@ -285,6 +361,7 @@ footer .first{
     padding: 1rem;
     margin-bottom: 1rem;
 }
+/* Remove bullets from lists */
 footer ul{
     list-style: none;
 }
@@ -295,6 +372,7 @@ footer a{
     text-decoration: none;
     color: #666;
 }
+/* hover effect */
 footer a:hover{
     color: #000;
     text-decoration: underline;
@@ -303,6 +381,15 @@ footer img{
     height: 3rem;
     cursor: pointer;
 }
+    /* #endregion================ First ====================== */
+
+    /* #region ========================== Second ============================ */
+    /*
+       - `.second` includes:
+          - **Social media icons**.
+          - **Copyright text**.
+          - **Legal disclaimers**.
+    */
 footer .second{
     padding: 1rem;
     display: flex;
@@ -356,18 +443,27 @@ footer .copyright{
     justify-content: center;
     align-items: center;
 }
-/* #endregion footer section end */
+    /* #endregion =====================Second ========================= */
+/* #endregion ========================== FOOTER SECTION END ======================================= */
 
-/*  */
+/* mobile nav cant be shown on PC device*/
 #mobile-menu{
     display: none;
 }
+/* mobile nav end */
 
-/* for mobile device */
+/*================================ for mobile device ==============================*/
 @media (max-width:768px){
     *{
         margin: 0;
         padding: 0;
+    }
+   /*#region header start */
+      .head-title,.product-page {
+       width: 100vw;
+    }
+    head-title h1{
+       font-size: 3rem;
     }
     header{
         justify-content: center;
@@ -376,6 +472,7 @@ footer .copyright{
         backdrop-filter: blur(10px); 
         -webkit-backdrop-filter:blur(10px);          
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
     }
     header .row{
         width: 100%;
@@ -408,9 +505,9 @@ footer .copyright{
     header .search-div{
     display: none ;
     }
-    /* header end */
+    /* #endregion header end */
 
-
+    /* for main section start */
     main{
         height: 80vh;
     }
@@ -422,138 +519,150 @@ footer .copyright{
     position: absolute;
     bottom: 20px;
    }
+   main #hint{
+    font-size: 1rem;
+   }
+   /* main section end */
 
  /*hide PC silde bar */
  #slidebar {
     display: none; 
 }
 
-/* #region mobile nav start */
-@keyframes animate{
-    from{
-        transform: translateX(-1000px);
-    }to{
-        transform: translateX(0px);
+ /* #region ============ MOBILE NAVIGATION ============ */
+    /* Adds sliding animation to the mobile menu */
+    @keyframes animate{
+        from{
+            transform: translateX(-1000px);
+        }to{
+            transform: translateX(0px);
+        }
     }
-}
-#mobile-menu {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
+    /* Displays the mobile menu */
+    #mobile-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
 
-#menu-btn {
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px 15px;
-    background: transparent;
-    color: black;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-}
-#menu-content {
-    display: none; 
-    width: 75%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 10px 15px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter:blur(15px);
-}
-#close{
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    height: 20px;
-}
-#menu-content .search-bar{
-    margin-bottom: 1rem;
-}
-#menu-content .search-bar input{
-    border-radius: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.107);
-    border: 1px solid black;
-}
-#menu-content .search-bar input::placeholder{
-    padding: 1rem;
-    letter-spacing: 1px;
-}
-#menu-content .search-bar button{
-    width: 4rem;
-    background-color: #FFD700;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-}
-#menu-content .search-bar button:hover{
-    background-color: #ffaa00;
-    transform: scale(1.05);
-}
-.menu-category h3 {
-    margin-bottom: 15px;
-  }
-#menu-content .profile{
-    height: 40px;
-    width: 100%;
-    margin:10px auto;
-    padding-bottom: 20px;
-    text-align: center;
-}
-#menu-content .profile img{
-    height: 30px;
-}
-#menu-btn:hover #menu-content{
-    display: block;
-}
-#menu-content .nav-pet{
-    border-top: 1px solid #999;
-}
-.menu-category {
-    margin: 0 auto;
-    align-items: center;
-    padding: 20px 0;
-    text-align: left;
-    border-bottom: 1px solid #999 ;
-}
+    #menu-btn {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 15px;
+        background: transparent;
+        color: black;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+    }
+    #menu-content {
+        display: none; 
+        width: 75%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 10px 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter:blur(15px);
+    }
+    #close{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size:2rem;
+        cursor: pointer;
+    }
+     /* Styles search bar */
+    #menu-content .search-bar{
+        margin-bottom: 1rem;
+    }
+    #menu-content .search-bar input{
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.107);
+        border: 1px solid black;
+    }
+    /* Placeholder text styling */
+    #menu-content .search-bar input::placeholder{
+        padding: 1rem;
+        letter-spacing: 1px;
+    }
 
-.menu-category ul, .menu-category li{
-    margin-top: 10px;
-}
-.menu-category li{
-    padding: 5px 0;
-    border-bottom: 1px solid #999;
-}
-.menu-category span,.menu-category li a {
-    color: #333;
-}
+    #menu-content .search-bar button{
+        width: 4rem;
+        background-color: #FFD700;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+     /* Hover effect for search button */
+    #menu-content .search-bar button:hover{
+        background-color: #ffaa00;
+        transform: scale(1.05);
+    }
+    .menu-category h3 {
+        margin-bottom: 15px;
+      }
+    #menu-content .profile{
+        height: 40px;
+        width: 100%;
+        margin:10px auto;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    #menu-content .profile img{
+        height: 30px;
+    }
+    #menu-btn:hover #menu-content{
+        display: block;
+    }
+    #menu-content .nav-pet{
+        border-top: 1px solid #999;
+    }
+    .menu-category {
+        margin: 0 auto;
+        align-items: center;
+        padding: 20px 0;
+        text-align: left;
+        border-bottom: 1px solid #999 ;
+    }
 
-.menu-category a {
-    color: #007bff;
-    text-decoration: none;
-    margin-right: 10px;
-    display: inline-block;
-}
+    .menu-category ul, .menu-category li{
+        margin-top: 10px;
+    }
+    .menu-category li{
+        padding: 5px 0;
+        border-bottom: 1px solid #999;
+    }
+    .menu-category span,.menu-category li a {
+        color: #333;
+    }
 
-.menu-category a:hover {
-    text-decoration: underline;
-}
+    .menu-category a {
+        color: #007bff;
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block;
+    }
 
-/* Transition Animation */
-#menu-content {
-    transition: max-height 0.3s ease-in-out;
-    overflow: hidden;
-}
+    .menu-category a:hover {
+        text-decoration: underline;
+    }
+
+    /* Transition Animation */
+    #menu-content {
+        transition: max-height 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    /* #endregion mobile nav end */
 
     /* #region footer start */
-     footer{
+    footer{
         padding: 1rem;
     }
     footer .first{
@@ -570,6 +679,7 @@ footer .copyright{
         display: none;
     }
     /* #endregion footer end */
+    
     @media (max-width:500px){
         .nav-item:first-child{
             display: none;

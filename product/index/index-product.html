@@ -16,185 +16,177 @@
     <script src="./bootstrap.bundle.min.js"></script>
     <!-- import font icons -->
     <link rel="stylesheet" href="./iconfont.css">
-    <link rel="stylesheet" href="./favicon.ico">
+    <link rel="icon" href="./index/favicon.ico" type="image/x-icon">
 </head>
 <body>
-       <!-- header part start -->
-       <header class="section">
-        <div class="row">
-            <!-- logo part -->
-            <div class="top-left col-1">
-                <img src="../img/logo.svg" alt="logo">
-            </div>
-            <!-- search bar -->
-            <div class="search-div col-lg-5 col-md-4 offset-md-1">
-                <form class="form-horizontal row">
-                    <input type="text" class="search form-control" placeholder="Search the product" id="searching">
-                    <button type="button" class="submit form-control" id="btn01">Search</button>
-                </form>
-              </div>
-            <!-- navigator on header -->
-            <div class="top-right col-lg-5 col-md-6">
-
-                <ul class="nav nav-pills">
-                    <li class="nav-item "><a class="nav-link active" href="../../login/index-login.html"></a></li>
-                    <li class="nav-item "><a class="nav-link active" href="../../main/index/index-main.html"></a></li>
-                    <li class="nav-item cart1">
-                        <div id="cart-num"></div>
-                        <a class="nav-link active" href="../../Cart/index/index-cart.html"></a>
-                    </li>
-                </ul> 
-            </div>
-        </div>
-    </header>
-<!-- header part end -->
-
-
-<!-- navigation  start-->
-    <nav class="row main-nav section">
-        <div class="col-4 nav nav-pet">
-            <a id="click01" href="javascript:;">PokePets</a>
-        </div>
-        <div class="col-4 nav nav-product">
-            <a id="click02" href="javascript:;">products</a>
-        </div>
-        <div class="col-4 nav nav-card">
-            <a id="click03" href="javascript:;">Cards</a>
+<!-- ================== Header Section Start ================== -->
+<header class="section">
+    <div class="row">
+      
+        <!-- ========== Logo Section On Top-Left ========== -->
+        <div class="top-left col-1">
+            <img src="../img/logo.svg" alt="logo">
         </div>
 
-        <!-- hidden nav for Pets -->
-         <section class="hidden-nav hidden-nav-pet row">
-            <div class="nav-item first col-3 text-center">
-                <a href="#pets">shop all PokePets</a>
-                <a href="#pets">about the PokePets</a>
-            </div>
-            <div class="nav-item second col-3">
-                <h2>Pokepet category</h2>
-                <a href="#pets">Bulbasaur</a>
-                <a href="#pets">Charmander</a>
-                <a href="#pets">Squirtle</a>
-                <a href="#pets">Caterpie</a>
-                <a href="#pets">Beedrill</a>
-                <a href="#pets">Spearow</a>
-                <a href="#pets">Pikachu</a>
-                <a href="#pets">Raichu</a>
-                <a href="#pets">Clefairy</a>
-                <a href="#pets">Vulpix</a>
-                <a href="#pets">Ninetales</a>
-                <a href="#pets">Wigglytuff</a>
-                <a href="#pets">...</a>
-            </div>
-            <div class="nav-item third col-3">
-                <h2>PokePets Types</h2>
-                <a href="#pets">Grass</a>
-                <a href="#pets">water</a>
-                <a href="#pets">flying</a>
-                <a href="#pets">fire</a>
-                <a href="#pets">normal</a>
-                <a href="#pets">posion</a>
-                <a href="#pets">rock</a>
-                <a href="#pets">ghost</a>
-                <a href="#pets">...</a>
-            </div>
-            <div class="nav-item third col-3 text-center">
-                <img src="../img/Salamence.png" alt="">
-                <a href="">shop now</a>
-            </div>
-        </section>
+        <!-- ========== Search Bar Form Section ========== -->
+        <div class="search-div col-lg-5 col-md-4 offset-md-1">
+            <form class="form-horizontal row">
+                <input type="text" class="search form-control" placeholder="Search the product" id="searching">
+                <button type="button" class="submit form-control" id="btn01">Search</button>
+            </form>
+        </div>
 
+        <!-- ========== Navigation Links (Login, Home, Cart) ========== -->
+        <div class="top-right col-lg-5 col-md-6">
+            <ul class="nav nav-pills">
+                <!-- Login Button -->
+                <li class="nav-item">
+                    <!-- turn to login page -->
+                    <a class="nav-link active" href="../../login/index/index-login.html"></a>  
+                </li>
+                <!-- Home Button -->
+                <li class="nav-item">
+                    <!-- turn to home page(back to top) -->
+                    <a class="nav-link active" href="../../main/index/index-main.html"></a>
+                </li>
+                <!-- Cart Button -->
+                <li class="nav-item cart1">
+                    <div id="cart-num"></div> <!-- show the number in cart -->
+                    <!-- turn to cart page -->
+                    <a class="nav-link active" href="../../Cart/index/index-cart.html"></a>
+                </li>
+            </ul> 
+        </div>
 
-         <!-- hidden nav for Products -->
-        <section class="hidden-nav hidden-nav-product row">
-            <div class="nav-item first col-3 text-center">
-                <a href="#products">Products Tree</a>
-                <a href="#products">about our Porducts</a>
-                <a href="#products">shop all products</a>
-            </div>
-            <div class="nav-item second col-3">
-                <h2>PLush category</h2>
-                <a href="#products">Holiday Plush</a>
-                <a href="#products">Halloween Plush</a>
-                <a href="#products">Large Plush</a>
-                <a href="#products">Keychains</a>
-                <a href="#products">Poké Plush</a>
-                <a href="#products">Sitting Cuties</a>
-                <a href="#products">Pikachu Plush</a>
-                <a href="#products">Hand Puppets</a>
-                <a href="#products">Comfy Friends</a>
-                <a href="#products">Pokémon Dolls</a>
-                <a href="#products">Eevee Evolutions</a>
-                <a href="#products">Pokémon Squishmallows</a>
-                <a href="#products">...</a>
-            </div>
-            <div class="nav-item third col-3">
-                <h2>other products</h2>
-                <a href="#products">Clothing</a>
-                <a href="#products">Accessories</a>
-                <a href="#products">Home Goods</a>
-                <a href="#products">Stationery</a>
-                <a href="#products">Office Supplies</a>
-
-            </div>
-            <div class="nav-item third col-3 text-center">
-                <img src="../img/plush.jpg" alt="">
-                <a href="">shop now</a>
-            </div>
-        </section>
+    </div>
+</header>
+<!-- ================== Header Section End ================== -->
 
 
 
-          <!-- hidden nav for Cards -->
-        <section class="hidden-nav hidden-nav-card row">
-            <div class="nav-item first col-3 text-center">
-                <a href="#Cards">Pokémon TCG Classic</a>
-                <a href="#Cards">New to TCG?</a>
-                <a href="#Cards">Shopping all cards</a>
-            </div>
-            <div class="nav-item second col-3">
-                <h2>Cards category</h2>
-                <a href="#Cards">Playmats</a>
-                <a href="#Cards">Deck Boxes</a>
-                <a href="#Cards">Card Sleeves</a>
-                <a href="#Cards">Premium</a>
-                <a href="#Cards">Accessories</a>
-                <a href="#Cards">Boxed Sets</a>
-                <a href="#Cards">Decks</a>
-                <a href="#Cards">Battle & Theme</a>
-                <a href="#Cards">Collection</a>
-            </div>
-            <div class="nav-item third col-3">
-                <h2>EXPANSIONS</h2>
-                <a href="#Cards">Surging Sparks</a>
-                <a href="#Cards">Twilight Masquerade</a>
-                <a href="#Cards">Shrouded Fable</a>
-                <a href="#Cards">Temporal Forces</a>
-                <a href="#Cards">Paldean Fates</a>
-                <a href="#Cards">Paradox Rift</a>
-                <a href="#Cards">Crown Zenith</a>
-                <a href="#Cards">Brilliant Stars</a>
-                <a href="#Cards">Lost Origin</a>
-            </div>
-            <div class="nav-item third col-3 text-center">
-                <img src="../img/cards.png" alt="">
-                <a href="">shop now</a>
-            </div>
-        </section>
-    </nav>
-<!-- nav part end -->
+<!--======================== Navigation Section Start ========================-->
+<nav class="row main-nav section">
+    
+    <!--========= Top-Level Navigation Buttons =========-->
+    <div class="col-4 nav nav-pet">
+        <a id="click01" href="javascript:;">PokePets</a> <!-- when hover show PokePets nav  -->
+    </div>
+    <div class="col-4 nav nav-product">
+        <a id="click02" href="javascript:;">Products</a> <!-- when hover show Products nav -->
+    </div>
+    <div class="col-4 nav nav-card">
+        <a id="click03" href="javascript:;">Cards</a> <!-- when hover show Cards nav -->
+    </div>
+
+    <!--=============== Hidden Navigation Menu for PokePets ===============-->
+    <section class="hidden-nav hidden-nav-pet row">
+        <!-- ===== First column ===== -->
+        <div class="nav-item first col-3 text-center">
+            <a href="#pets">Shop All PokePets</a>
+            <a href="#pets">About PokePets</a>
+        </div>
+        <!-- ===== Second column ===== -->
+        <div class="nav-item second col-3">
+            <h2>PokePet Categories</h2>
+            <a href="#pets">Bulbasaur</a>
+            <a href="#pets">Charmander</a>
+            <a href="#pets">Squirtle</a>
+            <a href="#pets">...</a>
+        </div>
+        <!-- ===== Third column ===== -->
+        <div class="nav-item third col-3">
+            <h2>PokePets Types</h2>
+            <a href="#pets">Grass</a>
+            <a href="#pets">Water</a>
+            <a href="#pets">Flying</a>
+            <a href="#pets">...</a>
+        </div>
+        <!-- ===== forth column ===== -->
+        <div class="nav-item third col-3 text-center">
+            <img src="../img/Salamence.png" alt="Salamence Image">
+            <a href="">Shop Now</a>
+        </div>
+    </section>
+
+    <!--=============== Hidden Navigation Menu for Products ===============-->
+    <section class="hidden-nav hidden-nav-product row">
+        <!-- ===== First column ===== -->
+        <div class="nav-item first col-3 text-center">
+            <a href="#products">Products Tree</a>
+            <a href="#products">About Our Products</a>
+            <a href="#products">Shop All Products</a>
+        </div>
+        <!-- ===== Second column ===== -->
+        <div class="nav-item second col-3">
+            <h2>Plush Category</h2>
+            <a href="#products">Holiday Plush</a>
+            <a href="#products">Large Plush</a>
+            <a href="#products">Keychains</a>
+            <a href="#products">...</a>
+        </div>
+        <!-- ===== Third column ===== -->
+        <div class="nav-item third col-3">
+            <h2>Other Products</h2>
+            <a href="#products">Clothing</a>
+            <a href="#products">Accessories</a>
+            <a href="#products">Home Goods</a>
+            <a href="#products">Stationery</a>
+        </div>
+        <!-- ===== Forth column ===== -->
+        <div class="nav-item third col-3 text-center">
+            <img src="../img/plush.jpg" alt="Plush Product Image">
+            <a href="">Shop Now</a>
+        </div>
+    </section>
+
+    <!--=============== Hidden Navigation Menu for Cards ===============-->
+    <section class="hidden-nav hidden-nav-card row">
+        <!-- ===== First column ===== -->
+        <div class="nav-item first col-3 text-center">
+            <a href="#Cards">Pokémon TCG Classic</a>
+            <a href="#Cards">New to TCG?</a>
+            <a href="#Cards">Shop All Cards</a>
+        </div>
+        <!-- ===== Second column ===== -->
+        <div class="nav-item second col-3">
+            <h2>Cards Category</h2>
+            <a href="#Cards">Playmats</a>
+            <a href="#Cards">Deck Boxes</a>
+            <a href="#Cards">Card Sleeves</a>
+            <a href="#Cards">...</a>
+        </div>
+        <!-- ===== Third column ===== -->
+        <div class="nav-item third col-3">
+            <h2>Expansions</h2>
+            <a href="#Cards">Surging Sparks</a>
+            <a href="#Cards">Twilight Masquerade</a>
+            <a href="#Cards">Shrouded Fable</a>
+        </div>
+        <!-- ===== Forth column ===== -->
+        <div class="nav-item third col-3 text-center">
+            <img src="../img/cards.png" alt="Pokemon Cards Image">
+            <a href="">Shop Now</a>
+        </div>
+    </section>
+
+</nav>
+<!--======================== Navigation Section End ========================-->
 
 
-<!-- main part start -->
+<!--============================ Main Part Start ===================================-->
+    <!--=== Breadcrumb small nav above the product ===-->
     <main class="container section">
-        <div class="sequence col-12">
-            <a href="">home</a>/
-            <a href="">PokePets</a>/
-            <a href="">Electric</a>
+        <div class="sequence col-12">           
+            <a href="../../main/index/index-main.html">home</a>/   <!-- turn to home page -->
+            <a href="javascrip:;">PokePets</a>/
+            <a href="javascrip:;">Electric</a>
         </div>
 
-        <!-- product section start -->
+        <!--===== Product Section Start =====-->
         <div class="product-detail">
+            <!-- half page of left part -->
             <section class="left">
-                <!-- Slideshow  start-->
+                <!--=== Carousel  start ===-->
                 <div class="slideShow">
                    <ul class="imgList" id="imgList">
                        <li>
@@ -213,8 +205,9 @@
                         <img src="../img/pikachu1.gif" alt="pikachu1">
                        </li>
                    </ul>
-                    <button class="carousel-btn prev">❮</button>
-                    <button class="carousel-btn next">❯</button>
+                    <button class="carousel-btn prev">❮</button>   <!--turn to pre one button-->
+                    <button class="carousel-btn next">❯</button>   <!--turn to next one button-->
+                    <!-- show the current img number -->
                     <div class="nav-dots">
                         <a href="javascript:;"></a>
                         <a href="javascript:;"></a>
@@ -223,10 +216,11 @@
                     </div>
                 </div>
             </section>
-            <!-- slideshow end -->
+            <!--=== carousel end ===-->
                 
-            <!-- product intro  start-->
+            <!--=== Product Intro  start ===-->
             <section class="right">
+                <!-- using icon show the rating -->
                 <div class="review">
                     <i class="iconfont icon-wuxinghaoping-quan"></i>
                     <i class="iconfont icon-wuxinghaoping-quan"></i>
@@ -240,28 +234,30 @@
                 <div class="quantity-select">
                     <label for="quantity">quantity</label>
                     <div class="quantity-controls">
-                        <button id="decrease" class="quantity-btn form-control">−</button>
-                        <input id="quantity" class="text-center form-control" type="number" value="1" min="1" readonly >
-                        <button id="increase" class="quantity-btn form-control">+</button>
+                        <button id="decrease" class="quantity-btn form-control">−</button> <!--increase quantity button-->
+                        <input id="quantity" class="text-center form-control" type="number" value="1" min="1" readonly > <!--quantity of product-->
+                        <button id="increase" class="quantity-btn form-control">+</button> <!--decrease quantity button-->
                     </div>
+                    <!-- add to cart button -->
                     <div class="add">
                         <input type="button" name="add" id="add" class="form-control" value="add to cart" data-name="Pikachu" data-price="499.99" data-img="../../main/img/wallpaper-pikachu.png">
                     </div>
                 </div>
+                <!-- small article of intorduction to this product -->
                 <article class="Introduction">
                     <h3>Most popular Pets ever</h3>
                     <span>Don’t miss your chance to bring Pikachu into your life – order now and let this lovable Pokémon spark joy in your world</span>
                 </article>
             </section>
         </div>
-            <!-- product intro end -->
+            <!--=== product intro end ===-->
 
-        <!--more detail of the product start -->
+        <!--=== more detail of the product start ===-->
         <div class="more">
             <!-- description start -->
             <section class="d1 description row">
                 <h2 class="col-10">description</h2>
-                <div id="btn-description" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>
+                <div id="btn-description" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>   <!-- click to show more detail-->
                 <p class="col-12" id="detail-description">Not only does it look cute, it also has powerful electrical properties, and can release skills such as 100,000 volts and electric ball. Whether it is a forest adventure or a battle, it will use its lightning speed and unparalleled loyalty to become your reliable partner on the adventure.</p>
             </section>
             <!-- description end -->
@@ -269,7 +265,7 @@
             <!-- product details start-->
             <section class="d1 details row">
                 <h2 class="col-10">more details</h2>
-                <div id="btn-detail" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>
+                <div id="btn-detail" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>   <!-- click to show more detail-->
                 <ul id="details" class="col-10 offset-2">
                     <li><span>Type: Mouse Pokémon</span></li>
                     <li><span>Attribute: Electric</span></li>
@@ -283,7 +279,7 @@
             <!-- delivery policy  start-->
             <section class="d1 delivery row">
                 <h2 class="col-10">delivery policy</h2>
-                <div id="btn-delivery" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>
+                <div id="btn-delivery" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>     <!-- click to show more detail-->
                 <ul id="delivery" class="col-11 offset-1">
                     <li>Estimated Delivery Time: 3-6 business days with Standard shipping.</li>
                     <li>Return Policy: We are not allowed to return the product once delivery accepted</li>
@@ -302,6 +298,7 @@
                             <span class="col-3 h1">5.0</span>
                             <span class="col-8">out of 5.0</span>
                             <div class="reviews">
+                                <!-- Icons show the rating -->
                                 <i class="iconfont icon-wuxinghaoping-quan"></i>
                                 <i class="iconfont icon-wuxinghaoping-quan"></i>
                                 <i class="iconfont icon-wuxinghaoping-quan"></i>
@@ -317,30 +314,35 @@
                                 <li class="row">
                                     <span class="col-3">5 <i class="iconfont icon-wuxinghaoping-quan"></i> :</span>
                                     <div class="col-7 progress">
+                                        <!-- 100% of 5 starts -->
                                         <div role="progressbar" style="width: 100%;" aria-valuenow="50" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage1">100%</div>
                                     </div>
                                 </li>
                                 <li class="row">
                                     <span class="col-3">4 <i class="iconfont icon-wuxinghaoping-quan"></i> :</span>
                                     <div class="col-7 progress">
+                                        <!-- 0% of 4 starts -->
                                         <div role="progressbar" style="width: 100%; background-color: #ccc;" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage2">0%</div>
                                     </div>
                                 </li>
                                 <li class="row">
                                     <span class="col-3">3 <i class="iconfont icon-wuxinghaoping-quan"></i> :</span>
                                     <div class="col-7 progress">
+                                        <!-- 0% of 3 starts -->
                                         <div role="progressbar" style="width: 100%; background-color: #ccc" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage3">0%</div>
                                     </div>
                                 </li>
                                 <li class="row">
                                     <span class="col-3">2 <i class="iconfont icon-wuxinghaoping-quan"></i> :</span>
                                     <div class="col-7 progress">
+                                        <!-- 0% of 2 starts -->
                                         <div role="progressbar" style="width: 100%; background-color: #ccc" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage4">0%</div>
                                     </div>
                                 </li>
                                 <li class="row">
                                     <span class="col-3">1 <i class="iconfont icon-wuxinghaoping-quan"></i> :</span>
                                     <div class="col-7 progress">
+                                        <!-- 0% of 1 starts -->
                                         <div role="progressbar" style="width: 100%; background-color: #ccc" aria-valuenow="0" aria-valuemax="100" aria-valuemin="0" class="progress-bar" id="percentage5">0%</div>
                                     </div>
                                 </li>
@@ -350,119 +352,201 @@
                     </div>
                 </div>
 
-                <!-- previous comments start -->
-                <div id="btn-comment" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>
+                <!-- =============== Comments Section Start =============== -->
+                <div id="btn-comment" class="h1 col-1 offset-lg-1 offset-md-1 offset-sm-1 btn">+</div>  
+                <!-- 用户点击此按钮可以展开或收起评论列表 -->
+
+
+                <!-- =============== Previous Comments Start =============== -->
                 <div id="comment-list">
                     <article class="row comments" id="message">
+                        <!-- Comment 1: Ash -->
                         <ul class="col-4 date">
+                            <!-- date of comment -->
                             <li><span>25/05/2015</span></li>
-                            <li><span><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i></span></li>
+                            <li>
+                                <span>
+                                    <!-- rating of this comment -->
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                </span>
+                            </li>
+                            <!-- title -->
                             <li><h5>Best Partner Ever!</h5></li>
                         </ul>
+                        <!-- comment detail -->
                         <p class="col-6">This Pikachu is so cute! Its electric-type skills are very powerful, and its "100,000 Volts" is amazing in battle. And it is very loyal and always stays by my side. I definitely recommend it to every trainer!</p>
                         <div class="person col-2">
+                            <!-- profile of comment -->
                             <div class="face face1"></div>
-                            <p> Ash</p>
+                            <p>Ash</p>
                         </div>
                     </article>
+                
+                    <!-- Comment 2: Dawn -->
                     <article class="row comments">
                         <ul class="col-4 date">
+                            <!-- date of this comment -->
                             <li><span>03/11/2012</span></li>
-                            <li><span><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i></span></li>
+                            <li>
+                                <span>
+                                    <!-- rating of this comment -->
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                </span>
+                            </li>
+                            <!-- title -->
                             <li><h5>Perfect for any trainer</h5></li>
                         </ul>
+                        <!-- comment detail -->
                         <p class="col-6">As my first Pokémon, Pikachu adapts perfectly to various scenarios. Not only can it fight with me, but it can also accompany me on trips, and it can even use its static electricity to help start devices. It's so considerate!</p>
                         <div class="person col-2">
+                            <!-- profile of this comment -->
                             <div class="face face2"></div>
                             <p>Dawn</p>
                         </div>
                     </article>
+                
+                    <!-- Comment 3: Serena -->
                     <article class="row comments">
                         <ul class="col-4 date">
+                            <!-- date of this comments -->
                             <li><span>11/07/2010</span></li>
-                            <li><span><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i></span></li>
+                            <li>
+                                <span>
+                                    <!-- rating of this comments -->
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                </span>
+                            </li>
+                            <!-- title  -->
                             <li><h5>Super popular Pokémon</h5></li>
                         </ul>
+                        <!-- comment detail -->
                         <p class="col-6">I have loved Pikachu since I was a kid, and now I finally have one of my own! It really interacts with me, and it is super cute every time it releases electricity. I have become the best partner with it!</p>
                         <div class="person col-2">
+                            <!-- profile of this comment -->
                             <div class="face face3"></div>
                             <p>Serena</p>
                         </div>
                     </article>
+                
+                    <!-- Comment 4: Brock -->
                     <article class="row comments">
                         <ul class="col-4 date">
+                            <!-- date of this comment -->
                             <li><span>25/05/2008</span></li>
-                            <li><span><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i><i class="iconfont icon-wuxinghaoping-quan"></i></span></li>
+                            <li>
+                                <span>
+                                    <!-- rating of this comments -->
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                    <i class="iconfont icon-wuxinghaoping-quan"></i>
+                                </span>
+                            </li>
+                            <!-- title -->
                             <li><h5>The cutest power bank Ever!</h5></li>
                         </ul>
+                        <!-- comment detail -->
                         <p class="col-6">I can actually use Pikachu to charge my phone! Every time my phone runs out of power, it uses its cheeks to generate a small current. It is simply the most environmentally friendly power bank, hahaha!</p>
                         <div class="person col-2">
+                            <!-- profile of this comment -->
                             <div class="face face4"></div>
                             <p>Brock</p>
                         </div>
                     </article>
-                <!-- previous comments end -->
-
-                <!-- write comments start -->
+                    <!-- =============== Previous Comments End =============== -->
+                
+                    <!-- =============== Write a Comment Start =============== -->
                     <form class="row text-center comments">
-                        <label for="new-comment" class="h5">write your own comment</label>
-                        <div class="col-12 row write-comment"> 
+                        <label for="new-comment" class="h5">Write your own comment</label>
+                        <div class="col-12 row write-comment">
+                        
+                            <!-- Rating Stars -->
+                             <!-- when hover choose the star -->
                             <div class="Rating col-12">           
-                                <input type="radio" id="star5" class="stars" name="rating" value="5" ><label for="star5" title="5 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
-                                <input type="radio" id="star4" class="stars" name="rating" value="4" ><label for="star4" title="4 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
-                                <input type="radio" id="star3" class="stars" name="rating" value="3" ><label for="star3" title="3 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
-                                <input type="radio" id="star2" class="stars" name="rating" value="2" ><label for="star2" title="2 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
-                                <input type="radio" id="star1" class="stars" name="rating" value="1" ><label for="star1" title="1 star"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
+                                <input type="radio" id="star5" class="stars" name="rating" value="5">
+                                <label for="star5" title="5 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
+                            
+                                <input type="radio" id="star4" class="stars" name="rating" value="4">
+                                <label for="star4" title="4 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
+                            
+                                <input type="radio" id="star3" class="stars" name="rating" value="3">
+                                <label for="star3" title="3 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
+                            
+                                <input type="radio" id="star2" class="stars" name="rating" value="2">
+                                <label for="star2" title="2 stars"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
+                            
+                                <input type="radio" id="star1" class="stars" name="rating" value="1">
+                                <label for="star1" title="1 star"><i class="iconfont icon-wuxinghaoping-quan"></i></label>
                                 <span>Rate the product:&nbsp;</span>
-                              </div>
+                            </div>
+                        
+                            <!-- User Input Fields -->
+                             <!-- user name input -->
                             <input type="text" placeholder="User name" id="user-name" class="col-10">
-                            <input type="text" placeholder="title" id="comment-title" class="col-10">
+                             <!-- comment title input -->
+                            <input type="text" placeholder="Title" id="comment-title" class="col-10">
+                             <!-- detail comment iniput -->
                             <textarea class="col-10" id="new-comment" placeholder="Leave your comment..." required></textarea>
+                        
+                            <!-- Submit Button -->
                             <button class="col-1 offset-1" id="submit-comment" type="button">Submit</button>
                         </div>
                     </form>
-                    <!-- write comment end -->
+                    <!-- =============== Write a Comment End =============== -->
                 </div>
+                <!-- =============== Comments Section End =============== -->
+            
+            
+            
+                <!--========== recommendation start =============-->
+                <section class="d1 row recommendation">
+                    <h2>Recommendation</h2>
+                    <!-- product1 -->
+                    <div class="product col-lg-3 col-md-3">
+                        <img src="../img/product13.png" alt="Electabuzz">
+                        <p>Electabuzz</p>
+                        <p><i class="iconfont icon-qian"></i>: 399.99</p>
+                    </div>
+                    <!-- product2 -->
+                    <div class="product col-lg-3 col-md-3">
+                        <img src="../img/product14.png" alt="Plusle">
+                        <p>Plusle</p>
+                        <p><i class="iconfont icon-qian"></i>: 299.99</p>
+                    </div>
+                    <!-- product3 -->
+                    <div class="product col-lg-3 col-md-3">
+                        <img src="../img/product15.png" alt="Pachirisu">
+                        <p>Pachirisu</p>
+                        <p><i class="iconfont icon-qian"></i>: 299.99</p>
+                    </div>
+                    <!-- product4 -->
+                    <div class="product col-lg-3 col-md-3">
+                        <img src="../img/product16.png" alt="Togedemaru">
+                        <p>Togedemaru</p>
+                        <p><i class="iconfont icon-qian"></i>: 199.99</p>
+                    </div>
+                </section>
+                <!--============ recommendation end ===============-->
             </div>
-            <!-- comment section end -->
-
-
-            <!-- recommendation start -->
-             <section class="d1 row recommendation">
-                <h2>Recommendation</h2>
-                <!-- product1 -->
-                <div class="product col-lg-3 col-md-3">
-                    <img src="../img/product13.png" alt="Electabuzz">
-                    <p>Electabuzz</p>
-                    <p><i class="iconfont icon-qian"></i>: 399.99</p>
-                </div>
-                <!-- product2 -->
-                <div class="product col-lg-3 col-md-3">
-                    <img src="../img/product14.png" alt="Plusle">
-                    <p>Plusle</p>
-                    <p><i class="iconfont icon-qian"></i>: 299.99</p>
-                </div>
-                <!-- product3 -->
-                <div class="product col-lg-3 col-md-3">
-                    <img src="../img/product15.png" alt="Pachirisu">
-                    <p>Pachirisu</p>
-                    <p><i class="iconfont icon-qian"></i>: 299.99</p>
-                </div>
-                <!-- product4 -->
-                <div class="product col-lg-3 col-md-3">
-                    <img src="../img/product16.png" alt="Togedemaru">
-                    <p>Togedemaru</p>
-                    <p><i class="iconfont icon-qian"></i>: 199.99</p>
-                </div>
-             </section>
-             <!-- recommendation end -->
-        </div>
-    </main>
-<!--main section end  -->
+        </main>
+<!--============================= Main Section End  ===============================-->
 
 
 
-    <!-- Add to Cart Success Modal -->
+    <!--============ Add to Cart Success Modal Start =====================-->
     <section class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -476,27 +560,34 @@
             </div>
             <!-- Modal Footer -->
             <div class="modal-footer">
+                <!-- close button -->
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
             </div>
           </div>
         </div>
     </section>
-    <!-- add to cart success modal -->
+    <!--=============== Add to cart success modal End =================-->
 
 
-<!-- footer section start -->
-<footer class="section">
+<!-- ================== Footer Section Start ================== -->
+<footer class="section sectionZ">
+
+    <!-- Top Section: Quick Links, Location, Contact, and Payment Methods -->
     <div class="first">
+
+        <!-- Quick Links Section -->
         <div class="quick-link">
-            <h1>Quick-link</h1>
+            <h1>Quick Links</h1>
             <ul>
-                <li><a href="#">home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="../../Cart/index/index-cart.html">My Cart</a></li>
                 <li><a href="#pets">Pets</a></li>
-                <li><a href="#Products">Products</a></li>
-                <li><a href="#Cards">Cards</a></li>           
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cards">Cards</a></li>           
             </ul>
         </div>
+
+        <!-- Location Section -->
         <div class="location">
             <h1>Location</h1>
             <ul>
@@ -506,99 +597,127 @@
                 <li><a href="javascript:;">Finland</a></li>
             </ul>
         </div>
+
+        <!-- Contact Information Section -->
         <div class="contact">
-            <h1>Contact Infro</h1>
+            <h1>Contact Info</h1>
             <ul>
                 <li><a href="javascript:;">Esmee</a></li>
                 <li><a href="javascript:;">+44 520-1314</a></li>
                 <li><a href="javascript:;">myl666@gmail.com</a></li>
             </ul>
         </div>
+
+        <!-- Payment Methods Section -->
         <div class="payment">
-            <h1>payment</h1>
+            <h1>Payment</h1>
             <ul>
-                <li><img src="../img/mastercard.png" alt="mastercard"></li>
-                <li><img src="../img/yinlian.png" alt="yinlian"></li>
-                <li><img src="../img/visaPay.png" alt="visaPay"></li>
+                <li><img src="../img/mastercard.png" alt="MasterCard" loading="lazy"></li>
+                <li><img src="../img/yinlian.png" alt="UnionPay" loading="lazy"></li>
+                <li><img src="../img/visaPay.png" alt="VisaPay" loading="lazy"></li>
             </ul>
         </div>
-    </div>
 
+    </div> <!-- End of First Section -->
+
+    <!-- Bottom Section: Branding, Social Media, and Legal Links -->
     <div class="second">
+        
+        <!-- Brand Tagline -->
         <span>Your go-to platform for exploring and adopting virtual Pokémon pets.</span>
         <span>Learn, play, and connect with your favorite Pokémon today!</span>
 
+        <!-- Social Media Follow Section -->
         <div class="follow">
-            <h1>Follow us :</h1>
+            <h1>Follow Us:</h1>
             <div class="icon-list">
-                <div class="icons"></div>
-                <div class="icons"></div>
-                <div class="icons"></div>
+                <div class="icons"></div>  <!-- Placeholder for Facebook -->
+                <div class="icons"></div>  <!-- Placeholder for Instagram -->
+                <div class="icons"></div>  <!-- Placeholder for WeChat -->
             </div>
         </div>
 
-        <!-- copyright -->
-         <div class="copyright">
-            <h5>&copy; 2025 PokéShop.All rights reserved</h5>
+        <!-- Copyright and Legal Information -->
+        <div class="copyright">
+            <h5>&copy; 2025 PokéShop. All rights reserved</h5>
             <h5>.UA92.YuLun_Miao_666</h5>
         </div>
-         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </div>
+
+        <!-- Privacy Policy and Terms of Service Links -->
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+
+    </div> <!-- End of Second Section -->
+
 </footer>
-<!-- footer section end -->
+<!-- ================== Footer Section End ================== -->
+
+
 
     
-<!-- moblie slidebar start-->
-    <div id="mobile-menu">
-        <button id="menu-btn">☰</button>
-        <div id="menu-content">
-            <img id="close" src="../img/close.png" alt="">
-            <div class="profile">
-                <img src="../img/profile.png" alt="">
-                <span>sign in / login</span>
+<!-- ================== Mobile Sidebar Start ================== -->
+<div id="mobile-menu">
+    <!-- Sidebar Toggle Button -->
+    <button id="menu-btn">☰</button>
+    
+    <!-- Sidebar Content -->
+    <div id="menu-content">
+        <!-- Close Button -->
+        <img id="close" src="../img/close.png" alt="Close Button">
+
+        <!-- User Profile Section -->
+        <div class="profile">
+            <img src="../img/profile.png" alt="User Profile">
+            <span>Sign in / Login</span>
+        </div>
+
+        <!-- Pokepets Navigation -->
+        <div class="menu-category row nav-pet">
+            <div class="col-10"><span>Pokepets:</span></div>
+            <div class="col-1" id="symbol1"><span class="btn btn-open">></span></div>
+            <div class="col-12 menu-detail">
+                <ul>
+                    <li><a href="javascript:;">Grass</a></li>
+                    <li><a href="javascript:;">Fire</a></li>
+                    <li><a href="javascript:;">Water</a></li>
+                    <li><a href="javascript:;">Flying</a></li>
+                    <li><a href="javascript:;">Electric</a></li>
+                    <li><a href="javascript:;">Poison</a></li>
+                </ul>
             </div>
-            <div class="menu-category row nav-pet">
-                <div class="col-10"><span>Pokepets:</span></div>
-                <div class="col-1" id="symbol1"><span class="btn btn-open">></span></div>
-                <div class="col-12 menu-detail">
-                    <ul>
-                        <li><a href="javascript:;">Grass</a></li>
-                        <li><a href="javascript:;">Fire</a></li>
-                        <li><a href="javascript:;">Water</a></li>
-                        <li><a href="javascript:;">Flying</a></li>
-                        <li><a href="javascript:;">Electric</a></li>
-                        <li><a href="javascript:;">posion</a></li>
-                    </ul>
-                </div>
+        </div>
+
+        <!-- Products Navigation -->
+        <div class="menu-category row nav-product">
+            <div class="col-10"><span>Products:</span></div>
+            <div class="col-1" id="symbol2"><span class="btn btn-open">></span></div>
+            <div class="col-12 menu-detail">
+                <ul>
+                    <li><a href="javascript:;">Hoodies</a></li>
+                    <li><a href="javascript:;">Jackets</a></li>
+                    <li><a href="javascript:;">Plush</a></li>
+                    <li><a href="javascript:;">Home</a></li>
+                    <li><a href="javascript:;">Accessories</a></li>
+                    <li><a href="javascript:;">Office Supplies</a></li>
+                </ul>
             </div>
-            <div class="menu-category row nav-product">
-                <div class="col-10"><span>Products:</span></div>
-                <div class="col-1" id="symbol2"><span class="btn btn-open">></span></div>
-                <div class="col-12 menu-detail">
-                    <ul>
-                        <li><a href="javascript:;">Hoodies</a></li>
-                        <li><a href="javascript:;">Jackets</a></li>
-                        <li><a href="javascript:;">Plush</a></li>
-                        <li><a href="javascript:;">Home</a></li>
-                        <li><a href="javascript:;">Accessories</a></li>
-                        <li><a href="javascript:;">officiis</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="menu-category row nav-card">
-                <div class="col-10"><span>Cards:</span></div>
-                <div class="col-1" id="symbol3"><span class="btn btn-open">></span></div>
-                <div class="col-12 menu-detail">
-                    <ul>
-                        <li><a href="javascript:;">TCG cards</a></li>
-                        <li><a href="javascript:;">collection</a></li>
-                        <li><a href="javascript:;">Battle</a></li>
-                        <li><a href="javascript:;">Decks</a></li>
-                    </ul>
-                </div>
+        </div>
+
+        <!-- Cards Navigation -->
+        <div class="menu-category row nav-card">
+            <div class="col-10"><span>Cards:</span></div>
+            <div class="col-1" id="symbol3"><span class="btn btn-open">></span></div>
+            <div class="col-12 menu-detail">
+                <ul>
+                    <li><a href="javascript:;">TCG Cards</a></li>
+                    <li><a href="javascript:;">Collection</a></li>
+                    <li><a href="javascript:;">Battle</a></li>
+                    <li><a href="javascript:;">Decks</a></li>
+                </ul>
             </div>
         </div>
     </div>
-<!-- mobile slide bar end -->
+</div>
+<!-- ================== Mobile Sidebar End ================== -->
+
 </body>
 </html>

@@ -717,9 +717,10 @@ footer .copyright{
 #mobile-menu{
     display: none;
 }
-/* for ipad air */
+/*#region for ipad air */
+    /*change the layout  */
 @media (min-width: 768px) and (max-width: 998px) 
-and  (max-height: 1200px) {
+and  (max-height: 1300px) {
  .slideShow li img{
      max-width: 300px;
   }
@@ -727,6 +728,8 @@ and  (max-height: 1200px) {
     display: none;
   }
 }
+/* #endregion for ipad ari */
+
 
 /* for mobile device */
 @media (max-width:768px){

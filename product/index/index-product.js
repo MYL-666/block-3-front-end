@@ -6,25 +6,27 @@ window.onload = function () {
     var nextBtn = document.querySelector('.next'); 
     var allA = document.querySelectorAll(".nav-dots a"); 
 
+    // initailize the carousel
     function init() {
         index = 0; 
         setA(); 
     }
     init();
  
+    // click prebtn lead to previous page
     prevBtn.onclick = function () {
         index--; 
         if (index < 0) index = imgArr.length - 1; 
         setA();
     };
-
+    // click nextBtn lead to next page
     nextBtn.onclick = function () {
         index++; 
         if (index >= imgArr.length) index = 0; 
         setA();
     };
 
-
+    
     for (var i = 0; i < allA.length; i++) {
         allA[i].num = i;
         allA[i].onclick = function () {

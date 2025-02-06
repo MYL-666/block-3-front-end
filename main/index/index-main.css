@@ -1447,8 +1447,8 @@ footer .copyright{
 
 /* #region ==================== MEDIA QUERIES (MOBILE & TABLET) ======================= */
 
-/* #region Devices smaller than 1200px  */
-@media (max-width:1200px){
+/* #region Devices smaller than 1366px  */
+@media (max-width:1366px){
     .pet-shell{
         min-height: 150vh;
     }
@@ -1480,9 +1480,9 @@ footer .copyright{
     }
     /* product intro end */
 }
-/* #endregion Devices smaller than 1200px */
+/* #endregion Devices smaller than 1366px */
 
-/* #region Devices smaller than 992px  */
+/* #region Devices smaller than 1024px  */
 @media (max-width:1024px){
     /* about us */
     .about .right p{
@@ -1531,7 +1531,7 @@ footer .copyright{
     }
     /* product intro end */
 }
-/* #endregion Devices smaller than 992px */
+/* #endregion Devices smaller than 1024px */
 
 
 /* #region =================== MOBILE RESPONSIVENESS (MAX WIDTH: 768PX) =================== */

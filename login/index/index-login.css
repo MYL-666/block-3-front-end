@@ -14,10 +14,19 @@ body{
     overflow-x: hidden;
 }
 
-/* #region main section start */
+/* #region==================== main section start ==============================*/
+/* 1.left part ---- logo and img
+    2. right part ---- main form
+    3.account login ---email
+    4.password required ---- pdw & regular expression
+    5.instruction --- required to be read
+    6. social media login ways
+ */
+
 main{
     padding: 5rem 0;
 }
+/* Main container layout for the form and image */
 .shell{
     display: flex;
     min-height: 60vh;
@@ -27,27 +36,28 @@ main{
 
 }
     /* img section start */
+    /* Container for the image */
 .img-box {
-    flex: 1;              
+    flex: 1;            /* Takes up equal space with the form */  
     height: auto;          
-    opacity: 0;
+    opacity: 0;      /* Initially hidden */
     animation: animate1 1s ease-out forwards;
     background-color: transparent;
-    display: flex;       
-    justify-content: center;
+    display: flex;        /* Centers image */
+    justify-content: center; 
     align-items: center;
     box-sizing: border-box;
 }
 .img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;      
+    object-fit: cover;       /* Ensures the image scales properly */
 }   
     /* img section end */
     /* main form start */
 .box {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;      /* Stacks elements vertically */
     align-items: center;
     justify-content: center;
     background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(255, 255, 255) 0%, rgba(234,241,249,0.8) 90.1%);
@@ -58,14 +68,14 @@ main{
     min-width: 520px;
     box-sizing: border-box;
     height: auto;        
-    flex: 1;               
+    flex: 1;                /* Takes up equal space with the image */
 }
     
 .welcome{
     margin-bottom: 2rem;
     text-align: center;
     opacity: 0;
-    animation: animate2 1s ease-out forwards;
+    animation: animate2 1s ease-out forwards;  /* Fade-in animation */
 }
 .welcome h1{
     letter-spacing: 1px;
@@ -80,15 +90,17 @@ main{
     gap: 1rem; 
     width: 80%;
 }
+/* Input field styling */
 .input{
     padding: 1rem 1.5rem;
     border: 2px solid #6e6d6e;
     line-height: 1;
-    border-radius: 2rem;
+    border-radius: 2rem; /* Rounded corners */
     width: 100%;
     opacity: 0;
     animation: animate2 1s .3s ease-out forwards;
 }
+/* Removes default styling from input fields */
 .input input{
     margin: 0;
     border: 0;
@@ -96,9 +108,11 @@ main{
     width: 100%;
     background-color: transparent;
 }
+/* Password input field */
 .password{
     position: relative;
 }
+/* Password visibility toggle icon */
 .password i {
     position: absolute;
     right: 1rem;
@@ -108,10 +122,12 @@ main{
     font-size: 1.2rem;
     color: #888;
 }
+/* Forgot password & form validation message */
 .forget,.checking{
     opacity: 0;
     animation: animate2 1s .5s ease-out forwards;
 }
+/* Login button container */
 .login{
     margin-top: 1.5rem;
     width: 100%;
@@ -120,6 +136,7 @@ main{
     flex-direction: column;
     align-items: center;
 }
+/* Login button animation */
 .login,.existing{
     opacity: 0;
     animation: animate2 1s .8s ease-out forwards;
@@ -135,14 +152,17 @@ main{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+/* Disabled button */
 :disabled{
     color: #666;
 }
+/* Hover effect for login button */
 #btn:hover {
     transform: scale(1.05);
     background-color: rgb(248, 202, 67);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
+/* Text styling for login validation messages */
 .main-content .login .checking {
     font-size: 12px;
     display: flex;
@@ -158,10 +178,12 @@ a{
     text-decoration: none;
     color: #333;
 }
+/* hover effect */
  a:hover{
     text-decoration: underline;
     color: #000;
 }
+/* Social media login options */
 .existing{
     margin-top: 1rem;
     height: 2rem;
@@ -176,6 +198,7 @@ a{
     line-height: 2rem;
     text-align: center;
 }
+/* Social media icon styling */
 .existing i{
     font-size: 1.5rem;
     color: #333;
@@ -191,7 +214,7 @@ a{
 
     /* main form end */
 
-    /* animation */
+    /* animation1 jump up from right bottom */
 @keyframes animate1{
     from{
         opacity: 0;
@@ -203,6 +226,7 @@ a{
         z-index: 1;
     }
 }
+    /* animation2 fade in from left */
 @keyframes animate2{
     from{
         opacity: 0;
@@ -212,17 +236,17 @@ a{
         opacity: 1;
     }
 }
-/* #endregion main section end */
+/* #endregion======================== main section end ==============================*/
 
-/* #region instructions */
+/* #region========================== instructions ================================*/
 .instructions{
     display: none;
-    z-index: 1000;
-    width: 80%;
-    height: 60%;
+    z-index: 1000;              /* Ensures it appears on top of other elements */
+    width: 80%;                 /* Takes up 80% of the screen width */
+    height: 60%;                /* Takes up 60% of the screen height */
     border-radius: 5px;
     overflow: auto;
-    position: fixed;
+    position: fixed;            
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -237,19 +261,20 @@ a{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
     scrollbar-width: thin;
 }
+/* Centers the heading, makes it bold, and sets color */
 .instructions h2, .reading-instructions h3 {
     text-align: center;
     font-weight: bold;
     color: #333;
 }
-
+/* Main heading (H2) inside instructions */
 .instructions h2 {
     font-size: 28px;
     margin-bottom: 20px;
     border-bottom: 2px solid #f7c6c7; 
     padding-bottom: 10px;
 }
-
+/* Subheadings inside instructions */
 .instructions h3 {
     font-size: 22px;
     margin-top: 20px;
@@ -272,7 +297,7 @@ a{
     color: #444;
     font-size: 16px;
 }
-
+/* button to close style */
 #btn03 {
     display: block;
     margin: 20px auto 0;
@@ -287,6 +312,7 @@ a{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     transition: all 0.3s ease;
 }
+/* checkbox style to fit theme */
 input[type="checkbox"]:checked {
     accent-color: #FFD700;
 }
@@ -295,6 +321,8 @@ input[type="checkbox"]:checked {
     transform: scale(1.02); 
 }
 /* #endregion instructions */
+
+/* #region ============================= MEDIA QUERY START ========================== */
 @media (max-width: 1024px) {
     .shell {
         flex-direction: column;
@@ -324,3 +352,4 @@ input[type="checkbox"]:checked {
             display: none;
         }
 }
+/* #endregion ============================= MEDIA QUERY END ========================== */

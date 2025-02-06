@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<!-- main section start -->
+<!--================ main section start ========================-->
 <main>
     <div class="shell">
         <!-- img section , let the img show on the right side -->
@@ -42,25 +42,25 @@
                     <input type="text" placeholder="Account:" required autocomplete="username">
                 </div>
                 
-                <!--         textbox used for password， checked by regular expression,make sure only 8 character and 1 capital letter are allowed         -->
+                <!-- textbox used for password， checked by regular expression,make sure only 8 character and 1 capital letter are allowed         -->
                 <div class="input password">
                     <input type="password" id="pdw" placeholder="Password:" required pattern="^(?=.*[A-Z]).{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter" autocomplete="current-password">
                     <i class="iconfont icon-yanjing_yincang" id="btn-hidden"></i>
                     <i class="iconfont icon-yanjing_xianshi" id="btn-show"></i>
                 </div>
 
-                <!-- a lable for forgot password      -->
+                <!-- a lable for forgot password-->
                 <div class="forget">
                     <a href="javascript:;">Forgot password?</a>
                 </div>
 
-                <!--          submition button & reading instruction is required        -->
+                <!--submition button & reading instruction is required-->
                 <div class="checking">
                     <input type="checkbox" disabled class="agree" id="btn02" name="agree" required>
                     <label for="btn02"><span>I have read & agree to the</span> <a id="show" href="javascript:;">instructions</a></label>
                 </div>
 
-                <!-- icons of other type login                 -->
+                <!-- icons of other type login-->
                 <div class="login">
                     <input type="submit" value="Login" id="btn" disabled>
                     <span style="color: #666;">begin with existing account</span>
@@ -84,9 +84,9 @@
         <!-- main form section end -->
     </div>
 </main>
-<!-- main section end -->
+<!--================== MAIN SECTION END ===============================-->
 
-<!-- instructions start -->
+<!--================= instructions start ===========================-->
 <div id="instructions" class="instructions">
     <!--   title of instruction   -->
 <h2>Reading Instructions</h2>
@@ -109,7 +109,7 @@
     <!--    close button to close insturction   -->
 <button id="btn03" class="form-control" disabled="disabled">Close</button>
 </div>
-<!-- insturction end -->
+<!--============================= insturction end ================================-->
     
 </body>
 </html>

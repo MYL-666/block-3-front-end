@@ -16,6 +16,7 @@ window.onload=function(){
     // binding the onscroll event to "instruction" so that only read all the 
     // instruction the button can be clicked
     instruction.onscroll=function(){
+        // only scroll to the end of the insturction the close btn would onlock
         if(Math.abs(instruction.scrollHeight-instruction.scrollTop-instruction.clientHeight)<1){
             btn02.disabled=false;
             btn03.disabled = false;
@@ -30,9 +31,11 @@ window.onload=function(){
       });
       
         // password show and hide
+        // initailize the pdw to be hidden
     btnShow.style.opacity='0';
     btnHidden.style.opacity='1';
     btnShow.onclick=function(){
+        // if its hidden,then show;otherwise, close
         if(btnShow.style.opacity=='1'){
             btnShow.style.opacity='0';
             btnHidden.style.opacity='1';

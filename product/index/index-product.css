@@ -717,6 +717,16 @@ footer .copyright{
 #mobile-menu{
     display: none;
 }
+/* for ipad air */
+@media (min-width: 768px) and (max-width: 998px) 
+and  (max-height: 1200px) {
+ .slideShow li img{
+     max-width: 300px;
+  }
+  .overall,.big span:nth-child(2){
+    display: none;
+  }
+}
 
 /* for mobile device */
 @media (max-width:768px){
@@ -999,16 +1009,7 @@ footer .copyright{
         display: none;
     }
 }
-/* for ipad air */
-@media (min-width: 800px) and (max-width: 840px) 
-and (min-height: 1160px) and (max-height: 1200px) {
- .slideShow li img{
-     max-width: 300px;
-  }
-  .overall,.big span:nth-child(2){
-    display: none;
-  }
-}
+
 /* for ipad mini */
 @media (width:768px) and (height:1024px){
     .slideShow li img{

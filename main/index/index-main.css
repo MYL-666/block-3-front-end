@@ -1483,7 +1483,7 @@ footer .copyright{
 /* #endregion Devices smaller than 1200px */
 
 /* #region Devices smaller than 992px  */
-@media (max-width:992px){
+@media (max-width:1024px){
     /* about us */
     .about .right p{
         font-size: 1rem;

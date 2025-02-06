@@ -173,483 +173,627 @@
 
 
 
-<!-- main page start -->
+<!--========================= MAIN SECTION START =====================================-->
  <main>
-<!-- head pic start -->
-        <div class="wallpaper">
-            <div class="text">
-                <span class="h1" style="font-size: 3rem;">Ready for your adevnture?</span>
-                <span>Book a lesson with our master!</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, deserunt? Id dignissimos reiciendis deserunt accusantium rem neque distinctio, ullam iure?</p>
-                <button>More information</button>
+<!--========================= Hero Section (Header Image) =========================-->
+<div class="wallpaper">
+    <div class="text">
+        <!-- Main Heading for Adventure Call -->
+        <span class="h1" style="font-size: 3rem;">Ready for your adventure?</span>
+        <span>Book a lesson with our master!</span>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Veniam, deserunt? Id dignissimos reiciendis deserunt accusantium rem neque distinctio, ullam iure?
+        </p>
+        <!-- Call to Action Button -->
+        <button>More information</button>
+    </div>
+</div>
+<!--========================= End of Hero Section =========================-->
+
+
+<!--========================= About Us Section =========================-->
+<div class="About section sectionZ">
+    <!-- Subtitle for About Us -->
+    <div class="subtitle section sectionZ">
+        <span class="h1 ">About Us</span>
+    </div>
+
+    <section class="about">
+        <!-- Left Side: Image and Text -->
+        <div class="left section sectionL">
+            <span>First Pokemon Pet Seller</span>
+            <img src="../img/wallpaper2.jpg" alt="About Us Image" loading="lazy">
+        </div>
+
+        <!-- Right Side: Introduction and Description -->
+        <div class="right section sectionR">
+            <h2>Who are we</h2>
+            <p>
+                Welcome to PokéShop, the first virtual Pokémon pet adoption platform! 
+                We are dedicated to bringing Pokémon lovers an exciting and immersive experience, 
+                allowing trainers to discover, adopt, and interact with their favorite Pokémon like never before.
+            </p>
+            <p>Discover rare and legendary Pokémon in a way you’ve never seen before.</p>
+            <!-- Learn More Button -->
+            <button>Learn more</button>
+        </div>
+    </section>
+</div>
+<!--========================= End of About Us Section =========================-->
+
+
+<!--========================= PokéPet Section =========================-->
+<div class="container head-title sectionZ section">
+    <!-- Section Title with a Link to More Pets -->
+    <h1 id="pets">Pokepet</h1>
+    <a href="javascript:;" class="h3">More ></a>
+</div>
+
+<!--========================= Pet Introduction =========================-->
+<section class="pet-intro">
+    <!-- Left Side: Description -->
+    <div class="left section sectionL">
+        <h2>Choose your own pets!</h2>
+        <p>
+            Find the Pokémon that matches your style, strength, and spirit. 
+            Whether fierce, friendly, or fearless—there's a PokéPet waiting just for you!
+        </p>
+        <p>
+            From the depths of the ocean to the heights of the skies, explore a world of powerful companions. 
+            Start your adventure today!
+        </p>
+        <!-- Call to Action Button -->
+        <button>Choose now!</button>
+    </div>
+
+    <!-- Right Side: Image -->
+    <div class="right section sectionR">
+        <img src="../img/pet-intro.png" alt="pet-intro" loading="lazy">
+    </div>
+</section>
+<!--========================= End of Pet Introduction =========================-->
+
+
+<!--========================= Most Popular Pets Section =========================-->
+<div class="subtitle section sectionZ">
+    <h1>Most popular pets</h1>
+</div>
+
+<!-- Pet Cards Container -->
+<div class="pet-shell section sectionL">
+    <div class="pet-box">
+        <!-- Pikachu Card -->
+        <div class="pet-card card1">
+            <img src="../img/wallpaper-pikachu.png" alt="Pikachu" id="pikachu" loading="lazy">
+            <div class="description">
+                <h3>Pikachu</h3>
+                <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 499.99</p>
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Pikachu" data-price="499.99" 
+                       data-img="../../main/img/pikachu1.png">
             </div>
         </div>
-<!-- head pci end -->
 
-
-<!-- about us start-->
-        <div class="About section sectionZ">
-            <div class="subtitle section sectionZ">
-                <span class="h1 ">About Us</span>
+        <!-- Cubone Card -->
+        <div class="pet-card card2">
+            <img src="../../main/img/wallpaper-Cubone.png" alt="Cubone" loading="lazy">
+            <div class="description">
+                <h3>Cubone</h3>
+                <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 479.99</p>
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Cubone" data-price="479.99" 
+                       data-img="../../main/img/Cubone.png">
             </div>
-            <section class="about">       
-                <div class="left section sectionL">
-                    <span>First Pokemon Pet Seller</span>
-                    <img src="../img/wallpaper2.jpg" alt="1111" loading="lazy">
-                </div>
-                <div class="right section sectionR">
-                    <h2>Who are we</h2>
-                    <p>Welcome to PokéShop, the first virtual Pokémon pet adoption platform!
-                        We are dedicated to bringing Pokémon lovers an exciting and immersive experience, allowing trainers to discover, adopt, and interact with their favorite Pokémon like never before.</p>
-                    <p>Discover rare and legendary Pokémon in a way you’ve never seen before.</p>
-                    <button>Learn more</button>
-                </div>
-            </section>
         </div>
-<!-- about us end -->
+
+        <!-- Jigglypuff Card -->
+        <div class="pet-card card3">
+            <img src="../img/wallpapaer-Jigglypuff.png" alt="Jigglypuff" loading="lazy">
+            <div class="description">
+                <h3>Jigglypuff</h3>
+                <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 399.99</p>
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Jigglypuff" data-price="399.99" 
+                       data-img="../../main/img/Jigglypuff.png">
+            </div>
+        </div>
+
+        <!-- Squirtle Card -->
+        <div class="pet-card card4">
+            <img src="../img/wallpaper-Squirtle.png" alt="Squirtle" loading="lazy">
+            <div class="description">
+                <h3>Squirtle</h3>
+                <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 249.99</p>
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Squirtle" data-price="249.99" 
+                       data-img="../../main/img/Squirtle.png">
+            </div>
+        </div>
+
+        <!-- Charizard Card -->
+        <div class="pet-card card5">
+            <img src="../img/wallpaper-Charizard.png" alt="Charizard" loading="lazy">
+            <div class="description">
+                <h3>Charizard</h3>
+                <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 649.99</p>
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Charizard" data-price="649.99" 
+                       data-img="../../main/img/Charizard.png">
+            </div>
+        </div>
+
+        <!-- Bulbasaur Card -->
+        <div class="pet-card card6">
+            <img src="../img/wallpaper-Bulbasaur.png" alt="Bulbasaur" loading="lazy">
+            <div class="description">
+                <h3>Bulbasaur</h3>
+                <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 349.99</p>
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Bulbasaur" data-price="349.99" 
+                       data-img="../../main/img/Bulbasaur.png">
+            </div>
+        </div>
+    </div>
+</div>
+<!--========================= End of Pet Cards Section =========================-->
 
 
-<!-- poke pet section start -->
 
-        <!-- pet-intro start -->
-        <div class="container head-title sectionZ section">
-            <h1 id="pets">Pokepet</h1>
-            <a href="javascrip:;" class="h3">More></a>
-         </div>
-         <section class="pet-intro">
+
+<!--========================= Product Section Start =========================-->
+
+<!-- Product Header (Title & More Link)-->
+<div class="container head-title section sectionZ">
+    <h1 id="products">Products</h1>
+    <!-- Link to see more products -->
+    <a href="javascript:;" class="h3">More ></a>
+</div>
+
+<!-- Product Featured Image & Loading Animation -->
+<div class="product-box section sectionR">
+    <div class="loading">
+        <!-- span imitate the border -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span>
+            <!-- Buy Now Button for Snorlax -->
+            <button value="Add to cart" class="add-cart" 
+                    data-name="Snorlax" data-price="99.99" 
+                    data-img="../../main/img/snorlax.png">
+                Buy now
+            </button>
+        </span>
+    </div>
+</div>
+<!-- End of Product Header -->
+
+
+<!-- Recommended Products Section -->
+<section class="product-page">
+    <!-- Subtitle for Recommendations -->
+    <div class="subtitle section sectionZ">
+        <span class="title h1">Guess you might also like:</span>
+    </div>
+
+    <!-- Product Cards Container -->
+    <div class="product-container">
+        
+        <!-- Meowth Product Card -->
+        <div class="box section sectionL">
+            <span class="discount">-10%</span>
+            <div class="img">
+                <img src="../img/Meowth.jpg" alt="Meowth" class="product-imgs" loading="lazy">
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Meowth" data-price="99.99" 
+                       data-img="../../main/img/Meowth.jpg">
+            </div>
+            <div class="content">
+                <div class="name">
+                    <h2>New!</h2>
+                    <span class="h3">Meowth</span>
+                </div>
+                <div class="price">
+                    <h5>109.99</h5>
+                    <h3><i class="iconfont icon-qian"></i>&nbsp;: 99.99</h3>
+                </div>
+            </div>
+        </div>
+
+        <!--Palkia Product Card -->
+        <div class="box section sectionL">
+            <span class="discount">-10%</span>
+            <div class="img">
+                <img src="../img/Palkia.jpg" alt="Palkia" class="product-imgs" loading="lazy">
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Palkia" data-price="249.99" 
+                       data-img="../../main/img/Palkia.jpg">
+            </div>
+            <div class="content">
+                <div class="name">
+                    <h2>New!</h2>
+                    <span class="h3"> Palkia</span>
+                </div>
+                <div class="price">
+                    <h5>274.99</h5>
+                    <h3><i class="iconfont icon-qian"></i>&nbsp;: 249.99</h3>
+                </div>
+            </div>
+        </div>
+
+        <!--============== Hydrapple Product Card ================-->
+        <div class="box section sectionL">
+            <span class="discount">-10%</span>
+            <div class="img">
+                <img src="../img/Hydrapple.jpg" alt="Hydrapple" class="product-imgs" loading="lazy">
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Hydrapple" data-price="129.99" 
+                       data-img="../../main/img/Hydrapple.jpg">
+            </div>
+            <div class="content">
+                <div class="name">
+                    <h2>New!</h2>
+                    <span class="h3"> Hydrapple</span>
+                </div>
+                <div class="price">
+                    <h5>142.99</h5>
+                    <h3><i class="iconfont icon-qian"></i>&nbsp;: 129.99</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sweetheart Product Card -->
+        <div class="box section sectionR">
+            <span class="discount">-15%</span>
+            <div class="img">
+                <img src="../img/sweetheart.jpg" alt="sweet-heart" class="product-imgs" loading="lazy">
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="sweet-heart" data-price="149.99" 
+                       data-img="../../main/img/sweetheart.jpg">
+            </div>
+            <div class="content">
+                <span class="h3"> sweetheart</span>
+                <div class="price">
+                    <h5>169.99</h5>
+                    <h3><i class="iconfont icon-qian"></i>&nbsp;: 149.99</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gengar Product Card -->
+        <div class="box section sectionR">
+            <span class="discount">-15%</span>
+            <div class="img">
+                <img src="../img/Gengar.jpg" alt="Gengar" class="product-imgs" loading="lazy">
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Gengar" data-price="129.99" 
+                       data-img="../../main/img/Gengar.jpg">
+            </div>
+            <div class="content">
+                <span class="h3"> Gengar</span>
+                <div class="price">
+                    <h5>147.99</h5>
+                    <h3><i class="iconfont icon-qian"></i>&nbsp;: 129.99</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Eevee Product Card -->
+        <div class="box section sectionR">
+            <span class="discount">-15%</span>
+            <div class="img">
+                <img src="../img/Eevee.jpg" alt="Eevee" class="product-imgs" loading="lazy">
+                <!-- store this itmes name,img,price into local Storage when click `add to cart` -->
+                <input type="button" value="Add to cart" class="add-cart" 
+                       data-name="Eevee" data-price="149.99" 
+                       data-img="../../main/img/Eevee.jpg">
+            </div>
+            <div class="content">
+                <span class="h3"> Eevee</span>
+                <div class="price">
+                    <h5>169.99</h5>
+                    <h3><i class="iconfont icon-qian"></i>&nbsp;: 149.99</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>              
+</section>
+<!-- End of Recommended Products Section -->
+
+<!--========================= Product Section End =========================-->
+
+
+
+<!--========================= Card Section Start =========================-->
+<div class="card-section section sectionZ">
+
+    <!--========================= Card Introduction Section =========================-->
+    <div class="container head-title section sectionZ">
+        <span class="h1" id="cards">Poké Cards</span>
+        <!-- Link to see more card collections -->
+        <a href="javascript:;" class="h3">More ></a>
+    </div>
+
+    <!-- About Poké Cards -->
+    <div>
+        <section class="about">       
+            <!-- Left: Card Introduction Image -->
             <div class="left section sectionL">
-                <h2>Choose your own pets!</h2>
-                <p>Find the Pokémon that matches your style, strength, and spirit. Whether fierce, friendly, or fearless—there's a PokéPet waiting just for you!"</p>
-                <p>From the depths of the ocean to the heights of the skies, explore a world of powerful companions. Start your adventure today!</p>
-                <button>Choose now!</button>
+                <img src="../img/card-intro.jpg" alt="card-intro" loading="lazy">
             </div>
+
+            <!-- Right: Card Information Text -->
             <div class="right section sectionR">
-                <img src="../img/pet-intro.png" alt="pet-intro" loading="lazy">
+                <h2>What is Poké Card?</h2>
+                <p>Dive into the vibrant world of Pokémon with our exclusive collection of Poké Cards. From classic favorites to rare, legendary treasures, each card holds the power to ignite your inner trainer’s spirit.</p>
+                <p>What Makes Them Special?</p>
+                <ul>
+                    <li>Collect iconic Pokémon cards from different generations.</li>
+                    <li>Battle with strategic decks and dominate your opponents.</li>
+                    <li>Trade with fellow trainers to complete your ultimate collection.</li>
+                </ul>
+                <p class="h3">Ready to Become a Card Master?</p>
+                <button id="btn-card">Start Now</button>
             </div>
-         </section>
-         <!-- pet-intro end -->
-
-         <!-- pets card start -->
-         <div class="subtitle section sectionZ">
-            <h1>Most popular pets</h1>
-        </div>
-
-        <div class="pet-shell section sectionL" >
-            <div class="pet-box">
-                <div class="pet-card card1">
-                    <img src="../img/wallpaper-pikachu.png" alt="Pikachu" id="pikachu" loading="lazy">
-                    <div class="description">
-                        <h3>Pikachu</h3>
-                        <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 499.99</p>
-                        <input type="button" value="Add to cart" class="add-cart" data-name="Pikachu" data-price="499.99" data-img="../../main/img/pikachu1.png">
-                    </div>
-                </div>
-                <div class="pet-card card2">
-                    <img src="../../main/img/wallpaper-Cubone.png" alt="Cubone" loading="lazy">
-                    <div class="description">
-                        <h3>Cubone</h3>
-                        <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 479.99</p>
-                        <input type="button" value="Add to cart" class="add-cart" data-name="Cubone" data-price="479.99" data-img="../../main/img/Cubone.png">
-                    </div>
-                </div>
-                <div class="pet-card card3">
-                    <img src="../img/wallpapaer-Jigglypuff.png" alt="Jigglypuff" loading="lazy">
-                    <div class="description">
-                        <h3>Jigglypuff</h3>
-                        <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 399.99</p>
-                        <input type="button" value="Add to cart" class="add-cart" data-name="Jigglypuff" data-price="399.99" data-img="../../main/img/Jigglypuff.png">
-                    </div>
-                </div>
-                <div class="pet-card card4">
-                    <img src="../img/wallpaper-Squirtle.png" alt="Squirtle" loading="lazy">
-                    <div class="description">
-                        <h3>Squirtle</h3>
-                        <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 249.99</p>
-                        <input type="button" value="Add to cart" class="add-cart" data-name="Squirtle" data-price="249.99" data-img="../../main/img/Squirtle.png">
-                    </div>
-                </div>
-                <div class="pet-card card5">
-                    <img src="../img/wallpaper-Charizard.png" alt="Charizard" loading="lazy">
-                    <div class="description">
-                        <h3>Charizard</h3>
-                        <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 649.99</p>
-                        <input type="button" value="Add to cart" class="add-cart" data-name="Charizard" data-price="649.99" data-img="../../main/img/Charizard.png">
-                    </div>
-                </div>
-                <div class="pet-card card6">
-                    <img src="../img/wallpaper-Bulbasaur.png" alt="Bulbasaur" loading="lazy">
-                    <div class="description">
-                        <h3>Bulbasaur</h3>
-                        <p class="price"><i class="iconfont icon-qian"></i>&nbsp;: 349.99</p>
-                        <input type="button" value="Add to cart" class="add-cart" data-name="Bulbasaur" data-price="349.99" data-img="../../main/img/Bulbasaur.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- pet card end -->
-<!-- pet section end -->
-
-
-<!-- product section start -->
-        <!-- product head pic start -->
-        <div class="container head-title section sectionZ">
-            <h1 id="products">Products</h1>
-            <a href="javascrip:;" class="h3">More></a>
-        </div>
-        <div class="product-box section sectionR">
-            <div class="loading">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span>
-                    <button value="Add to cart" class="add-cart" data-name="Snorlax" data-price="99.99" data-img="../../main/img/snorlax.png">Buy now</button>
-                </span>
-            </div>
-        </div>
-<!-- product head pic end -->
-        <!-- product card start -->
-        <section class="product-page">
-            <div class="subtitle section sectionZ">
-                <span class="title h1">Guess you might also like:</span>
-            </div>
-            <div class="product-container">
-                <div class="box section sectionL">
-                    <span class="discount">-10%</span>
-                    <div class="img">
-                        <img src="../img/Meowth.jpg" alt="Meowth" class="product-imgs" loading="lazy">
-                        <input type="button" value="Add to cart" class="add-cart" data-name="Meowth" data-price="99.99" data-img="../../main/img/Meowth.jpg">
-                    </div>
-                    <div class="content ">
-                        <div class="name">
-                            <h2>New!</h2>
-                            <span class="h3">Meowth</span>
-                        </div>
-                        <div class="price">
-                            <h5>109.99</h5>
-                            <h3><i class="iconfont icon-qian"></i>&nbsp;: 99.99</h3>
-                        </div>
-                    </div>
-                  </div>
-            
-                  <div class="box section sectionL">
-                    <span class="discount">-10%</span>
-                    <div class="img">
-                        <img src="../img/Palkia.jpg" alt="Palkia" class="product-imgs" loading="lazy">
-                        <input type="button" value="Add to cart" class="add-cart" data-name="Palkia" data-price="249.99" data-img="../../main/img/Palkia.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="name">
-                            <h2>New!</h2>
-                            <span class="h3"> Palkia</span>
-                        </div>
-                        <div class="price">
-                            <h5>274.99</h5>
-                            <h3><i class="iconfont icon-qian"></i>&nbsp;: 249.99</h3>
-                        </div>
-                    </div>
-                  </div>
-            
-                  <div class="box section sectionL">
-                    <span class="discount">-10%</span>
-                    <div class="img">
-                        <img src="../img/Hydrapple.jpg" alt="Hydrapple" class="product-imgs" loading="lazy">
-                        <input type="button" value="Add to cart" class="add-cart" data-name="Hydrapple" data-price="129.99" data-img="../../main/img/Hydrapple.jpg">
-                    </div>
-                    <div class="content">
-                        <div class="name">
-                            <h2>New!</h2>
-                            <span class="h3"> Hydrapple</span>
-                        </div>
-                        <div class="price">
-                            <h5>142.99</h5>
-                            <h3><i class="iconfont icon-qian"></i>&nbsp;: 129.99</h3>
-                        </div>
-                    </div>
-                  </div>
-        
-              <div class="box section sectionR">
-                <span class="discount">-15%</span>
-                <div class="img">
-                    <img src="../img/sweetheart.jpg" alt="sweet-heart" class="product-imgs" loading="lazy">
-                    <input type="button" value="Add to cart" class="add-cart" data-name="sweet-heart" data-price="149.99" data-img="../../main/img/sweetheart.jpg">
-                </div>
-                <div class="content">
-                    <span class="h3"> sweetheart</span>
-                    <div class="price">
-                        <h5>169.99</h5>
-                        <h3><i class="iconfont icon-qian"></i>&nbsp;: 149.99</h3>
-                    </div>
-                </div>
-              </div>
-        
-              <div class="box section sectionR">
-                <span class="discount">-15%</span>
-                <div class="img">
-                    <img src="../img/Gengar.jpg" alt="Floatzel" class="product-imgs" loading="lazy">
-                    <input type="button" value="Add to cart" class="add-cart" data-name="Gengar" data-price="129.99" data-img="../../main/img/Gengar.jpg">
-                </div>
-                <div class="content">
-                    <span class="h3"> Gengar</span>
-                    <div class="price">
-                        <h5> 147.99</h5>
-                        <h3><i class="iconfont icon-qian"></i>&nbsp;: 129.99</h3>
-                    </div>
-                </div>
-              </div>
-        
-              <div class="box section sectionR">
-                <span class="discount">-15%</span>
-                <div class="img">
-                    <img src="../img/Eevee.jpg" alt="Eevee" class="product-imgs" loading="lazy">
-                    <input type="button" value="Add to cart" class="add-cart" data-name="Eevee" data-price="149.99" data-img="../../main/img/Eevee.jpg">
-                </div>
-                <div class="content">
-                    <span class="h3"> Eevee</span>
-                    <div class="price">
-                        <h5> 169.99</h5>
-                        <h3><i class="iconfont icon-qian"></i>&nbsp;: 149.99</h3>
-                    </div>
-                </div>
-              </div>
-            </div>              
         </section>
-        <!-- product card end -->
-<!-- product section end -->
 
-
-<!-- card section start -->
-        <div class="card-section section sectionZ">
-
-        <!-- card intro start -->
-            <div class="container head-title section sectionZ">
-                <span class="h1" id="cards">Poke Crads</span>
-                <a href="javascript:;" class="h3">More></a>
-            </div>
-            
-            <div>
-                <section class="about">       
-                    <div class="left section sectionL">
-                        <img src="../img/card-intro.jpg" alt="card-intro" loading="lazy">
-                    </div>
-                    <div class="right section sectionR">
-                        <h2>What is Poke card</h2>
-                        <p>Dive into the vibrant world of Pokémon with our exclusive collection of Poké Cards. From classic favorites to rare, legendary treasures, each card holds the power to ignite your inner trainer’s spirit.</p>
-                        <p>What Makes Them Special?</p>
-                        <ul>
-                            <li>Collect iconic Pokémon cards from different generations.</li>
-                            <li>Battle with strategic decks and dominate your opponents.</li>
-                            <li>Trade with fellow trainers to complete your ultimate collection.</li>
-                        </ul>
-                        <p class="h3">Ready to Become a Card Master?</p>
-                        <button id="btn-card">Start Now</button>
-                    </div>
-                </section>
-
-                <div class="subtitle section sectionZ">
-                    <span class="title h1">Pick your lucky cards:</span>
-                </div>
-
-                <!-- first line -->
-                <div class="card-shell section sectionZ">
-                    
-                    <div class="card-container section sectionL">
-                        <div class="box card-box">
-                                <div class="cover">
-                                    <img  src="../img/Dragapult.png" alt="Dragapult" loading="lazy">
-                                    <div class="card-content">
-                                        <span class="h3">Dragapult</span>
-                                        <span><i class="iconfont icon-qian"></i>&nbsp;: 29.99</span>
-                                        <input type="button" value="Add to cart" class="add-cart" data-name="Dragapult" data-price="29.99" data-img="../../main/img/Dragapult.png">
-                                    </div>
-                                </div>
-                                <div class="back">
-                                    <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
-                                </div>
-                                
-                        </div>
-
-                        <div class="box card-box">
-                            <div class="cover">
-                                <img  src="../img/Ceruledge.png" alt="Ceruledge" loading="lazy">
-                                <div class="card-content">
-                                    <span class="h3">Ceruledge</span>
-                                    <span><i class="iconfont icon-qian"></i>&nbsp;: 49.99</span>
-                                    <input type="button" value="Add to cart" class="add-cart" data-name="Ceruledge" data-price="49.99" data-img="../../main/img/Ceruledge.png">
-                                </div>
-                            </div>
-                            <div class="back">
-                                <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
-                            </div>
-                        </div>
-
-                        <div class="box card-box">
-                            <div class="cover">
-                                <img  src="../img/Articuno-GX.png" alt="Articuno-GX" loading="lazy">
-                                <div class="card-content">
-                                    <span class="h3">Articuno-GX</span>
-                                    <span><i class="iconfont icon-qian"></i>&nbsp;: 19.99</span>
-                                    <input type="button" value="Add to cart" class="add-cart" data-name="Articuno-GX" data-price="19.99" data-img="../../main/img/Articuno-GX.png">
-                                </div>
-                            </div>
-                            <div class="back">
-                                <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
-                            </div>
-                        </div>
-
-                        <div class="box card-box">
-                            <div class="cover">
-                                <img  src="../img/Zapdos.png" alt="Zapdos" loading="lazy">
-                                <div class="card-content">
-                                    <span class="h3">Zapdos</span>
-                                    <span><i class="iconfont icon-qian"></i>&nbsp;: 29.99</span>
-                                    <input type="button" value="Add to cart" class="add-cart" data-name="Zapdos" data-price="29.99" data-img="../../main/img/Zapdos.png">
-                                </div>
-                            </div>
-                            <div class="back">
-                                <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-
-                     <!-- second lines -->
-                     <div class="card-container section sectionR">
-                        <div class="box card-box">
-                                <div class="cover">
-                                    <img  src="../img/SkyLegends.png" alt="SkyLegends" loading="lazy">
-                                    <div class="card-content">
-                                        <span class="h3">Sky Legends</span>
-                                        <span><i class="iconfont icon-qian"></i>&nbsp;: 39.99</span>
-                                        <input type="button" value="Add to cart" class="add-cart" data-name="Sky Legends" data-price="39.99" data-img="../../main/img/SkyLegends.png">
-                                    </div>
-                                </div>
-                                <div class="back">
-                                    <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
-                                </div>                            
-                        </div>
-
-                        <div class="box card-box">
-                            <div class="cover">
-                                <img  src="../img/Deckshield.png" alt="Deckshield" loading="lazy">
-                                <div class="card-content">
-                                    <span class="h3">Deckshield</span>
-                                    <span><i class="iconfont icon-qian"></i>&nbsp;: 29.99</span>
-                                    <input type="button" value="Add to cart" class="add-cart" data-name="Deckshield" data-price="29.99" data-img="../../main/img/Deckshield.png">
-                                </div>
-                            </div>
-                            <div class="back">
-                                <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
-                            </div>
-                        </div>
-
-                        <div class="box card-box">
-                            <div class="cover">
-                                <img  src="../img/DarkGX.jpg" alt="DarkGX" loading="lazy">
-                                <div class="card-content">
-                                    <span class="h3">Dark GX</span>
-                                    <span><i class="iconfont icon-qian"></i>&nbsp;: 39.99</span>
-                                    <input type="button" value="Add to cart" class="add-cart" data-name="DarkGX" data-price="39.99" data-img="../../main/img/DarkGX.jpg">
-                                </div>
-                            </div>
-                            <div class="back">
-                                <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
-                            </div>
-                        </div>
-
-                        <div class="box card-box">
-                            <div class="cover">
-                                <img  src="../img/Bunt.jpg" alt="Bunt" loading="lazy">
-                                <div class="card-content">
-                                    <span class="h3">Bunt</span>
-                                    <span><i class="iconfont icon-qian"></i>&nbsp;: 49.99</span>
-                                    <input type="button" value="Add to cart" class="add-cart" data-name="Bunt" data-price="49.99" data-img="../../main/img/Bunt.jpg">
-                                </div>
-                            </div>
-                            <div class="back">
-                                <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- pick cards end -->
-<!-- cards section end -->
-
-
-<!-- personal trainer section start -->
-        <div class="head-title container section sectionZ">
-            <h1>Personal Trainer</h1> 
-            <a class="h3" href="javascript:;">more></a>
+        <!-- Section Title for Card Selection -->
+        <div class="subtitle section sectionZ">
+            <span class="title h1">Pick your lucky cards:</span>
         </div>
 
-        <div class="trainer-container" id="trainer-container">
-            <div class="shell">
-                <!-- first tutor ash -->
-                <div class="card ash section sectionL">
-                    <div class="wrapper">
-                        <img src="../img/ash2.jpg" alt="" class="cover-img" loading="lazy">
-                    </div>
-                    <img src="../img/ash-text.png" alt="" class="title" loading="lazy">
-                    <img src="../img/ash.png" alt="" class="character" loading="lazy">
-                    <div class="intro intro-ash">
-                        <h2>Ash Ketchum</h2>
-                        <h3>🔥Mentor Background:</h3>
-                        <h4>World Pokémon Masters Champion</h4>
-                        <ul>
-                            <li class="h3">Partner Pokémon:</li>
-                            <li> Pikachu, Charizard, Garchomp, Greninja, etc.</li>
-                            <li class="h3">Experience:</li> 
-                            <li>1000+ battles, fought against Dandi and Red</li>
-                        </ul>
-                        <div class="text-center detail">
-                            <h3>Make an appointment now let </h3>
-                            <h3>Ash help you become a true</h3>
-                            <h3> Pokémon Master! 🔥</h3>
-                        </div>  
-                        <button class="btn-reserve">Reserve Now</button>        
-                        <a href="#" class="more-link">More details ⬇</a>
-                    </div>
-                </div>
+        <!--========================= First Row of Cards =========================-->
+        <div class="card-shell section sectionZ">
+            <div class="card-container section sectionL">
                 
-                <!-- second mentor -->
-                <div class="card dawn section sectionR">
-                    <div class="wrapper">
-                        <img src="../img/dawn1.jpg" alt="" class="cover-img" loading="lazy">
-                    </div>
-                    <img src="../img/Dawn-text.png" alt="" class="title" loading="lazy">
-                    <img src="../img/dawn2.png" alt="" class="character" loading="lazy">
-                    <div class="intro intro-dawn">
-                        <h2>Dawn</h2>
-                        <h3>🔥Mentor Background:</h3>
-                        <h4>Pokémon Contests Top Coordinator</h4>
-                        <ul>
-                            <li><h3>Partner Pokémon:</h3> Piplup, Infernape, Swanna, etc.</li>
-                            <li><h3>Areas of expertise:</h3> </li>
-                            <li>Pokémon coordination training,</li>
-                            <li>stage performance skills,</li>
-                            <li> and performance</li>
-                        </ul>
-                        <div class="text-center detail">
-                            <h4>Make an appointment now let Ash help you  </h4>
-                            <h4> Learn how to perform the most spectacular </h4>
-                            <h4>moves  in Pokémon battles🔥</h4>
+                <!-- Dragapult Card -->
+                <div class="box card-box">
+                    <div class="cover">
+                        <img src="../img/Dragapult.png" alt="Dragapult" loading="lazy">
+                        <div class="card-content">
+                            <span class="h3">Dragapult</span>
+                            <span><i class="iconfont icon-qian"></i>&nbsp;: 29.99</span>
+                            <input type="button" value="Add to cart" class="add-cart" data-name="Dragapult" data-price="29.99" data-img="../../main/img/Dragapult.png">
                         </div>
-        
-                        <button class="btn-reserve">Reserve Now</button>
-        
-                        <a href="#" class="more-link">More details ⬇</a>
+                    </div>
+                    <div class="back">
+                        <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
                     </div>
                 </div>
+
+                <!-- Ceruledge Card -->
+                <div class="box card-box">
+                    <div class="cover">
+                        <img src="../img/Ceruledge.png" alt="Ceruledge" loading="lazy">
+                        <div class="card-content">
+                            <span class="h3">Ceruledge</span>
+                            <span><i class="iconfont icon-qian"></i>&nbsp;: 49.99</span>
+                            <input type="button" value="Add to cart" class="add-cart" data-name="Ceruledge" data-price="49.99" data-img="../../main/img/Ceruledge.png">
+                        </div>
+                    </div>
+                    <div class="back">
+                        <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Articuno-GX Card -->
+                <div class="box card-box">
+                    <div class="cover">
+                        <img src="../img/Articuno-GX.png" alt="Articuno-GX" loading="lazy">
+                        <div class="card-content">
+                            <span class="h3">Articuno-GX</span>
+                            <span><i class="iconfont icon-qian"></i>&nbsp;: 19.99</span>
+                            <input type="button" value="Add to cart" class="add-cart" data-name="Articuno-GX" data-price="19.99" data-img="../../main/img/Articuno-GX.png">
+                        </div>
+                    </div>
+                    <div class="back">
+                        <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Zapdos Card -->
+                <div class="box card-box">
+                    <div class="cover">
+                        <img src="../img/Zapdos.png" alt="Zapdos" loading="lazy">
+                        <div class="card-content">
+                            <span class="h3">Zapdos</span>
+                            <span><i class="iconfont icon-qian"></i>&nbsp;: 29.99</span>
+                            <input type="button" value="Add to cart" class="add-cart" data-name="Zapdos" data-price="29.99" data-img="../../main/img/Zapdos.png">
+                        </div>
+                    </div>
+                    <div class="back">
+                        <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
+                    </div>
+                </div>
+
+            </div>
+
+            <!--========================= Second Row of Cards =========================-->
+            <div class="card-container section sectionR">
+                
+                <!-- Sky Legends Card -->
+                <div class="box card-box">
+                    <div class="cover">
+                        <img src="../img/SkyLegends.png" alt="SkyLegends" loading="lazy">
+                        <div class="card-content">
+                            <span class="h3">Sky Legends</span>
+                            <span><i class="iconfont icon-qian"></i>&nbsp;: 39.99</span>
+                            <input type="button" value="Add to cart" class="add-cart" data-name="Sky Legends" data-price="39.99" data-img="../../main/img/SkyLegends.png">
+                        </div>
+                    </div>
+                    <div class="back">
+                        <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Deckshield Card -->
+                <div class="box card-box">
+                    <div class="cover">
+                        <img src="../img/Deckshield.png" alt="Deckshield" loading="lazy">
+                        <div class="card-content">
+                            <span class="h3">Deckshield</span>
+                            <span><i class="iconfont icon-qian"></i>&nbsp;: 29.99</span>
+                            <input type="button" value="Add to cart" class="add-cart" data-name="Deckshield" data-price="29.99" data-img="../../main/img/Deckshield.png">
+                        </div>
+                    </div>
+                    <div class="back">
+                        <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Dark GX Card -->
+                <div class="box card-box">
+                    <div class="cover">
+                        <img src="../img/DarkGX.jpg" alt="DarkGX" loading="lazy">
+                        <div class="card-content">
+                            <span class="h3">Dark GX</span>
+                            <span><i class="iconfont icon-qian"></i>&nbsp;: 39.99</span>
+                            <input type="button" value="Add to cart" class="add-cart" data-name="DarkGX" data-price="39.99" data-img="../../main/img/DarkGX.jpg">
+                        </div>
+                    </div>
+                    <div class="back">
+                        <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Bunt Card -->
+                <div class="box card-box">
+                    <div class="cover">
+                        <img src="../img/Bunt.jpg" alt="Bunt" loading="lazy">
+                        <div class="card-content">
+                            <span class="h3">Bunt</span>
+                            <span><i class="iconfont icon-qian"></i>&nbsp;: 49.99</span>
+                            <input type="button" value="Add to cart" class="add-cart" data-name="Bunt" data-price="49.99" data-img="../../main/img/Bunt.jpg">
+                        </div>
+                    </div>
+                    <div class="back">
+                        <img src="../img/card-back.jpg" alt="card-back" loading="lazy">
+                    </div>
+                </div>
+
             </div>
         </div>
-        <!-- trainer section end -->
+    </div>
+</div>
+<!--========================= Card Section End =========================-->
+
+
+
+<!--========================= Personal Trainer Section Start =========================-->
+<div class="head-title container section sectionZ">
+    <h1>Personal Trainer</h1> 
+    <!-- Link to view more trainers -->
+    <a class="h3" href="javascript:;">More ></a>
+</div>
+
+<!-- Trainer Container -->
+<div class="trainer-container" id="trainer-container">
+    <div class="shell">
+
+        <!--========================= First Trainer: Ash Ketchum =========================-->
+        <div class="card ash section sectionL">
+            <!-- Trainer Background Image -->
+            <div class="wrapper">
+                <img src="../img/ash2.jpg" alt="Ash Ketchum Background" class="cover-img" loading="lazy">
+            </div>
+            <!-- Trainer Title (Name Banner) -->
+            <img src="../img/ash-text.png" alt="Ash Ketchum Name" class="title" loading="lazy">
+            <!-- Trainer Character Image -->
+            <img src="../img/ash.png" alt="Ash Ketchum Character" class="character" loading="lazy">
+            
+            <!-- Trainer Details (Intro Section) -->
+            <div class="intro intro-ash">
+                <h2>Ash Ketchum</h2>
+                <h3>🔥 Mentor Background:</h3>
+                <h4>World Pokémon Masters Champion</h4>
+                
+                <!-- Trainer Information List -->
+                <ul>
+                    <li class="h3">Partner Pokémon:</li>
+                    <li>Pikachu, Charizard, Garchomp, Greninja, etc.</li>
+                    <li class="h3">Experience:</li> 
+                    <li>1000+ battles, fought against Dandi and Red</li>
+                </ul>
+
+                <!-- Appointment Invitation -->
+                <div class="text-center detail">
+                    <h3>Make an appointment now!</h3>
+                    <h3>Let Ash help you become a true</h3>
+                    <h3>Pokémon Master! 🔥</h3>
+                </div>  
+                
+                <!-- Reserve Button -->
+                <button class="btn-reserve">Reserve Now</button>        
+                
+                <!-- Link to Trainer Details -->
+                <a href="#" class="more-link">More details ⬇</a>
+            </div>
+        </div>
+
+        <!--========================= Second Trainer: Dawn =========================-->
+        <div class="card dawn section sectionR">
+            <!-- Trainer Background Image -->
+            <div class="wrapper">
+                <img src="../img/dawn1.jpg" alt="Dawn Background" class="cover-img" loading="lazy">
+            </div>
+            <!-- Trainer Title (Name Banner) -->
+            <img src="../img/Dawn-text.png" alt="Dawn Name" class="title" loading="lazy">
+            <!-- Trainer Character Image -->
+            <img src="../img/dawn2.png" alt="Dawn Character" class="character" loading="lazy">
+            
+            <!-- Trainer Details (Intro Section) -->
+            <div class="intro intro-dawn">
+                <h2>Dawn</h2>
+                <h3>🔥 Mentor Background:</h3>
+                <h4>Pokémon Contests Top Coordinator</h4>
+                
+                <!-- Trainer Information List -->
+                <ul>
+                    <li><h3>Partner Pokémon:</h3> Piplup, Infernape, Swanna, etc.</li>
+                    <li><h3>Areas of Expertise:</h3></li>
+                    <li>Pokémon coordination training,</li>
+                    <li>Stage performance skills,</li>
+                    <li>Battle performance strategies</li>
+                </ul>
+
+                <!-- Appointment Invitation -->
+                <div class="text-center detail">
+                    <h4>Book an appointment now!</h4>
+                    <h4>Learn how to perform the most spectacular</h4>
+                    <h4>moves in Pokémon battles with Dawn! 🔥</h4>
+                </div>
+
+                <!-- Reserve Button -->
+                <button class="btn-reserve">Reserve Now</button>
+
+                <!-- Link to Trainer Details -->
+                <a href="#" class="more-link">More details ⬇</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--========================= Personal Trainer Section End =========================-->
 </main>
-<!-- main page end -->
+<!--========================= Main Page End =========================-->
 
 
-     <!-- Add to Cart Success Modal start -->
+
+<!--============ Add to Cart Success Modal Start =====================-->
      <section class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" >
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -663,13 +807,14 @@
             </div>
             <!-- Modal Footer -->
             <div class="modal-footer">
+                <!-- close button -->
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="OK"
               >OK</button>
             </div>
           </div>
         </div>
     </section>
-    <!-- add to cart modal end -->
+    <!--=============== Add to cart success modal End =================-->
 
 
 
@@ -757,7 +902,7 @@
 
 
 
-<!-- mobile nav start -->
+<!-- ================== Mobile Sidebar Start ================== -->
     <!-- moblie slidebar -->
     <div id="mobile-menu">
         <button id="menu-btn">☰</button>
@@ -819,7 +964,7 @@
             </section>
         </div>
     </div>
-<!-- mobile nav end -->
+<!-- ================== Mobile Sidebar End ================== -->
 
 </body>
 </html>

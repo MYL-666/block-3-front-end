@@ -655,68 +655,67 @@
 
     
 <!-- ================== Mobile Sidebar Start ================== -->
-<div id="mobile-menu">
-    <!-- Sidebar Toggle Button -->
-    <button id="menu-btn">☰</button>
-    
-    <!-- Sidebar Content -->
-    <div id="menu-content">
-        <!-- Close Button -->
-        <img id="close" src="../img/close.png" alt="Close Button">
-
-        <!-- User Profile Section -->
-        <div class="profile">
-            <img src="../img/profile.png" alt="User Profile">
-            <span>Sign in / Login</span>
-        </div>
-
-        <!-- Pokepets Navigation -->
-        <div class="menu-category row nav-pet">
-            <div class="col-10"><span>Pokepets:</span></div>
-            <div class="col-1" id="symbol1"><span class="btn btn-open">></span></div>
-            <div class="col-12 menu-detail">
-                <ul>
-                    <li><a href="javascript:;">Grass</a></li>
-                    <li><a href="javascript:;">Fire</a></li>
-                    <li><a href="javascript:;">Water</a></li>
-                    <li><a href="javascript:;">Flying</a></li>
-                    <li><a href="javascript:;">Electric</a></li>
-                    <li><a href="javascript:;">Poison</a></li>
-                </ul>
+    <!-- moblie slidebar -->
+    <div id="mobile-menu">
+        <button id="menu-btn">☰</button>
+        <div id="menu-content">
+            <span id="close">✖</span>
+            <div class="profile">
+                <img src="../img/profile.png" alt="profile">
+                <span>sign in / login</span>
             </div>
-        </div>
-
-        <!-- Products Navigation -->
-        <div class="menu-category row nav-product">
-            <div class="col-10"><span>Products:</span></div>
-            <div class="col-1" id="symbol2"><span class="btn btn-open">></span></div>
-            <div class="col-12 menu-detail">
-                <ul>
-                    <li><a href="javascript:;">Hoodies</a></li>
-                    <li><a href="javascript:;">Jackets</a></li>
-                    <li><a href="javascript:;">Plush</a></li>
-                    <li><a href="javascript:;">Home</a></li>
-                    <li><a href="javascript:;">Accessories</a></li>
-                    <li><a href="javascript:;">Office Supplies</a></li>
-                </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Enter the product">
+                <button>search</button>
             </div>
-        </div>
-
-        <!-- Cards Navigation -->
-        <div class="menu-category row nav-card">
-            <div class="col-10"><span>Cards:</span></div>
-            <div class="col-1" id="symbol3"><span class="btn btn-open">></span></div>
-            <div class="col-12 menu-detail">
-                <ul>
-                    <li><a href="javascript:;">TCG Cards</a></li>
-                    <li><a href="javascript:;">Collection</a></li>
-                    <li><a href="javascript:;">Battle</a></li>
-                    <li><a href="javascript:;">Decks</a></li>
-                </ul>
-            </div>
+            <!-- pet section -->
+            <section class="menu-category row nav-pet">
+                <div class="col-10 "><h3>Pokepets:</h3></div>
+                <div class="col-1" id="symbol1"><span class="btn btn-open">></span></div>
+                <!-- hidden menu for pets -->
+                <div class="col-12 menu-detail">
+                    <ul>
+                        <li><a href="javascript:;">Grass</a></li>
+                        <li><a href="javascript:;">Fire</a></li>
+                        <li><a href="javascript:;">Water</a></li>
+                        <li><a href="javascript:;">Flying</a></li>
+                        <li><a href="javascript:;">Electric</a></li>
+                        <li><a href="javascript:;">posion</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- product section -->
+            <section class="menu-category row nav-product">
+                <div class="col-10"><h3>Products:</h3></div>
+                <div class="col-1" id="symbol2"><span class="btn btn-open">></span></div>
+                <!-- hidden menu for products -->
+                <div class="col-12 menu-detail">
+                    <ul>
+                        <li><a href="javascript:;">Hoodies</a></li>
+                        <li><a href="javascript:;">Jackets</a></li>
+                        <li><a href="javascript:;">Plush</a></li>
+                        <li><a href="javascript:;">Home</a></li>
+                        <li><a href="javascript:;">Accessories</a></li>
+                        <li><a href="javascript:;">officiis</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- card section -->
+            <section class="menu-category row nav-card">
+                <div class="col-10"><h3>Cards:</h3></div>
+                <div class="col-1" id="symbol3"><span class="btn btn-open">></span></div>
+                <!-- hidden menu for cards -->
+                <div class="col-12 menu-detail">
+                    <ul>
+                        <li><a href="javascript:;">TCG cards</a></li>
+                        <li><a href="javascript:;">collection</a></li>
+                        <li><a href="javascript:;">Battle</a></li>
+                        <li><a href="javascript:;">Decks</a></li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </div>
-</div>
 <!-- ================== Mobile Sidebar End ================== -->
 
 </body>

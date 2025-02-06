@@ -72,14 +72,23 @@ body {
 /* universe cahnge end */
 
 
-/*#region header part start */
+/* #region=================== header-part of main page start =====================*/
+/* 
+   Description: 
+   - The header contains a logo, navigation menu of home/cart/login, and search bar.
+   - It has a sticky position at the top with a semi-transparent background.
+   - Includes an animation effect for a smooth appearance.
+   - Navigation icons for profile, home, and cart are included.
+   - Responsive design ensures proper alignment on different screen sizes.
+*/
+/*#region===== header part start =====*/
 .head-title{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-top: 2rem;
 }
-.head-title>h1{
+.head-title>h1,.head-title>span{
     font-size: 5rem;
 }
 .head-title .h3{
@@ -174,11 +183,15 @@ header li:first-child a{
     /* add the change when hover */
     box-shadow: 0 0 10px;
 }
-/* #endregion header part end */
+    /* logo animation */
+.logo ,.header-nav,.search-div{
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 1s ease-out forwards;
+}  
+    /* #endregion===== header part end =====*/
 
-
-
-/* #region search bar */
+    /* #region===== search bar start =====*/
 .search-div{
     /* search bar layout */
     margin-top: 10px;
@@ -195,7 +208,7 @@ header li:first-child a{
 }
 .search-div .submit{
     width: 25%;
-    background-color: #FFD700;
+    background-color: #ffcb05;
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
@@ -205,10 +218,15 @@ header li:first-child a{
 .search-div .submit:hover{
     box-shadow: 0 0 10px;
 }
-/* #endregion search bar */
+    /*#endregion===== search bar end =====*/
+/* #endregion ================== HEADER SECTION END =========================== */
 
-
-/* #region bodypart start */
+/* #region=========================== bodypart start ===========================*/
+/* 1.left part form ---- left form & right form
+    2.right part --- Bill summary & payment
+    3.bottom form ---- mainly textarea
+    4.payment success animation ---- svg picture
+ */
 main{
     display: flex;
     width: 100vw;
@@ -313,8 +331,6 @@ main{
 /* #endregion body part end */
 
 
-
-
 /*#region add the cart product to form start */
 main #cartItemsContainer{
     margin-top: 10px;
@@ -356,57 +372,75 @@ main .cart-item .added:hover{
 .payment-success>h1{
     margin-top: 40px;
 }
+/* Circle Animation */
 .circle{
     stroke-dasharray: 1194;
     stroke-dashoffset: 1194;
     animation: circle 1s ease-in-out forwards;
 }
+/* Checkmark Tick Animation (inside the circle) */
 .tick{
     stroke-dasharray: 350;
     stroke-dashoffset: 350;
     animation: tick 1.2s ease-in-out forwards;
 }
+/* Payment Text Animation */
 .payment-text {
     opacity: 0;
     transform: translateY(20px);
     animation: payment-text 0.5s ease-out 1s forwards;
 }
+
 .btn-primary{
     background-color: #ffcb05;
     color: black;
     border: 0;
 }
-/* animations */
+/* #region KEYFRAME ANIMATIONS */
+
+/* Animation for Payment Text (fade-in effect) */
 @keyframes payment-text {
     0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes circle{
-    from{
-        stroke-dashoffset: 1194;
-    }
-    to{
-        stroke-dashoffset: 2388;
+        opacity: 0;                /* Fully transparent at the start */
+        transform: translateY(20px); /* Starts 20px lower */
+    }100% {
+        opacity: 1;                /* Fully visible */
+        transform: translateY(0);   /* Moves to original position */
     }
 }
-@keyframes tick{
-    from{
-        stroke-dashoffset: 350;
-    }
-    to{
-        stroke-dashoffset: 0;
+
+/* Animation for Circle Drawing */
+@keyframes circle {
+    from {
+        stroke-dashoffset: 1194; /* Starts with the stroke hidden */
+    }to {
+        stroke-dashoffset: 2388; /* Fully draws the circle */
     }
 }
+/* Animation for Checkmark Tick */
+@keyframes tick {
+    from {
+        stroke-dashoffset: 350; /* Starts with the tick hidden */
+    }to {
+        stroke-dashoffset: 0;   /* Fully draws the tick */
+    }
+}
+/* #endregion KEYFRAME ANIMATIONS */
+
 /* #endregion payment success */
+/* #endregion ========================= MAIN SECTION END =========================== */
 
 
-/* #region footer section start */
+
+/* #region ============ FOOTER SECTION START ============ */
+/*
+   - This section styles the **footer**, which includes:
+      1. `.first` → Contains **quick links, location, and contact info**.
+      2. `.second` → Displays **social icons & legal text**.
+      3. `.icons` → Interactive **social media buttons**.
+      4. Hover effects for **links and icons**.
+*/
+/* #region ====================== FIrst =================================== */
 footer{
     display: flex;
     flex-direction: column;
@@ -421,6 +455,7 @@ footer .first{
     padding: 1rem;
     margin-bottom: 1rem;
 }
+/* Remove bullets from lists */
 footer ul{
     list-style: none;
 }
@@ -431,6 +466,7 @@ footer a{
     text-decoration: none;
     color: #666;
 }
+/* hover effect */
 footer a:hover{
     color: #000;
     text-decoration: underline;
@@ -439,6 +475,15 @@ footer img{
     height: 3rem;
     cursor: pointer;
 }
+    /* #endregion================ First ====================== */
+
+    /* #region ========================== Second ============================ */
+    /*
+       - `.second` includes:
+          - **Social media icons**.
+          - **Copyright text**.
+          - **Legal disclaimers**.
+    */
 footer .second{
     padding: 1rem;
     display: flex;
@@ -492,12 +537,15 @@ footer .copyright{
     justify-content: center;
     align-items: center;
 }
-/* #endregion footer section end */
+    /* #endregion =====================Second ========================= */
+/* #endregion ========================== FOOTER SECTION END ======================================= */
 
 
 
 
-/* for mobile device */
+
+
+/*#region ================================ for mobile device ==============================*/
 @media (max-width:768px){
     *{
         margin: 0;
@@ -596,27 +644,29 @@ footer .copyright{
      /*#endregion main section end */
 
 
-     /* #region footer start */
-     footer{
-         padding: 1rem;
-     }
-     footer .first{
-         display: grid;
-         grid-template-columns: 2fr;
-         text-align: center;
-     }
-     footer ul{
-         display: flex;
-         justify-content: center;
-         align-items: center;
-     }
-     footer .second span{
-         display: none;
-     }
-     /* #endregion footer end */
+    /* #region footer start */
+    footer{
+        padding: 1rem;
+    }
+    footer .first{
+        display: grid;
+        grid-template-columns: 2fr;
+        text-align: center;
+    }
+    footer ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .second span{
+        display: none;
+    }
+    /* #endregion footer end */
      @media (max-width:500px){
         .nav-item:first-child{
             display: none;
         }
     }
 }
+
+/*#endregion ================================ for mobile device ==============================*/

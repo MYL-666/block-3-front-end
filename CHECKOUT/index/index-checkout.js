@@ -9,10 +9,12 @@ window.onload=function(){
     // double check of cart
     function renderCart() {
         cartItemsContainer.innerHTML = ""; 
+        // claer the cart
         let total = 0.00; 
         cart.forEach((item, index) => {
             const itemElement = document.createElement("div");
             itemElement.classList.add("cart-item");
+            // add the cart product to html
             itemElement.innerHTML = `
             <div class="added">
                 <img src="${item.img}" alt="${item.name}" style="width:50px;">&nbsp;
@@ -22,6 +24,7 @@ window.onload=function(){
             </div>
             `;
             cartItemsContainer.appendChild(itemElement);
+            // calculate the total prices of all products
             total += item.price * item.quantity;            
         });
         // if total amount > 300. the discount will apply
@@ -30,9 +33,9 @@ window.onload=function(){
             discount.innerHTML='-10% <i class="iconfont icon-qian"></i>';
             // creat an element to show the actual price
             span.innerHTML=`${total2.toFixed(2)}<i class="iconfont icon-qian"></i>`;
-            totalPrice.parentElement.appendChild(span);
-            totalPrice.style.textDecoration="line-through"
-            totalPrice.textContent = `${total.toFixed(2)}<i class="iconfont icon-qian"></i>`;
+            totalPrice.parentElement.appendChild(span); 
+            totalPrice.style.textDecoration="line-through"; //orginal price without discount
+            totalPrice.textContent = `${total.toFixed(2)}<i class="iconfont icon-qian"></i>`; //2decimal number for total price
         }
         totalPrice.innerHTML = `${total.toFixed(2)} <i class="iconfont icon-qian"></i>`;
     }
@@ -42,6 +45,7 @@ window.onload=function(){
     //#region submit the order
    var submit=document.getElementById("submit-order");
    submit.onclick=function(){
+    // when submit the order, evrything should be clear and the payment success animation will show
     if(cart.length>0)
     {localStorage.removeItem("cart");
     cart.length=0;
@@ -50,9 +54,10 @@ window.onload=function(){
     if(span){
         totalPrice.parentElement.removeChild(span);
     }
+    // clear discount
     discount.innerHTML='-0% <i class="iconfont icon-qian"></i>'
-    totalPrice.style.textDecoration="none";
-    totalPrice.innerHTML='0.00 <i class="iconfont icon-qian"></i>'}
+    totalPrice.style.textDecoration="none"; //clear price
+    totalPrice.innerHTML='0.00 <i class="iconfont icon-qian"></i>'} // clear total price
    }
 //    remove focus
    const btnClose=document.getElementById("close-btn");

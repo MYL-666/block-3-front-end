@@ -15,128 +15,134 @@
     <script src="./bootstrap.bundle.min.js"></script>
     <!-- import font icons -->
     <link rel="stylesheet" href="./iconfont.css">
-    <link rel="stylesheet" href="./favicon.ico">
+    <link rel="icon" href="./index/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<!-- header part start -->
-<header class="sectionZ section">
+<!-- ================== Header Section Start ================== -->
+<header>
     <div class="row">
-        <!-- logo part -->
-        <div class="top-left col-lg-1 col-md-1">
+      
+        <!-- ========== Logo Section On Top-Left ========== -->
+        <div class="top-left col-1">
             <img src="../img/logo.svg" alt="logo">
         </div>
-        <!-- search bar -->
+
+        <!-- ========== Search Bar Form Section ========== -->
         <div class="search-div col-lg-5 col-md-4 offset-md-1">
             <form class="form-horizontal row">
                 <input type="text" class="search form-control" placeholder="Search the product" id="searching">
-                <button type="button" class="submit form-control" id="btn01">search</button>
+                <button type="button" class="submit form-control" id="btn01">Search</button>
             </form>
-          </div>
-        <!-- navigator on header -->
-        <div class="top-right col-lg-5 col-md-6">
+        </div>
 
+        <!-- ========== Navigation Links (Login, Home, Cart) ========== -->
+        <div class="top-right col-lg-5 col-md-6">
             <ul class="nav nav-pills">
-                <li class="nav-item "><a class="nav-link active" href="../../login/index-login.html"></a></li>
-                <li class="nav-item "><a class="nav-link active" href="../../main/index/index-main.html"></a></li>
+                <!-- Login Button -->
+                <li class="nav-item">
+                    <!-- turn to login page -->
+                    <a class="nav-link active" href="../../login/index/index-login.html"></a>  
+                </li>
+                <!-- Home Button -->
+                <li class="nav-item">
+                    <!-- turn to home page(back to top) -->
+                    <a class="nav-link active" href="../../main/index/index-main.html"></a>
+                </li>
+                <!-- Cart Button -->
                 <li class="nav-item cart1">
-                    <div id="cart-num"></div>
+                    <div id="cart-num"></div> <!-- show the number in cart -->
+                    <!-- turn to cart page -->
                     <a class="nav-link active" href="../../Cart/index/index-cart.html"></a>
                 </li>
             </ul> 
         </div>
+
     </div>
 </header>
-<!-- header start end -->
+<!-- ================== Header Section End ================== -->
 
-<!-- main body start -->
-    <form>
-        <!-- main body -->
-     <main class="container">
 
-        <!-- left form -->
+
+<!--===================== Main Body Start =========================-->
+<form> 
+    <main class="container">       
+        <!-- Left Section: Billing Details -->
         <div class="row left-part col-8 sectionL section">
             <div class="col-12 text-left">
                 <h2>Bill Details</h2>
             </div>
-            <!-- left section -->
-            <div class="col-6 left-form form-horizontal " role="form">
-                <!-- name -->
-               <div class="form-group">
+            <!-- Left Form: User Information -->
+            <div class="col-6 left-form form-horizontal" role="form">
+                <!-- User Name Input -->
+                <div class="form-group">
                     <label for="user-name" class="control-label h4">User name*:</label>
                     <div class="col-12">
                         <input type="text" placeholder="User name" id="user-name" required class="form-control">
                     </div>
-               </div>
-
-               <!-- region -->
-               <div class="form-group">
-                    <label for="region" class="control-label h4">region*:</label>
+                </div>
+                <!-- Region Selection Dropdown -->
+                <div class="form-group">
+                    <label for="region" class="control-label h4">Region*:</label>
                     <div class="col-12">
                         <select id="region" required class="form-control" name="region">
-                            <option value='' disabled selected>choose your country</option>
-                            <option value='UK'>UK</option>
-                            <option value='Euro'>Europe</option>
-                            <option value='CN'>China</option>
-                            <option value='JP'>Japan</option>
-                            <option value='FI'>Finland</option>
+                            <option value="" disabled selected>Choose your country</option>
+                            <option value="UK">UK</option>
+                            <option value="Euro">Europe</option>
+                            <option value="CN">China</option>
+                            <option value="JP">Japan</option>
+                            <option value="FI">Finland</option>
                         </select>
                     </div>
                 </div>
-
-                <!-- city -->
+                <!-- City Input -->
                 <div class="form-group">
                     <label for="city" class="control-label h4">City*:</label>
                     <div class="col-12">
-                        <input type="text" placeholder="Enter the city to delivery" id="city" required class="form-control">
+                        <input type="text" placeholder="Enter the city for delivery" id="city" required class="form-control">
                     </div>
-                   </div>               
-                
-                <!-- address -->
-               <div class="form-group">
+                </div>               
+                <!-- Street Address -->
+                <div class="form-group">
                     <label for="street" class="control-label h4">Street*:</label>
                     <div class="col-12">
-                        <input type="text" placeholder="Enter the street" id="street" required class="form-control">
+                        <input type="text" placeholder="Enter the street address" id="street" required class="form-control">
                     </div>
-               </div>
+                </div>
             </div>
-
-            <!-- right section -->
+            <!-- Right Form: Additional Details -->
             <div class="col-6 right-form form-horizontal">
-                <!-- last name -->
+                <!-- Last Name Input -->
                 <div class="form-group">
                     <label for="lastName" class="control-label h4">Last name*:</label>
                     <div class="col-12">
                         <input type="text" placeholder="Enter last name" id="lastName" required class="form-control">
                     </div>
                 </div>
-
-                <!-- first name -->
+                <!-- First Name Input -->
                 <div class="form-group">
-                    <label for="firstName" class="control-label h4">first name*:</label>
+                    <label for="firstName" class="control-label h4">First name*:</label>
                     <div class="col-12">
                         <input type="text" placeholder="Enter first name" id="firstName" required class="form-control">
                     </div>
                 </div>
-
-                <!-- post-code -->
+                <!-- Postal Code Input -->
                 <div class="form-group">
                     <label for="postCode" class="control-label h4">Post code*:</label>
                     <div class="col-12">
-                        <input type="text" placeholder="Enter Postcode" id="postCode" required class="form-control">
+                        <input type="text" placeholder="Enter postal code" id="postCode" required class="form-control">
                     </div>
                 </div>
-
-                <!-- street number2 -->
+                <!-- Second Line of Street Address (Optional) -->
                 <div class="form-group">
-                    <label for="postCode" class="control-label h4">Street 2:</label>
+                    <label for="street2" class="control-label h4">Street 2:</label>
                     <div class="col-12">
-                        <input type="text" placeholder="Enter the second line of street" id="street2" required class="form-control">
+                        <input type="text" placeholder="Enter the second line of street" id="street2" class="form-control">
                     </div>
                 </div>               
             </div>
-
-            <!-- bottom section -->
+            <!-- Bottom Section: Contact Information -->
             <div>
+                <!-- Phone Number -->
                 <div class="col-6 form-horizontal bottom">
                     <div class="form-group">
                         <label for="phonenumber" class="control-label h4">Phone number*:</label>
@@ -145,19 +151,19 @@
                         </div>
                     </div>
                 </div>
-    
+                <!-- Email Address -->
                 <div class="col-6 form-horizontal bottom">
                     <div class="form-group">
                         <label for="email" class="control-label h4">Email*:</label>
                         <div class="col-12">
-                            <input type="email" placeholder="youreamil@gmail.com" id="email" required class="form-control">
+                            <input type="email" placeholder="youremail@gmail.com" id="email" required class="form-control">
                         </div>
                     </div>
                 </div>
-    
+                <!-- Additional Notes -->
                 <div class="col-12 form-horizontal bottom">
                     <div class="form-group">
-                        <label for="email" class="control-label h4">Additional Notes:</label>
+                        <label for="extra" class="control-label h4">Additional Notes:</label>
                         <div class="col-12">
                             <textarea name="extra" id="extra" class="form-control"></textarea>
                         </div>
@@ -166,75 +172,88 @@
             </div>
         </div>
 
-         <!-- right part -->
+        <!-- Right Section: Bill Summary & Payment -->
         <div class="right-part col-4 sectionR section">
-            <!-- bill summary -->
+            <!-- Bill Summary -->
             <div class="top">
                 <h2 class="text-center">Bill Summary</h2>
                 <div class="col-12 text-left summary"> 
                     <div id="cartItemsContainer"></div>                
+                    <!-- Delivery Fee -->
                     <div class="delivery">
                         <span>Delivery Fee:</span>
                         <span>0.00 <i class="iconfont icon-qian"></i></span>
                     </div>
-                   <div class="discount">
-                    <span>discount:</span>
-                    <span id="discount">-0% <i class="iconfont icon-qian"></i></span>
-                   </div>
+                    <!-- Discount -->
+                    <div class="discount">
+                        <span>Discount:</span>
+                        <span id="discount">-0% <i class="iconfont icon-qian"></i></span>
+                    </div>
                 </div>
+                <!-- Total Amount -->
                 <div id="total">
                     <span>Total:</span>
                     <span id="total-amount">0.00 <i class="iconfont icon-qian"></i></span>
                 </div>
             </div>
-
-            <!-- Payment -->
-             <div class="right-bottom">
+            <!-- Payment Section -->
+            <div class="right-bottom">
                 <h2 class="text-center">Payment</h2>
                 <div class="ways">
+                    <!-- Bank Transfer Option -->
                     <div class="bank-transfer">
                         <input type="radio" name="choice" id="bank-transfer">
-                        <label for="bank-transfer">bank transfer</label>
+                        <label for="bank-transfer">Bank Transfer</label>
                     </div>
+                    <!-- Debit Card Option -->
                     <div class="cards">
                         <input type="radio" name="choice" id="cards">
-                        <label for="cards">debit cards</label>
+                        <label for="cards">Debit Cards</label>
                         <div class="imglist">
-                            <img src="../img/visaPay.png" alt="visaPay">
-                            <img src="../img/mastercard.png" alt="mastercard">
-                            <img src="../img/yinlian.png" alt="yinlian">
+                            <img src="../img/visaPay.png" alt="Visa">
+                            <img src="../img/mastercard.png" alt="Mastercard">
+                            <img src="../img/yinlian.png" alt="UnionPay">
                         </div>
                     </div>
+                    <!-- Cash on Delivery Option -->
                     <div class="recive-pay">
                         <input type="radio" name="choice" id="COD">
-                        <label for="COD">cash on delivery</label>
+                        <label for="COD">Cash on Delivery</label>
                         <p class="text-center">VIP users can enjoy cash on delivery service</p>
                     </div>
-                        <div class="pay">
-                            <input type="button" id="submit-order" value="Submit Order" class="form-control submit-payment" data-bs-toggle="modal" data-bs-target="#payment-success">
-                        </div>
+                    <!-- Submit Order Button -->
+                    <div class="pay">
+                        <input type="button" id="submit-order" value="Submit Order" class="form-control submit-payment" data-bs-toggle="modal" data-bs-target="#payment-success">
+                    </div>
                 </div>
-             </div>
+            </div>
         </div>
-     </main>
-    </form>
-<!-- main section end -->
+    </main>
+</form>
+<!--==================== Main Section End ========================-->
 
 
 
-<!-- footer section start -->
-<footer class="sectionZ section">
+
+<!-- ================== Footer Section Start ================== -->
+<footer class="section sectionZ">
+
+    <!-- Top Section: Quick Links, Location, Contact, and Payment Methods -->
     <div class="first">
+
+        <!-- Quick Links Section -->
         <div class="quick-link">
-            <h1>Quick-link</h1>
+            <h1>Quick Links</h1>
             <ul>
-                <li><a href="#">home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="../../Cart/index/index-cart.html">My Cart</a></li>
                 <li><a href="#pets">Pets</a></li>
-                <li><a href="#Products">Products</a></li>
-                <li><a href="#Cards">Cards</a></li>           
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cards">Cards</a></li>           
             </ul>
         </div>
+
+        <!-- Location Section -->
         <div class="location">
             <h1>Location</h1>
             <ul>
@@ -244,65 +263,82 @@
                 <li><a href="javascript:;">Finland</a></li>
             </ul>
         </div>
+
+        <!-- Contact Information Section -->
         <div class="contact">
-            <h1>Contact Infro</h1>
+            <h1>Contact Info</h1>
             <ul>
                 <li><a href="javascript:;">Esmee</a></li>
                 <li><a href="javascript:;">+44 520-1314</a></li>
                 <li><a href="javascript:;">myl666@gmail.com</a></li>
             </ul>
         </div>
+
+        <!-- Payment Methods Section -->
         <div class="payment">
-            <h1>payment</h1>
+            <h1>Payment</h1>
             <ul>
-                <li><img src="../img/mastercard.png" alt="mastercard"></li>
-                <li><img src="../img/yinlian.png" alt="yinlian"></li>
-                <li><img src="../img/visaPay.png" alt="visaPay"></li>
+                <li><img src="../img/mastercard.png" alt="MasterCard" loading="lazy"></li>
+                <li><img src="../img/yinlian.png" alt="UnionPay" loading="lazy"></li>
+                <li><img src="../img/visaPay.png" alt="VisaPay" loading="lazy"></li>
             </ul>
         </div>
-    </div>
 
+    </div> <!-- End of First Section -->
+
+    <!-- Bottom Section: Branding, Social Media, and Legal Links -->
     <div class="second">
+        
+        <!-- Brand Tagline -->
         <span>Your go-to platform for exploring and adopting virtual Pokémon pets.</span>
         <span>Learn, play, and connect with your favorite Pokémon today!</span>
 
+        <!-- Social Media Follow Section -->
         <div class="follow">
-            <h1>Follow us :</h1>
+            <h1>Follow Us:</h1>
             <div class="icon-list">
-                <div class="icons"></div>
-                <div class="icons"></div>
-                <div class="icons"></div>
+                <div class="icons"></div>  <!-- Placeholder for Facebook -->
+                <div class="icons"></div>  <!-- Placeholder for Instagram -->
+                <div class="icons"></div>  <!-- Placeholder for WeChat -->
             </div>
         </div>
 
-        <!-- copyright -->
-         <div class="copyright">
-            <h5>&copy; 2025 PokéShop.All rights reserved</h5>
+        <!-- Copyright and Legal Information -->
+        <div class="copyright">
+            <h5>&copy; 2025 PokéShop. All rights reserved</h5>
             <h5>.UA92.YuLun_Miao_666</h5>
         </div>
-         <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-    </div>
+
+        <!-- Privacy Policy and Terms of Service Links -->
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+
+    </div> <!-- End of Second Section -->
+
 </footer>
-<!-- footer section end -->
+<!-- ================== Footer Section End ================== -->
 
 
-<!-- payment success animate start -->
+
+<!--============================ payment success animate start -->
          <div id="payment-success" class="modal fade">
             <div class="modal-dialog">
                 <div class="payment-success modal-content">
+                    <!-- draw a payment success svg picture -->
                     <svg width="200" height="200">
                         <circle id="circle" class="circle" fill="none" stroke="#68e534" stroke-width="10" cx="100" cy="100" r="95" transform="rotate(-90 100 100)"></circle>
                         <polyline id="tick" fill="none" stroke="#68e534" stroke-width="12" points="60,110 90,140 140,60" stroke-linecap="round" stroke-linejoin="round" class="tick"></polyline>
                      </svg>   
+                     <!-- payment success content -->
                      <h1 class="payment-text">payment successed</h1> 
                      <h3 class="payment-text">Your order will be delivered</h3>
                      <h3 class="payment-text">in 5-7 days</h3>
                  </div>
                  <div class="modal-footer">
+                    <!-- button to close -->
                     <button type="button" id="close-btn" class="btn btn-primary" data-bs-dismiss="modal" style="margin-bottom: 10px;">close</button>
                  </div>
             </div>
          </div>
-<!-- payment success animate end -->
+<!--===================== payment success animate end ==========================-->
 </body>
 </html>

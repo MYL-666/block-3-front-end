@@ -452,7 +452,7 @@ footer .copyright{
 }
 /* mobile nav end */
 
-/*================================ for mobile device ==============================*/
+/*#region ================================ for mobile device ==============================*/
 @media (max-width:768px){
     *{
         margin: 0;

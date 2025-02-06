@@ -21,35 +21,46 @@
 <!-- main section start -->
 <main>
     <div class="shell">
-        <!-- img section -->
+        <!-- img section , let the img show on the right side -->
         <div class="img-box">
             <img src="./img/login-wallpaper.jpg" alt="">
         </div>
         <!-- img section end -->
 
-        <!-- main form section -->
+        <!-- main form section, the login form -->
         <form class="box" action="../main/index/index-main.html">
+            <!--    welcome title of the form          -->
             <div class="welcome">
                 <img src="./img/logo.svg" alt="">
                 <h1>Hi,Adventurer</h1>
                 <h2>Welcome Back</h2>
             </div>
             <div class="inform">
+                
+                <!-- textbox is used for username   -->
                 <div class="input">
                     <input type="text" placeholder="Account:" required autocomplete="username">
                 </div>
+                
+                <!--         textbox used for password， checked by regular expression,make sure only 8 character and 1 capital letter are allowed         -->
                 <div class="input password">
                     <input type="password" id="pdw" placeholder="Password:" required pattern="^(?=.*[A-Z]).{8,}$" title="Password must be at least 8 characters long and contain at least one uppercase letter" autocomplete="current-password">
                     <i class="iconfont icon-yanjing_yincang" id="btn-hidden"></i>
                     <i class="iconfont icon-yanjing_xianshi" id="btn-show"></i>
                 </div>
+
+                <!-- a lable for forgot password      -->
                 <div class="forget">
                     <a href="javascript:;">Forgot password?</a>
                 </div>
+
+                <!--          submition button & reading instruction is required        -->
                 <div class="checking">
                     <input type="checkbox" disabled class="agree" id="btn02" name="agree" required>
                     <label for="btn02"><span>I have read & agree to the</span> <a id="show" href="javascript:;">instructions</a></label>
                 </div>
+
+                <!-- icons of other type login                 -->
                 <div class="login">
                     <input type="submit" value="Login" id="btn" disabled>
                     <span style="color: #666;">begin with existing account</span>
@@ -77,9 +88,9 @@
 
 <!-- instructions start -->
 <div id="instructions" class="instructions">
+    <!--   title of instruction   -->
 <h2>Reading Instructions</h2>
 <p>Welcome to our virtual pet platform! The purpose of this website is to provide users with a platform to explore and purchase virtual pets, and to enhance users' understanding of digital interactive experience. This platform is mainly used to learn and demonstrate front-end development skills and does not involve any actual commodity transactions.</p>
-
 <h3>Announcement</h3>
 <ol>
     <li>All content on this website is for academic purposes only and does not involve any commercial use.</li>
@@ -93,8 +104,9 @@
     <li>If you find that the content involves infringement, please contact us immediately and we will deal with it as soon as possible.</li>
     <li>This platform does not bear legal responsibility for user behavior and its consequences. Visiting and using this website means that you accept this statement.</li>
 </ol>
-<!-- make it feel like longer -->
+    <!-- make it feel like longer by using lorem -->
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero doloremque molestiae ab? Molestiae quos asperiores beatae sunt cumque quaerat blanditiis, distinctio, veniam in accusantium possimus ad commodi! Animi nesciunt vel minima ullam? Itaque quia quasi rem. Eum libero dolores soluta ipsa incidunt a alias aperiam rem adipisci, magnam ex vel aut non nemo itaque nobis quia, exercitationem perspiciatis. Aliquam dolore eaque eveniet mollitia cum dicta modi quasi! Perferendis corrupti aliquid sunt omnis, est labore cupiditate commodi hic sit perspiciatis minima necessitatibus beatae iure, aperiam reiciendis porro deserunt id molestias modi? Sit accusamus, debitis voluptatum ullam nisi est molestiae? Deserunt odit impedit quod possimus perspiciatis harum ad aspernatur. Vel natus adipisci optio hic animi officiis debitis magni deserunt facilis, ea perspiciatis inventore laudantium omnis provident voluptatum ipsam laboriosam, quam ab facere porro, aspernatur suscipit quos consequuntur nulla. Aspernatur id et ab non cumque officiis! Error quibusdam ipsam quos voluptates nulla? Magnam, doloremque! Veritatis nam repellat fugit tempore modi enim quae. Doloribus quas inventore iure assumenda tenetur nesciunt laboriosam earum praesentium officiis a, modi illo minus nisi. Quibusdam deserunt quasi et, hic vero placeat ipsa, voluptate in at, quisquam ad veritatis saepe voluptas provident nobis neque voluptatem fugit odio tenetur impedit. Ut.</p>
+    <!--    close button to close insturction   -->
 <button id="btn03" class="form-control" disabled="disabled">Close</button>
 </div>
 <!-- insturction end -->

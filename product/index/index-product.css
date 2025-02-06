@@ -5,9 +5,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* universal animation */
-    /* fade in from left */
+body {
+    /* make sure evry part connect to each other */
+    display: flex;
+    flex-direction: column; 
+    margin: 0;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #F8FBFF 0%, #FDEEF4 100%);
+}
+.content a {
+    /* more clear blue of <a> */
+    color: #007acc;
+}
+/*============================ UNIVERSAL ANIMATION START ============================*/
+/* 
+   Animation: Fade in from the left 
+   - Moves elements from the left (-1000px) to their normal position (0)
+   - Gradually increases opacity from 0 to 1 for a smooth entrance effect 
+*/
 @keyframes animation1{
     from{
         opacity: 0;
@@ -28,16 +43,30 @@
 .section:nth-child(3){
     animation-delay: .4s;
 }
+/* 
+   Footer animation delay 
+   - Ensures the footer appears after other elements have loaded 
+*/
 footer.section{
     animation-delay: .6s;
 }
-/* universal animation end */
+/*============================ UNIVERSAL ANIMATION END ============================*/
 
-/* font icon color change start */
+
+
+/* ===================== font icon color change start =============================*/
 .icon-wuxinghaoping-quan{
     color: #FFD700;
 }
-/* scroll style start */
+.icon-qian{
+    font-size: 50px !important;
+    color: #FFB300 ;
+}
+/*========================= font color change end ===================*/
+
+
+
+/* =====================scroll style start =================================*/
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -45,35 +74,27 @@ footer.section{
     background-color: #FFD700;
     border-radius: 10px;
 }
-    /* scroll style end */
-.icon-qian{
-    font-size: 50px !important;
-    color: #FFB300 ;
-}
-/* font color change end */
+/*==================== scroll style end =========================*/
 
 
-/* #region header-part of main page start */
-body {
-    /* make sure evry part connect to each other */
-    display: flex;
-    flex-direction: column; 
-    margin: 0;
-    overflow-x: hidden;
-    background: linear-gradient(135deg, #F8FBFF 0%, #FDEEF4 100%);
-}
-.content a {
-    /* more clear blue of <a> */
-    color: #007acc;
-}
-/*#region header part start */
+
+/* #region=================== header-part of main page start =====================*/
+/* 
+   Description: 
+   - The header contains a logo, navigation menu of home/cart/login, and search bar.
+   - It has a sticky position at the top with a semi-transparent background.
+   - Includes an animation effect for a smooth appearance.
+   - Navigation icons for profile, home, and cart are included.
+   - Responsive design ensures proper alignment on different screen sizes.
+*/
+/*#region===== header part start =====*/
 .head-title{
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-top: 2rem;
 }
-.head-title>h1{
+.head-title>h1,.head-title>span{
     font-size: 5rem;
 }
 .head-title .h3{
@@ -97,7 +118,7 @@ header{
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 10000;
+    z-index: 100;
     box-shadow: 5px 5px 8px  rgba(0, 0, 0, 0.331);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter:blur(15px);
@@ -168,11 +189,15 @@ header li:first-child a{
     /* add the change when hover */
     box-shadow: 0 0 10px;
 }
-/* #endregion header part end */
+    /* logo animation */
+.logo ,.header-nav,.search-div{
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 1s ease-out forwards;
+}  
+    /* #endregion===== header part end =====*/
 
-
-
-/* #region search bar */
+    /* #region===== search bar start =====*/
 .search-div{
     /* search bar layout */
     margin-top: 10px;
@@ -189,7 +214,7 @@ header li:first-child a{
 }
 .search-div .submit{
     width: 25%;
-    background-color: #FFD700;
+    background-color: #ffcb05;
     background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
@@ -199,10 +224,19 @@ header li:first-child a{
 .search-div .submit:hover{
     box-shadow: 0 0 10px;
 }
-/* #endregion search bar */
+    /*#endregion===== search bar end =====*/
+/* #endregion ================== HEADER SECTION END =========================== */
 
 
-/* #region navigator */
+/*#region==================== NAVIGATION SECTION START ===================================*/
+/* 
+   Description:
+   - This section styles the main navigation menu.
+   - It includes hover effects, transitions, and hidden dropdown menus for different categories.
+   - The navigation bar has a sticky position and a subtle shadow effect.
+   - Hidden sub-menus are displayed when hovering over main categories.
+   - Uses smooth transitions for a better user experience.
+*/
 nav{
     /* layout of main-nav */
     width: 100vw;
@@ -213,7 +247,7 @@ nav{
     border-top: 2px solid #000;
     position: relative;
     transition: all .3s;
-    z-index: 1000;
+    z-index: 10;
 }
 nav .nav {
     /* for the top part layout in nav */
@@ -242,6 +276,11 @@ nav .nav a{
     text-decoration: none;
     color: black;
 }
+    /* =================== Dropdown Navigation Menus Start =================== */
+    /* 
+       - The following styles handle the hidden sub-menus.
+       - Each category (Pets, Products, Cards) has its own submenu that appears when hover.
+    */
 /* for pets nav */
 .nav-pet:hover+.nav-product+.nav-card+.hidden-nav-pet, .hidden-nav-pet:hover{
     display: flex;
@@ -286,10 +325,13 @@ nav .nav-item>a:hover{
 nav .third img{
     margin-top: 10px;
 }
-/* #endregion navigator */
+    /* =================== Dropdown Navigation Menus End =================== */
+/*#endregion========================== NAVIGATION END =======================================*/
 
 
-/* #region main body */
+/* #region =============== Product Details Section =============== */
+/* This section styles the right-side product details area, including
+   product name, price, quantity selection, and the add-to-cart button. */
 main{
     width: 100vw;
 }
@@ -317,7 +359,7 @@ main .product-detail{
     height: auto;
     margin-right: 5vw;
 }
-/* #region slideshow */
+/* #region ============= Carousel Section on the left ==================== */
 .slideShow{
     height: 100%;
     width: 100%;
@@ -328,7 +370,7 @@ main .product-detail{
     width: 100%;
     height: 100%;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.9); /* 半透明的白色 */
+    background-color: rgba(255, 255, 255, 0.9); 
     border-radius: 16px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
 }
@@ -345,6 +387,7 @@ main .product-detail{
     align-items: center;
     overflow: hidden
 }
+/* carousel's img & video style */
 .slideShow li img{
    max-width: 700px;
    max-height: 500px;
@@ -359,6 +402,7 @@ main .product-detail{
 .slideShow li{
     opacity: 0;
 }
+/* button to control next&prev */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -370,15 +414,13 @@ main .product-detail{
     padding: 10px;
     z-index: 1000;
 }
-
 .prev {
     left: 10px;
 }
-
 .next {
     right: 10px;
 }
-
+/* node to show the poistion of slide */
 .nav-dots {
     position: absolute;
     bottom: 10px;
@@ -387,7 +429,7 @@ main .product-detail{
     justify-content: center;
     gap: 5px;
 }
-
+/* could be clicked */
 .nav-dots a {
     width: 10px;
     height: 10px;
@@ -396,10 +438,8 @@ main .product-detail{
     display: inline-block;
     cursor: pointer;
 }
-
-
-
-
+/* ==============Right Section============== */
+/* This section contain, reviews,quantity control,add to cart button & description */
 main .right{
     height: auto;
     min-height: 600px;
@@ -410,6 +450,9 @@ main .right{
     flex-direction: column;
     align-items: flex-start;
 }
+/* #region =============== Review Section =============== */
+/* This section styles the product review area, including user ratings
+   and review comments. */
 main .review>span{
     color: red;
     margin: 0 10px;
@@ -424,6 +467,9 @@ main .quantity-controls{
 main .quantity-select{
     margin-top:30px ;
 }
+/* #region =============== Quantity Selection =============== */
+/* This section handles the styling of the quantity selection buttons
+   for increasing or decreasing the number of items in the cart. */
 main #decrease,#increase{
     width:5rem;
     height: 3rem;
@@ -435,6 +481,8 @@ main #quantity{
     border: 1px solid #999;
     margin: 0 5px;
 }
+/* #region =============== Add to Cart Button =============== */
+/* Styles the "Add to Cart" button with a hover effect for user interaction. */
 main #add{
     background-color: #ffcb05;
     width: 80%;
@@ -449,7 +497,9 @@ main .Introduction{
     margin-bottom: 20px;
 }
 
-/*#region  description part */
+/* #region =============== Product Description Section =============== */
+/* Handles the styling for additional product details, including 
+   delivery info, product specifications, and user-generated comments. */
 main .more{
     width: 100%;
     padding: 20px;
@@ -460,6 +510,7 @@ main .more{
     padding-bottom: 20px;
     margin: 10px;
 }
+/* Buttons for toggling between different sections (description, reviews, etc.). */
 #btn-description,#btn-detail,#btn-delivery,#btn-comment{
     font-size: 18px;
     font-weight: bold;
@@ -473,6 +524,10 @@ main .more{
     list-style: none;
     margin: 10px;
 }
+/* #endregion PRoduct description part end */
+
+/* #region =============== User Rating Section =============== */
+/* Styles the rating stars, average rating, and review counts. */
 .rating{
     padding-top: 40px;
 }
@@ -491,6 +546,10 @@ main .more{
 .rating .big>.h1{
     font-size: 60px;
 }
+/* rating part end */
+
+/* #region =============== User Comments Section =============== */
+/* Styles the comment area where users leave feedback about the product. */
 .comments{
     border-top: 1px solid #999;
     padding-top: 20px;
@@ -519,6 +578,7 @@ main .more{
     background-repeat: no-repeat;
     cursor: pointer;
 }
+/* Different user avatars */
 .face1{
     background-image: url(../img/ash-face.png);
 }
@@ -537,6 +597,8 @@ main .more{
 .face:hover{
     transform: scale(1.2);
 }
+/* #region =============== Star Rating System =============== */
+/* Styles the rating stars users click to rate the product. */
 .Rating {
     display: flex;
     flex-direction: row-reverse;
@@ -558,13 +620,17 @@ main .more{
   .Rating i{
     color: #999;
   }
-  
+  /* When a star is selected or hovered, it turns gold */
   .Rating input:checked ~ label i,
   .Rating label:hover i,
   .Rating label:hover ~ label i {
-    color: #FFD700; /* 金色 */
+    color: #FFD700; 
   }
-/* progress reviews */
+  /* #endregion star rating */
+
+
+/* Styles the progress bar that shows the distribution of ratings. */
+
 .overall li{
     align-items: center;
     justify-content: space-evenly;
@@ -576,6 +642,8 @@ main .more{
     background-color: #ffcb05;
     color: black;
 }
+/* #region =============== Comment Input Section =============== */
+/* Styles the area where users write new comments. */
 .write-comment{
     display: flex;
     align-items: end;
@@ -586,19 +654,21 @@ main .more{
 #user-name,#comment-title{
     margin-bottom: 1rem;
 }
+/* submit button of new comment */
 #submit-comment{
     background-color: #ffcb05;
     height: 3rem;
     width: 5rem;
     border-radius: 10px;
 }
+/* hover effect */
 #submit-comment:hover{
     transform: scale(1.1);
     box-shadow: 2px 2px 8px;
 }
 /* #endregion description part end */
 
-/* #region recommendation */
+/* #region============== recommendation ========================*/
 .recommendation>h2{
     border-bottom: 1px solid #999;
     margin: 20px 0;
@@ -623,9 +693,17 @@ main .more{
     border: 1px solid #ccc;
 }
 /* #endregion recommendation */
+/* #endregion====================== Product Details End======================== */
 
-
-/* #region footer section start */
+/* #region ============ FOOTER SECTION START ============ */
+/*
+   - This section styles the **footer**, which includes:
+      1. `.first` → Contains **quick links, location, and contact info**.
+      2. `.second` → Displays **social icons & legal text**.
+      3. `.icons` → Interactive **social media buttons**.
+      4. Hover effects for **links and icons**.
+*/
+    /* #region ====================== FIrst =================================== */
 footer{
     display: flex;
     flex-direction: column;
@@ -640,6 +718,7 @@ footer .first{
     padding: 1rem;
     margin-bottom: 1rem;
 }
+/* Remove bullets from lists */
 footer ul{
     list-style: none;
 }
@@ -650,6 +729,7 @@ footer a{
     text-decoration: none;
     color: #666;
 }
+/* hover effect */
 footer a:hover{
     color: #000;
     text-decoration: underline;
@@ -658,6 +738,15 @@ footer img{
     height: 3rem;
     cursor: pointer;
 }
+    /* #endregion================ First ====================== */
+
+    /* #region ========================== Second ============================ */
+    /*
+       - `.second` includes:
+          - **Social media icons**.
+          - **Copyright text**.
+          - **Legal disclaimers**.
+    */
 footer .second{
     padding: 1rem;
     display: flex;
@@ -711,16 +800,19 @@ footer .copyright{
     justify-content: center;
     align-items: center;
 }
-/* #endregion footer section end */
-
-
-
-
+    /* #endregion =====================Second ========================= */
+/* #endregion ========================== FOOTER SECTION END ======================================= */
+    
+/* mobile nav cant be shown on PC device*/
 #mobile-menu{
     display: none;
 }
-/*#region for ipad air */
-    /*change the layout  */
+/* mobile nav end */
+
+
+/* #region ==================== MEDIA QUERIES (MOBILE & TABLET) ======================= */
+
+/* #region Devices smaller than 998px(Ipad devices)  */
 @media (min-width: 768px) and (max-width: 998px) 
 and  (max-height: 1300px) {
  .slideShow li img{
@@ -733,7 +825,7 @@ and  (max-height: 1300px) {
 /* #endregion for ipad ari */
 
 
-/* for mobile device */
+/* #region Devices smaller than 768px (mobile device)  */
 @media (max-width:768px){
     *{
         margin: 0;
@@ -788,13 +880,14 @@ and  (max-height: 1300px) {
     }
     /* #endregion header end */
 
-
+    /* nav-start */
    .main-nav{
     display: none;
    }
    footer p{
     font-size: 12px;
    }
+   /* nav-end */
 
    /* mian-body */
    main{
@@ -867,7 +960,8 @@ and  (max-height: 1300px) {
         display: none; 
     }
 
-    /* #region mobile nav start */
+    /* #region ============ MOBILE NAVIGATION ============ */
+    /* Adds sliding animation to the mobile menu */
     @keyframes animate{
         from{
             transform: translateX(-1000px);
@@ -875,6 +969,7 @@ and  (max-height: 1300px) {
             transform: translateX(0px);
         }
     }
+    /* Displays the mobile menu */
     #mobile-menu {
         display: block;
         position: fixed;
@@ -893,7 +988,6 @@ and  (max-height: 1300px) {
         cursor: pointer;
         width: 100%;
         text-align: left;
-        z-index: 100;
     }
     #menu-content {
         display: none; 
@@ -912,9 +1006,10 @@ and  (max-height: 1300px) {
         position: absolute;
         top: 1rem;
         left: 1rem;
-        height: 20px;
-        z-index: 1000000;
+        font-size:2rem;
+        cursor: pointer;
     }
+     /* Styles search bar */
     #menu-content .search-bar{
         margin-bottom: 1rem;
     }
@@ -923,10 +1018,12 @@ and  (max-height: 1300px) {
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.107);
         border: 1px solid black;
     }
+    /* Placeholder text styling */
     #menu-content .search-bar input::placeholder{
         padding: 1rem;
         letter-spacing: 1px;
     }
+
     #menu-content .search-bar button{
         width: 4rem;
         background-color: #FFD700;
@@ -934,6 +1031,7 @@ and  (max-height: 1300px) {
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: all 0.3s ease;
     }
+     /* Hover effect for search button */
     #menu-content .search-bar button:hover{
         background-color: #ffaa00;
         transform: scale(1.05);
@@ -992,6 +1090,7 @@ and  (max-height: 1300px) {
         transition: max-height 0.3s ease-in-out;
         overflow: hidden;
     }
+    /* #endregion mobile nav end */
 
      /* #region footer start */
      footer{

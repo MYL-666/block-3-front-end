@@ -189,12 +189,6 @@ header li:first-child a{
     /* add the change when hover */
     box-shadow: 0 0 10px;
 }
-    /* logo animation */
-.logo ,.header-nav,.search-div{
-    opacity: 0;
-    transform: scale(0.8);
-    animation: zoomIn 1s ease-out forwards;
-}  
     /* #endregion===== header part end =====*/
 
     /* #region===== search bar start =====*/
@@ -213,7 +207,7 @@ header li:first-child a{
     box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.1);
 }
 .search-div .submit{
-    width: 25%;
+    width: 4.5rem;
     background-color: #ffcb05;
     background-size: 60%;
     background-position: center;
@@ -823,7 +817,12 @@ and  (max-height: 1300px) {
   }
 }
 /* #endregion for ipad ari */
-
+@media (max-width:805px){
+    /* display search when screen is smaller than 805px */
+    header .search-div{
+        display: none ;
+        }
+}
 
 /* #region Devices smaller than 768px (mobile device)  */
 @media (max-width:768px){

@@ -1,5 +1,5 @@
 window.onload = function () {
-    // #region slideshow
+// #region slideshow
     var index = 0; 
     var imgArr = document.querySelectorAll(".imgList li");
     var prevBtn = document.querySelector('.prev'); 
@@ -26,7 +26,7 @@ window.onload = function () {
         setA();
     };
 
-    
+    // let all the node can be clicked, and when click going to its own number's slide
     for (var i = 0; i < allA.length; i++) {
         allA[i].num = i;
         allA[i].onclick = function () {
@@ -34,7 +34,7 @@ window.onload = function () {
             setA();
         };
     }
-
+    // make a funciton about how carousel work, by controling slides' opacity and z-index
     function setA() {
         for (var i = 0; i < imgArr.length; i++) {
             imgArr[i].style.opacity = "0"; 
@@ -45,10 +45,10 @@ window.onload = function () {
         imgArr[index].style.zIndex = "1"; 
         allA[index].style.backgroundColor = "black"; 
     }
-    // #endregion slideshow end
+// #endregion slideshow end
 
 
-    //#region description and details and reviews;
+//#region description and details and reviews;
     var detailDescription=document.getElementById("detail-description");
     var btnDescription=document.getElementById("btn-description");
     var details=document.getElementById("details")
@@ -64,6 +64,7 @@ window.onload = function () {
     show(commentList,btnComment)
     // make a function to handle multiple usage
     function show(name,btn){
+        // when click,show the detail, if its alredy shown then close it
         name.style.display="none"
         btn.onclick=function(){
             if(name.style.display=="none"){
@@ -75,16 +76,19 @@ window.onload = function () {
             }
         }
     }
-    // #endregion description end
+// #endregion description end
 
-    // #region write comment start
+
+
+// #region write comment start
+    // get the value of comments'title,username and details
     const userName=document.getElementById("user-name");
     const commentTitle=document.getElementById("comment-title");
     const newComment=document.getElementById("new-comment");
     const stars=document.querySelectorAll(".stars");
     const submitBtn=document.getElementById("submit-comment");
 
-
+    // submit the comment when click it 
     submitBtn.onclick=function(){
         var newMessage=document.createElement("article");
         let i=0;
@@ -100,6 +104,7 @@ window.onload = function () {
         for(var j=0;j<i;j++){
             commentStar+='<i class="iconfont icon-wuxinghaoping-quan"></i>';
         };
+        // creat a html label to store the new comments details
         newMessage.classList.add("row","comments");
         newMessage.innerHTML=`
         <ul class="col-4 date">
@@ -112,9 +117,9 @@ window.onload = function () {
             <div class="face face5"></div>
             <p>${userName.value}</p>
         </div>`;
-        
+        // insert the new comment into the page
         commentList.insertBefore(newMessage,commentList.firstChild);
-        // clear textarese
+        // clear textarese and everything
         userName.value='';
         commentTitle.value='';
         newComment.value = '';
@@ -129,11 +134,11 @@ window.onload = function () {
         var day=('0'+now.getDate()).slice(-2);
         return day+'/'+month+'/'+year;
     }
-    // #endregion write comment end
+// #endregion write comment end
 
 
 
-     // #region slide bar for mobile device
+// #region slide bar for mobile device
     // get element by id
     var menuBtn = document.getElementById("menu-btn");
     var menuContent = document.getElementById("menu-content");
@@ -156,9 +161,9 @@ window.onload = function () {
             menuContent.style.display = "block"; 
         }
     };
-    // #endregion sildebar for mobile device
+// #endregion sildebar for mobile device
 
-    // #region add to cart
+// #region add to cart
     var add=document.getElementById("add");
     var decrease=document.getElementById("decrease");
     var increase=document.getElementById("increase");
@@ -189,7 +194,7 @@ window.onload = function () {
             j=1;
         }
     }
-
+    // when click update the quantity of the product
     increase.onclick=function(){
         j++;;
         quantity.value=j;
@@ -202,29 +207,30 @@ window.onload = function () {
         var img=this.dataset.img;
         cart.push({ name, price, img, quantity: quantity.value });
 
-        num+=parseInt(j);
-        cartNum.innerText=num;
-        cartNum.style.display="block";
+        num+=parseInt(j);    //whole cart num update
+        cartNum.innerText=num;  //change the number of cart to show
+        cartNum.style.display="block";  //show the cart number
         localStorage.setItem("cart", JSON.stringify(cart));
         modalMessage.textContent = `${name} has been successfully added to the cart!`;
         successModal.show();
     }
-    // #endregion add to cart
+// #endregion add to cart
 
-    //#region mobile sildebar
+//#region mobile sildebar
     var open=document.querySelectorAll(".btn-open")
     var details=document.querySelectorAll(".menu-detail")
     for(let i=0;i<open.length;i++){
         details[i].style.display = "none";
         open[i].onclick=function(){
+            // if its close then open, if its open then close
             if (details[i].style.display === "block") {
                 details[i].style.display = "none"; 
-                open[i].style.transform="rotate(0deg)"
+                open[i].style.transform="rotate(0deg)" //change the arrows direction
             } else {
                 details[i].style.display = "block"; 
-                open[i].style.transform="rotate(90deg)"
+                open[i].style.transform="rotate(90deg)" //change back
             }
         }
     }
-    // #endregion mobile slidebar
+// #endregion mobile slidebar
 };

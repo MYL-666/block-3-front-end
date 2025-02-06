@@ -1,4 +1,4 @@
-/* clear all margin and padding and reset the font style */
+/*========== clear all margin and padding and reset the font style ============= */
 *{
     font-family: "Sour Gummy", serif;
     margin: 0;
@@ -7,8 +7,27 @@
     box-sizing: border-box;
     /* outline: 1px solid red !important; */
 }
+body{
+    /* make sure evry part connect to each other */
+    display: flex;
+    flex-direction: column; 
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
 
-/*#region universe animate */
+
+/*#region ============ UNIVERSAL ANIMATION START ==================*/
+/*
+   - This section contains global animations used throughout the project.
+   - It includes three animations:
+      1. `zoomIn` → Enlarges and fades in elements.
+      2. `fromLeft` → Slides in elements from the left.
+      3. `fromRight` → Slides in elements from the right.
+   - The `.section` class ensures elements start with opacity 0 and 
+     become visible when `.visible` is added dynamically by scrolling.
+*/
+    /* from small,transparent to big & actual */
 @keyframes zoomIn{
     from{
         transform: scale(0.8);
@@ -18,6 +37,7 @@
         opacity: 1;
     }
 }
+    /* fade in to the screen from left sides */
 @keyframes fromLeft{
     from{
         opacity: 0;
@@ -27,6 +47,7 @@
         transform: translateX(0);
     }
 }
+    /* fade in to the screen from right sides */
 @keyframes fromRight{
     from{
         opacity: 0;
@@ -36,12 +57,15 @@
         transform: translateX(0);
     }
 }
+    /* every section that have animation ,first opcity need to be 0 */
 .section{
     opacity: 0;
 }
+    /* when adding the class visbile, their opacity become 1 */
 .section.visible{
     opacity: 1;
 }
+/* ======== Apply Specific Animations Based on Section Type ======== */
 .sectionL.visible{
     animation: fromLeft 1.5s ease forwards;
 }
@@ -51,20 +75,22 @@
 .sectionZ.visible{
     animation: zoomIn 1s ease-out forwards;
 }
-/* #endregion universe animate end */
+/* #endregion ================ UNIVERSE ANIMATION END =====================*/
 
 
-/* scroll style start */
+/* #region================= scroll style start ==================*/
 ::-webkit-scrollbar{
     width: 6px;
 }
+    /* scroll color to be yeloow fit the theme */
 ::-webkit-scrollbar-thumb{
     background-color: #FFD700;
     border-radius: 10px;
 }
-/* scroll style end */
+/* #endregion end============= scroll style end ================*/
 
-/* icon style */
+
+/*#region =========icon style ===========*/
 .icon-wuxinghaoping-quan{
     color: #FFD700;
 }
@@ -73,18 +99,18 @@
     color: #FFB300 ;
     text-decoration: none !important;
 }
-/* icon style end*/
+/*#endregion =========== icon style end =============*/
 
-/* #region header-part of main page start */
-body{
-    /* make sure evry part connect to each other */
-    display: flex;
-    flex-direction: column; 
-    overflow-x: hidden;
-    justify-content: center;
-    align-items: center;
-}
-/*#region header part start */
+/* #region=================== header-part of main page start =====================*/
+/* 
+   Description: 
+   - The header contains a logo, navigation menu of home/cart/login, and search bar.
+   - It has a sticky position at the top with a semi-transparent background.
+   - Includes an animation effect for a smooth appearance.
+   - Navigation icons for profile, home, and cart are included.
+   - Responsive design ensures proper alignment on different screen sizes.
+*/
+/*#region===== header part start =====*/
 .head-title{
     display: flex;
     justify-content: space-between;
@@ -192,11 +218,9 @@ header li:first-child a{
     transform: scale(0.8);
     animation: zoomIn 1s ease-out forwards;
 }  
-/* #endregion header part end */
+    /* #endregion===== header part end =====*/
 
-
-
-/* #region search bar */
+    /* #region===== search bar start =====*/
 .search-div{
     /* search bar layout */
     margin-top: 10px;
@@ -223,10 +247,19 @@ header li:first-child a{
 .search-div .submit:hover{
     box-shadow: 0 0 10px;
 }
-/* #endregion search bar */
+    /*#endregion===== search bar end =====*/
+/* #endregion ================== HEADER SECTION END =========================== */
 
 
-/* #region navigator */
+/*#region==================== NAVIGATION SECTION START ===================================*/
+/* 
+   Description:
+   - This section styles the main navigation menu.
+   - It includes hover effects, transitions, and hidden dropdown menus for different categories.
+   - The navigation bar has a sticky position and a subtle shadow effect.
+   - Hidden sub-menus are displayed when hovering over main categories.
+   - Uses smooth transitions for a better user experience.
+*/
 nav{
     /* layout of main-nav */
     width: 100vw;
@@ -265,6 +298,11 @@ nav .nav a{
     text-decoration: none;
     color: black;
 }
+    /* =================== Dropdown Navigation Menus Start =================== */
+    /* 
+       - The following styles handle the hidden sub-menus.
+       - Each category (Pets, Products, Cards) has its own submenu that appears when hover.
+    */
 /* for pets nav */
 .nav-pet:hover+.nav-product+.nav-card+.hidden-nav-pet, .hidden-nav-pet:hover{
     display: flex;
@@ -309,9 +347,18 @@ nav .nav-item>a:hover{
 nav .third img{
     margin-top: 10px;
 }
-/* #endregion navigator */
+    /* =================== Dropdown Navigation Menus End =================== */
+/*#endregion========================== NAVIGATION END =======================================*/
 
 
+
+/*#region ========================= WALLPAPER SECTION START ========================= */
+/*
+   - This section styles the banner area of the page.
+   - It ensures the background image covers the full viewport.
+   - The text is aligned to the left, with a structured layout.
+   - Includes a call-to-action button with hover effects.
+*/
 .wallpaper{
     min-height: 100vh;
     min-width: 100vw;
@@ -339,9 +386,9 @@ nav .third img{
     color: rgba(0, 0, 0, 0.85);
 }
 .wallpaper button{
-    background: rgba(0, 0, 0, 0.6); /* 半透明黑色 */
-    color: #fff; /* 文字白色 */
-    border: 2px solid #ffffff; /* 增加对比度 */
+    background: rgba(0, 0, 0, 0.6); 
+    color: #fff; 
+    border: 2px solid #ffffff; 
     padding: 10px 20px;
     border-radius: 10px;
     transition: 0.3s ease-in-out;
@@ -353,9 +400,20 @@ nav .third img{
     background: rgba(255, 255, 255, 0.9);
     color: #212121;
 }
+/* #endregion ========================= WALLPAPER SECTION END ============================= */
 
 
-/* #region about us start */
+/* #region ========================== ABOUT US SECTION START ============================== */
+/*
+   - This section styles the "About Us" part of the webpage.
+   - It includes:
+      1. `.subtitle` → A highlighted title section.
+      2. `.About` → The container that holds all the content.
+      3. `.about` → The main layout containing text and an image.
+      4. `.left` → The left side containing an image with an overlay title.
+      5. `.right` → The right side containing a heading, paragraph, and button.
+*/
+    /* =====subtitle section ====== */
 .subtitle{
     height: 3rem;
     background-color: #ffcd054f;
@@ -378,6 +436,7 @@ nav .third img{
     padding: 3rem;
     align-items: center;
 }
+    /* ===== Left section ====== */
 .about .left{
     width: 50%;
     object-fit: cover;
@@ -404,6 +463,7 @@ nav .third img{
     border-radius: 5px;
     box-shadow: 0 0 8px;
 }
+    /* ====== right section ====== */
 .about .right{
     width: 50%;
     display: flex;
@@ -427,18 +487,33 @@ nav .third img{
     background-color: #4B0082;
     color: white;
 }
+    /* button hover effect */
 .about .right button:hover{
     transform: scale(1.1);
     box-shadow: 0 0 5px #000;
 }
-/* #endregion about us end */
+/* #endregion====================== ABOUT US END ============================== */
 
 
 
 
-/* #region pet section */
+/* #region =========================== PET SECTION START ================================== */
+/*
+   - This section styles the "Pets" area of the website.
+   - It includes:
+      1. `.pet-intro` → Introduction section with text and image.
+      2. `.pet-shell` → Main container for the pet cards.
+      3. `.pet-box` → Holds all pet cards in a horizontal scroll layout.
+      4. `.pet-card` → Individual pet card styling with hover expansion.
+      5. `.description` → Detailed info section for each pet.
+*/
 
-    /*#region pet-intro start  */
+    /* #region ============ PET INTRO START ============ */
+    /*
+       - The "Pet Intro" section is a two-column layout:
+          1. `.left` → Contains a heading, description, and button.
+          2. `.right` → Contains an image.
+    */
 .pet-intro{
     display: flex;
     flex-wrap: wrap;
@@ -482,9 +557,17 @@ nav .third img{
     transform: scale(1.1);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
-    /* #endregion pet-inro end */
+    /* #endregion================ Pet Intro End =======================*/
 
-    /* #region pets card start */
+    /* #region ============ PET CARD SECTION START ============ */
+    /*
+       - The "Pet Cards" section displays Pokémon-style pets as interactive cards.
+       - Cards expand when hovered over.
+       - `.pet-shell` → Main container with background.
+       - `.pet-box` →  container holding pet cards which are displayed like accordion on PC screen.
+       - `.pet-card` → Individual interactive pet card with pet img & small description.
+       - `.description` → Info box with stock and pricing details and button to add to cart.
+    */
     .pet-shell  {
         box-sizing: border-box;
         height: auto;
@@ -545,6 +628,15 @@ nav .third img{
     .pet-shell .card5{
         background-color: #ff802c80;
     }
+    /* ========== PET DESCRIPTION BOX ========== */
+    /*
+       - This section shows pet details such as:
+          1. Name
+          2. Price
+          3. Stock Status
+          4. "Add to Cart" Button
+    */
+    /* description container */
     .pet-shell .description{
         width: 50%;
         height: 50vh;
@@ -557,7 +649,8 @@ nav .third img{
         background-color: #ffffff0f;
         box-shadow: 5px 10px 15px 10px rgba(0, 0, 0, 0.178);
         box-sizing: border-box;
-        margin: 10px;
+        margin: 5px;
+        padding: 5px;
     }
     .pet-shell .description>h3{
         font-size: 1.5rem;
@@ -567,20 +660,8 @@ nav .third img{
         font-size: 1rem;
         font-weight: bold;
         color: black;
-    }
-    
-    .pet-shell .stock-status {
-        font-size: 14px;
-    }
-    
-    .pet-shell .in-stock {
-        color: green;
-    }
-    
-    .pet-shell .out-of-stock {
-        color: red;
-    }
-    
+    }   
+    /* add to cart button */
     .pet-shell .add-cart {
         background: #ffcb05;
         padding: 10px;
@@ -589,16 +670,29 @@ nav .third img{
         border-radius: 5px;
         font-size: clamp(14px, 3vw, 16px);
     }
-    
+    /* button hover effect  */
     .pet-shell .add-cart:hover {
         background: #ffac00;
     }
-    /* #endregion pets card end*/
-/*#endregion pet section end */
+    /* #endregion ============ PET CARD SECTION START ============ */
+/*#endregion============================ PET SECTION END =====================================*/
 
 
-/*#region product section start */
-    /* #region product-intro strat */
+/* #region ============================ PRODUCT SECTION START ============================ */
+/*
+   - This section styles the "Product" area of the website.
+   - It includes:
+      1. `.product-box` → Full-screen background with an image.
+      2. `.loading` → Animated elements mimicking a loading box for add to cart.
+      3. `@keyframes move` → Rotating animation for the effect of rolling circle.
+      4. `@keyframes colorChange` → Color transition animation.
+*/
+    /* #region ============ PRODUCT INTRO START ============ */
+    /*
+       - The "Product Intro" section features a **large background image**.
+       - `.product-box` → Full-page **flexbox** container.
+       - `.loading` → Holds rotating elements to create a dynamic effect.
+    */
     .product-box{
         margin: 0;
         padding: 0;
@@ -616,6 +710,9 @@ nav .third img{
         width: 80vh;
         position: relative;
     }
+    /* Each `span` inside `.loading` is a rotating animated shape with different border-radius
+     ,color, and animation lasting time.
+     */
     .loading span{
         width: 40vh;
         height: 40vh;
@@ -650,6 +747,7 @@ nav .third img{
         animation-direction: reverse;
         animation-duration: 3.5s;
     }
+    /* The last `span` holds a button instead of an animated border */
     .loading span:last-child{
         border: 0;
         animation: none;
@@ -667,11 +765,17 @@ nav .third img{
         font-weight: bold;
         transition: .5s;
     }
+    /* button hover effect */
     .loading span:hover button{
         box-shadow: 0 0 8px black;
         transform: scale(1.05);
     }
-    /* amimation of span border */
+    /* ============ ANIMATIONS ============ */
+    /*
+       - These animations handle the effects for `.loading` elements.
+       - `@keyframes colorChange` → Cycles through different border colors.
+       - `@keyframes move` → Rotates the shapes roundly and infinitely.
+    */
     @keyframes colorChange{
         0%{
             border-color: rgba(176, 224, 230, 0.6); 
@@ -692,10 +796,22 @@ nav .third img{
             transform: rotate(360deg);
         }
     }
-    /* #endregion product-intro end */
+    /* #endregion============ product-intro end ========================*/
 
 
-    /* #region product cards start */
+    /* #region ============ PRODUCT CARDS SECTION START ============ */
+    /*
+       - This section is responsible for styling the product cards.
+       - It includes:
+          1. `.product-container` → Container that manages the layout of all product cards.
+          2. `.box` → Individual product card styling.
+          3. `.img` → Image styling & hover effect.
+          4. `.price` → Pricing details (with discounts).
+          5. `.name` → Product name styling.
+          6. **Animations** → Cards fade in with delay for a smooth appearance.
+          7. button → Add the product to the cart.
+          8. `.discount` → the discount on the top-left of each product with yellow background. 
+    */
     .product-page{
         width: 100vw;
         display: flex;
@@ -756,9 +872,11 @@ nav .third img{
        border-radius: 15px;
        transition: all .5s ease-in-out;
     }
+    /* hover to show the button */
     .product-container .img:hover input{
         opacity: 1;
     }
+    /* hover effect of button */
     .product-container .img input:hover{
         transform: scale(1.05);
         color: white;
@@ -783,34 +901,47 @@ nav .third img{
         display: flex;
         gap: .5rem;
     }
+    /* `new` product label */
     .product-container .name>h2{
         color: red;
     }
-        /* box animate */
+        /* box animate, fade in one by one*/
     .box:nth-child(1),.box:nth-child(6){
         animation-delay: .4s;
     }
     .box:nth-child(2),.box:nth-child(5){
         animation-delay: .2s;
     }
-    /* #endregion product card end */
-/* #endregion product section end */
+    /* #endregion ============ PRODUCT CARDS SECTION END ============ */
+/* #endregion ============================ PRODUCT SECTION END ============================ */
 
 
-/* #region card section start */
-    /* card-intro start */
+/* #region ============================== CARD SECTION START ============================== */
+/*
+   - This section is responsible for styling interactive 3D cards.
+   - It includes:
+      1. `.card-shell` → Manages the card layout & background.
+      2. `.card-container` → Holds all cards & enables 3D perspective.
+      3. `.box` → Individual card with hover effects.
+      4. **Hover Animations** → Cards expand and rotate on hover.
+      5. **Flip Animation** → Cards flip between front & back views.
+*/
+    /* card intro, have the same style as `About Us` */
     #btn-card{
         background-color: #FFD700;
         color: #000;
     }
     /* card intro end */
 
-    /* cards main section start */
+    /* ============ CARD CONTAINER (3D PERSPECTIVE) ============ */
+    /*
+       - `.card-container` holds all individual cards.
+       - Uses `perspective` to create a **3D effect**.
+    */
     .card-shell{
         height: auto;
         background-color: rgba(173, 216, 230, 0.2);
     }
-    /* start perspective */
     .card-container{
         display: flex;
         justify-content: space-evenly;
@@ -825,7 +956,7 @@ nav .third img{
         position: relative;
         height: 400px;
         width: 300px;
-        perspective: 1000px;
+        perspective: 1000px; /* Ensures 3D transformations */
         transition-delay: .1s;
         transform: rotateY(0deg);
         transition: .3s;
@@ -861,20 +992,26 @@ nav .third img{
     .card-container .card-content span{
         font-size: 1.2rem;
     }
-    /* movement of card when hover on it */
+    /* Rotate all cards slightly when hovering over the section */
     .card-container:hover .box{
         transform: rotateY(20deg);
     }
+    /* The active card expands to **120% size** */
     .card-container .box:hover{
         transform: rotateY(0deg) scale(1.2);
         z-index: 1;
     }
-    /* other cards move towards the mouse  */
+    /* Other cards rotated towards the active one when hovering on one actived */
     .card-container .box:hover~.box{
         transform: rotateY(-20deg);
     }
     /* movement of card end */
-    /* turn the cards */
+    /*  ============ FLIP ANIMATION (FRONT & BACK) ============ */
+    /*
+       - `.cover` represents the **front side** of the card.
+       - `.back` represents the **back side** of the card.
+       - Cards flip **180 degrees** when hovered.
+    */
     .card-container .cover{
         transform: rotateY(-180deg);
     }
@@ -902,12 +1039,13 @@ nav .third img{
         height: 100%;
         width: 100%;
         object-fit: cover;
-
     }
+    /* cover img style */
     .card-container .cover img{
         height: 70%;
         width: auto;
     }
+    /* add to cart button style */
     .card-content input {
         width: 8rem;
         height: 3rem;
@@ -917,6 +1055,7 @@ nav .third img{
         visibility: hidden;       
         transition: all 0.3s ease;
     }
+    /* Show button on hover */
     .card-box:hover .card-content input {
         opacity: 1;
         visibility: visible;
@@ -937,16 +1076,25 @@ nav .third img{
         }
     }
     /* animation end */
-    /* #endregion card main section end */
-/*#endregion card section end */
+    /*============== card main section end ===================*/
+/*#endregion =========================card section end ================================*/
 
 
 
-/* #region trainer section start */
+/* #region ============ TRAINER SECTION START ============ */
+/*
+   - This section styles **interactive trainer cards** with:
+      1. `.trainer-container` → Main wrapper with background.
+      2. `.card` → Individual trainer card.
+      3. `.wrapper` → Creates **3D hover effects**.
+      4. `.character` & `.title` → Display trainer name & image.
+      5. `.intro` → Expanding trainer **biography section**.
+      6. Hover **animations & transitions** for smooth interactivity.
+*/
     .trainer-container{
         margin: 0;
         padding: 0;
-        min-width: 100vw;
+        max-width: 100vw;
         max-height: 800px;
         height: 120vh;
         display: flex;
@@ -956,11 +1104,17 @@ nav .third img{
         box-sizing: border-box;
         z-index: 0;
     }
+    /* `.shell` holds all the trainer cards */
     .trainer-container .shell{
         display: flex;
         justify-content: center;
         align-items: center;
     }
+    /* #region ============ TRAINER CARDS (3D EFFECT & HOVER) ============ */
+    /*
+       - `.card` represents a **single trainer card**.
+       - Uses **3D perspective** for immersive effects.
+    */
     .trainer-container .shell .card{
         width:270px;
         height: 545px;
@@ -969,17 +1123,20 @@ nav .third img{
         justify-content: center;
         align-items: flex-end;
         padding: 0 25px;
-        perspective: 2500px;
+        perspective: 2500px;/* Ensures deep 3D effect */
         transition: all 0.4s;
         margin: 0 100px;
         border: 0;
         background-color: transparent;
         z-index: 1;
     }
+    /* `.cover-img` ensures full-size background images */
     .trainer-container .card .cover-img{
         width: 100%;
         height: 100%;
     }
+    /* #endregion ============ TRAINER CARDS END ============ */
+
     .trainer-container .wrapper{
         transition: all 0.3s;
         position: absolute;
@@ -1010,12 +1167,20 @@ nav .third img{
         rgba(12,13,19,0.5) 68%,
         rgba(12,13,19) 97%);
     }
+    /* Makes **shadows more visible** when hovering */
     .trainer-container .card:hover .wrapper::before,.wrapper::after{
         opacity: 1;
     }
     .trainer-container .card:hover .wrapper::after{
         height: 120px;
     }
+
+    /* #region ============ TRAINER CHARACTER IMAGE & TITLE ============ */
+    /*
+       - `.character` holds the **trainer image**.
+       - `.title` holds the **trainer name**.
+       - Both **move upwards** when the card is hovered.
+    */
     .trainer-container .character{
         width: 100%;
         opacity: 0;
@@ -1023,6 +1188,7 @@ nav .third img{
         position:absolute;
         z-index: -1;
     }
+    /* Moves **trainer name** upwards on hover */
     .trainer-container .title{
         width: 100%;
         position: absolute;
@@ -1033,13 +1199,23 @@ nav .third img{
     .trainer-container .card:hover .title{
         transform: translate3d(0%,-50px,100px);
     }
+    /* Hovering **reveals trainer image** */
     .trainer-container .card:hover .character{
         opacity: 1;
         transform: translate3d(0%,-10%,100px);
     }
+    /* Moves the entire card **down slightly** on hover */
     .trainer-container .card:hover{
         transform: translateY(40px);
     }
+    /* #endregion ============ TRAINER CHARACTER & TITLE END ============ */
+
+
+    /* #region ============ INTRO PANEL (TRAINER DETAILS) ============ */
+    /*
+       - `.intro` is the **trainer details panel**.
+       - Appears when hovering **with animation**.
+    */
     /* make sure two character cards have same height */
     .trainer-container .card:hover img[src="../img/dawn2.png"]{
         height: 480px;
@@ -1073,13 +1249,21 @@ nav .third img{
         left: 0 ;
         bottom: 0;
     }    
+    /* Adjusts animation when hovering over different trainers */
     .trainer-container .card:hover .intro-ash{
         animation: showoff1 .5s ease-in 1s forwards;
     }
     .trainer-container .dawn:hover .intro-dawn{
         animation: showoff2 .5s ease-in 1s forwards;
     }
-    /* animation to show intro */
+    /* #endregion ============ INTRO PANEL END ============ */
+
+
+    /* #region ============ INTRO ANIMATIONS ============ */
+    /*
+       - `showoff1` → Expands trainer bio from Ash's side.
+       - `showoff2` → Expands trainer bio from Dawn's side.
+    */
     @keyframes showoff1{
         from{
             transform: scale(0.1);
@@ -1098,7 +1282,9 @@ nav .third img{
             opacity: 1;
         }
     }
-    /* trainer information start */
+    /* #endregion ============ INTRO ANIMATIONS END ============ */
+
+    /* ================trainer information start ================== */
     .trainer-container .btn-reserve{
         font-size: 16px;
         padding: 10px 20px;
@@ -1139,11 +1325,19 @@ nav .third img{
     .intro2{
         display: none;
     }
-    /* trainer information end */
-/* #endregion trainer section end */
+    /*============== trainer information end ======================= */
+/* #endregion =============================== TRAINER SECTION END ================================= */
 
 
-/* #region footer section start */
+/* #region ============ FOOTER SECTION START ============ */
+/*
+   - This section styles the **footer**, which includes:
+      1. `.first` → Contains **quick links, location, and contact info**.
+      2. `.second` → Displays **social icons & legal text**.
+      3. `.icons` → Interactive **social media buttons**.
+      4. Hover effects for **links and icons**.
+*/
+    /* #region ====================== FIrst =================================== */
 footer{
     display: flex;
     flex-direction: column;
@@ -1158,6 +1352,7 @@ footer .first{
     padding: 1rem;
     margin-bottom: 1rem;
 }
+/* Remove bullets from lists */
 footer ul{
     list-style: none;
 }
@@ -1168,6 +1363,7 @@ footer a{
     text-decoration: none;
     color: #666;
 }
+/* hover effect */
 footer a:hover{
     color: #000;
     text-decoration: underline;
@@ -1176,6 +1372,15 @@ footer img{
     height: 3rem;
     cursor: pointer;
 }
+    /* #endregion================ First ====================== */
+
+    /* #region ========================== Second ============================ */
+    /*
+       - `.second` includes:
+          - **Social media icons**.
+          - **Copyright text**.
+          - **Legal disclaimers**.
+    */
 footer .second{
     padding: 1rem;
     display: flex;
@@ -1229,9 +1434,10 @@ footer .copyright{
     justify-content: center;
     align-items: center;
 }
-/* #endregion footer section end */
+    /* #endregion =====================Second ========================= */
+/* #endregion ========================== FOOTER SECTION END ======================================= */
 
-/* mobile nav  start*/
+/* mobile nav cant be shown on PC device*/
 #mobile-menu{
     display: none;
 }
@@ -1239,17 +1445,9 @@ footer .copyright{
 
 
 
+/* #region ==================== MEDIA QUERIES (MOBILE & TABLET) ======================= */
 
-
-
-
-
-
-
-
-
-
-/* mobile device */
+/* #region Devices smaller than 1200px  */
 @media (max-width:1200px){
     .pet-shell{
         min-height: 150vh;
@@ -1282,7 +1480,9 @@ footer .copyright{
     }
     /* product intro end */
 }
+/* #endregion Devices smaller than 1200px */
 
+/* #region Devices smaller than 992px  */
 @media (max-width:992px){
     /* about us */
     .about .right p{
@@ -1318,7 +1518,7 @@ footer .copyright{
       .pet-card, 
       .pet-card:hover {
         flex-basis: 100% ;
-        width: 100% ; 
+        width: 80% ; 
         transition: none ;
       }
     /* pet-card end */
@@ -1331,10 +1531,13 @@ footer .copyright{
     }
     /* product intro end */
 }
+/* #endregion Devices smaller than 992px */
 
+
+/* #region =================== MOBILE RESPONSIVENESS (MAX WIDTH: 768PX) =================== */
 
 @media (max-width:768px){
-    /* header start */
+    /*====== header start =======*/
     .head-title,.product-page {
         width: 100vw;
     }
@@ -1383,7 +1586,7 @@ footer .copyright{
     /* header end */
 
 
-    /* head-title start */
+    /*======= head-title start =======*/
     .head-title,.product-page {
         width: 100vw;
     }
@@ -1393,7 +1596,7 @@ footer .copyright{
     /* head title end */
 
 
-    /* about us start */
+    /*======= about us start ========*/
     .about{
     flex-direction: column;
     justify-content: center;
@@ -1409,7 +1612,7 @@ footer .copyright{
     /* about us end */
 
 
-    /* #region pet section start */
+    /* #region======= pet section start =======*/
 
         /* pet-intro start */
     .pet-intro{
@@ -1427,7 +1630,7 @@ footer .copyright{
     /*#endregion pet section end */
 
 
-    /* #region product section start */
+    /* #region======== product section start =======*/
         /* product-intro  start*/
     .product-box {
         background-size: contain; 
@@ -1450,7 +1653,7 @@ footer .copyright{
     /* #endregion product section end */
 
 
-    /* #region trainer section start */
+    /* #region====== trainer section start =======*/
     .trainer-container{
         height: auto;
         max-height: 1300px;
@@ -1499,7 +1702,8 @@ footer .copyright{
     /* footer section end */
 
 
-    /* #region mobile nav start */
+    /* #region ============ MOBILE NAVIGATION ============ */
+    /* Adds sliding animation to the mobile menu */
     @keyframes animate{
         from{
             transform: translateX(-1000px);
@@ -1507,6 +1711,7 @@ footer .copyright{
             transform: translateX(0px);
         }
     }
+    /* Displays the mobile menu */
     #mobile-menu {
         display: block;
         position: fixed;
@@ -1546,6 +1751,7 @@ footer .copyright{
         font-size:2rem;
         cursor: pointer;
     }
+     /* Styles search bar */
     #menu-content .search-bar{
         margin-bottom: 1rem;
     }
@@ -1554,10 +1760,12 @@ footer .copyright{
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.107);
         border: 1px solid black;
     }
+    /* Placeholder text styling */
     #menu-content .search-bar input::placeholder{
         padding: 1rem;
         letter-spacing: 1px;
     }
+
     #menu-content .search-bar button{
         width: 4rem;
         background-color: #FFD700;
@@ -1565,6 +1773,7 @@ footer .copyright{
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: all 0.3s ease;
     }
+     /* Hover effect for search button */
     #menu-content .search-bar button:hover{
         background-color: #ffaa00;
         transform: scale(1.05);
@@ -1649,9 +1858,13 @@ footer .copyright{
         display: none;
     }
     /* #endregion footer end */
+
+    /* Hides first navigation item on very small screens */
     @media (max-width:500px){
         .nav-item:first-child{
             display: none;
         }
     }
 }
+/* #endregion =========== MOBILE RESPONSIVENESS (MAX WIDTH: 768PX) ============== */
+/* #endregion ==================== MEDIA QUERIES (MOBILE & TABLET) ======================= */

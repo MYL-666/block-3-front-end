@@ -18,17 +18,17 @@ window.onload=function(){
     instruction.onscroll=function(){
         // only scroll to the end of the insturction the close btn would onlock
         if(Math.abs(instruction.scrollHeight-instruction.scrollTop-instruction.clientHeight)<1){
-            btn02.disabled=false;
-            btn03.disabled = false;
+            btn02.disabled=false; //unlock the btn of checkbox
+            btn03.disabled = false; //unlock the close btn of instruction
         }
         btn03.onclick=function(){
-            instruction.style.display="none"
+            instruction.style.display="none"; //show the instruction part
         }
     }
     // if checkbox not check, the submot btn will lock
-    // btn02.addEventListener('change', function(){
-    //     btn.disabled = !btn02.checked;
-    //   });
+    btn02.addEventListener('change', function(){
+        btn.disabled = !btn02.checked; //let the checkbox buttom link to login button
+      });
       
         // password show and hide
         // initailize the pdw to be hidden
@@ -37,9 +37,9 @@ window.onload=function(){
     btnShow.onclick=function(){
         // if its hidden,then show;otherwise, close
         if(btnShow.style.opacity=='1'){
-            btnShow.style.opacity='0';
-            btnHidden.style.opacity='1';
-            pdw.type="password";
+            btnShow.style.opacity='0'; // eyes open become unvisible
+            btnHidden.style.opacity='1'; // eyes close show
+            pdw.type="password"; //change to pdw type to hide password
         }else{
             btnShow.style.opacity='1';
             btnHidden.style.opacity='0';

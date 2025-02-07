@@ -354,7 +354,7 @@ main .cart-item .added:hover{
     position: fixed;
     top: 50vh;
     left: 50vw;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-25%);
 }
 .payment-success{
     display: flex;
@@ -620,7 +620,7 @@ footer .copyright{
         position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,-25%);
     }
     h2{
      font-size: 26px;

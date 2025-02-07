@@ -301,7 +301,8 @@ main .cart-item {
 }
 /* Cart Item Image Styling */
 .cart-item img {
-    max-width: 200px;
+    width:200px;
+    height: 200px;
     border-radius: 5px;
     object-fit: cover;
 }

@@ -25,10 +25,10 @@ window.onload=function(){
             instruction.style.display="none"
         }
     }
-    
-    btn02.addEventListener('change', function(){
-        btn.disabled = !btn02.checked;
-      });
+    // if checkbox not check, the submot btn will lock
+    // btn02.addEventListener('change', function(){
+    //     btn.disabled = !btn02.checked;
+    //   });
       
         // password show and hide
         // initailize the pdw to be hidden
@@ -46,5 +46,22 @@ window.onload=function(){
             pdw.type='text';
         }
         
+    }
+
+    // user could have more clear instruction of how to login
+    btn.onclick=function(){
+        // if user try to login without read instruction
+        if(btn02.disabled && btn03.disabled){
+            alert("Please read the instruction");
+            btn.disabled=true;
+        }
+        if(!btn02.checked && !btn03.disabled){
+            alert("Please tick the checkbox");
+            btn.disabled=true;
+        }
+    }  
+    // if login button is lock,when cilick will alert a instruction about how to unlock
+    btn03.onclick=function(){
+        btn.disabled=false;
     }
 }

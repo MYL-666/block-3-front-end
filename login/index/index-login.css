@@ -358,5 +358,10 @@ input[type="checkbox"]:checked {
     .checking span{
             display: none;
         }
+    .forget{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 /* #endregion ============================= MEDIA QUERY END ========================== */

@@ -183,6 +183,13 @@ a{
     text-decoration: underline;
     color: #000;
 }
+/* fogot pdw & Guest login  */
+.forget{
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+}
 /* Social media login options */
 .existing{
     margin-top: 1rem;

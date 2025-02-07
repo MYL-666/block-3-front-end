@@ -1,6 +1,6 @@
 window.onload=function(){
 
-// #region slide bar for mobile device
+// #region======================================== slide bar for mobile device =========================================
     // get element by id
     var menuBtn = document.getElementById("menu-btn");
     var menuContent = document.getElementById("menu-content");
@@ -25,14 +25,14 @@ window.onload=function(){
             menuContent.style.display = "block"; 
         }
     };
-// #endregion sildebar for mobile device
+// #endregionsildebar for mobile device 
 
 
 
-// #region adding the products to cart
+// #region================================================ adding the products to cart ====================================
     var cartBtn=document.querySelectorAll(".add-cart");
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    // success adding to cart
+    // ======================success adding to cart =============================
     var successModal = new bootstrap.Modal(document.getElementById("successModal"));
     var modalMessage = document.getElementById("modalMessage");
     var cartNum=document.getElementById("cart-num");
@@ -80,7 +80,7 @@ window.onload=function(){
     }
 // #endregion adding the product end
 
-//#region when hover on the product change the img
+//#region============================================= when hover on the product change the img =========================================
     const productImg=document.querySelectorAll(".product-imgs");
     let nameArr=["Meowth","Palkia","Hydrapple","sweetheart","Gengar","Eevee"]; //put all img name in an Arr
     //when mouse hover on it, change the pic direction by change the img of it
@@ -105,7 +105,7 @@ window.onload=function(){
 // #endregion
 
 
-//#region mobile slide bar
+//#region============================================== mobile slide bar ===============================================
     var open=document.querySelectorAll(".btn-open")
     var details=document.querySelectorAll(".menu-detail")
     for(let i=0;i<open.length;i++){
@@ -126,7 +126,7 @@ window.onload=function(){
 // #endregion
 
 
-    // #region turning the card start
+    // #region==================================== turning the card start =======================================================
     const cardList=document.querySelectorAll(".card-box");
     const cover=document.querySelectorAll(".cover");
     const back=document.querySelectorAll(".back");
@@ -145,7 +145,7 @@ window.onload=function(){
 }
 
 
-    // scrolling animation,when scroll down to 85%, the animation will start
+    //======================================== scrolling animation,when scroll down to 85%, the animation will start =======================================
         window.addEventListener('scroll', () => {
             // for all the label that have `.section` class
             const sections = document.querySelectorAll('.section');

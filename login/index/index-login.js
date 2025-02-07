@@ -1,5 +1,5 @@
 window.onload=function(){
-    // get all the buttons and checkbox
+    // get all the buttons and checkbox and inputs
     var btn = document.getElementById("btn");
     var btn02 = document.getElementById("btn02");
     var btn03 = document.getElementById("btn03");
@@ -20,6 +20,7 @@ window.onload=function(){
         if(Math.abs(instruction.scrollHeight-instruction.scrollTop-instruction.clientHeight)<1){
             btn02.disabled=false; //unlock the btn of checkbox
             btn03.disabled = false; //unlock the close btn of instruction
+            btn.disabled=false; //unlock the login button
         }
         btn03.onclick=function(){
             instruction.style.display="none"; //show the instruction part
@@ -41,9 +42,9 @@ window.onload=function(){
             btnHidden.style.opacity='1'; // eyes close show
             pdw.type="password"; //change to pdw type to hide password
         }else{
-            btnShow.style.opacity='1';
-            btnHidden.style.opacity='0';
-            pdw.type='text';
+            btnShow.style.opacity='1'; //eye-open become visbile
+            btnHidden.style.opacity='0'; //eye close hide
+            pdw.type='text'; //change to text type sothat pdw can be seen when inputing
         }
         
     }
@@ -52,16 +53,13 @@ window.onload=function(){
     btn.onclick=function(){
         // if user try to login without read instruction
         if(btn02.disabled && btn03.disabled){
-            alert("Please read the instruction");
-            btn.disabled=true;
+            alert("Please read the instruction"); //give a hint to user that they need to read insturction first
+            btn.disabled=true; //lock the login button
         }
         if(!btn02.checked && !btn03.disabled){
-            alert("Please tick the checkbox");
-            btn.disabled=true;
+            alert("Please tick the checkbox"); //give a hint to user that they need to tick the checkbox first
+            btn.disabled=true; //lock the login button
         }
     }  
-    // if login button is lock,when cilick will alert a instruction about how to unlock
-    btn03.onclick=function(){
-        btn.disabled=false;
-    }
+
 }

@@ -1445,9 +1445,9 @@ footer .copyright{
 
 
 
-/* #region ==================== MEDIA QUERIES (MOBILE & TABLET) ======================= */
+/* #region ==================================================== MEDIA QUERIES (MOBILE & TABLET) =================================================== */
 
-/* #region Devices smaller than 1366px  */
+/* #region================ Devices smaller than 1366px  ============================*/
 @media (max-width:1366px){
     .pet-shell{
         min-height: 150vh;
@@ -1459,8 +1459,8 @@ footer .copyright{
         height: 50vh;
         z-index: 10;
     }
-    .pet-card:hover {
-        width: 33.33%;
+    .pet-card img{
+        height: 70%;
     }
     .pet-card:hover{
         transition: none;
@@ -1481,6 +1481,15 @@ footer .copyright{
     /* product intro end */
 }
 /* #endregion Devices smaller than 1366px */
+
+@media (max-height:700px){
+    .pet-card{
+        justify-content: center;
+    }
+    .pet-card .description{
+        height: 80%;
+    }
+}
 
 /* #region Devices smaller than 1025px  */
 @media (max-width:1025px){

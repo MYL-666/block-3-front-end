@@ -287,7 +287,18 @@ main .cart-item {
     width: 100%;
     overflow: auto;
 }
-
+/* quantity */
+.quantity{
+    width: 4rem;
+    border: 1px solid #666;
+    padding: .5rem 0;
+    border-radius: 20px;
+}
+.increase,.decrease{
+    border: 0;
+    background-color: transparent;
+    margin: 0 1rem;
+}
 /* Cart Item Image Styling */
 .cart-item img {
     max-width: 200px;

@@ -113,30 +113,35 @@
             <div class="col-6 right-form form-horizontal">
                 <!-- Last Name Input -->
                 <div class="form-group">
-                    <label for="lastName" class="control-label h4">Last name*:</label>
+                    <label for="lastName" class="control-label h4">Last Name*:</label>
                     <div class="col-12">
                         <input type="text" placeholder="Enter last name" id="lastName" required class="form-control">
                     </div>
                 </div>
                 <!-- First Name Input -->
                 <div class="form-group">
-                    <label for="firstName" class="control-label h4">First name*:</label>
+                    <label for="firstName" class="control-label h4">First Name*:</label>
                     <div class="col-12">
                         <input type="text" placeholder="Enter first name" id="firstName" required class="form-control">
                     </div>
                 </div>
                 <!-- Postal Code Input -->
                 <div class="form-group">
-                    <label for="postCode" class="control-label h4">Post code*:</label>
+                    <label for="postCode" class="control-label h4">Post Code*:</label>
                     <div class="col-12">
                         <input type="text" placeholder="Enter postal code" id="postCode" required class="form-control">
                     </div>
                 </div>
                 <!-- Second Line of Street Address (Optional) -->
                 <div class="form-group">
-                    <label for="street2" class="control-label h4">Street 2:</label>
+                    <label for="street2" class="control-label h4">Delivery Option*</label>
                     <div class="col-12">
-                        <input type="text" placeholder="Enter the second line of street" id="street2" class="form-control">
+                        <select id="delivery-opt" required class="form-control" name="delivery-option">
+                            <option class="delivery-opt" value="" disabled selected>Choose your way for delivery</option>
+                            <option class="delivery-opt" value="fast">fast (In 3 days)</option>
+                            <option class="delivery-opt" value="basic">basic (In 7 days)</option>
+                            <option class="delivery-opt" value="pick">pick up (find the neartest spot)</option>
+                        </select>
                     </div>
                 </div>               
             </div>
@@ -182,7 +187,7 @@
                     <!-- Delivery Fee -->
                     <div class="delivery">
                         <span>Delivery Fee:</span>
-                        <span>0.00 <i class="iconfont icon-qian"></i></span>
+                        <span id="delivery-fee">0.00 <i class="iconfont icon-qian"></i></span>
                     </div>
                     <!-- Discount -->
                     <div class="discount">

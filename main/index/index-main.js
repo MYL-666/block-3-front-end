@@ -1,6 +1,6 @@
 window.onload=function(){
 
-// #region======================================== slide bar for mobile device =========================================
+//#region============================================== mobile slide bar ===============================================
     // get element by id
     var menuBtn = document.getElementById("menu-btn");
     var menuContent = document.getElementById("menu-content");
@@ -25,7 +25,25 @@ window.onload=function(){
             menuContent.style.display = "block"; 
         }
     };
-// #endregionsildebar for mobile device 
+
+  var open=document.querySelectorAll(".btn-open")
+  var details=document.querySelectorAll(".menu-detail")
+  for(let i=0;i<open.length;i++){
+      //make sure it is close at first
+      details[i].style.display = "none";
+      // for all section in mobile slide bar bind an onlick event
+      open[i].onclick=function(){
+          //when click, show it, if already shown,it will close
+          if (details[i].style.display === "block") {
+              details[i].style.display = "none"; //detail nav will hide when its already open
+              open[i].style.transform="rotate(0deg)" // change the deg to make the arrow back to position
+          } else {
+              details[i].style.display = "block"; //detail nav will show when its close and clicked
+              open[i].style.transform="rotate(90deg)"; // change the degree of arrow to make it towards to bottom
+          }
+      }
+  }
+// #endregion
 
 
 
@@ -105,28 +123,8 @@ window.onload=function(){
 // #endregion
 
 
-//#region============================================== mobile slide bar ===============================================
-    var open=document.querySelectorAll(".btn-open")
-    var details=document.querySelectorAll(".menu-detail")
-    for(let i=0;i<open.length;i++){
-        //make sure it is close at first
-        details[i].style.display = "none";
-        // for all section in mobile slide bar bind an onlick event
-        open[i].onclick=function(){
-            //when click, show it, if already shown,it will close
-            if (details[i].style.display === "block") {
-                details[i].style.display = "none"; //detail nav will hide when its already open
-                open[i].style.transform="rotate(0deg)" // change the deg to make the arrow back to position
-            } else {
-                details[i].style.display = "block"; //detail nav will show when its close and clicked
-                open[i].style.transform="rotate(90deg)"; // change the degree of arrow to make it towards to bottom
-            }
-        }
-    }
-// #endregion
 
-
-    // #region==================================== turning the card start =======================================================
+// #region==================================== turning the card start =======================================================
     const cardList=document.querySelectorAll(".card-box");
     const cover=document.querySelectorAll(".cover");
     const back=document.querySelectorAll(".back");

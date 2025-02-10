@@ -495,6 +495,7 @@ footer .follow{
 footer .icon-list{
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 footer .icons{
     height: 3rem;

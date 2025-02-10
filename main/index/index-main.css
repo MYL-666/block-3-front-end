@@ -117,7 +117,7 @@ body{
     align-items: baseline;
     margin-top: 2rem;
 }
-.head-title>h1,.head-title>span{
+.head-title>.h1,.head-title>span{
     font-size: 5rem;
 }
 .head-title .h3{
@@ -472,7 +472,7 @@ nav .third img{
     padding: 0 2rem;
 }
 
-.about .right h2{
+.about .right .h2{
     font-size: 2rem;
     color: #333;
 }
@@ -652,7 +652,7 @@ nav .third img{
         margin: 5px;
         padding: 5px;
     }
-    .pet-shell .description>h3{
+    .pet-shell .description>.h3{
         font-size: 1.5rem;
     }
     .pet-shell .price {
@@ -894,7 +894,7 @@ nav .third img{
         align-items: baseline;
         gap: 1rem;
     }
-    .product-container .price>h5{
+    .product-container .price>.h5{
         text-decoration: line-through;
     }
     .product-container .name{
@@ -902,7 +902,7 @@ nav .third img{
         gap: .5rem;
     }
     /* `new` product label */
-    .product-container .name>h2{
+    .product-container .name>.h2{
         color: red;
     }
         /* box animate, fade in one by one*/
@@ -1398,6 +1398,7 @@ footer .follow{
 footer .icon-list{
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 footer .icons{
     height: 3rem;
@@ -1547,12 +1548,6 @@ footer .copyright{
 
 @media (max-width:768px){
     /*====== header start =======*/
-    .head-title,.product-page {
-        width: 100vw;
-    }
-    .head-title h1{
-        font-size: 3rem;
-    }
     header{
         justify-content: center;
         height: auto;
@@ -1599,7 +1594,7 @@ footer .copyright{
     .head-title,.product-page {
         width: 100vw;
     }
-    .head-title h1{
+    .head-title .h1{
         font-size: 3rem;
     }
     /* head title end */

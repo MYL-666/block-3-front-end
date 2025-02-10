@@ -31,7 +31,7 @@ window.onload=function(){
         btn.disabled = !btn02.checked; //let the checkbox buttom link to login button
       });
       
-        // password show and hide
+        //============================== password show and hide ===========================
         // initailize the pdw to be hidden
     btnShow.style.opacity='0';
     btnHidden.style.opacity='1';

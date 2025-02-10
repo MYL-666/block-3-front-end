@@ -132,7 +132,7 @@ window.onload = function () {
             btn03.style.display = "inline-block"; //Hides the "Checkout" button as the cart is empty
             formlist[1].action = "../../main/index/index-main.html"; //Displays the "Back to Product" button so users can continue shopping
             hint.style.display = "flex"; //Redirects the "Back to Product" button to the main product page
-            hint.style.margin = "0 auto"; //Displays a message indicating the cart is empty
+            hint.style.margin = "0 auto"; //make sure text is central
             cartItemsContainer.style.display = "none"; //Hides the cart item count bubble
             cartNum.style.display = "none"; //Hides the cart item container since there are no products
         } 

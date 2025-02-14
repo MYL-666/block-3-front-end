@@ -1,4 +1,4 @@
-=================== PokeShop - Virtual Pokémon Pet Platform =================
+===================== PokeShop - Virtual Pokémon Pet Platform =================
 PokeShop is an interactive and visually engaging e-commerce platform designed for purchasing virtual Pokémon pets and related products. This project demonstrates core front-end development skills, including dynamic interactions, responsive design, and accessibility testing.
 
 ==============================Project Structure================================

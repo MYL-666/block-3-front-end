@@ -167,13 +167,13 @@ block-3-front-end
 │     └─ index-product.js           
 └─ README.md                        
   
-=====================================Technologies Used==================================
+================Technologies Used===================
 • HTML5: Page structure and layout.
 • CSS3: Styling and animations.
 • JavaScript: Dynamic interactions (carousel, review input).
 • Bootstrap: Responsive grid and UI components.
 
-=====================================Testing & Validation====================================
+=========Testing & Validation======================
 1. HTML & CSS Validation
 • Tested using W3C Validation Services.
 • Fixed issues with heading hierarchy and animation values.

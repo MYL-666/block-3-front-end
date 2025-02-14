@@ -146,6 +146,7 @@ header li:first-child a{
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 1;
 }
 .search-div form{
     width: 100%;
@@ -388,7 +389,12 @@ nav .third img{
     
     
 /* #region ==================================================== MEDIA QUERIES (MOBILE & TABLET) =================================================== */
-
+@media (max-width:805px){
+    /* display search when screen is smaller than 805px */
+    header .search-div{
+        display: none ;
+        }
+}
 
 /* #region =================== MOBILE RESPONSIVENESS (MAX WIDTH: 768PX) =================== */
 
@@ -429,9 +435,6 @@ nav .third img{
    header .nav-item{
     width: 4.5rem;
     margin: 5px;
-   }
-   header .search-div{
-    display: none ;
    }
     /* header end */
 
@@ -487,6 +490,8 @@ nav .third img{
      /* Styles search bar */
     #menu-content .search-bar{
         margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
     }
     #menu-content .search-bar input{
         border-radius: 10px;

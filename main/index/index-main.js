@@ -1,10 +1,9 @@
 window.onload=function(){
-
-//#region============================================== mobile slide bar ===============================================
+    //#region============================================== mobile slide bar ===============================================
     // get element by id
     var menuBtn = document.getElementById("menu-btn");
     var menuContent = document.getElementById("menu-content");
-    var close=document.getElementById("close")
+    var close=document.getElementById("close");
 
     // Bind click event to button, when this button is clicked
     menuBtn.onclick = function () {
@@ -44,8 +43,6 @@ window.onload=function(){
       }
   }
 // #endregion
-
-
 
 // #region================================================ adding the products to cart ====================================
     var cartBtn=document.querySelectorAll(".add-cart");

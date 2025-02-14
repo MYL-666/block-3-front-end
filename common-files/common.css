@@ -1,0 +1,604 @@
+/*========== clear all margin and padding and reset the font style ============= */
+*{
+    font-family: "Sour Gummy", serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red !important; */
+}
+/* #region================= scroll style start ==================*/
+::-webkit-scrollbar{
+    width: 6px;
+}
+    /* scroll color to be yeloow fit the theme */
+::-webkit-scrollbar-thumb{
+    background-color: #FFD700;
+    border-radius: 10px;
+}
+/* #endregion end============= scroll style end ================*/
+
+
+/* #region=================== header-part of main page start =====================*/
+/* 
+   Description: 
+   - The header contains a logo, navigation menu of home/cart/login, and search bar.
+   - It has a sticky position at the top with a semi-transparent background.
+   - Includes an animation effect for a smooth appearance.
+   - Navigation icons for profile, home, and cart are included.
+   - Responsive design ensures proper alignment on different screen sizes.
+*/
+/*#region===== header part start =====*/
+.head-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 2rem;
+}
+.head-title>.h1,.head-title>span{
+    font-size: 5rem;
+}
+.head-title .h3{
+    text-decoration: none;
+}
+.head-title .h3:hover{
+    text-decoration: underline;
+}
+.content a {
+    /* more clear blue of <a> */
+    color: #007acc;
+}
+header .row{
+    /* make usre the logo and header nav on the left and right */
+    justify-content: space-evenly;
+}
+header{
+    /* header backgorund color */
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 5px 5px 8px  rgba(0, 0, 0, 0.331);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    padding: 0 1rem;
+}
+header img{ 
+    /* change the size of logo */
+    height: 100px;
+    display: block;
+}
+header .top-right{
+    /* header nav layout */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+header ul{
+    display: flex;
+}
+header li a{    
+    /* gap between each element */
+    margin-right: 10px;
+}
+.cart1{
+    position: relative;
+}
+header li:last-child a{
+    background-image: url(cart.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 5rem;
+}
+header li:nth-child(2) a{
+    background-image: url(home.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 5rem;
+}
+header li:first-child a{
+    background-image: url(profile.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 5rem;
+}
+#cart-num{
+    height: 25px;
+    width: 25px;
+    background-image: url(icon_dot.png);
+    background-size: cover;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    text-align: center;
+    display: none;
+}
+.nav-pills .nav-link.active {
+    /* change the button color */
+    background-color: #FFD700; 
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+    color: black; 
+}
+.nav-pills .nav-link.active:hover{
+    /* add the change when hover */
+    box-shadow: 0 0 10px;
+}
+    /* logo animation */
+.logo ,.header-nav,.search-div{
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 1s ease-out forwards;
+}  
+    /* #endregion===== header part end =====*/
+
+    /* #region===== search bar start =====*/
+.search-div{
+    /* search bar layout */
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-div form{
+    width: 100%;
+}
+.search-div .search{
+    width: 70%;
+    box-shadow: 2px 2px 5px  rgba(0, 0, 0, 0.1);
+}
+.search-div .submit{
+    width: 25%;
+    background-color: #ffcb05;
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+    transition: 0.2s ease-in-out;
+}
+.search-div .submit:hover{
+    box-shadow: 0 0 10px;
+}
+    /*#endregion===== search bar end =====*/
+/* #endregion ================== HEADER SECTION END =========================== */
+
+/*#region==================== NAVIGATION SECTION START ===================================*/
+/* 
+   Description:
+   - This section styles the main navigation menu.
+   - It includes hover effects, transitions, and hidden dropdown menus for different categories.
+   - The navigation bar has a sticky position and a subtle shadow effect.
+   - Hidden sub-menus are displayed when hovering over main categories.
+   - Uses smooth transitions for a better user experience.
+*/
+nav{
+    /* layout of main-nav */
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.909); 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+    position: relative;
+    transition: all .3s;
+}
+nav .nav {
+    /* for the top part layout in nav */
+    height: 10vh;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+nav .nav a{
+    width: 100%;
+    text-align: center;
+    border-right: 2px solid black;
+    line-height: 4vh;
+}
+nav .nav:hover{
+    /* when hover show the blue bottom line */
+    border-bottom: 3px solid #007acc;
+}
+nav .nav:hover a{
+    color: #007acc;
+}
+nav #click03{
+    border: 0;
+}
+nav .nav a{
+    text-decoration: none;
+    color: black;
+}
+    /* =================== Dropdown Navigation Menus Start =================== */
+    /* 
+       - The following styles handle the hidden sub-menus.
+       - Each category (Pets, Products, Cards) has its own submenu that appears when hover.
+    */
+/* for pets nav */
+.nav-pet:hover+.nav-product+.nav-card+.hidden-nav-pet, .hidden-nav-pet:hover{
+    display: flex;
+}
+/* for product nav */
+.nav-product:hover+.nav-card+.hidden-nav-pet+.hidden-nav-product, .hidden-nav-product:hover{
+    display: flex;
+}
+/* for cards nav */
+.nav-card:hover+.hidden-nav-pet+.hidden-nav-product+.hidden-nav-card, .hidden-nav-card:hover{
+    display: flex;
+}
+nav .hidden-nav{
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    height: 500px;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+    z-index: 10;
+    display: none;  
+}
+nav .nav-item{
+    border-right: 1px solid #999;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.747);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter:blur(5px);
+    display: flex;
+    flex-direction: column;
+}
+nav .nav-item>a, .nav-item>h2{
+    margin: 5px 0;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+nav .nav-item>a:hover{
+    text-decoration: underline;
+}
+nav .third img{
+    margin-top: 10px;
+}
+    /* =================== Dropdown Navigation Menus End =================== */
+/*#endregion========================== NAVIGATION END =======================================*/
+
+
+
+/* #region ============ FOOTER SECTION START ============ */
+/*
+   - This section styles the **footer**, which includes:
+      1. `.first` → Contains **quick links, location, and contact info**.
+      2. `.second` → Displays **social icons & legal text**.
+      3. `.icons` → Interactive **social media buttons**.
+      4. Hover effects for **links and icons**.
+*/
+    /* #region ====================== FIrst =================================== */
+    footer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(to top, #FFFFFF, #FAFAFA);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+    footer .first{
+        display: flex;
+        justify-content: space-evenly;
+        border-bottom: 1px solid #999;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+    /* Remove bullets from lists */
+    footer ul{
+        list-style: none;
+    }
+    footer li{
+        padding: .5rem;
+    }
+    footer a{
+        text-decoration: none;
+        color: #666;
+    }
+    /* hover effect */
+    footer a:hover{
+        color: #000;
+        text-decoration: underline;
+    }
+    footer img{
+        height: 3rem;
+        cursor: pointer;
+    }
+        /* #endregion================ First ====================== */
+    
+        /* #region ========================== Second ============================ */
+        /*
+           - `.second` includes:
+              - **Social media icons**.
+              - **Copyright text**.
+              - **Legal disclaimers**.
+        */
+    footer .second{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .follow{
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer .icon-list{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    footer .icons{
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        background-color: #ffc0cb21;
+        margin-right: 10px;
+        cursor: pointer;
+        background-size: 90%;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: 0.2s linear;
+        margin-bottom: 10px;
+    }
+    footer .icons:hover{
+        box-shadow: 0 0 8px;
+        transform: scale(1.1);
+    }
+    footer .icons:nth-child(1){
+        background-image: url(facebook.svg);
+    }
+    footer .icons:nth-child(2){
+        background-image: url(instagram.svg);
+    }
+    footer .icons:nth-child(3){
+        background-image: url(微信.svg);
+    }
+    footer .second p{
+        font-size: 1rem;
+    }
+    footer .copyright{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+        /* #endregion =====================Second ========================= */
+    /* #endregion ========================== FOOTER SECTION END ======================================= */
+    
+    /* mobile nav cant be shown on PC device*/
+    #mobile-menu{
+        display: none;
+    }
+    /* mobile nav end */
+
+    
+    
+/* #region ==================================================== MEDIA QUERIES (MOBILE & TABLET) =================================================== */
+
+
+/* #region =================== MOBILE RESPONSIVENESS (MAX WIDTH: 768PX) =================== */
+
+@media (max-width:768px){
+    /*====== header start =======*/
+    header{
+        justify-content: center;
+        height: auto;
+        background: rgba(255, 255, 255, 0.8); 
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter:blur(10px);          
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    header .row{
+        width: 100%;
+        margin: 0;
+        justify-content: space-between;
+        padding-left: 2rem;
+        height: 5.5rem;
+        align-items: center;
+    }
+    header .top-left{
+        width: 30%;
+        padding: 0;
+        text-align: center;
+    }
+    header .top-left img{
+        width: 5rem;
+    }
+   header .top-right{
+    text-align: center;
+    width: 50%;
+    margin-top: 10px;
+   }
+   header .nav-pills{
+    flex-wrap: nowrap;
+   }
+   header .nav-item{
+    width: 4.5rem;
+    margin: 5px;
+   }
+   header .search-div{
+    display: none ;
+   }
+    /* header end */
+
+    /* #region ============ MOBILE NAVIGATION ============ */
+    /* Adds sliding animation to the mobile menu */
+    @keyframes animate{
+        from{
+            transform: translateX(-1000px);
+        }to{
+            transform: translateX(0px);
+        }
+    }
+    /* Displays the mobile menu */
+    #mobile-menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    #menu-btn {
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px 15px;
+        background: transparent;
+        color: black;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: left;
+    }
+    #menu-content {
+        display: none; 
+        width: 75%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 10px 15px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter:blur(15px);
+    }
+    #close{
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size:2rem;
+        cursor: pointer;
+    }
+     /* Styles search bar */
+    #menu-content .search-bar{
+        margin-bottom: 1rem;
+    }
+    #menu-content .search-bar input{
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.107);
+        border: 1px solid black;
+    }
+    /* Placeholder text styling */
+    #menu-content .search-bar input::placeholder{
+        padding: 1rem;
+        letter-spacing: 1px;
+    }
+
+    #menu-content .search-bar button{
+        width: 4rem;
+        background-color: #FFD700;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+     /* Hover effect for search button */
+    #menu-content .search-bar button:hover{
+        background-color: #ffaa00;
+        transform: scale(1.05);
+    }
+    .menu-category h3 {
+        margin-bottom: 15px;
+      }
+    #menu-content .profile{
+        height: 40px;
+        width: 100%;
+        margin:10px auto;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    #menu-content .profile img{
+        height: 30px;
+    }
+    #menu-btn:hover #menu-content{
+        display: block;
+    }
+    #menu-content .nav-pet{
+        border-top: 1px solid #999;
+    }
+    .menu-category {
+        margin: 0 auto;
+        align-items: center;
+        padding: 20px 0;
+        text-align: left;
+        border-bottom: 1px solid #999 ;
+    }
+
+    .menu-category ul, .menu-category li{
+        margin-top: 10px;
+    }
+    .menu-category li{
+        padding: 5px 0;
+        border-bottom: 1px solid #999;
+    }
+    .menu-category span,.menu-category li a {
+        color: #333;
+    }
+
+    .menu-category a {
+        color: #007bff;
+        text-decoration: none;
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .menu-category a:hover {
+        text-decoration: underline;
+    }
+
+    /* Transition Animation */
+    #menu-content {
+        transition: max-height 0.3s ease-in-out;
+        overflow: hidden;
+    }
+    /* #endregion mobile nav end */
+
+    /* PC nav */
+    .main-nav{
+        display: none;
+    }
+
+
+    /* #region footer start */
+    footer{
+        padding: 1rem;
+    }
+    footer .first{
+        display: grid;
+        grid-template-columns: 2fr;
+        text-align: center;
+    }
+    footer ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .second span{
+        display: none;
+    }
+    footer p{
+        font-size: 12px;
+       }
+    /* #endregion footer end */
+
+    /* Hides first navigation item on very small screens */
+    @media (max-width:500px){
+        .nav-item:first-child{
+            display: none;
+        }
+    }
+}

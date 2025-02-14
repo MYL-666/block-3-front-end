@@ -9,7 +9,6 @@ body {
     /* make sure evry part connect to each other */
     display: flex;
     flex-direction: column; 
-    margin: 0;
     overflow-x: hidden;
     background: linear-gradient(135deg, #F8FBFF 0%, #FDEEF4 100%);
 }

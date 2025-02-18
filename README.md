@@ -171,16 +171,16 @@ block-3-front-end
 │     └─ index-product.js           
 └─ README.md                        
   
-================Technologies Used===================
-• HTML5: Page structure and layout.
-• CSS3: Styling and animations.
-• JavaScript: Dynamic interactions (carousel, review input).
-• Bootstrap: Responsive grid and UI components.
+================Technologies Used===================<br>
+• HTML5: Page structure and layout.<br>
+• CSS3: Styling and animations.<br>
+• JavaScript: Dynamic interactions (carousel, review input).<br>
+• Bootstrap: Responsive grid and UI components.<br>
 
-=========Testing & Validation======================
-1. HTML & CSS Validation
-• Tested using W3C Validation Services.
-• Fixed issues with heading hierarchy and animation values.
-2. Accessibility
-• A checklist was created to evaluate accessibility.
-• Issues with heading structure and keyboard navigation were identified for future improvement.
+=========Testing & Validation======================<br>
+1. HTML & CSS Validation<br>
+• Tested using W3C Validation Services.<br>
+• Fixed issues with heading hierarchy and animation values.<br>
+2. Accessibility<br>
+• A checklist was created to evaluate accessibility.<br>
+• Issues with heading structure and keyboard navigation were identified for future improvement.<br>

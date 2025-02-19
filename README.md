@@ -1,7 +1,11 @@
-===================== PokeShop - Virtual Pokémon Pet Platform =================
-PokeShop is an interactive and visually engaging e-commerce platform designed for purchasing virtual Pokémon pets and related products. This project demonstrates core front-end development skills, including dynamic interactions, responsive design, and accessibility testing.
+=====================**PokeShop - Virtual Pokémon Pet Platform**====================<br>
+PokeShop is an interactive and visually engaging e-commerce platform designed for purchasing virtual Pokémon pets and related products. This project demonstrates core front-end development skills, including dynamic interactions, responsive design, and accessibility testing.  
 
-==============================Project Structure================================
+========== **Code Ownership Statement** =====================<br>
+All code within this project has been written and developed by myself (YuLun), unless explicitly stated otherwise.
+I have taken full ownership of my original work, including HTML, CSS, and JavaScript files, ensuring that all functionalities, designs, and interactive elements are uniquely crafted for this project.                                           
+<br>
+==============**Project Structure**=============<br>
 block-3-front-end                   
 ├─ Cart                             
 │  ├─ img                           
@@ -167,16 +171,16 @@ block-3-front-end
 │     └─ index-product.js           
 └─ README.md                        
   
-================Technologies Used===================
-• HTML5: Page structure and layout.
-• CSS3: Styling and animations.
-• JavaScript: Dynamic interactions (carousel, review input).
-• Bootstrap: Responsive grid and UI components.
+================Technologies Used===================<br>
+• HTML5: Page structure and layout.<br>
+• CSS3: Styling and animations.<br>
+• JavaScript: Dynamic interactions (carousel, review input).<br>
+• Bootstrap: Responsive grid and UI components.<br>
 
-=========Testing & Validation======================
-1. HTML & CSS Validation
-• Tested using W3C Validation Services.
-• Fixed issues with heading hierarchy and animation values.
-2. Accessibility
-• A checklist was created to evaluate accessibility.
-• Issues with heading structure and keyboard navigation were identified for future improvement.
+=========Testing & Validation======================<br>
+1. HTML & CSS Validation<br>
+• Tested using W3C Validation Services.<br>
+• Fixed issues with heading hierarchy and animation values.<br>
+2. Accessibility<br>
+• A checklist was created to evaluate accessibility.<br>
+• Issues with heading structure and keyboard navigation were identified for future improvement.<br>

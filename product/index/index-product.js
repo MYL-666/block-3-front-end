@@ -117,8 +117,13 @@ window.onload = function () {
             <div class="face face5"></div>
             <p>${userName.value}</p>
         </div>`;
-        // insert the new comment into the page
-        commentList.insertBefore(newMessage,commentList.firstChild);
+        // make sure the text and title have content, if not alert users
+        if(commentTitle.value!=='' && newComment.value!==''){
+            commentList.insertBefore(newMessage,commentList.firstChild); // insert the new comment into the page
+        }else{
+            alert("please input title and comments before submit"); 
+            return
+        }
         // clear textarese and everything
         userName.value=''; //clear username
         commentTitle.value='';//clear title
@@ -130,7 +135,7 @@ window.onload = function () {
     function getCurrentTime(){
         var now=new Date(); //get the current time
         var year=now.getFullYear();//get the cureent year
-        var month=('0'+(now.getDate()-1)).slice(-2);//get the current month
+        var month=('0'+(now.getMonth() + 1)).slice(-2);//get the current month
         var day=('0'+now.getDate()).slice(-2);//get the current day
         return day+'/'+month+'/'+year; //final,the date of writing commnet output
     }

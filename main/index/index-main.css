@@ -306,7 +306,7 @@ body{
     }
     .pet-box{
         width: 100vw;
-        display: flex;
+        display: flex; /* flexbox display*/
         min-height: 100vh;
         gap: 5px;
         border: 10px solid #fff;
@@ -321,7 +321,7 @@ body{
         box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.078);
         backdrop-filter: blur(15px);
         flex: 1;
-        width: 6%;
+        width: 6%;        /* withtout expand only 6% width */
         border: 10px solid #FFFBF2;
         display: flex;
         align-items: center;
@@ -338,6 +338,7 @@ body{
         z-index: -1;
     }
     .pet-card:hover{
+        /* when hover expand to 60% */
         flex-basis: 60%;
     }
     .pet-shell .card1{
@@ -1075,9 +1076,11 @@ body{
     .pet-card img{
         height: 70%;
     }
+    /* would not expand when hover */
     .pet-card:hover{
         transition: none;
     }
+    /* one row with 3 fix product */
     .pet-card,.pet-card:hover{
         flex-basis: 33.3%;
     }

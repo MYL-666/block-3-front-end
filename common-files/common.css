@@ -110,6 +110,7 @@ header li:first-child a{
     height: 40px;
     width: 5rem;
 }
+/* cart quantity calculation icon */
 #cart-num{
     height: 25px;
     width: 25px;
@@ -311,6 +312,7 @@ nav .third img{
         color: #000;
         text-decoration: underline;
     }
+    /* can be hover */
     footer img{
         height: 3rem;
         cursor: pointer;
@@ -356,6 +358,7 @@ nav .third img{
         transition: 0.2s linear;
         margin-bottom: 10px;
     }
+    /* hover effect for icons */
     footer .icons:hover{
         box-shadow: 0 0 8px;
         transform: scale(1.1);

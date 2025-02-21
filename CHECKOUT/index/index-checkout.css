@@ -1,4 +1,5 @@
 /* universal animation */
+/* from left fade in */
 @keyframes fromL{
     from{
         opacity: 0;
@@ -8,6 +9,7 @@
         transform: translateX(0);
     }
 }
+/* from right fade in */
 @keyframes fromR{
     from{
         opacity: 0;
@@ -17,6 +19,7 @@
         transform: translateX(0);
     }
 }
+/* zoom in effect */
 @keyframes fromZ{
     from{
         opacity: 0;
